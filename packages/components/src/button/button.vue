@@ -11,7 +11,11 @@ import { buttonProps } from './types';
 const props = defineProps(buttonProps)
 const styleClass = computed(() => {
     return {
-        [`h-button--${props.type}`]: props.type
+        [`h-button--${props.type}`]: props.type,
+        'is-plain':props.plain,
+        'is-round':props.round,
+        'is-disabled':props.disabled,
+        [`h-button--${props.size}`]: props.size,
     }
 })
 </script>
