@@ -1,0 +1,176 @@
+html,
+body,
+#app {
+  height: 100%;
+  background-color: var(--sub-background-color);
+  transition: background-color .3s ease;
+  color: var(--main-text-color);
+}
+
+.logo-img {
+  position: fixed;
+  left: 25px;
+  top: 15px;
+  z-index: 15;
+  font-size: 32px;
+  background: url(../assets/logo.png) no-repeat left center;
+  background-size: 30px;
+  padding-left: 40px;
+
+  &::after {
+    content: "RelaxPlus";
+    color: var(--main-text-color);
+    font-family: "calibre bold";
+  }
+}
+
+.qrcode{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 120px;
+  height: 120px;
+  
+  img{
+    display: block;
+    width: 100%;
+  };
+}
+
+.content-menu{
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  display: flex;
+  z-index: 6;
+  align-items: center;
+  
+  .item{
+    width: 32px;
+    height: 32px;
+    // padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .4s ease;
+    text-align: center;
+    margin-left: 10px;
+    color: var(--sub-text-color);
+    font-size: 18px;
+    line-height: 32px;
+  
+    &:hover{
+      background-color: var(--hover-background-color);
+    }
+  }
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  padding-left: 225px;
+
+  .sidebar-nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 225px;
+    top: 0;
+    background-color: var(--main-background-color);
+    transition: background-color .3s ease;
+  }
+
+  .sidebar-menu {
+    position: absolute;
+    left: 0;
+    top: 70px;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+
+    .menu{
+      padding: 0 20px;
+      a{
+        font-size: 14px;
+        display: block;
+        color: var(--main-text-color);
+        padding: 8px 10px;
+        margin: 4px 0;
+        transition: background-color .3s ease;
+      }
+      a:hover{
+        background-color: var(--hover-background-color);
+      }
+      dl{
+        dt{
+          color: var(--sub-text-color);
+          padding: 8px 10px;
+          padding-bottom: 8px;
+          border-bottom: 1px solid var(--hover-background-color);
+        }
+      }
+    }
+  }
+}
+
+.content-page {
+  padding: 35px;
+  padding-right: 160px;
+}
+
+.h2-nav{
+  position: fixed;
+  right: 20px;
+  top: 80px;
+  width: 105px;
+  padding-left: 15px;
+  padding-bottom: 30px;
+  border-left: 1px solid var(--hover-background-color);
+  color: var(--sub-text-color);
+
+  .dot{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    top: 7px;
+    left: -3px;
+    background-color: rgb(var(--warning));
+    transition: transform .4s ease;
+    
+    &::after{
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      background-color: rgb(var(--warning));
+      border-radius: 50%;
+      animation: pulseDot 2.5s cubic-bezier(.47, -.2, .13, 1.35) infinite;
+    }
+  }
+
+  @keyframes pulseDot {
+    0% {
+      transform: scale(1);
+      opacity: 0.48;
+    }
+
+    100% {
+      transform: scale(5);
+      opacity: 0;
+    }
+  }
+
+  .item{
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: color .4s ease;
+
+    &.active{
+      color: rgb(var(--warning));
+    }
+  }
+}
+
