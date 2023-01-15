@@ -1,7 +1,9 @@
 <template>
-  <button class="h-button" :class="styleClass">
+  <div>
+    <button class="h-button" :class="styleClass">
     <slot />
   </button>
+  </div>
 </template>
 <script lang='ts'>
 import './style/index.less'

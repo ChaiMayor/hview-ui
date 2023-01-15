@@ -21,11 +21,10 @@ function applyOptions(app: App) {
   app.config.globalProperties[`$modal`] = components['Modal']
 }
 
+
 const HViewPlus =  {
   install,
   ...components
 }
 
 export default HViewPlus
-
-
