@@ -1,0 +1,14 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "hview": "workspace:^1.0.0"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "hview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "scripts": {
+    "build": "vite build & esno build/buildLess"
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "keywords": [
+    "hview-ui",
+    "vue3组件库"
+  ],
+  "author": "芜湖起飞队",
+  "license": "MIT",
+  "typings": "lib/index.d.ts",
+  "dependencies": {
+    "@hview/utils": "workspace:^1.0.0"
+  }
+}
