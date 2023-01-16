@@ -2,14 +2,15 @@
   "name": "hview",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/index.js",
-  "module": "src/index.js",
+  "module": "./hview-ui/es/index.mjs",
+  "main": "./hview-ui/lib/index.js",
   "scripts": {
-    "build": "vite build & esno build/buildLess"
+    "build": "vite build",
+    "test": "vitest"
   },
   "files": [
-    "es",
-    "lib"
+    "hview-ui/es",
+    "hview-ui/lib"
   ],
   "keywords": [
     "hview-ui",
@@ -17,8 +18,9 @@
   ],
   "author": "芜湖起飞队",
   "license": "MIT",
-  "typings": "lib/index.d.ts",
+  "typings": "hview-ui/lib/index.d.ts",
   "dependencies": {
     "@hview/utils": "workspace:^1.0.0"
   }
 }
+

@@ -3,16 +3,13 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import "./style/index.less";
+import { defineComponent, ref } from "vue";
 const val = ref<string>("xiaochai");
 </script>
 
 <script lang="ts">
-export default {
+export default defineComponent({
   name: "HButton",
-};
+});
 </script>
-
-<style lang="less">
-@import "./style/style.less";
-</style>

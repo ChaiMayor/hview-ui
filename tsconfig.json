@@ -8,6 +8,10 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "moduleResolution": "Node",
-    "lib": ["esnext", "dom"]
+    "lib": ["esnext", "dom"],
+    "rootDirs": ["./", "./packages/components"],
+    "paths": {
+      "@/*": ["packages/components/src/*"]
+    }
   }
 }
