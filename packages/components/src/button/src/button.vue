@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-import "./style/index.less";
+import "../style/index.less";
 import { defineComponent, ref } from "vue";
 const val = ref<string>("xiaochai");
 </script>
