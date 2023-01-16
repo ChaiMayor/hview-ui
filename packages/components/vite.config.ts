@@ -4,6 +4,10 @@ import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
 import { resolve } from "path";
 import DefineOptions from "unplugin-vue-define-options/vite";
+// 本地打包测试
+// "module": "./hview-ui/es/index.mjs",
+// 本地代码测试
+// "main": "./hview-ui/lib/index.js",
 
 export default defineConfig({
   build: {

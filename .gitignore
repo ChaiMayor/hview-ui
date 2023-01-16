@@ -1,6 +1,7 @@
 node_modules
 **/es
 **/lib
+hview-ui
 coverage
 *.log
 examples/dist  
