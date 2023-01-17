@@ -1,4 +1,5 @@
 import { default as Button } from "./button";
 import { default as Link } from "./link";
-export { Button, Link };
-export default [Button, Link];
+import { default as Icon } from "./icon";
+export { Button, Link, Icon };
+export default [Button, Link, Icon];
