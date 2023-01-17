@@ -5,3 +5,5 @@ hview-ui
 coverage
 *.log
 examples/dist  
+cache
+site/**/dist
