@@ -5,6 +5,11 @@ import { src, dest } from "gulp";
 const copypackage = async () => {
   return src(`${pkgPath}/transitpkg/**`).pipe(dest(`${componentPath}/hview-ui/`));
 };
+
+// pnpm version major 版本号（第一个 +1）
+// pnpm version minor 版本号（第二个 +1）
+// pnpm version patch 版本号（第三个 +1）
+
 //发布组件
 export const publish = async () => {
   //先给transitpkg升个版本
