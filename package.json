@@ -7,7 +7,8 @@
     "build": "gulp -f packages/components/script/build/gulpfile.ts",
     "publish": "pnpm run --filter ./packages/components/hview-ui release",
     "dev": "pnpm run --filter ./examples dev",
-    "docs:dev": "pnpm run --filter ./site docs:dev"
+    "docs:dev": "pnpm run --filter ./site docs:dev",
+    "docs:build": "pnpm run --filter ./site docs:build"
   },
   "keywords": [],
   "author": "",
