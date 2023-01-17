@@ -8,5 +8,9 @@
   "[less]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "prettier.configPath": ".prettierrc.json"
+  "prettier.configPath": ".prettierrc.json",
+  "i18n-ally.localesPaths": [
+    "packages/locale",
+    "packages/locale/lang"
+  ]
 }

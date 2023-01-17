@@ -20,6 +20,10 @@
   "license": "MIT",
   "typings": "hview-ui/lib/index.d.ts",
   "dependencies": {
-    "@hview-plus/utils": "workspace:^1.0.0"
+    "@hview-plus/utils": "workspace:^1.0.0",
+    "@hview-plus/locale": "workspace:^1.0.0",
+    "@hview-plus/constants": "workspace:^1.0.0",
+    "@hview-plus/hooks": "workspace:^1.0.0",
+    "@hview-plus/theme": "workspace:^1.0.0"
   }
 }
