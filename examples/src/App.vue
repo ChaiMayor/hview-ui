@@ -1,10 +1,6 @@
 <template>
   <div>
-    <h-button></h-button>
+    <h-button type="success" :round="true">Success</h-button>
+    <h-link type="warning" disabled>链接</h-link>
   </div>
 </template>
-
-<script lang="ts" setup>
-// import { Button } from "hview";
-// console.log(Button);
-</script>
