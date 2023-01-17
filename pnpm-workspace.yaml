@@ -2,3 +2,4 @@ packages:
   - "packages/**"
   - "examples"
   - "site"
+  - "!packages/components/transitpkg"

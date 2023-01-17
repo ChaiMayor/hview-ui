@@ -10,7 +10,7 @@ const delPath = async (path: string) => {
     files = fs.readdirSync(path);
 
     files.forEach(async (file) => {
-      let curPath = resolve(path, file);
+      const curPath = resolve(path, file);
 
       if (fs.statSync(curPath).isDirectory()) {
         // recurse

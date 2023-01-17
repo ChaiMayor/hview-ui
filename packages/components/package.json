@@ -1,5 +1,5 @@
 {
-  "name": "hview",
+  "name": "hview-plus",
   "version": "1.0.0",
   "description": "",
   "module": "index.ts",
@@ -20,6 +20,6 @@
   "license": "MIT",
   "typings": "hview-ui/lib/index.d.ts",
   "dependencies": {
-    "@hview/utils": "workspace:^1.0.0"
+    "@hview-plus/utils": "workspace:^1.0.0"
   }
 }

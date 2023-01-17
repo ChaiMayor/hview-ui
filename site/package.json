@@ -6,7 +6,7 @@
     "docs:build": "cross-env NODE_ENV=production vitepress build docs"
   },
   "dependencies": {
-    "hview": "workspace:1.0.0",
+    "hview-plus": "workspace:1.0.0",
     "unplugin-vue-setup-extend-plus": "^0.3.2",
     "vitepress": "1.0.0-alpha.36"
   },

@@ -1,5 +1,5 @@
 {
-  "name": "@hview/utils",
+  "name": "@hview-plus/utils",
   "version": "1.0.0",
   "main": "./index.ts",
   "module": "./index.ts",
