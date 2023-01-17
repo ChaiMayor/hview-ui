@@ -1,36 +1,53 @@
-# 按钮
+<style scoped>
+.example {
+  border: 1px solid #f5f5f5;
+  border-radius: 5px;
+  padding:20px;
+}
+.example div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 2px;
+}
+</style>
+
+# h-button 按钮
+
+> 常用的操作按钮。
 
 ## 基础用法
 
-使用 type、plain、round 和 circle 来定义按钮的样式。
+按钮可以根据 `type` 来设置不同的颜色, `primary` `success` `info` `danger` `warning` `text`
+
+设置 `plain` 属性可以设置镂空按钮,设置 `round` 属性可以设置圆角按钮
+
 
 <div class="example">
-    <div>
-        <h-button>默认按钮</h-button>
-        <h-button icon="edit" type="primary">主要按钮</h-button>
-        <h-button type="success">成功按钮</h-button>
-        <h-button type="info">信息按钮</h-button>
-        <h-button type="warning">警告按钮</h-button>
-        <h-button type="danger">危险按钮</h-button>
-        <h-button type="text">文字按钮</h-button>
-        <br>
-        <br>
-        <h-button plain>朴素按钮</h-button>
-        <h-button type="primary" plain>主要按钮</h-button>
-        <h-button type="success" plain>成功按钮</h-button>
-        <h-button type="info" plain>信息按钮</h-button>
-        <h-button type="warning" plain>警告按钮</h-button>
-        <h-button type="danger" plain>危险按钮</h-button>
-        <br>
-        <br>
-        <h-button round>圆角按钮</h-button>
-        <h-button type="primary" round>主要按钮</h-button>
-        <h-button type="success" round>成功按钮</h-button>
-        <h-button type="info" round>信息按钮</h-button>
-        <h-button type="warning" round>警告按钮</h-button>
-        <h-button type="danger" round>危险按钮</h-button>
-    </div>
-
+  <div>
+    <h-button>Default</h-button>
+    <h-button type="primary">Primary</h-button>
+    <h-button type="success">Success</h-button>
+    <h-button type="info">Info</h-button>
+    <h-button type="warning">Warning</h-button>
+    <h-button type="danger">Danger</h-button>
+  </div>
+  <div>
+    <h-button plain>Plain</h-button>
+    <h-button type="primary" plain>Primary</h-button>
+    <h-button type="success" plain>Success</h-button>
+    <h-button type="info" plain>Info</h-button>
+    <h-button type="warning" plain>Warning</h-button>
+    <h-button type="danger" plain>Danger</h-button>
+  </div>
+  <div>
+    <h-button round>Round</h-button>
+    <h-button type="primary" round>Primary</h-button>
+    <h-button type="success" round>Success</h-button>
+    <h-button type="info" round>Info</h-button>
+    <h-button type="warning" round>Warning</h-button>
+    <h-button type="danger" round>Danger</h-button>
+  </div>
 </div>
 
 ::: details 显示代码
@@ -38,27 +55,26 @@
 ```html
 <template>
   <div>
-    <h-button>默认按钮</h-button>
-    <h-button type="primary">主要按钮</h-button>
-    <h-button type="success">成功按钮</h-button>
-    <h-button type="info">信息按钮</h-button>
-    <h-button type="warning">警告按钮</h-button>
-    <h-button type="danger">危险按钮</h-button>
-    <h-button type="text">文字按钮</h-button>
+    <h-button>Default</h-button>
+    <h-button type="primary">Primary</h-button>
+    <h-button type="success">Success</h-button>
+    <h-button type="info">Info</h-button>
+    <h-button type="warning">Warning</h-button>
+    <h-button type="danger">Danger</h-button>
 
-    <h-button plain>朴素按钮</h-button>
-    <h-button type="primary" plain>主要按钮</h-button>
-    <h-button type="success" plain>成功按钮</h-button>
-    <h-button type="info" plain>信息按钮</h-button>
-    <h-button type="warning" plain>警告按钮</h-button>
-    <h-button type="danger" plain>危险按钮</h-button>
+    <h-button plain>Plain</h-button>
+    <h-button type="primary" plain>Primary</h-button>
+    <h-button type="success" plain>Success</h-button>
+    <h-button type="info" plain>Info</h-button>
+    <h-button type="warning" plain>Warning</h-button>
+    <h-button type="danger" plain>Danger</h-button>
 
-    <h-button round>圆角按钮</h-button>
-    <h-button type="primary" round>主要按钮</h-button>
-    <h-button type="success" round>成功按钮</h-button>
-    <h-button type="info" round>信息按钮</h-button>
-    <h-button type="warning" round>警告按钮</h-button>
-    <h-button type="danger" round>危险按钮</h-button>
+    <h-button round>Round</h-button>
+    <h-button type="primary" round>Primary</h-button>
+    <h-button type="success" round>Success</h-button>
+    <h-button type="info" round>Info</h-button>
+    <h-button type="warning" round>Warning</h-button>
+    <h-button type="danger" round>Danger</h-button>
   </div>
 </template>
 ```
@@ -66,47 +82,47 @@
 :::
 
 ## 禁用状态
+你可以使用 `disabled` 属性来定义按钮是否被禁用。
 
-使用`disabled`控制按钮是否可以点击
+使用 `disabled` 属性来控制按钮是否为禁用状态。 该属性接受一个`Boolean` 类型的值。
 
 <div class="example">
-    <div>
-        <h-button disabled>禁用按钮</h-button>
-        <h-button type="primary" disabled>主要按钮</h-button>
-        <h-button type="success" disabled>成功按钮</h-button>
-        <h-button type="info" disabled>信息按钮</h-button>
-        <h-button type="warning" disabled>警告按钮</h-button>
-        <h-button type="danger" disabled>危险按钮</h-button>
-        <br>
-        <br>
-        <h-button disabled>禁用按钮</h-button>
-        <h-button type="primary" disabled plain>主要按钮</h-button>
-        <h-button type="success" disabled plain>成功按钮</h-button>
-        <h-button type="info" disabled plain>信息按钮</h-button>
-        <h-button type="warning" disabled plain>警告按钮</h-button>
-        <h-button type="danger" disabled plain>危险按钮</h-button>
-    </div>
+  <div>
+    <h-button disabled>Default</h-button>
+    <h-button type="primary" disabled>Primary</h-button>
+    <h-button type="success" disabled>Success</h-button>
+    <h-button type="info" disabled>Info</h-button>
+    <h-button type="warning" disabled>Warning</h-button>
+    <h-button type="danger" disabled>Danger</h-button>
+    <br>
+    <h-button disabled>Default</h-button>
+    <h-button type="primary" disabled plain>Primary</h-button>
+    <h-button type="success" disabled plain>Success</h-button>
+    <h-button type="info" disabled plain>Info</h-button>
+    <h-button type="warning" disabled plain>Warning</h-button>
+    <h-button type="danger" disabled plain>Danger</h-button>
+  </div>
 </div>
+
 
 ::: details 显示代码
 
 ```html
 <template>
   <div>
-    <h-button disabled>禁用按钮</h-button>
-    <h-button type="primary" disabled>主要按钮</h-button>
-    <h-button type="success" disabled>成功按钮</h-button>
-    <h-button type="info" disabled>信息按钮</h-button>
-    <h-button type="warning" disabled>警告按钮</h-button>
-    <h-button type="danger" disabled>危险按钮</h-button>
-    <br />
-    <br />
-    <h-button disabled>禁用按钮</h-button>
-    <h-button type="primary" disabled plain>主要按钮</h-button>
-    <h-button type="success" disabled plain>成功按钮</h-button>
-    <h-button type="info" disabled plain>信息按钮</h-button>
-    <h-button type="warning" disabled plain>警告按钮</h-button>
-    <h-button type="danger" disabled plain>危险按钮</h-button>
+    <h-button disabled>Default</h-button>
+    <h-button type="primary" disabled>Primary</h-button>
+    <h-button type="success" disabled>Success</h-button>
+    <h-button type="info" disabled>Info</h-button>
+    <h-button type="warning" disabled>Warning</h-button>
+    <h-button type="danger" disabled>Danger</h-button>
+
+    <h-button disabled>Default</h-button>
+    <h-button type="primary" disabled plain>Primary</h-button>
+    <h-button type="success" disabled plain>Success</h-button>
+    <h-button type="info" disabled plain>Info</h-button>
+    <h-button type="warning" disabled plain>Warning</h-button>
+    <h-button type="danger" disabled plain>Danger</h-button>
   </div>
 </template>
 ```
@@ -114,16 +130,14 @@
 :::
 
 ## 调整尺寸
-
-使用`size`控制按钮大小
-
+按钮根据`size`来变换尺寸，提供了 `medium` `small` `mini`三种
 <div class="example">
-    <div>
-        <h-button>默认按钮</h-button>
-        <h-button size="medium">中等按钮</h-button>
-        <h-button size="small">小型按钮</h-button>
-        <h-button size="mini">超小按钮</h-button>
-    </div>
+  <div>
+    <h-button>Default</h-button>
+    <h-button size="medium">Medium</h-button>
+    <h-button size="small">Small</h-button>
+    <h-button size="mini">mini</h-button>
+  </div>
 </div>
 
 ::: details 显示代码
@@ -131,24 +145,24 @@
 ```html
 <template>
   <div>
-    <h-button>默认按钮</h-button>
-    <h-button size="medium">中等按钮</h-button>
-    <h-button size="small">小型按钮</h-button>
-    <h-button size="mini">超小按钮</h-button>
+    <h-button>Default</h-button>
+    <h-button size="medium">Medium</h-button>
+    <h-button size="small">Small</h-button>
+    <h-button size="mini">mini</h-button>
   </div>
 </template>
 ```
 
-:::
+::: 
 
 ## 图标按钮
 
 <div class="example">
-    <div>
-        <h-button icon="edit" type="primary"></h-button>
-        <h-button icon="edit" icon-position="right" type="success">编辑</h-button>
-        <h-button icon="edit" icon-position="left">编辑</h-button>
-    </div>
+  <div>
+    <h-button icon="edit" type="primary"></h-button>
+    <h-button icon="edit" icon-position="right" type="success">编辑</h-button>
+    <h-button icon="edit" icon-position="left">编辑</h-button>
+  </div>
 </div>
 
 ::: details 显示代码
