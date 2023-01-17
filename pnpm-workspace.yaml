@@ -3,3 +3,4 @@ packages:
   - "examples"
   - "site"
   - "!packages/components/transitpkg"
+  - "!packages/components/hview-ui"

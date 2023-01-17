@@ -1,5 +1,5 @@
 <template>
-  <button class="h-button h-button--primary h-button-text is-disabled">测试按钮{{ val }}</button>
+  <button class="h-button h-button--primary h-button-text is-disabled">测试按钮aaa{{ val }}</button>
 </template>
 
 <script lang="ts" setup>
