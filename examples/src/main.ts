@@ -3,6 +3,7 @@ import App from "./App.vue";
 const app = createApp(App);
 
 import hview from "hview";
+
 app.use(hview);
 
 // import { Button } from "hview";
