@@ -1,0 +1,6 @@
+{
+  "name": "@hview/constants",
+  "private": true,
+  "license": "MIT",
+  "main": "index.ts"
+}

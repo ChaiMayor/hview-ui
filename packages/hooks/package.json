@@ -1,0 +1,6 @@
+{
+  "name": "@hview/hooks",
+  "private": true,
+  "license": "MIT",
+  "main": "index.ts"
+}
