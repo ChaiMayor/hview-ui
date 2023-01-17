@@ -1,5 +1,5 @@
 {
-  "name": "@hview/theme",
+  "name": "@hview-plus/theme",
   "private": true,
   "license": "MIT",
   "main": "index.ts"

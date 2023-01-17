@@ -2,10 +2,10 @@ import { createApp } from "vue";
 import App from "./App.vue";
 const app = createApp(App);
 
-import hview from "hview";
-app.use(hview);
+import hviewPlus from "hview-plus";
+app.use(hviewPlus);
 
-// import { Button } from "hview";
+// import { Button } from "hview-plus";
 // app.use(Button);
 
 // import Button from "hview/es/button";
