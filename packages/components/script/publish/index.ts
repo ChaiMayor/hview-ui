@@ -2,7 +2,7 @@ import { componentPath, pkgPath } from "../utils/paths";
 import run from "../utils/run";
 import { src, dest } from "gulp";
 //复制
-const copypackage = async () => {
+export const copypackage = async () => {
   return src(`${pkgPath}/transitpkg/**`).pipe(dest(`${componentPath}/hview-ui/`));
 };
 
