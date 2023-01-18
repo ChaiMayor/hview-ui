@@ -22,7 +22,6 @@
 
 设置 `plain` 属性可以设置镂空按钮,设置 `round` 属性可以设置圆角按钮
 
-
 <div class="example">
   <div>
     <h-button>Default</h-button>
@@ -82,6 +81,7 @@
 :::
 
 ## 禁用状态
+
 你可以使用 `disabled` 属性来定义按钮是否被禁用。
 
 使用 `disabled` 属性来控制按钮是否为禁用状态。 该属性接受一个`Boolean` 类型的值。
@@ -103,7 +103,6 @@
     <h-button type="danger" disabled plain>Danger</h-button>
   </div>
 </div>
-
 
 ::: details 显示代码
 
@@ -130,7 +129,9 @@
 :::
 
 ## 调整尺寸
+
 按钮根据`size`来变换尺寸，提供了 `medium` `small` `mini`三种
+
 <div class="example">
   <div>
     <h-button>Default</h-button>
@@ -153,7 +154,7 @@
 </template>
 ```
 
-::: 
+:::
 
 ## 图标按钮
 
