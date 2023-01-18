@@ -1,11 +1,11 @@
 <template>
-  <div class="h-form-input">
+  <div class="h-from-input">
     <template v-if="type !== 'textarea'">
       <input class="h-input" :type="type" :value="text" @input="handerInput" />
     </template>
     <template v-else>
       <textarea class="h-textarea" v-bind="$attrs" :value="text" :maxlength="maxlength" @input="handerInput"></textarea>
-      <span>{{ textLength }} / {{ maxlength }}</span>
+      <span class="h-textarea-maxlength">{{ textLength }}/{{ maxlength }}</span>
     </template>
   </div>
 </template>
@@ -30,7 +30,9 @@ const handerInput = (e: any) => {
   emit("update:modelValue", text.value);
 };
 
-const textLength = computed(() => text.value.length);
+const textLength = computed(() => {
+  return text.value === undefined ? 0 : text.value.length;
+});
 </script>
 
 <script lang="ts">

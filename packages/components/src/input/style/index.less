@@ -1,6 +1,27 @@
 .h-from-input {
   position: relative;
-  display: inline-block;
+
+  .h-textarea {
+    padding-bottom: 2.3em;
+  }
+
+  .h-textarea-maxlength {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 13px;
+    color: var(--color-default);
+  }
+
+  &.h-input-block {
+    display: block;
+    width: inherit;
+
+    .h-input {
+      display: block;
+      width: inherit;
+    }
+  }
 }
 
 .h-input,
