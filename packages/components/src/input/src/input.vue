@@ -1,10 +1,31 @@
 <template>
-  <div class="h-from-input">
+  <div 
+    class="h-from-input" 
+    :class="{
+      'h-input-icon-before': iconBefore && iconBefore !== '',
+      'h-input-icon-after': (iconAfter && iconAfter !== '') || clearable,
+      'h-input-block': block,
+    }"
+  >
     <template v-if="type !== 'textarea'">
-      <input class="h-input" :type="type" :value="text" @input="handerInput" />
+      <input 
+        class="h-input" 
+        v-bind="$attrs" 
+        :type="type" 
+        :value="text" 
+        @input="handerInput" 
+      />
+      <i class="h-after" :class="iconAfter" v-if="iconAfter && iconAfter !== ''"></i>
+      <i class="h-before" :class="iconBefore" v-if="iconBefore && iconBefore !== ''"></i>
     </template>
     <template v-else>
-      <textarea class="h-textarea" v-bind="$attrs" :value="text" :maxlength="maxlength" @input="handerInput"></textarea>
+      <textarea 
+        class="h-textarea" 
+        v-bind="$attrs" 
+        :value="text" 
+        :maxlength="maxlength" 
+        @input="handerInput">
+      </textarea>
       <span class="h-textarea-maxlength">{{ textLength }}/{{ maxlength }}</span>
     </template>
   </div>
