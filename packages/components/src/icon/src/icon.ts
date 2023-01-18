@@ -12,7 +12,7 @@ export const iconProps = {
   },
   // 图标右上角展示徽标
   badge: {
-    type: String,
+    type: String || Number,
   },
   // 图标颜色
   color: {
