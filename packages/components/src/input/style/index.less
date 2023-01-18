@@ -1,32 +1,35 @@
-@import "../../../common/index.less";
-
 .h-from-input {
   position: relative;
   display: inline-block;
 }
 
-.h-input {
-  padding: 7px 10px;
-  border: 1px solid #colors[-line-color];
-  border-radius: 4px;
-  font-size: 12px;
+.h-input,
+.h-textarea {
+  padding: 5px 10px;
+  border: 1px solid var(--color-default);
+  border-radius: 5px;
+  font-size: 13px;
   transition-property: border-color, box-shadow;
   transition-duration: 0.25s;
   transition-timing-function: ease-in-out;
-  color: #ffffff;
-  background-color: transparent;
 
   &:focus,
   &.is-focus {
-    border-color: #colors[primary];
-    box-shadow: 0 0 0 2px rgb(45, 123, 244, 0.3);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(45, 148, 244, 0.3);
+    outline: none;
+  }
+
+  &.is-blur {
+    border-color: var(--color-default);
+    box-shadow: none;
+
+    &::placeholder {
+      color: var(--color-default);
+    }
   }
 
   &:hover {
-    border-color: #colors[primary];
-  }
-
-  &::placeholder {
-    color: #colors[-line-color];
+    border-color: var(--color-primary);
   }
 }
