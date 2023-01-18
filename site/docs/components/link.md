@@ -68,7 +68,7 @@
         margin-right:10px;
     }
    .primary{
-        color:#409eff !important
+        color:#5d80f4 !important
    }
    
 </style>
