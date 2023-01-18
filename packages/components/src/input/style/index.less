@@ -13,14 +13,33 @@
     color: var(--color-default);
   }
 
-  &.h-input-block {
-    display: block;
-    width: inherit;
-
+  &.h-input-icon-before {
     .h-input {
-      display: block;
-      width: inherit;
+      padding-left: 25px;
     }
+
+    .h-before {
+      left: 8px;
+    }
+  }
+
+  &.h-input-icon-after {
+    .h-input {
+      padding-right: 25px;
+    }
+
+    .h-after {
+      right: -32px;
+    }
+  }
+
+  .h-after,
+  .h-before,
+  .h-icon-h {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    transition: color 0.25s ease;
   }
 }
 
@@ -28,11 +47,20 @@
 .h-textarea {
   padding: 5px 10px;
   border: 1px solid var(--color-default);
-  border-radius: 5px;
+  border-radius: 3px;
   font-size: 13px;
   transition-property: border-color, box-shadow;
   transition-duration: 0.25s;
   transition-timing-function: ease-in-out;
+
+  &:disabled {
+    cursor: no-drop;
+    background-color: #f7f7fa;
+
+    &:hover {
+      border-color: var(--color-default);
+    }
+  }
 
   &:focus,
   &.is-focus {
@@ -46,11 +74,15 @@
     box-shadow: none;
 
     &::placeholder {
-      color: var(--color-default);
+      color: #abaeb5;
     }
   }
 
   &:hover {
     border-color: var(--color-primary);
+  }
+
+  &::placeholder {
+    color: #abaeb5;
   }
 }
