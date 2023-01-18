@@ -2,6 +2,7 @@ import { ExtractPropTypes } from "vue";
 
 export const InputProps = {
   type: String,
+  maxlength: Number,
   modelValue: [String, Number],
 };
 
