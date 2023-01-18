@@ -20,6 +20,6 @@
   ],
   "author": "芜湖起飞队",
   "license": "MIT",
-  "description": "",
+  "description": "基于Vue3的UI组件库，搭配了完善了文档库供其参考",
   "typings": "lib/index.d.ts"
 }
