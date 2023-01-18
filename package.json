@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "pnpm run --filter ./examples dev",
     "build": "gulp -f packages/components/script/build/gulpfile.ts",
-    "publish": "pnpm run build & gulp -f packages/components/script/publish/gulpfile.ts",
-    "publish:hview": "pnpm run --filter ./packages/components/hview-ui release",
+    "publish": "cd ./packages/components/hview-ui & pnpm run release",
+    "publish:gulp": "pnpm run build & gulp -f packages/components/script/publish/gulpfile.ts",
     "docs:dev": "pnpm run --filter ./site docs:dev",
     "docs:build": "pnpm run --filter ./site docs:build"
   },
