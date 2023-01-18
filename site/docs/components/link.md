@@ -3,10 +3,13 @@
 ## 基础用法
 
 <div class="example">
-    <div>
-        <h-link type="primary"  class="primary">主要链接</h-link>
-    </div>
-
+  <div>
+    <h-link type="primary" class="primary">primary</h-link>
+    <h-link type="success" class="success">success</h-link>
+    <h-link type="warning" class="warning">warning</h-link>
+    <h-link type="danger" class="danger">danger</h-link>
+    <h-link type="info" class="info">info</h-link>
+  </div>
 </div>
 
 ::: details 显示代码
@@ -14,7 +17,11 @@
 ```html
 <template>
   <div>
-    <h-link type="primary">主要链接</h-link>
+    <h-link type="primary">primary</h-link>
+    <h-link type="success">success</h-link>
+    <h-link type="warning">warning</h-link>
+    <h-link type="danger">danger</h-link>
+    <h-link type="info">info</h-link>
   </div>
 </template>
 ```
@@ -24,10 +31,11 @@
 ## 禁用状态
 
 <div class="example">
-    <div>
-        <h-link type="primary" disabled>主要链接</h-link>
-    </div>
-
+  <h-link type="primary" disabled>primary</h-link>     
+  <h-link type="success" disabled>success</h-link>     
+  <h-link type="warning" disabled>warning</h-link>     
+  <h-link type="danger" disabled>danger</h-link>     
+  <h-link type="info" disabled>info</h-link>     
 </div>
 
 ::: details 显示代码
@@ -35,7 +43,11 @@
 ```html
 <template>
   <div>
-    <h-link type="primary" disabled>主要链接</h-link>
+    <h-link type="primary" disabled>primary</h-link>     
+    <h-link type="success" disabled>success</h-link>     
+    <h-link type="warning" disabled>warning</h-link>     
+    <h-link type="danger" disabled>danger</h-link>     
+    <h-link type="info" disabled>info</h-link> 
   </div>
 </template>
 ```
@@ -45,10 +57,13 @@
 ## 下划线
 
 <div class="example">
-    <div>
-        <h-link type="primary"  class="primary" underline>有下划线</h-link>
-        <h-link type="primary"  class="primary" >无下划线</h-link>
-    </div>
+  <div>  
+    <h-link type="primary" underline>primary</h-link>     
+    <h-link type="success" underline>success</h-link>     
+    <h-link type="warning" underline>warning</h-link>     
+    <h-link type="danger" underline>danger</h-link>     
+    <h-link type="info" underline>info</h-link>  
+  </div>
 </div>
 
 ::: details 显示代码
@@ -56,19 +71,37 @@
 ```html
 <template>
   <div>
-    <h-link type="primary" disabled>主要链接</h-link>
+    <h-link type="primary" underline>primary</h-link>     
+    <h-link type="success" underline>success</h-link>     
+    <h-link type="warning" underline>warning</h-link>     
+    <h-link type="danger" underline>danger</h-link>     
+    <h-link type="info" underline>info</h-link>  
   </div>
 </template>
 ```
 
 :::
-
 <style>
-   .example a {
-        margin-right:10px;
-    }
-   .primary{
-        color:#5d80f4 !important
-   }
-   
+.example a {
+  margin-right:10px;
+}
+
+.primary {
+  color: #409eff!important;
+}
+
+.success {
+  color: #67c23a!important;
+}
+
+.info {
+  color: #909399!important;
+}
+
+.danger {
+  color: #f56c6c!important;
+}
+.warning {
+  color: #e6a23c!important;
+}
 </style>
