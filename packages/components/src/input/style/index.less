@@ -15,4 +15,18 @@
   transition-timing-function: ease-in-out;
   color: #ffffff;
   background-color: transparent;
+
+  &:focus,
+  &.is-focus {
+    border-color: #colors[primary];
+    box-shadow: 0 0 0 2px rgb(45, 123, 244, 0.3);
+  }
+
+  &:hover {
+    border-color: #colors[primary];
+  }
+
+  &::placeholder {
+    color: #colors[-line-color];
+  }
 }
