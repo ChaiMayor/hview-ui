@@ -7,6 +7,7 @@
     "dev": "pnpm run --filter ./examples dev",
     "build": "gulp -f packages/components/script/build/gulpfile.ts",
     "publish": "gulp -f packages/components/script/build/gulpfile.ts & gulp -f packages/components/script/publish/gulpfile.ts",
+    "publish:hview": "gulp -f packages/components/script/build/gulpfile.ts & pnpm run --filter ./packages/components/kitty-ui release",
     "docs:dev": "pnpm run --filter ./site docs:dev",
     "docs:build": "pnpm run --filter ./site docs:build"
   },

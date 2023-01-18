@@ -7,6 +7,13 @@
     "es",
     "lib"
   ],
+  "scripts": {
+    "release": "release-it"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/ChaiMayor/hview-ui"
+  },
   "keywords": [
     "hview-ui",
     "vue3组件库"
