@@ -53,5 +53,6 @@ export const sidebar = {
         { text: "Rate 评分", link: "/components/rate" },
       ],
     },
+    { text: "Data 数据展示", link: "/components/", items: [{ text: "Card 卡片", link: "/components/card" }] },
   ],
 };
