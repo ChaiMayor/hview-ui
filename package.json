@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prepare": "husky install",
     "dev": "pnpm run --filter ./examples dev",
     "build": "gulp -f packages/components/script/build/gulpfile.ts",
     "publish": "cd ./packages/components/hview-ui & pnpm run release",
@@ -12,7 +13,8 @@
     "docs:build": "pnpm run --filter ./site docs:build",
     "lint-staged": "lint-staged --allow-empty",
     "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
-    "prepare": "husky install"
+    "test": "pnpm run --filter ./packages/components test",
+    "coverage": "pnpm run --filter ./packages/components coverage"
   },
   "keywords": [],
   "author": "",
