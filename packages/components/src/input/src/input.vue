@@ -4,7 +4,6 @@
     :class="{
       'h-input-icon-before': iconBefore && iconBefore !== '',
       'h-input-icon-after': (iconAfter && iconAfter !== '') || clearable,
-      'h-input-block': block,
     }"
   >
     <template v-if="type !== 'textarea'">
@@ -12,7 +11,8 @@
         class="h-input" 
         v-bind="$attrs" 
         :type="type" 
-        :value="text" 
+        :value="text"
+        :class="size"
         @input="handerInput" 
       />
       <i class="h-after" :class="iconAfter" v-if="iconAfter && iconAfter !== ''"></i>
@@ -40,6 +40,11 @@ const props = defineProps(InputProps);
 const emit = defineEmits(["update:modelValue"]);
 const { modelValue } = toRefs(props);
 const text = ref();
+const size = computed(() => {
+  return {
+    [`h-input-${props.size}`]: props.size,
+  }
+})
 
 watchEffect(() => {
   // text.value = modelValue!.value,

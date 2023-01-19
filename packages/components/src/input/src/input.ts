@@ -5,7 +5,7 @@ export const InputProps = {
   maxlength: Number,
   iconBefore: String,
   iconAfter: String,
-  block: Boolean,
+  size: String,
   clearable: Boolean,
   modelValue: [String, Number],
 };
