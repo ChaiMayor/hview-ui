@@ -1,10 +1,7 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import dynamicImport from 'vite-plugin-dynamic-import'
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import DefineOptions from "unplugin-vue-define-options/vite";
 
 export default defineConfig({
-  plugins:[
-    vue(),
-    dynamicImport(),
-  ]
-})
+  plugins: [vue(), DefineOptions()],
+});

@@ -1,30 +1,9 @@
-import { App } from 'vue'
-import Button from './button/button.vue'
-const components:{ [key:string]: {} } = {}  // 挂载组件
-const api:{ [key:string]: {} } = {}    // 挂载一些api组件，如message
+import { default as Button } from "./button";
+import { default as Link } from "./link";
+import { default as Icon } from "./icon";
+import { default as Card } from "./card";
+import { default as Input } from "./input";
+import { Container, Header, Aside, Main, Footer } from "./container";
 
-components[Button.name] = Button
-
-function install(app: App) {
-  Object.keys(components).forEach((key) => {
-    const component = components[key]
-    app.component('h' + component.name, component)
-  })
-  applyOptions(app)
-}
-
-function applyOptions(app: App) {
-  // 兼容vue2写法
-  Object.keys(api).forEach((key) => {
-    app.config.globalProperties[`$${key}`] = api[key]
-  })
-  app.config.globalProperties[`$modal`] = components['Modal']
-}
-
-
-const HViewPlus =  {
-  install,
-  ...components
-}
-
-export default HViewPlus
+export { Button, Link, Icon, Card, Input, Container, Header, Aside, Main, Footer };
+export default [Button, Link, Icon, Card, Input, Container, Header, Aside, Main, Footer];

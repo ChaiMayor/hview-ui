@@ -1,0 +1,166 @@
+@import "./dark.less";
+
+* {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, PingFang SC, Hiragino Sans GB, noto sans, Microsoft YaHei,
+    Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+:root {
+  --vp-c-green: #5d80f4;
+  --vp-c-brand-dark: #5d80f4;
+  --vp-c-bg-alt: #fff; // 侧边栏
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
+  --vp-c-green-lighter: #426bf5;
+  --vp-c-green-light: #426bf5;
+  --vp-button-brand-active-bg: #426bf5;
+  --vp-button-brand-hover-bg: #426bf5;
+}
+
+.sidebar-link-item.active {
+  background: rgba(82, 179, 94, 0.1);
+}
+
+.icon_content {
+  border-left: 1px solid #dcdcdcb3 !important;
+  border-top: 1px solid #dcdcdcb3 !important;
+  .icon_list {
+    border-right: 1px solid #dcdcdcb3 !important;
+    border-bottom: 1px solid #dcdcdcb3 !important;
+  }
+}
+
+.vp-doc tr {
+  border-top: 1px solid #dcdcdcb3 !important;
+}
+
+.example {
+  // border: 1px solid #f5f5f5;
+  border: 1px solid #dcdcdcb3 !important;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.h-button {
+  margin: 10px 5px !important;
+}
+
+details > summary:first-of-type {
+  font-size: 10px;
+  padding: 8px 0;
+  cursor: pointer;
+  color: #1989fa;
+}
+
+.vp-doc {
+  // 代码片段下拉菜单
+  details {
+    padding: 0px !important;
+    margin-top: -10px !important;
+    border-radius: 0 !important;
+    background: #fff !important;
+
+    summary {
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+      margin: 0 !important;
+
+      &:hover {
+        transition: 0.5s;
+        color: #2d5af1;
+      }
+    }
+
+    &::before {
+      content: "" !important;
+    }
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 0;
+
+    li {
+      margin-top: 0;
+    }
+  }
+
+  ul.f-list {
+    list-style: none;
+  }
+
+  // 表格
+  .vp-table__container {
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+
+    table {
+      width: 100%;
+      display: inline-table;
+    }
+
+    th,
+    tr:nth-child(2n) {
+      background-color: transparent;
+    }
+
+    td,
+    th {
+      text-align: center;
+      font-size: 15px;
+      border: none;
+    }
+  }
+
+  p.f-text {
+    line-height: 1;
+  }
+}
+
+// 顶部 logo
+.VPNavBarTitle.has-sidebar {
+  border: none;
+}
+
+// 左侧选项链接
+.VPSidebarGroup {
+  .VPLink.link.link {
+    margin: 0;
+    padding: 5px 18px;
+    transition: 0.4s;
+    padding-left: 14px !important;
+    border-radius: 6px;
+  }
+
+  .VPLink.link.link.active {
+    background: lighten(#2d5af1, 39%);
+    box-sizing: border-box;
+
+    .link-text {
+      font-weight: 600;
+    }
+  }
+}
+
+// 菜单栏
+.VPSidebar.open {
+  z-index: 99999;
+}
+
+// 滚动条
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+// 滚动滑块
+::-webkit-scrollbar-thumb {
+  background: #dddddd2a;
+  border-radius: 6px;
+}
+
+// 粘性卡片
+.f-sticky-card {
+  margin-top: 20px;
+}

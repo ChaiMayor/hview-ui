@@ -1,8 +1,21 @@
-@prefix:h;
+@prefix: h;
 
-:root {
-    --color-primary: #409eff;
-}
 #colors() {
-    primary: var(--color-primary);
+  primary: var(--color-primary);
+  success: var(--color-success);
+  info: var(--color-info);
+  danger: var(--color-danger);
+  warning: var(--color-warning);
+
+  -primary-hover: var(--color-hover-primary);
+  -success-hover: var(--color-hover-success);
+  -info-hover: var(--color-hover-info);
+  -danger-hover: var(--color-hover-danger);
+  -warning-hover: var(--color-hover-warning);
+
+  -primary-disabled: var(--color-disabled-primary);
+  -success-disabled: var(--color-disabled-success);
+  -info-disabled: var(--color-disabled-info);
+  -danger-disabled: var(--color-disabled-danger);
+  -warning-disabled: var(--color-disabled-warning);
 }

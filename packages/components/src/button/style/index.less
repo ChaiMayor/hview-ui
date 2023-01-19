@@ -1,4 +1,4 @@
-@import '../../../common/index.less';
+@import "../../../common/index.less";
 
 .@{prefix}-button {
   display: inline-block;
@@ -8,7 +8,6 @@
   background: #fff;
   border: 1px solid #dcdfe6;
   color: #606266;
-  -webkit-appearance: none;
   text-align: center;
   box-sizing: border-box;
   outline: none;
@@ -25,7 +24,7 @@
   }
 
   &:hover {
-    color: #409eff;
+    color: #5d80f4;
     border-color: #c6e2ff;
     background-color: #ecf5ff;
   }
@@ -42,7 +41,7 @@
 .@{prefix}-button--primary {
   color: #fff;
   background-color: #colors[primary];
-  border-color: #409eff;
+  border-color: #5d80f4;
 
   &:hover {
     background: #66b1ff;
@@ -52,14 +51,14 @@
 }
 
 .@{prefix}-button--primary.is-plain {
-  color: #409eff;
+  color: #5d80f4;
   background: #ecf5ff;
   border-color: #b3d8ff;
 
   &:hover {
     color: #fff;
-    background-color: #409eff;
-    border-color: #409eff;
+    background-color: #5d80f4;
+    border-color: #5d80f4;
   }
 }
 
@@ -84,7 +83,7 @@
 
 .@{prefix}-button--text {
   border-color: transparent;
-  color: #409eff;
+  color: #5d80f4;
   background: transparent;
   padding-left: 0;
   padding-right: 0;
@@ -98,7 +97,7 @@
 
 .@{prefix}-button--success {
   color: #fff;
-  background-color: #67c23a;
+  background-color: #colors[success];
   border-color: #67c23a;
 
   &:hover {
@@ -141,7 +140,7 @@
 
 .@{prefix}-button--info {
   color: #fff;
-  background-color: #909399;
+  background-color: #colors[info];
   border-color: #909399;
 
   &:hover {

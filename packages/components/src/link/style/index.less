@@ -1,0 +1,104 @@
+@import "../../../common/index.less";
+
+.h-link {
+  display: inline-flex;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.h-link--primary {
+  color: #colors[primary];
+}
+
+.h-link--primary:hover {
+  color: #colors[-primary-hover];
+}
+
+.h-link--primary.is-disabled {
+  color: #colors[-primary-disabled];
+}
+
+.h-link.is-disabled:hover {
+  cursor: not-allowed;
+}
+
+.h-link.is-underline:hover {
+  border-bottom: 1px solid #colors[primary];
+}
+
+// Success
+.h-link--success {
+  color: #colors[success];
+}
+
+.h-link--success:hover {
+  color: #colors[-success-hover];
+}
+
+.h-link--success.is-disabled {
+  color: #colors[-success-hover];
+}
+
+.h-link.is-underline:hover {
+  border-bottom: 1px solid #colors[success];
+}
+
+// info
+.h-link--info {
+  color: #colors[info];
+}
+
+.h-link--info:hover {
+  color: #colors[-info-hover];
+}
+
+.h-link--info.is-disabled {
+  color: #colors[-info-disabled];
+}
+
+.h-link.is-underline:hover {
+  border-bottom: 1px solid #colors[info];
+}
+
+// danger
+
+.h-link--danger {
+  color: #colors[danger];
+}
+
+.h-link--danger:hover {
+  color: #colors[-danger-hover];
+}
+
+.h-link--danger.is-disabled {
+  color: #colors[-danger-hover];
+}
+
+.h-link.is-underline:hover {
+  border-bottom: 1px solid #colors[danger];
+}
+
+// warning
+.h-link--warning {
+  color: #colors[warning];
+}
+
+.h-link--warning:hover {
+  color: #colors[-warning-hover];
+}
+
+.h-link.is-disabled:hover {
+  cursor: not-allowed;
+}
+
+.h-link--warning.is-disabled {
+  color: #colors[-warning-disabled];
+}
+
+.h-link.is-underline:hover {
+  border-bottom: 1px solid #colors[warning];
+}

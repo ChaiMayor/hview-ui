@@ -1,0 +1,11 @@
+{
+  "name": "@hview-plus/locale",
+  "version": "1.0.0",
+  "description": "HviewUI locale",
+  "license": "MIT",
+  "main": "index.ts",
+  "module": "index.ts",
+  "unpkg": "index.js",
+  "jsdelivr": "index.js",
+  "types": "index.d.ts"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "docs",
+  "private": true,
+  "scripts": {
+    "docs:dev": "cross-env NODE_ENV=development vitepress dev docs",
+    "docs:build": "cross-env NODE_ENV=production vitepress build docs"
+  },
+  "dependencies": {
+    "hview-plus": "workspace:1.0.0",
+    "unplugin-vue-setup-extend-plus": "^0.3.2",
+    "vitepress": "1.0.0-alpha.36"
+  },
+  "devDependencies": {
+    "highlight.js": "^11.6.0",
+    "markdown-it": "^13.0.1",
+    "markdown-it-container": "^3.0.0",
+    "vite-svg-loader": "^3.6.0"
+  }
+}

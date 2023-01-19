@@ -1,8 +1,5 @@
-import { App } from 'vue'
-import Button from './button.vue'
+import button from "./src/button.vue";
+import { withInstall } from "@hview-plus/utils";
 
-(Button as any).install = function(app: App) {
-  app.component(Button.name,Button)
-}
-
-export default Button
+const Button = withInstall(button);
+export default Button;

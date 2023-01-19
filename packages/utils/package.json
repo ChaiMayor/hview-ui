@@ -1,12 +1,15 @@
 {
-  "name": "@hview-ui/utils",
+  "name": "@hview-plus/utils",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.ts",
+  "main": "./index.ts",
+  "module": "./index.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "vite build"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "MIT"
 }
