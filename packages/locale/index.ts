@@ -34,7 +34,7 @@ import { App } from "vue";
 export default {
   install(app: App) {
     const i18n = createI18n({
-      locale: localStorage.getItem("lang") || "zh-cn",
+      locale: localStorage?.getItem("lang") || "zh-cn",
       messages: handleLang(),
     });
     app.use(i18n);

@@ -6,10 +6,10 @@
   "bracketSpacing": true,
   "endOfLine": "auto",
   "tabWidth": 2,
-  "semi": false,
+  "semi": true,
   "bracketSameLine": true,
   "htmlWhitespaceSensitivity": "strict",
-  "vueIndentScriptAndStyle": true,
+  "vueIndentScriptAndStyle": false,
   "requirePragma": false,
   "insertPragma": false
 }
