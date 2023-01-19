@@ -43,11 +43,11 @@
 ```html
 <template>
   <div>
-    <h-link type="primary" disabled>primary</h-link>     
-    <h-link type="success" disabled>success</h-link>     
-    <h-link type="warning" disabled>warning</h-link>     
-    <h-link type="danger" disabled>danger</h-link>     
-    <h-link type="info" disabled>info</h-link> 
+    <h-link type="primary" disabled>primary</h-link>
+    <h-link type="success" disabled>success</h-link>
+    <h-link type="warning" disabled>warning</h-link>
+    <h-link type="danger" disabled>danger</h-link>
+    <h-link type="info" disabled>info</h-link>
   </div>
 </template>
 ```
@@ -71,16 +71,17 @@
 ```html
 <template>
   <div>
-    <h-link type="primary" underline>primary</h-link>     
-    <h-link type="success" underline>success</h-link>     
-    <h-link type="warning" underline>warning</h-link>     
-    <h-link type="danger" underline>danger</h-link>     
-    <h-link type="info" underline>info</h-link>  
+    <h-link type="primary" underline>primary</h-link>
+    <h-link type="success" underline>success</h-link>
+    <h-link type="warning" underline>warning</h-link>
+    <h-link type="danger" underline>danger</h-link>
+    <h-link type="info" underline>info</h-link>
   </div>
 </template>
 ```
 
 :::
+
 <style>
 .example a {
   margin-right:10px;

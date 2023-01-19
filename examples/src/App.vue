@@ -1,32 +1,11 @@
 <template>
   <div class="a">
-    <h-container>
-      <!-- <h-header>Header</h-header> -->
-      <h-aside width="200px">Aside</h-aside>
-      <h-main>Main</h-main>
-      <!-- <h-footer>Footer</h-footer> -->
-    </h-container>
-    <!-- <h-container>
-      <h-header> header </h-header>
-      <h-aside width="300px">
-        aside 超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本
-      </h-aside>
-      <h-main>
-        mian 超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本
-        超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本
-        超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本
-        超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本
-        超长文本超长文本
-      </h-main>
-      <h-footer style="margin-top: 10px">footer</h-footer>
-    </h-container> -->
+    <h-avatar
+      shape="square"
+      size="large"
+      border="dot"
+      src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></h-avatar>
   </div>
 </template>
 <script lang="ts" setup></script>
-<style lang="less" scoped>
-.a {
-  width: 100%;
-  height: 500px;
-  background-color: rgb(172, 107, 26);
-}
-</style>
+<style lang="less" scoped></style>

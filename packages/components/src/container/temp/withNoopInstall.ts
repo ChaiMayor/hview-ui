@@ -1,3 +1,4 @@
+// eslint-disable-next-line vue/prefer-import-from-vue
 import { NOOP } from "@vue/shared";
 import type { App, Plugin } from "vue";
 export type SFCWithInstall<T> = T & Plugin;

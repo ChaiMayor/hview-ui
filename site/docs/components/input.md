@@ -59,10 +59,9 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 
 :::
 
-
 ## 一键清空
-使用`clearable`属性即可得到一个可一键清空的输入框
 
+使用`clearable`属性即可得到一个可一键清空的输入框
 
 <ClientOnly>
 <div class="example">
@@ -74,7 +73,7 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 
 ```html
 <template>
-  <h-input placeholder="请输入内容"  type="text" clearable></h-input>
+  <h-input placeholder="请输入内容" type="text" clearable></h-input>
 </template>
 <script lang="ts" setup>
   import { ref } from "vue";
@@ -86,7 +85,7 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 
 ## 密码框
 
-在type中使用`password`,即可变成密码框
+在 type 中使用`password`,即可变成密码框
 
 <ClientOnly>
 <div class="example">
@@ -110,7 +109,7 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 
 ## 带 Icon 的输入框
 
-可以通过 `iconAfter`  和 `iconBefore` 属性在 input 组件首部和尾部增加显示图标
+可以通过 `iconAfter` 和 `iconBefore` 属性在 input 组件首部和尾部增加显示图标
 
 <ClientOnly>
   <div class="example">
@@ -127,10 +126,8 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 
 ```html
 <template>
-  <h-input v-model="value" placeholder="请输入" type="text" 
-  iconBefore="h-search"></h-input>
-  <h-input v-model="value" placeholder="请输入" type="text" 
-  iconAfter="h-search"></h-input>
+  <h-input v-model="value" placeholder="请输入" type="text" iconBefore="h-search"></h-input>
+  <h-input v-model="value" placeholder="请输入" type="text" iconAfter="h-search"></h-input>
 </template>
 <script lang="ts" setup>
   import { ref } from "vue";
@@ -144,6 +141,7 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 
 用于输入多行文本信息，通过将 type 属性的值指定为 textarea。
 <ClientOnly>
+
   <div class="example">
     <h-input placeholder="请输入" type="textarea" rows="7" cols="40" :maxlength="40" />
   </div>
