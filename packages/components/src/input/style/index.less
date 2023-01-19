@@ -1,6 +1,6 @@
 .h-from-input {
   position: relative;
-
+  width: 180px;
   .h-textarea {
     padding-bottom: 2.3em;
   }
@@ -41,6 +41,31 @@
     position: absolute;
     transition: color 0.25s ease;
   }
+
+  .h-icon-h {
+    right: -34px;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-default);
+    border-radius: 50%;
+    transition: all 0.25s ease;
+    color: var(--color-default);
+  }
+
+  .h-icon-h::before {
+    content: "\00D7";
+    color: #acaeb3;
+    position: absolute;
+    top: -5px;
+  }
+}
+
+.h-input {
+  width: inherit;
 }
 
 .h-input,
@@ -80,6 +105,16 @@
 
   &:hover {
     border-color: var(--color-primary);
+  }
+
+  &.h-input-large {
+    padding: 12px 30px 12px 15px;
+    font-size: 14px;
+  }
+
+  &.h-input-small {
+    padding: 4px 6px;
+    font-size: 12px;
   }
 
   &::placeholder {
