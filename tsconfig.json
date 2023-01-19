@@ -4,7 +4,7 @@
     "jsx": "preserve",
     "strict": true,
     "target": "ES2015",
-    "module": "ESNext",
+    "module": "commonjs",
     "skipLibCheck": true,
     "esModuleInterop": true,
     "moduleResolution": "Node",
