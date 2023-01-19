@@ -1,0 +1,45 @@
+@import "../../../common/index.less";
+
+.@{prefix}-avatar {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+  color: var(--hv-color-white);
+  background: #c0c4cc;
+  width: 40px;
+  height: 40px;
+  font-size: var(--hv-font-size-base);
+  img {
+    display: block;
+    height: 100%;
+  }
+}
+
+.@{prefix}-avatar--circle {
+  border-radius: 50%;
+}
+
+.@{prefix}-avatar--square {
+  border-radius: var(--hv-border-radius-round);
+}
+
+.@{prefix}-avatar-size--large {
+  width: 56px;
+  height: 56px;
+}
+
+.@{prefix}-avatar-size--small {
+  width: 24px;
+  height: 24px;
+}
+
+.@{prefix}-avatar-border--solid {
+  border: var(--hv-border);
+}
+
+.@{prefix}-avatar-border--dot {
+  border: var(--hv-border-width) dashed var(--hv-border-color);
+}
