@@ -1,8 +1,14 @@
 <template>
   <div class="a">
     <h-container>
+      <!-- <h-header>Header</h-header> -->
+      <h-aside width="200px">Aside</h-aside>
+      <h-main>Main</h-main>
+      <!-- <h-footer>Footer</h-footer> -->
+    </h-container>
+    <!-- <h-container>
       <h-header> header </h-header>
-      <!-- <h-aside width="300px">
+      <h-aside width="300px">
         aside 超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本
       </h-aside>
       <h-main>
@@ -11,9 +17,9 @@
         超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本
         超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本 超长文本超长文本
         超长文本超长文本
-      </h-main> -->
+      </h-main>
       <h-footer style="margin-top: 10px">footer</h-footer>
-    </h-container>
+    </h-container> -->
   </div>
 </template>
 <script lang="ts" setup></script>
