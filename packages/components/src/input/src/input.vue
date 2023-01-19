@@ -1,5 +1,5 @@
 <template>
-  <div 
+  <div
     class="h-from-input" 
     :class="{
       'h-input-icon-before': iconBefore && iconBefore !== '',
@@ -8,8 +8,8 @@
   >
     <template v-if="type !== 'textarea'">
       <input 
-        class="h-input" 
-        v-bind="$attrs" 
+        class="h-input"
+        v-bind="$attrs"
         :type="type" 
         :value="text"
         :class="size"
@@ -17,6 +17,13 @@
       />
       <i class="h-after" :class="iconAfter" v-if="iconAfter && iconAfter !== ''"></i>
       <i class="h-before" :class="iconBefore" v-if="iconBefore && iconBefore !== ''"></i>
+      <transition name="fade">
+        <span
+          class="h-icon-h"
+          v-if="clearable && textLength > 0"
+          @click="handerInput"
+        ></span>
+      </transition>
     </template>
     <template v-else>
       <textarea 
