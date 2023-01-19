@@ -1,0 +1,8 @@
+dist
+hivew-ui
+node_modules
+coverage
+CHANGELOG.md
+pnpm-lock.yaml
+*.js
+*.css
