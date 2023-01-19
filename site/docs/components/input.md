@@ -35,6 +35,8 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 
 ## 禁用状态
 
+通过 `disabled` 属性指定是否禁用 input 组件
+
 <ClientOnly>
 <div class="example">
     <div>
@@ -57,7 +59,34 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 
 :::
 
+
+# 一键清空
+使用`clearable`属性即可得到一个可一键清空的输入框
+
+
+<ClientOnly>
+<div class="example">
+  <h-input placeholder="请输入内容" class="icon-right" type="text" clearable></h-input>
+</div>
+</ClientOnly>
+
+::: details 显示代码
+
+```html
+<template>
+  <h-input placeholder="请输入内容"  type="text" clearable></h-input>
+</template>
+<script lang="ts" setup>
+  import { ref } from "vue";
+  const input = ref("");
+</script>
+```
+
+:::
+
 ## 密码框
+
+在type中使用`password`,即可变成密码框
 
 <ClientOnly>
 <div class="example">
@@ -85,11 +114,11 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 
 <ClientOnly>
   <div class="example">
-    <h-input style="width: 200px" v-model="value" placeholder="请输入" type="text" 
+    <h-input v-model="value" placeholder="请输入" type="text" 
       iconBefore="iconfont icon-search"></h-input>
     <br />
     <br />
-    <h-input style="width: 200px" v-model="value" placeholder="请输入" type="text" 
+    <h-input v-model="value" placeholder="请输入" type="text" 
       iconAfter="iconfont icon-search"></h-input>
     </div>
 </ClientOnly>
@@ -98,9 +127,9 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 
 ```html
 <template>
-  <h-input style="width: 200px" v-model="value" placeholder="请输入" type="text" 
+  <h-input v-model="value" placeholder="请输入" type="text" 
   iconBefore="h-search"></h-input>
-  <h-input style="width: 200px" v-model="value" placeholder="请输入" type="text" 
+  <h-input v-model="value" placeholder="请输入" type="text" 
   iconAfter="h-search"></h-input>
 </template>
 <script lang="ts" setup>
@@ -163,3 +192,9 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 ```
 
 :::
+
+<style>
+.h-icon-h {
+  right: 6px!important;
+}
+</style>
