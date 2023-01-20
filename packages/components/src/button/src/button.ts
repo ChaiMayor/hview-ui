@@ -7,7 +7,7 @@ export const ButtonSize = ["large", "normal", "small", "mini"];
 /**
  * 定义button的参数
  */
-export const buttonProps = {
+export const ButtonProps = {
   type: {
     type: String,
     values: ButtonType,
@@ -21,4 +21,4 @@ export const buttonProps = {
   disabled: Boolean,
 };
 
-export type ButtonProps = ExtractPropTypes<typeof buttonProps>;
+export type ButtonProps = ExtractPropTypes<typeof ButtonProps>;
