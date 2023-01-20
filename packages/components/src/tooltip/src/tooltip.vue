@@ -22,7 +22,6 @@ export default defineComponent({
     content: [String, Number],
   },
   setup(props) {
-    // const props = defineProps(TooltipProps);
     const slots = useSlots();
     // 获取当前组件的实例
     const instance = getCurrentInstance();
