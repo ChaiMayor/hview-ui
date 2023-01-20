@@ -3,5 +3,6 @@ import { default as Link } from "./link";
 import { default as Icon } from "./icon";
 import { default as Card } from "./card";
 import { default as Input } from "./input";
-export { Button, Link, Icon, Card, Input };
-export default [Button, Link, Icon, Card, Input];
+import { default as Tooltip } from "./tooltip";
+export { Button, Link, Icon, Card, Input, Tooltip };
+export default [Button, Link, Icon, Card, Input, Tooltip];
