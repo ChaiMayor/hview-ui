@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h-button type="success"><h-icon name="edit"></h-icon></h-button>
+    <h-tooltip  content="这是文字提示" placement="right">
+      <h-button type="default" plain>right</h-button>
+    </h-tooltip>
   </div>
 </template>
 <script lang="ts" setup>
