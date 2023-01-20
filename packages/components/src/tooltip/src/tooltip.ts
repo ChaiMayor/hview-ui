@@ -1,6 +1,6 @@
 import { ExtractPropTypes } from "vue";
 
-export const TooltipType = ["left"];
+export const TooltipType = ["right"];
 
 export const TooltipProps = {
   placement: {

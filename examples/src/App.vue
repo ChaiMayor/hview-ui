@@ -1,7 +1,10 @@
 <template>
   <div>
-    <h-tooltip  content="这是文字提示" placement="right">
+    <h-tooltip content="这是文字提示" placement="right">
       <h-button type="default" plain>right</h-button>
+    </h-tooltip>
+    <h-tooltip content="这是文字提示" placement="right">
+      <h-button type="default" plain size="mini">right</h-button>
     </h-tooltip>
   </div>
 </template>
