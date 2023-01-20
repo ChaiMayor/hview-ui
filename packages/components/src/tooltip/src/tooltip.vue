@@ -1,6 +1,15 @@
 <script lang="ts">
+import { 
+  getCurrentInstance, 
+  defineComponent, 
+  useSlots, 
+  onMounted, 
+  toRefs, 
+  ref, 
+  watchEffect, 
+  nextTick 
+} from "vue";
 import "../style/index.less";
-import { getCurrentInstance, defineComponent, useSlots, onMounted, toRefs, ref, watchEffect, nextTick } from "vue";
 export default defineComponent({
   name: "HTooltip",
   props: {
@@ -8,10 +17,6 @@ export default defineComponent({
       type: String,
       default: 'top',
       validator: (value: string) => ["right"].includes(value),
-    },
-    modelValue: {
-      type: Boolean,
-      default: null,
     },
     width: String,
     content: [String, Number],
@@ -21,8 +26,8 @@ export default defineComponent({
     const slots = useSlots();
     // 获取当前组件的实例
     const instance = getCurrentInstance();
-    const { placement, content, width, modelValue } = toRefs(props);
-    const isShow = ref(modelValue.value);
+    const { placement, content, width } = toRefs(props);
+    const isShow = ref(false);
 
     // 获取插槽元素
     function getFirstElement() {
@@ -54,9 +59,7 @@ export default defineComponent({
 
     // 显示tooltip
     function show() {
-      console.log("showed");
       tip && tip.classList.add("h-tooltip-show");
-      console.log("show end");
     };
 
     function calcStyle(Rect: any, tip: any, key: string): {x: number, y: number} {
@@ -97,12 +100,8 @@ export default defineComponent({
         tip.innerHTML = `<span>${content?.value}</span>` || "";
         // 下个宏循环才能获取，加上nextTick
         nextTick(update);
-        if(toString.call(props.modelValue) !== "[object Null]") {
-          isShow.value = modelValue.value;
-        }
-        
+
         if (isShow.value) {
-          console.log("start show");
           show();
         } else {
           hide();
@@ -111,13 +110,10 @@ export default defineComponent({
 
     // 监听有无接触组件，接触了为true，离开为false
       el && el.addEventListener("mouseenter",() => {
-        console.log(modelValue.value);
-        // if (!modelValue?.value && !modelValue.value) return;
         isShow.value = true;
       });
 
       el && el.addEventListener("mouseleave",() => {
-        // if (modelValue?.value && modelValue.value) return;
         isShow.value = false;
       });
     })
