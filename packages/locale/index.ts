@@ -26,15 +26,15 @@ import { App } from "vue";
 
 // <p>{{ $t("colorpicker.confirm") }}</p>   模板代码
 // import { getCurrentInstance } from "vue";  更改使用i18n使用模式
-// const a = getCurrentInstance() as any;
+// const instance = getCurrentInstance() as any;
 // setTimeout(() => {
-//   a.ctx.$i18n.locale = "en";
+//   instance.ctx.$i18n.locale = "en";
 // }, 0);
 
 export default {
   install(app: App) {
     const i18n = createI18n({
-      locale: "zh-cn",
+      locale: localStorage?.getItem("lang") || "zh-cn",
       messages: handleLang(),
     });
     app.use(i18n);

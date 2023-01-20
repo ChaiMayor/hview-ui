@@ -5,8 +5,8 @@ import autoprefixer from "gulp-autoprefixer";
 import delpath from "../utils/delpath";
 import run from "../utils/run";
 //删除dist
-export const removeDist = () => {
-  return delpath(`${componentPath}/hview-ui`);
+export const removeDist = (floor: number) => {
+  return delpath(`${componentPath}/hview-ui`, floor);
 };
 
 //处理样式

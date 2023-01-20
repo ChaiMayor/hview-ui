@@ -6,7 +6,7 @@ import { mdPlugin } from "./config/plugins";
 
 export default defineConfig({
   title: "Hview UI",
-  base: process.env.NODE_ENV === "production" ? "/hviewui/" : "/",
+  base: process.env.NODE_ENV === "production" ? "/hview-ui/" : "/",
   head: [
     [
       "meta",

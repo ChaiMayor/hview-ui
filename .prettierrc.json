@@ -3,5 +3,13 @@
   "singleQuote": false,
   "trailingComma": "all",
   "arrowParens": "always",
-  "endOfLine": "auto"
+  "bracketSpacing": true,
+  "endOfLine": "auto",
+  "tabWidth": 2,
+  "semi": true,
+  "bracketSameLine": true,
+  "htmlWhitespaceSensitivity": "strict",
+  "vueIndentScriptAndStyle": false,
+  "requirePragma": false,
+  "insertPragma": false
 }

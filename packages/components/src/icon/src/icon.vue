@@ -7,9 +7,8 @@
   </div>
 </template>
 <script setup lang="ts">
-import { computed } from "vue";
-// 导入图标文件
-import "../../../asset/js/iconfont.js";
+import { computed, onMounted, defineComponent } from "vue";
+
 // 引入图标样式
 import "../style/index.less";
 // 导入类型
@@ -31,6 +30,17 @@ const badge = computed(() => {
 // 图标颜色
 const iconColor = computed(() => {
   return { color: props.color };
+});
+onMounted(() => {
+  import("../../../asset/js/iconfont.js" as any).then((module) => {
+    defineComponent({
+      setup() {
+        return {
+          badge,
+        };
+      },
+    });
+  });
 });
 </script>
 

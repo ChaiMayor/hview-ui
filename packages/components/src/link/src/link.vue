@@ -1,5 +1,5 @@
 <template>
-  <a v-bind="attrs" class="h-link" :class="styleClass">
+  <a class="h-link" v-bind="attrs" :class="styleClass">
     <slot />
   </a>
 </template>

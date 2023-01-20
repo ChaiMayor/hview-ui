@@ -4,16 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prepare": "husky install",
     "dev": "pnpm run --filter ./examples dev",
     "build": "gulp -f packages/components/script/build/gulpfile.ts",
-    "publish": "gulp -f packages/components/script/build/gulpfile.ts & gulp -f packages/components/script/publish/gulpfile.ts",
+    "publish": "cd ./packages/components/hview-ui & pnpm run release",
+    "publish:gulp": "pnpm run build & gulp -f packages/components/script/publish/gulpfile.ts",
     "docs:dev": "pnpm run --filter ./site docs:dev",
-    "docs:build": "pnpm run --filter ./site docs:build"
+    "docs:build": "pnpm run --filter ./site docs:build",
+    "lint-staged": "lint-staged --allow-empty",
+    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
+    "test": "pnpm run --filter ./packages/components test",
+    "coverage": "pnpm run --filter ./packages/components coverage"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
     "@release-it/conventional-changelog": "^5.1.1",
     "@rushstack/eslint-patch": "^1.2.0",
     "@types/gulp": "^4.0.10",
@@ -28,6 +36,7 @@
     "@vue/test-utils": "^2.2.7",
     "agent-base": "^6.0.2",
     "c8": "^7.12.0",
+    "commitlint": "^17.4.2",
     "cpy": "^9.0.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.32.0",
@@ -37,7 +46,9 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-less": "^5.0.0",
     "happy-dom": "^6.0.4",
+    "husky": "^8.0.0",
     "less": "^4.1.3",
+    "lint-staged": "^13.1.0",
     "prettier": "^2.8.3",
     "release-it": "15.5.0",
     "sucrase": "^3.29.0",
@@ -51,5 +62,11 @@
   },
   "dependencies": {
     "vue-i18n": "^9.2.2"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,.vue}": "pnpm run lint-staged:js",
+    "**/*.{js,jsx,tsx,ts,less,md,json,.vue}": [
+      "prettier --write"
+    ]
   }
 }

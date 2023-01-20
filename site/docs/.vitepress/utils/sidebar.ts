@@ -32,6 +32,7 @@ export const sidebar = {
         { text: "Icon 图标", link: "/components/icon" },
         { text: "Link 链接", link: "/components/link" },
         { text: "Layout 布局", link: "/components/layout" },
+        { text: "Container 布局容器", link: "/components/container" },
       ],
     },
     {
@@ -53,6 +54,13 @@ export const sidebar = {
         { text: "Rate 评分", link: "/components/rate" },
       ],
     },
-    { text: "Data 数据展示", link: "/components/", items: [{ text: "Card 卡片", link: "/components/card" }] },
+    {
+      text: "Data 数据展示",
+      link: "/components/",
+      items: [
+        { text: "Card 卡片", link: "/components/card" },
+        { text: "Avatar 头像", link: "/components/avatar" },
+      ],
+    },
   ],
 };

@@ -1,18 +1,25 @@
 {
   "name": "hview-plus",
-  "version": "1.0.5",
+  "version": "1.3.0",
   "main": "lib/index.js",
   "module": "es/index.mjs",
   "files": [
     "es",
     "lib"
   ],
+  "scripts": {
+    "release": "release-it --only-version"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/ChaiMayor/hview-ui"
+  },
   "keywords": [
     "hview-ui",
     "vue3组件库"
   ],
   "author": "芜湖起飞队",
   "license": "MIT",
-  "description": "",
+  "description": "基于Vue3的UI组件库，搭配了完善了文档库供其参考",
   "typings": "lib/index.d.ts"
 }

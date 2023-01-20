@@ -6,7 +6,8 @@
   "main": "./hview-ui/lib/index.js",
   "scripts": {
     "build": "vite build",
-    "test": "vitest"
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "files": [
     "hview-ui/es",
