@@ -5,25 +5,10 @@
 </template>
 <script setup lang="ts">
 import "../style/index.less";
-import { getCurrentInstance, defineComponent, useSlots, onMounted, toRefs, ref, watchEffect, nextTick } from "vue";
+import { getCurrentInstance, defineComponent, onMounted, toRefs, ref, watchEffect, nextTick } from "vue";
 import { TooltipProps } from "./tooltip";
 
 const props = defineProps(TooltipProps);
-const slots = useSlots();
-// 获取插槽元素
-function getFirstElement() {
-  const slotsDefault = slots.default &&  slots.default()
-  if (!Array.isArray(slotsDefault)) return null;
-  console.log(slotsDefault)
-  let element = null;
-  for (let index = 0; index < slotsDefault.length; index++) {
-    if (slotsDefault[index] && slotsDefault[index].type) {
-      element = slotsDefault[index];
-    }
-  }
-  return element;
-};
-
 // 获取当前组件的实例
 const instance = getCurrentInstance();
 const { placement, content, width, modelValue } = toRefs(props);
