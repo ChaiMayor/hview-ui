@@ -62,5 +62,10 @@ export const sidebar = {
         { text: "Avatar 头像", link: "/components/avatar" },
       ],
     },
+    {
+      text: "Feedback 反馈组件",
+      link: "/components/",
+      items: [{ text: "Tooltip 文字提示", link: "/components/tooltip" }],
+    },
   ],
 };
