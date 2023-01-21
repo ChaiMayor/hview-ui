@@ -24,7 +24,9 @@
     visibility: visible;
   }
 
-  &.h-tooltip-top {
+  &.h-tooltip-top,
+  &.h-tooltip-top-start,
+  &.h-tooltip-top-end {
     padding-bottom: 8px;
     &::after {
       content: "";
@@ -36,6 +38,12 @@
     }
   }
 
+  &.h-tooltip-top-start,
+  &.h-tooltip-bottom-start {
+    &::after {
+      left: 10px;
+    }
+  }
   &.h-tooltip-top,
   &.h-tooltip-bottom {
     &::after {
@@ -43,8 +51,31 @@
       transform: translateX(-50%);
     }
   }
+  &.h-tooltip-top-end,
+  &.h-tooltip-bottom-end {
+    &::after {
+      right: 10px;
+    }
+  }
 
-  &.h-tooltip-left {
+  &.h-tooltip-bottom-start,
+  &.h-tooltip-bottom,
+  &.h-tooltip-bottom-end {
+    padding-top: 8px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-bottom: 5px solid var(--color);
+    }
+  }
+
+  &.h-tooltip-left,
+  &.h-tooltip-left-start,
+  &.h-tooltip-left-end {
     padding-right: 8px;
     transform-origin: right center;
 
@@ -59,14 +90,28 @@
   }
 
   &.h-tooltip-left-start,
+  &.h-tooltip-right-start {
+    &::after {
+      top: 10px;
+    }
+  }
+  &.h-tooltip-left,
   &.h-tooltip-right {
     &::after {
       top: 50%;
       transform: translateY(-50%);
     }
   }
+  &.h-tooltip-left-end,
+  &.h-tooltip-right-end {
+    &::after {
+      bottom: 10px;
+    }
+  }
 
-  &.h-tooltip-right {
+  &.h-tooltip-right,
+  &.h-tooltip-right-start,
+  &.h-tooltip-right-end {
     padding-left: 8px;
 
     &::after {
@@ -86,7 +131,6 @@
       transform: translateY(0);
     }
   }
-
   &[class*="h-tooltip-left"] {
     transform: translateX(5px);
 
@@ -94,7 +138,6 @@
       transform: translateY(0);
     }
   }
-
   &[class*="h-tooltip-right"] {
     transform: translateX(-5px);
 
@@ -102,7 +145,6 @@
       transform: translateY(0);
     }
   }
-
   &[class*="h-tooltip-bottom"] {
     transform: translateY(-5px);
 
