@@ -1,37 +1,20 @@
 <template>
   <div
-    class="h-from-input" 
+    class="h-from-input"
     :class="{
       'h-input-icon-before': iconBefore && iconBefore !== '',
       'h-input-icon-after': (iconAfter && iconAfter !== '') || clearable,
-    }"
-  >
+    }">
     <template v-if="type !== 'textarea'">
-      <input 
-        class="h-input"
-        v-bind="$attrs"
-        :type="type" 
-        :value="text"
-        :class="size"
-        @input="handerInput" 
-      />
+      <input class="h-input" v-bind="$attrs" :type="type" :value="text" :class="size" @input="handerInput" />
       <i class="h-after" :class="iconAfter" v-if="iconAfter && iconAfter !== ''"></i>
       <i class="h-before" :class="iconBefore" v-if="iconBefore && iconBefore !== ''"></i>
       <transition name="fade">
-        <span
-          class="h-icon-h"
-          v-if="clearable && textLength > 0"
-          @click="handerInput"
-        ></span>
+        <span class="h-icon-h" v-if="clearable && textLength > 0" @click="handerInput"></span>
       </transition>
     </template>
     <template v-else>
-      <textarea 
-        class="h-textarea" 
-        v-bind="$attrs" 
-        :value="text" 
-        :maxlength="maxlength" 
-        @input="handerInput">
+      <textarea class="h-textarea" v-bind="$attrs" :value="text" :maxlength="maxlength" @input="handerInput">
       </textarea>
       <span class="h-textarea-maxlength">{{ textLength }}/{{ maxlength }}</span>
     </template>
@@ -50,8 +33,8 @@ const text = ref();
 const size = computed(() => {
   return {
     [`h-input-${props.size}`]: props.size,
-  }
-})
+  };
+});
 
 watchEffect(() => {
   // text.value = modelValue!.value,
