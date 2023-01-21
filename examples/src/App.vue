@@ -1,11 +1,10 @@
 <template>
   <div>
-    <h-tooltip content="这是文字提示" placement="right">
-      <h-button type="default" plain>right</h-button>
-    </h-tooltip>
-    <h-tooltip content="这是文字提示" placement="right">
-      <h-button type="default" plain size="mini">right</h-button>
-    </h-tooltip>
+    <div class="container">
+      <h-tooltip content="这是文字提示" placement="bottom">
+        <h-button type="default" plain>right</h-button>
+      </h-tooltip>
+    </div>
   </div>
 </template>
 <script lang="ts" setup>
@@ -13,3 +12,14 @@ import { ref } from "vue";
 import "./base.less";
 const value = ref();
 </script>
+<style scoped>
+.container {
+  position: relative;
+}
+
+.h-button {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+}
+</style>
