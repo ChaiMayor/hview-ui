@@ -1,15 +1,13 @@
 <template>
-  <div>
-    <button class="h-button" :class="styleClass">
-      <slot />
-    </button>
-  </div>
+  <button class="h-button" :class="styleClass">
+    <slot />
+  </button>
 </template>
 <script setup lang="ts">
 import "../style/index.less";
 import { computed, defineComponent } from "vue";
-import { buttonProps } from "./button";
-const props = defineProps(buttonProps);
+import { ButtonProps } from "./button";
+const props = defineProps(ButtonProps);
 const styleClass = computed(() => {
   return {
     [`h-button--${props.type}`]: props.type,

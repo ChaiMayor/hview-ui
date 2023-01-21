@@ -1,11 +1,23 @@
 <template>
-  <div class="a">
-    <h-avatar
-      shape="square"
-      size="large"
-      border="dot"
-      src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></h-avatar>
+  <div>
+    <div class="container">
+      <h-tooltip content="这是文字提示" placement="bottom">
+        <h-button type="default" plain>right</h-button>
+      </h-tooltip>
+    </div>
   </div>
 </template>
-<script lang="ts" setup></script>
-<style lang="less" scoped></style>
+<script lang="ts" setup>
+import "./base.less";
+</script>
+<style scoped>
+.container {
+  position: relative;
+}
+
+.h-button {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+}
+</style>
