@@ -1,59 +1,27 @@
 <template>
   <div>
-    <div class="container">
-      <div class="row center">
-        <h-tooltip class="box-item" content="top-start" placement="top-start">
-          <h-button type="default" plain>top-start</h-button>
-        </h-tooltip>
-        <h-tooltip class="box-item" content="top" placement="top">
-          <h-button type="default" plain>top</h-button>
-        </h-tooltip>
-        <h-tooltip class="box-item" content="top-end" placement="top-end">
-          <h-button type="default" plain>top-end</h-button>
-        </h-tooltip>
-      </div>
-      <div class="row">
-        <h-tooltip class="box-item" content="left-start" placement="left-start">
-          <h-button type="default" plain>left-start</h-button>
-        </h-tooltip>
-        <h-tooltip class="box-item" content="right-start" placement="right-start">
-          <h-button type="default" plain>right-start</h-button>
-        </h-tooltip>
-      </div>
-      <div class="row">
-        <h-tooltip class="box-item" content="left" placement="left">
-          <h-button type="default" plain>left</h-button>
-        </h-tooltip>
-        <h-tooltip class="box-item" content="right" placement="right">
-          <h-button type="default" plain>right</h-button>
-        </h-tooltip>
-      </div>
-      <div class="row">
-        <h-tooltip class="box-item" content="left-end" placement="left-end">
-          <h-button type="default" plain>left-end</h-button>
-        </h-tooltip>
-        <h-tooltip class="box-item" content="right-end" placement="right-end">
-          <h-button type="default" plain>right-end</h-button>
-        </h-tooltip>
-      </div>
-      <div class="row center">
-        <h-tooltip class="box-item" content="bottom-start" placement="bottom-start">
-          <h-button type="default" plain>bottom-start</h-button>
-        </h-tooltip>
-        <h-tooltip class="box-item" content="bottom" placement="bottom">
-          <h-button type="default" plain>bottom</h-button>
-        </h-tooltip>
-        <h-tooltip class="box-item" content="bottom-end" placement="bottom-end">
-          <h-button type="default" plain>bottom-end</h-button>
-        </h-tooltip>
-      </div>
-    </div>
+    <h-carousel height="300px" indicator-type="rect" trigger="click" indicator-position="outside">
+      <h-carousel-item>
+        <div class="item">123</div>
+      </h-carousel-item>
+      <h-carousel-item>
+        <div class="item">456</div>
+      </h-carousel-item>
+      <h-carousel-item>
+        <div class="item">789</div>
+      </h-carousel-item>
+    </h-carousel>
   </div>
 </template>
 <script lang="ts" setup>
 import "./base.less";
 </script>
 <style scoped>
+.item {
+  width: 100%;
+  height: 100%;
+  background-color: #bfa;
+}
 .container {
   position: absolute;
   top: 100px;
