@@ -14,6 +14,18 @@ export const MessageProps = {
     type: Number,
     default: 1500,
   },
+  center: {
+    type: Boolean,
+    default: false,
+  },
+  dangerouslyUseHTMLString: {
+    type: Boolean,
+    default: false,
+  },
+  showClose: {
+    type: Boolean,
+    default: false,
+  },
   onClose: {
     type: Function,
   },

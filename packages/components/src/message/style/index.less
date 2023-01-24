@@ -1,3 +1,5 @@
+@import "../../../common/icon.css";
+
 .h-message {
   min-width: 250px;
   box-sizing: border-box;
@@ -6,6 +8,7 @@
   position: fixed;
   left: 50%;
   top: 20px;
+  background-color: #f4f4f5;
   transform: translateX(-50%);
   transition: opacity 0.3s, transform 0.4s, top 0.4s;
   overflow: hidden;
@@ -32,8 +35,13 @@
   margin: 0;
 }
 
+.h-message--info {
+  background-color: #f4f4f5;
+  border-color: #e1f3d8;
+}
+
 .h-message--info .h-message__content {
-  color: #909399;
+  color: #9b9ea3;
 }
 
 .h-message--success {
@@ -64,6 +72,7 @@
 }
 
 .h-message__icon {
+  font-size: 16px;
   margin-right: 10px;
 }
 
@@ -84,29 +93,33 @@
   transform: translateY(-50%);
   cursor: pointer;
   color: #c0c4cc;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .h-message__closeBtn:focus {
   outline-width: 0;
 }
 
+.h-icon-close:before {
+  content: "\e6a7";
+}
+
 .h-message__closeBtn:hover {
   color: #909399;
 }
 
-.h-message .el-icon-success {
+.h-message .h-icon-success {
   color: #67c23a;
 }
 
-.h-message .el-icon-error {
+.h-message .h-icon-error {
   color: #f56c6c;
 }
 
-.h-message .el-icon-info {
+.h-message .h-icon-info {
   color: #909399;
 }
 
-.h-message .el-icon-warning {
+.h-message .h-icon-warning {
   color: #e6a23c;
 }
