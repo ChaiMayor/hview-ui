@@ -1,6 +1,6 @@
-:root {
-  --color-primary: #409eff;
-}
+@import '../../../common/index.css';
+@import '../../../common/index.less';
+
 .h-button {
   display: inline-block;
   line-height: 1;
@@ -9,7 +9,6 @@
   background: #fff;
   border: 1px solid #dcdfe6;
   color: #606266;
-  -webkit-appearance: none;
   text-align: center;
   box-sizing: border-box;
   outline: none;

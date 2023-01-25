@@ -1,13 +1,17 @@
 <template>
   <button class="h-button" :class="styleClass">
+    <span>
+      <i v-if="icon !== ''" :class="`h-icon-${icon}`"></i>
+    </span>
     <slot />
   </button>
 </template>
 <script setup lang="ts">
 import "../style/index.less";
-import { computed, defineComponent } from "vue";
+import { computed, defineComponent, toRefs } from "vue";
 import { ButtonProps } from "./button";
 const props = defineProps(ButtonProps);
+const { icon } = toRefs(props);
 const styleClass = computed(() => {
   return {
     [`h-button--${props.type}`]: props.type,
