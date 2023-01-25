@@ -8,8 +8,27 @@ import { default as Avatar } from "./avatar";
 import { default as Radio } from "./radio";
 import { default as Message } from "./message";
 import { Container, Header, Aside, Main, Footer } from "./container";
+import { default as Carousel } from "./carousel";
+import { default as CarouselItem } from "./carousel-item";
 
-export { Button, Link, Icon, Card, Input, Container, Header, Aside, Main, Footer, Avatar, Radio, Tooltip, Message };
+export {
+  Button,
+  Link,
+  Icon,
+  Card,
+  Input,
+  Container,
+  Header,
+  Aside,
+  Main,
+  Footer,
+  Avatar,
+  Radio,
+  Tooltip,
+  Carousel,
+  CarouselItem,
+  Message,
+};
 export default [
   Button,
   Link,
@@ -24,5 +43,7 @@ export default [
   Avatar,
   Radio,
   Tooltip,
+  Carousel,
+  CarouselItem,
   Message,
 ];
