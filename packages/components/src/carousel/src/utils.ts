@@ -23,20 +23,6 @@ export type RawSlots = Exclude<VNodeNormalizedChildren, Array<any>>;
 export type VNodeChildAtom = Exclude<VNodeChild, Array<any>>;
 export type FlattenVNodes = Array<VNodeChildAtom | RawSlots>;
 
-// function throttle(fun: Function, delay: number) {
-//   let timer: any = null;
-
-//   return function () {
-//     if (timer) {
-//       return;
-//     }
-//     timer = setTimeout(() => {
-//       fun.apply(this, arguments);
-//       timer = null;
-//     }, delay);
-//   };
-// }
-
 // 子节点扁平化
 export const flattedChildren = (children: FlattenVNodes | VNode | VNodeNormalizedChildren): FlattenVNodes => {
   const vNodes = isArray(children) ? children : [children];
@@ -117,19 +103,27 @@ export const useCarousel = (props: CarouselProps, emit: SetupContext<CarouselEmi
   const isVertical = computed(() => props.direction === "vertical");
 
   // methods
-  const throttledArrowClick =
-    // throttle(
-    (index: number) => {
+  const throttledArrowClick = (index: number) => {
+    let timer: any = null;
+    if (timer) {
+      return;
+    }
+    timer = setTimeout(() => {
       setActiveItem(index);
-    };
-  // , THROTTLE_TIME);
+      timer = null;
+    }, THROTTLE_TIME);
+  };
 
-  const throttledIndicatorHover =
-    // throttle(
-    (index: number) => {
+  const throttledIndicatorHover = (index: number) => {
+    let timer: any = null;
+    if (timer) {
+      return;
+    }
+    timer = setTimeout(() => {
       handleIndicatorHover(index);
-    };
-  // , THROTTLE_TIME);
+      timer = null;
+    }, THROTTLE_TIME);
+  };
 
   function pauseTimer() {
     if (timer.value) {
