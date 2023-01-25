@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Hviewicon"; /* Project id 3867051 */
+  src: url('//at.alicdn.com/t/c/font_3867051_ui2bl977map.woff2?t=1674568607632') format('woff2'),
+       url('//at.alicdn.com/t/c/font_3867051_ui2bl977map.woff?t=1674568607632') format('woff'),
+       url('//at.alicdn.com/t/c/font_3867051_ui2bl977map.ttf?t=1674568607632') format('truetype');
+}
+
+i {
+  font-family: "Hviewicon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.h-icon-close:before {
+  content: "\e6a7";
+}
+
+.h-icon-success:before {
+  content: "\e73c";
+}
+
+.h-icon-error:before {
+  content: "\e6c6";
+}
+
+.h-icon-warning:before {
+  content: "\e63f";
+}
+
+.h-icon-info:before {
+  content: "\e637";
+}
+
+.h-icon-search:before {
+  content: "\e741";
+}
