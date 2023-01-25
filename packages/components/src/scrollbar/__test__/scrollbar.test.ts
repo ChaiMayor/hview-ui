@@ -1,11 +1,12 @@
 import { describe, expect, it } from "vitest";
 
 import { mount } from "@vue/test-utils";
-import button from "../index";
+import Scrollbar from "../index";
+
 // The component to test
-describe("test Button", () => {
+describe("Scrollbar", () => {
   it("should render slot", () => {
-    const wrapper = mount(button, {
+    const wrapper = mount(Scrollbar, {
       slots: {
         default: "Hello world",
       },

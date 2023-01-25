@@ -9,3 +9,4 @@ cache
 site/**/dist
 package-lock.json
 pnpm-lock.yaml
+package-lock.json
