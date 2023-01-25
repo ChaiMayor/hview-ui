@@ -1,24 +1,15 @@
 <template>
   <div class="hview-icon">
-    <svg class="icon" :style="iconColor" aria-hidden="true">
-      <use :xlink:href="IconName"></use>
-    </svg>
+    <i :class="`h-icon-${props.name}`" :style="iconColor"></i>
     <div v-if="dot" class="hview-info" :class="styleDot">{{ badge }}</div>
   </div>
 </template>
 <script setup lang="ts">
 import { computed, onMounted, defineComponent } from "vue";
-
-// 引入图标样式
 import "../style/index.less";
-// 导入类型
 import { iconProps } from "./icon";
 const props = defineProps(iconProps);
 
-//获取传入的name，渲染对应的图标
-const IconName = computed(() => {
-  return `#icon-${props.name}`;
-});
 //展示图标右上方小红点
 const styleDot = computed(() => {
   return { [`hview-dot`]: props.dot && !props.badge };
