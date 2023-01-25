@@ -154,27 +154,29 @@ watch(
   },
 );
 // 监听slot内容变化
-const observer = new MutationObserver(callback);
-function callback() {
-  if (props.noresize) return;
-  countAllHeight();
-  setScrollTumb();
-}
-nextTick(() => {
-  observer.observe(scrollbar_view.value!, {
-    childList: true, // 监听子节点的变化(增加，删除)
-    characterData: true, // 监听节点的内容或文本变化
-  });
-});
+let observer: MutationObserver | null = null;
 // 设置滚动条thumb的top值
 onMounted(() => {
   countAllHeight();
   scrollbar_wrap.value?.addEventListener("scroll", setScrollTumb);
+  // 监听slot内容变化
+  observer = new MutationObserver(callback);
+  function callback() {
+    if (props.noresize) return;
+    countAllHeight();
+    setScrollTumb();
+  }
+  nextTick(() => {
+    observer!.observe(scrollbar_view.value!, {
+      childList: true, // 监听子节点的变化(增加，删除)
+      characterData: true, // 监听节点的内容或文本变化
+    });
+  });
 });
 // 当页面卸载时删除监听事件
 onUnmounted(() => {
   scrollbar_wrap.value?.removeEventListener("scroll", setScrollTumb);
-  observer.disconnect();
+  observer!.disconnect();
 });
 // 向外暴露方法
 defineExpose({

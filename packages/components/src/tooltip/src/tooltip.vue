@@ -13,7 +13,8 @@ const props = defineProps(TooltipProps);
 const instance = getCurrentInstance();
 const { placement, content, width, modelValue } = toRefs(props);
 const isShow = ref(modelValue.value);
-let tip:any = null,tid:string = "";
+let tip: any = null,
+  tid: string = "";
 
 // 隐藏tooltip
 function hide(tid: string) {
@@ -106,7 +107,7 @@ onMounted(() => {
   tip = document.createElement("div");
   tip.className = `h-tooltip h-tooltip-${placement!.value}`;
   width?.value && (tip.style.width = width.value);
-  tid = (tip.id = `h-tooltip-${instance!.uid}`);
+  tid = tip.id = `h-tooltip-${instance!.uid}`;
   // 监听isShow变化，监听有无接触组件
 
   watchEffect(() => {
@@ -127,9 +128,9 @@ onMounted(() => {
 
   // 退出页面后删除全部的结点
   onUnmounted(() => {
-    const el = document.getElementById(tid)
-    el && document.body.removeChild(tip)
-  })
+    const el = document.getElementById(tid);
+    el && document.body.removeChild(tip);
+  });
 
   // 监听有无接触组件，接触了为true，离开为false
   el &&

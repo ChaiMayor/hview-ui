@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Hviewicon"; /* Project id 3867051 */
-  src: url('//at.alicdn.com/t/c/font_3867051_ui2bl977map.woff2?t=1674568607632') format('woff2'),
-       url('//at.alicdn.com/t/c/font_3867051_ui2bl977map.woff?t=1674568607632') format('woff'),
-       url('//at.alicdn.com/t/c/font_3867051_ui2bl977map.ttf?t=1674568607632') format('truetype');
+  src: url('//at.alicdn.com/t/c/font_3867051_wahzh1cowsr.woff2?t=1674626425803') format('woff2'),
+       url('//at.alicdn.com/t/c/font_3867051_wahzh1cowsr.woff?t=1674626425803') format('woff'),
+       url('//at.alicdn.com/t/c/font_3867051_wahzh1cowsr.ttf?t=1674626425803') format('truetype');
 }
 
 i {
@@ -11,6 +11,59 @@ i {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+
+.h-icon-delete:before {
+  content: "\e67e";
+}
+
+.h-icon-share:before {
+  content: "\e68b";
+}
+
+.h-icon-edit:before {
+  content: "\ed4f";
+}
+
+.h-icon-calendar:before {
+  content: "\e74a";
+}
+
+.h-icon-loading:before {
+  content: "\e644";
+}
+
+.h-icon-user:before {
+  content: "\e7ae";
+}
+
+.h-icon-star:before {
+  content: "\e7df";
+}
+
+.h-icon-download:before {
+  content: "\e7ef";
+}
+
+.h-icon-view:before {
+  content: "\e69e";
+}
+
+.h-icon-typescript:before {
+  content: "\e6a3";
+}
+
+.h-icon-link:before {
+  content: "\e8c1";
+}
+
+.h-icon-question:before {
+  content: "\e6bd";
+}
+
+.h-icon-setting:before {
+  content: "\e67d";
 }
 
 .h-icon-close:before {
