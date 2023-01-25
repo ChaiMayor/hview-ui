@@ -20,7 +20,10 @@ const badge = computed(() => {
 });
 // 图标颜色
 const iconColor = computed(() => {
-  return { color: props.color };
+  return {
+    fontSize: "26px",
+    color: props.color,
+  };
 });
 onMounted(() => {
   import("../../../asset/js/iconfont.js" as any).then((module) => {
@@ -40,4 +43,3 @@ export default {
   name: "HIcon",
 };
 </script>
-<style lang="less" scoped></style>
