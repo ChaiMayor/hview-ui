@@ -7,7 +7,7 @@ module.exports = {
     // 将其设置为0取消报错
     "vue/multi-word-component-names": 0,
     // 解决折行报错
-    // "vue/html-closing-bracket-newline": ["error", "never"],
+    "vue/html-closing-bracket-newline": ["error", "never"],
   },
   extends: [
     "plugin:vue/vue3-essential",
