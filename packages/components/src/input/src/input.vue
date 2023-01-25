@@ -7,8 +7,8 @@
     }">
     <template v-if="type !== 'textarea'">
       <input class="h-input" v-bind="$attrs" :type="type" :value="text" :class="size" @input="handerInput" />
-      <i class="h-after" :class="iconAfter" v-if="iconAfter && iconAfter !== ''"></i>
-      <i class="h-before" :class="iconBefore" v-if="iconBefore && iconBefore !== ''"></i>
+      <i class="h-after" :class="`h-icon-${iconAfter}`" v-if="iconAfter && iconAfter !== ''"></i>
+      <i class="h-before" :class="`h-icon-${iconBefore}`" v-if="iconBefore && iconBefore !== ''"></i>
       <transition name="fade">
         <span class="h-icon-h" v-if="clearable && textLength > 0" @click="handerInput"></span>
       </transition>
