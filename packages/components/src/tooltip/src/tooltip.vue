@@ -7,6 +7,7 @@
 import "../style/index.less";
 import { getCurrentInstance, defineComponent, onUnmounted, onMounted, toRefs, ref, watchEffect, nextTick } from "vue";
 import { TooltipProps } from "./tooltip";
+import { compileScript } from "vue/compiler-sfc";
 
 const props = defineProps(TooltipProps);
 // 获取当前组件的实例
@@ -105,16 +106,26 @@ onMounted(() => {
   const el = instance?.proxy?.$el;
   // 构建以tooltip的DOM元素，并用uid记录
   tip = document.createElement("div");
+  tip &&
+    tip.addEventListener("mouseenter", () => {
+      isShow.value = true;
+    });
+  tip &&
+    tip.addEventListener("mouseleave", () => {
+      isShow.value = false;
+    });
   tip.className = `h-tooltip h-tooltip-${placement!.value}`;
   width?.value && (tip.style.width = width.value);
   tid = tip.id = `h-tooltip-${instance!.uid}`;
+
   // 监听isShow变化，监听有无接触组件
 
   watchEffect(() => {
     tip.innerHTML = `<span>${content?.value}</span>` || "";
     // 下个宏循环才能获取，加上nextTick
     nextTick(update(tip, tid));
-
+    tip.className = `h-tooltip h-tooltip-${placement!.value}`;
+    width?.value && (tip.style.width = width.value);
     if (toString.call(props.modelValue) !== "[object Null]") {
       isShow.value = modelValue.value;
     }
@@ -140,7 +151,9 @@ onMounted(() => {
 
   el &&
     el.addEventListener("mouseleave", () => {
-      isShow.value = false;
+      setTimeout(() => {
+        isShow.value = false;
+      }, 500);
     });
 });
 </script>
