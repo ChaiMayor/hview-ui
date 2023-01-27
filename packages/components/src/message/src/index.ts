@@ -8,8 +8,8 @@ export default function message(options: any) {
     };
   }
 
-  let userClose = options.onClose;
-  let opts = {
+  const userClose = options.onClose;
+  const opts = {
     ...options,
     onClose: () => {
       userClose && userClose();
