@@ -1,0 +1,113 @@
+@import "../../../common/index.less";
+
+.@{prefix}-tag {
+  background-color: var(--hv-color-primary);
+  border-color: var(--hv-border-color);
+  color: #fff;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 24px;
+  padding: 0 6px;
+
+  font-size: var(--hv-font-size-base);
+  line-height: 1;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  &-close {
+    margin-left: 4px;
+    i {
+      font-size: 18px !important;
+    }
+
+    cursor: pointer;
+    &:hover {
+      filter: brightness(90%);
+    }
+  }
+  &-round {
+    border-radius: 10px;
+  }
+}
+
+.@{prefix}-tag--small {
+  height: 20px;
+  padding: 0 4px;
+  font-size: var(--hv-font-size-small);
+  &-close {
+    margin-left: 1px;
+  }
+}
+.@{prefix}-tag--large {
+  height: 32px;
+  padding: 0px 8px;
+  font-size: var(--hv-font-size-large);
+  &-close {
+    margin-left: 6px;
+  }
+}
+
+.@{prefix}-tag--primary {
+  color: #fff;
+  background-color: var(--hv-color-primary);
+  border-color: var(--hv-color-primary);
+}
+
+.@{prefix}-tag--primary.is-plain {
+  color: var(--hv-color-primary);
+  background: #ecf5ff;
+  border-color: #b3d8ff;
+}
+
+.@{prefix}-tag--success {
+  color: #fff;
+  background-color: #colors[success];
+  border-color: #67c23a;
+}
+
+.@{prefix}-tag--success.is-plain {
+  color: #67c23a;
+  background: #f0f9eb;
+  border-color: #c2e7b0;
+}
+
+.@{prefix}-tag--info {
+  color: #fff;
+  background-color: #colors[info];
+  border-color: #909399;
+}
+
+.@{prefix}-tag--info.is-plain {
+  color: #909399;
+  background-color: #f4f4f5;
+  border-color: #d3d4d6;
+}
+
+.@{prefix}-tag--warning {
+  color: #fff;
+  background-color: #e6a23c;
+  border-color: #e6a23c;
+}
+
+.@{prefix}-tag--warning.is-plain {
+  color: #e6a23c;
+  background: #fdf6ec;
+  border-color: #faecd8;
+}
+
+.@{prefix}-tag--danger {
+  color: #fff;
+  background-color: #f56c6c;
+  border-color: #f56c6c;
+}
+
+.@{prefix}-tag--danger.is-plain {
+  color: #f56c6c;
+  background: #fef0f0;
+  border-color: #fbc4c4;
+}

@@ -1,20 +1,44 @@
 <template>
-  <div>
-    <h-input placeholder="请输入" type="text" iconBefore="success"></h-input>
-    <h-input placeholder="请输入" type="text" iconAfter="info"></h-input>
-    <h-button type="primary" @click="showMessage">test</h-button>
+  <div class="container">
+    <div class="con">
+      <h-tag closable theme="dark" size="small" round @click="clickT">primary</h-tag>
+      <h-tag closable theme="dark" size="small" type="success" round @close="closeT">primary</h-tag>
+      <h-tag closable theme="dark" size="small" type="info" round>primary</h-tag>
+      <h-tag closable theme="dark" size="small" type="warning" round>primary</h-tag>
+      <h-tag closable theme="dark" size="small" type="danger" round>primary</h-tag>
+    </div>
+    <div class="con">
+      <h-tag closable theme="dark">primary</h-tag>
+      <h-tag closable theme="dark" type="success">primary</h-tag>
+      <h-tag closable theme="dark" type="info">primary</h-tag>
+      <h-tag closable theme="dark" type="warning">primary</h-tag>
+      <h-tag closable theme="dark" type="danger">primary</h-tag>
+    </div>
+    <div class="con">
+      <h-tag closable theme="plain" size="large">primary</h-tag>
+      <h-tag closable theme="plain" size="large" type="success">primary</h-tag>
+      <h-tag closable theme="plain" size="large" type="info">primary</h-tag>
+      <h-tag closable theme="plain" size="large" type="warning">primary</h-tag>
+      <h-tag closable theme="plain" size="large" type="danger">primary</h-tag>
+    </div>
   </div>
 </template>
 <script lang="ts" setup>
-import { getCurrentInstance } from "vue";
-const instance = getCurrentInstance();
-const { $message } = instance!.appContext.config.globalProperties;
-const showMessage = () => {
-  $message({
-    message: "Message!!!",
-    type: "info",
-    duration: 3000,
-    dangerouslyUseHTMLString: true,
-  });
+const clickT = () => {
+  console.log("点击");
+};
+const closeT = () => {
+  console.log("关闭");
 };
 </script>
+
+<style lang="less" scoped>
+.container {
+  display: flex;
+  flex-direction: column;
+  .con {
+    margin: 2px auto;
+    display: block;
+  }
+}
+</style>
