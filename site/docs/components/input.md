@@ -114,11 +114,11 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 <ClientOnly>
   <div class="example">
     <h-input v-model="value" placeholder="请输入" type="text" 
-      iconBefore="iconfont icon-search"></h-input>
+      iconBefore="user"></h-input>
     <br />
     <br />
     <h-input v-model="value" placeholder="请输入" type="text" 
-      iconAfter="iconfont icon-search"></h-input>
+      iconAfter="calendar"></h-input>
     </div>
 </ClientOnly>
 
@@ -126,8 +126,12 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 
 ```html
 <template>
-  <h-input v-model="value" placeholder="请输入" type="text" iconBefore="h-search"></h-input>
-  <h-input v-model="value" placeholder="请输入" type="text" iconAfter="h-search"></h-input>
+  <div class="example">
+    <h-input v-model="value" placeholder="请输入" type="text" 
+      iconBefore="user"></h-input>
+    <h-input v-model="value" placeholder="请输入" type="text" 
+      iconAfter="calendar"></h-input>
+    </div>
 </template>
 <script lang="ts" setup>
   import { ref } from "vue";
@@ -192,7 +196,7 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 :::
 
 <style>
-.h-icon-h {
+.h-icon-h, .h-after{
   right: 6px!important;
 }
 </style>
