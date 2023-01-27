@@ -33,6 +33,7 @@ export const sidebar = {
         { text: "Link 链接", link: "/components/link" },
         { text: "Layout 布局", link: "/components/layout" },
         { text: "Container 布局容器", link: "/components/container" },
+        { text: "ScrollBar 滚动条", link: "/components/scrollbar" },
       ],
     },
     {
@@ -60,6 +61,7 @@ export const sidebar = {
       items: [
         { text: "Card 卡片", link: "/components/card" },
         { text: "Avatar 头像", link: "/components/avatar" },
+        { text: "Carousel 轮播图", link: "/components/carousel" },
       ],
     },
     {

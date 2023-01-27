@@ -5,8 +5,7 @@
       v-for="(item, index) in (options as any)"
       :key="index"
       :style="inlineStyle()"
-      :class="{ 'h-item-disabled-radio': item.disabled }"
-    >
+      :class="{ 'h-item-disabled-radio': item.disabled }">
       <span :style="colorStyle(index)" :class="{ active: radioIndex == index }" @click="change(item, index)"></span
       >{{ item.lable }}
     </div>
@@ -30,8 +29,8 @@ const inlineStyle = () => {
 };
 const colorStyle = (index: number) => {
   if (radioIndex.value == index) {
-    return { backgroundColor: props.customColor };
-  } else return {};
+    return { marginRight: "4px", backgroundColor: props.customColor };
+  } else return { marginRight: "4px" };
 };
 const change = (item: IItem, index: number): void => {
   if (!item.disabled) {

@@ -12,7 +12,7 @@
     "docs:dev": "pnpm run --filter ./site docs:dev",
     "docs:build": "pnpm run --filter ./site docs:build",
     "lint-staged": "lint-staged --allow-empty",
-    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
+    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx,.vue",
     "test": "pnpm run --filter ./packages/components test",
     "coverage": "pnpm run --filter ./packages/components coverage"
   },
@@ -33,7 +33,7 @@
     "@vue/compiler-sfc": "^3.2.45",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^11.0.2",
-    "@vue/test-utils": "^2.2.7",
+    "@vue/test-utils": "^2.0.0",
     "agent-base": "^6.0.2",
     "c8": "^7.12.0",
     "commitlint": "^17.4.2",
@@ -64,8 +64,8 @@
     "vue-i18n": "^9.2.2"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx,.vue}": "pnpm run lint-staged:js",
-    "**/*.{js,jsx,tsx,ts,less,md,json,.vue}": [
+    "**/*.{js,jsx,ts,tsx,vue}": "pnpm run lint-staged:js",
+    "**/*.{js,jsx,tsx,ts,md,json,vue}": [
       "prettier --write"
     ]
   }

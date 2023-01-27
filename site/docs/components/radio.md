@@ -2,7 +2,7 @@
 
 在一组备选项中进行单选
 
-# 基础用法
+## 基础用法
 
 使用 radio 组件，只需要传入每个选项的选项值即可
 
@@ -68,7 +68,7 @@ const state = reactive({
 
 :::
 
-# 禁用状态
+## 禁用状态
 
 disabled 属性可以用来控制单选框的禁用状态，只需要为单选框设置 disabled 属性值为 true 就能设置为禁用状态。
 
@@ -111,7 +111,7 @@ const state = reactive({
 
 :::
 
-# 垂直排列
+## 垂直排列
 
 设置 inline 属性值为 false 即可开启垂直排列
 
@@ -154,7 +154,7 @@ const state = reactive({
 
 :::
 
-# 自定义颜色
+## 自定义颜色
 
 更改 customColor 属性即可自定义颜色
 
@@ -172,16 +172,16 @@ const state = reactive({
 
 :::
 
-# Radio 属性
+## Attributes
 
-| 属性名      | 说明           | 类型                      | 可选值       | 默认值 |
-| ----------- | -------------- | ------------------------- | ------------ | ------ |
-| label       | 单选框对应的值 | string / number / boolean | ——           | ——     |
-| disabled    | 是否禁用单选框 | boolean                   | true / false | false  |
-| customColor | 单选框的颜色   | string                    | ——           | ——     |
-| inline      | 单选框的列方式 | boolean                   | true / false | true   |
+| 属性名      | 说明           | 类型                            | 默认值 |
+| ----------- | -------------- | ------------------------------- | ------ |
+| label       | 单选框对应的值 | `string` / `number` / `boolean` | —      |
+| disabled    | 是否禁用单选框 | `boolean`                       | false  |
+| customColor | 单选框的颜色   | `string`                        | —      |
+| inline      | 单选框的列方式 | `boolean`                       | true   |
 
-# Radio 事件
+## Events
 
 | 事件名 | 说明     | 回调参数                |
 | ------ | -------- | ----------------------- |
