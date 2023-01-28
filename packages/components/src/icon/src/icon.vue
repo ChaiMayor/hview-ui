@@ -21,7 +21,6 @@ const badge = computed(() => {
 // 图标颜色
 const iconColor = computed(() => {
   return {
-    fontSize: "26px",
     color: props.color,
   };
 });
