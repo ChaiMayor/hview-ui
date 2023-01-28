@@ -18,6 +18,7 @@ export default defineComponent({
       default: "ease",
     },
   },
+
   setup(props) {
     const inlineStyle = (dom: HTMLDivElement, styles: any) => {
       if (!dom) return;
