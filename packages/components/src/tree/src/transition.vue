@@ -20,10 +20,10 @@ export default defineComponent({
   },
   setup(props) {
     const inlineStyle = (dom: HTMLDivElement, styles: any) => {
-      if (!dom) return ;
+      if (!dom) return;
       for (const key in Object.keys(styles)) {
-        if ((<any>styles).hasOwnProperty(key)) {
-          dom.style[key] = styles[key]
+        if (Object.prototype.hasOwnProperty.call(styles, key)) {
+          dom.style[key] = styles[key];
         }
       }
     };
