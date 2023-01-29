@@ -32,13 +32,7 @@ import "../style/index.less";
 const emit = defineEmits(["update:modelValue", "change"]);
 const props = defineProps(CheckBoxProps);
 
-interface CheckboxGroup {
-  modelValue: Array<any>;
-  disabled: boolean;
-  changeEvent: (param: any) => void;
-}
-
-const checkboxGroup = inject<CheckboxGroup>("checkboxGroup");
+const checkboxGroup = inject<any>("checkboxGroup", {});
 
 // 是不是group分组
 const isGroup = computed(() => {
