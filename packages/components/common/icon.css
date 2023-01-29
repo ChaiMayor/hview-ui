@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Hviewicon"; /* Project id 3867051 */
-  src: url('//at.alicdn.com/t/c/font_3867051_wahzh1cowsr.woff2?t=1674626425803') format('woff2'),
-       url('//at.alicdn.com/t/c/font_3867051_wahzh1cowsr.woff?t=1674626425803') format('woff'),
-       url('//at.alicdn.com/t/c/font_3867051_wahzh1cowsr.ttf?t=1674626425803') format('truetype');
+  src: url('//at.alicdn.com/t/c/font_3867051_44xupjgp2ri.woff2?t=1674890492727') format('woff2'),
+  url('//at.alicdn.com/t/c/font_3867051_44xupjgp2ri.woff?t=1674890492727') format('woff'),
+  url('//at.alicdn.com/t/c/font_3867051_44xupjgp2ri.ttf?t=1674890492727') format('truetype');
 }
 
 i {
@@ -13,6 +13,54 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.h-icon-experiment:before {
+  content: "\e7e4";
+}
+
+.h-icon-github:before {
+  content: "\e685";
+}
+
+.h-icon-xiangshang:before {
+  content: "\e600";
+}
+
+.h-icon-xiangxia:before {
+  content: "\e601";
+}
+
+.h-icon-xiangshang1:before {
+  content: "\e76d";
+}
+
+.h-icon-xiala:before {
+  content: "\e65c";
+}
+
+.h-icon-icon-arrow-left2:before {
+  content: "\e664";
+}
+
+.h-icon-youjiantou:before {
+  content: "\e61e";
+}
+
+.h-icon-you:before {
+  content: "\e706";
+}
+
+.h-icon-you1:before {
+  content: "\e60a";
+}
+
+.h-icon-fuzhi:before {
+  content: "\ec7a";
+}
+
+.h-icon-zitidaima:before {
+  content: "\ec83";
+}
 
 .h-icon-delete:before {
   content: "\e67e";
