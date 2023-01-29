@@ -1,7 +1,7 @@
 <script setup>
-import basic from './basic.vue'
-import scrollbarX from './scrollbar-x.vue'
-import maxHeight from './max-height.vue'
+import basic from 'exam/scrollbar/basic.vue'
+import scrollbarX from 'exam/scrollbar/scrollbar-x.vue'
+import maxHeight from 'exam/scrollbar/max-height.vue'
 // import  from './'
 </script>
 

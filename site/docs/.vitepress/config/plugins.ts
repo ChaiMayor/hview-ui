@@ -52,7 +52,7 @@ export const mdPlugin = (md: MarkdownIt) => {
         const sourceFile = m && m.length > 1 ? m[1] : "";
         const sourceFileToken = tokens[idx + 2];
         // 源码文件路径
-        const filePath = path.resolve(process.cwd(), "docs/components", `${sourceFile}.vue`);
+        const filePath = path.resolve(process.cwd(), "docs/examples", `${sourceFile}.vue`);
         let source = "";
         if (sourceFileToken.type === "inline") {
           source = fs.readFileSync(filePath, "utf-8");

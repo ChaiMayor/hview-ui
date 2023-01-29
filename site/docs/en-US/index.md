@@ -15,10 +15,10 @@ hero:
     alt: HviewUI
   actions:
     - theme: brand
-      text: 开始
-      link: /docs/installation
+      text: Get Started
+      link: /en-US/docs/installation
     - theme: alt
-      text: 在 Github 上查看
+      text: View on GitHub
       link: https://github.com/ChaiMayor/hview-ui/tree/main
 
 features:

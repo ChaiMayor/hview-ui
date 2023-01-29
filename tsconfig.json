@@ -11,7 +11,8 @@
     "lib": ["esnext", "dom"],
     "rootDirs": ["./", "./packages/components"],
     "paths": {
-      "@/*": ["packages/components/src/*"]
+      "@/*": ["packages/components/src/*"],
+      "exam/*": ["site/docs/examples/*"]
     }
   }
 }

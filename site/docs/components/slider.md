@@ -1,10 +1,10 @@
 <script setup>
-import basic from './basic.vue'
-import disperse from './disperse.vue'
-import site from './site.vue'
-import scope from './scope.vue'
-import vertical from './vertical.vue'
-import tag from './tag.vue'
+import basic from 'exam/slider/basic.vue'
+import disperse from 'exam/slider/disperse.vue'
+import site from 'exam/slider/site.vue'
+import scope from 'exam/slider/scope.vue'
+import vertical from 'exam/slider/vertical.vue'
+import tag from 'exam/slider/tag.vue'
 // import  from './'
 </script>
 

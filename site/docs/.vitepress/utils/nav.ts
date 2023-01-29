@@ -16,7 +16,7 @@ const nav = [
   {
     text: "组件库",
     activeMatch: "^/components/",
-    link: "/components/button/",
+    link: "/components/button",
   },
   {
     text: version,
@@ -44,7 +44,7 @@ const navEN = [
   {
     text: "Component",
     activeMatch: "^/en-US/components/",
-    link: "/components/button/",
+    link: "/components/button",
   },
   {
     text: version,

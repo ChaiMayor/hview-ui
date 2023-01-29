@@ -95,6 +95,24 @@
   .example_scrollbar {
     border: 1px solid rgba(84, 84, 84, 0.48) !important;
   }
+
+  .group {
+    .items {
+      padding-right: 12px;
+      .VPSidebarItem {
+        font-size: 13px;
+        padding: 2px 0;
+        padding-left: 12px;
+        margin: 6px 0;
+        &.is-active,
+        .has-active {
+          border-radius: 6px;
+          background: rgba(64, 158, 255, 0.1);
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
 }
 
 .VPNav {

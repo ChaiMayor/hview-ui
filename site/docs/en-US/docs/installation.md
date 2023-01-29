@@ -1,23 +1,23 @@
-# 安装
+# Installation
 
-## 环境支持
+## Compatibility
 
-由于 Vue 3 不再支持 IE11，hviewui 也不再支持 IE11 浏览器。
+As Vue 3 no longer supports IE11, hviewui no longer supports IE11.
 
 | <img src="https://cdn.jsdelivr.net/npm/@browser-logos/edge/edge_32x32.png" alt=""> | <img src="https://cdn.jsdelivr.net/npm/@browser-logos/firefox/firefox_32x32.png" alt=""> | <img src="https://cdn.jsdelivr.net/npm/@browser-logos/chrome/chrome_32x32.png" alt=""> | <img src="https://cdn.jsdelivr.net/npm/@browser-logos/safari/safari_32x32.png" alt=""> |
 | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | Edge ≥ 79                                                                          | Firefox ≥ 78                                                                             | Chrome ≥ 64                                                                            | Safari ≥ 12                                                                            |
 
-## 版本
+## Version
 
-Hview UI 目前还处于快速开发迭代中。
+Hview UI is currently in a rapid development iteration.
 
-## 使用包管理器
+## Using Package Manager
 
-建议您使用包管理器 (NPM, Yarn, pnpm) 安装 hviewui, 然后您就可以使用打包工具，例如 Vite 和 webpack
+It is recommended that you install hviewui using the package manager (NPM, Yarn, pnpm), and then you can use packaging tools such as Vite and webpack.
 
 ```shell
-# 选择一个你喜欢的包管理器
+# Choose a package manager you like.
 
 # NPM
 $ npm install hview-plus --save
@@ -29,4 +29,4 @@ $ yarn add hview-plus
 $ pnpm install hview-plus
 ```
 
-如果您的网络环境不好，建议使用相关镜像服务 [cnpm](https://github.com/cnpm/cnpm) 或 [中国 NPM 镜像](https://registry.npmmirror.com/)。
+If your network environment is not good, it is recommended to use a mirror registry [cnpm](https://github.com/cnpm/cnpm) or [Alibaba](https://registry.npmmirror.com/).

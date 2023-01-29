@@ -1,17 +1,17 @@
-# 快速开始
+# Quick Start
 
-本节将介绍如何在项目中使用 Hview UI。
+This section describes how to use Hview UI in your project.
 
-## 用法
+## Usage
 
-### 完整引入
+### Full Import
 
-如果你对打包后的文件大小不是很在乎，那么使用完整导入会更方便。
+If you don’t care about the bundle size so much, it’s more convenient to use full import.
 
 ```ts
 // main.ts
 import { createApp } from "vue";
-// HviewUI 样式文件自动引入
+// The HviewUI style file is automatically imported
 import HviewPlus from "hview-plus";
 import App from "./App.vue";
 
@@ -21,7 +21,7 @@ app.use(HviewPlus);
 app.mount("#app");
 ```
 
-### 手动导入
+### Manually import
 
 ```ts
 // main.ts

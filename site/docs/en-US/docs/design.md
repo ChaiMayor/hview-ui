@@ -1,15 +1,15 @@
-## 项目名称
+## Project Name
 
 Hview-UI
 
-寓意：往往学习编程的第一句代码都是 hello world，而我们开发组件库也是第一次开发，我们的组件库也是参照已有的组件库进行开发和学习，而 view 有观察、透视、视图等意思，所以我们将 h 和 view 融合在了一起，给组件库其名为：hview-ui，寓意我们这个新生的组件库通过学习融合现有组件库的优点，希望能为大家呈现出一个不错的组件库项目
+Implied meaning：Often the first code to learn programming is hello world, and it is the first time for us to develop component libraries. Our component libraries are also developed and learned by referring to existing component libraries, and view has the meaning of observation, perspective, view, etc., so we combine h and view together, and give the component library its name: hview-ui, meaning that our new component library by learning the advantages of integrating existing component libraries, hope to present you with a good component library project.
 
 <br/>
 
-## 项目 Logo
+## Project Logo
 
 [![img](https://camo.githubusercontent.com/33905ebd43fab53ba7ddf546e5a34e5618d61beca3bed4c440c9bf01c9712339/68747470733a2f2f6f73732e7a686973686979752e6f6e6c696e652f6d61726b646f776e5f696d616765732f3230323330313139313930383839362e706e67)](https://camo.githubusercontent.com/33905ebd43fab53ba7ddf546e5a34e5618d61beca3bed4c440c9bf01c9712339/68747470733a2f2f6f73732e7a686973686979752e6f6e6c696e652f6d61726b646f776e5f696d616765732f3230323330313139313930383839362e706e67)
 
-设计：view 有透视、视图的意思，这里就用了三个不同视图方向的图案组成这个 H
+Design：View has the meaning of perspective and view. Here, three patterns in different view directions are used to form the H.
 
-寓意：我们的组件库还存在很多不完善的地方，非常希望广大开发人员能够使用我们组件库和给我们进行反馈和提问，我们会虚心接受，然后接纳大家的意见，不断迭代出让开发者满意的项目
+Implied meaning：There are still many imperfections in our component library. We sincerely hope that the majority of developers can use our component library and give us feedback and questions. We will humbly accept and then accept your opinions, and continue to iterate the project that satisfies the developers.

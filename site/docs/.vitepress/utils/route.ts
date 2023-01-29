@@ -45,7 +45,6 @@ export const addSidebarPrefix = (prefix: string = "/", sidebar: object) => {
     sidebar[key] = sidebar[key].map((item) => {
       return {
         text: item.text,
-        link: `${prefix}${item.link.replace("/", "")}`,
         items: item.items.map((i) => {
           return {
             text: i.text,

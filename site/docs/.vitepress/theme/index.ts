@@ -19,58 +19,21 @@ import { useRouter, useData, useRoute } from "vitepress";
 export default {
   ...Theme,
 
-  enhanceApp({ app, router, siteData }) {
+  enhanceApp({ app }) {
     app.use(hp);
     app.use(ElementPlus);
     app.component("HCode", hpCode);
-    // // refer: https://github.com/vuejs/vitepress/issues/318
-    // watch(router.route, () => {
-    //   NProgress.start();
-    //   nextTick(() => {
-    //     NProgress.done();
-    //   });
-    // });
   },
 
   setup() {
     const router = useRouter();
-    const b = useData();
-    const c = useRoute();
-    let currPage = "";
-
     // refer: https://github.com/vuejs/vitepress/issues/318
     watch(router.route, (newVal, oldVal) => {
       NProgress.start();
-      // 替换导航标题
-      // console.log(router);
-      // console.log(window.location);
-
-      // console.log(b);
-      // console.log(c);
-      currPage = window.location.pathname;
-
       nextTick(() => {
         NProgress.done();
       });
     });
-    // watch(
-    //   () => b.lang.value,
-    //   (newVal, oldVal) => {
-    //     // console.log(currPage);
-
-    //     const curLang = b.lang.value === "zh-CN" ? "/" : "/en-US/";
-
-    //     // console.log(window.location);
-    //     console.log(`${window.location.origin}${currPage.replace("/", curLang)}`);
-
-    //     // window.location.href = `${window.location.origin}${currPage.replace("/", curLang)}`;
-    //     nextTick(() => {
-    //       router.go(`${window.location.origin}${currPage.replace("/", curLang)}`);
-    //     });
-
-    //     // console.log(newVal, oldVal);
-    //   },
-    // );
   },
 
   Layout: MyLayout,

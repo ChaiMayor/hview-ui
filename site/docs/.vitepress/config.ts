@@ -5,16 +5,39 @@ import { defineConfig } from "vitepress";
 import { mdPlugin } from "./config/plugins";
 
 export default defineConfig({
+  // refer: https://vitepress.vuejs.org/guide/i18n
+  // issue: https://github.com/vuejs/vitepress/issues/1860
+  title: "Hview UI",
   locales: {
-    "/": {
-      label: "中文",
+    root: {
+      label: "简体中文",
       lang: "zh-CN",
-      title: "Hview UI",
+      themeConfig: {
+        // @ts-ignore
+        nav: getNavRouter(),
+        // @ts-ignore
+        sidebar: getSidebarRouter(),
+        lastUpdatedText: "最后更新时间",
+        docFooter: {
+          prev: "上一篇",
+          next: "下一篇",
+        },
+      },
     },
-    "/en-US/": {
+    "en-US": {
       label: "English",
       lang: "en-US",
-      title: "Hview UI",
+      themeConfig: {
+        // @ts-ignore
+        nav: getNavRouter("/en-US/"),
+        // @ts-ignore
+        sidebar: getSidebarRouter("/en-US/"),
+        lastUpdatedText: "Last update time",
+        docFooter: {
+          prev: "Previous article",
+          next: "Next article",
+        },
+      },
     },
   },
   base: process.env.NODE_ENV === "production" ? "/hview-ui/" : "/",
@@ -35,34 +58,50 @@ export default defineConfig({
       indexName: "interview-questions-record",
       // 如果 Algolia 没有为你提供 `appId` ，使用 `BH4D9OD16A` 或者移除该配置项
       appId: "XQYLP2L9WC",
-    },
-    localeLinks: {
-      text: "",
-      items: [
-        {
-          link: "/",
-          text: "简体中文",
+      locales: {
+        root: {
+          placeholder: "搜索文档",
+          translations: {
+            button: {
+              buttonText: "搜索文档",
+              buttonAriaLabel: "搜索文档",
+            },
+            modal: {
+              searchBox: {
+                resetButtonTitle: "清除查询条件",
+                resetButtonAriaLabel: "清除查询条件",
+                cancelButtonText: "取消",
+                cancelButtonAriaLabel: "取消",
+              },
+              startScreen: {
+                recentSearchesTitle: "搜索历史",
+                noRecentSearchesText: "没有搜索历史",
+                saveRecentSearchButtonTitle: "保存至搜索历史",
+                removeRecentSearchButtonTitle: "从搜索历史中移除",
+                favoriteSearchesTitle: "收藏",
+                removeFavoriteSearchButtonTitle: "从收藏中移除",
+              },
+              errorScreen: {
+                titleText: "无法获取结果",
+                helpText: "你可能需要检查你的网络连接",
+              },
+              footer: {
+                selectText: "选择",
+                navigateText: "切换",
+                closeText: "关闭",
+                searchByText: "搜索提供者",
+              },
+              noResultsScreen: {
+                noResultsText: "无法找到相关结果",
+                suggestedQueryText: "你可以尝试查询",
+                reportMissingResultsText: "你认为该查询应该有结果？",
+                reportMissingResultsLinkText: "点击反馈",
+              },
+            },
+          },
         },
-        {
-          link: "/en-US/",
-          text: "English",
-        },
-      ],
-    },
-    // @ts-ignore
-    locales: {
-      "/": {
-        label: "中文",
-        nav: getNavRouter(),
-        sidebar: getSidebarRouter(),
-      },
-      "/en-US/": {
-        label: "English",
-        nav: getNavRouter("/en-US/"),
-        sidebar: getSidebarRouter("/en-US/"),
       },
     },
-    lastUpdatedText: "最后更新时间",
     socialLinks: [
       {
         icon: "github",
