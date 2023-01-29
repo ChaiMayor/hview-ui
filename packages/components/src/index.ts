@@ -11,7 +11,8 @@ import { Container, Header, Aside, Main, Footer } from "./container";
 import { default as Carousel } from "./carousel";
 import { default as CarouselItem } from "./carousel-item";
 import { default as Tag } from "./tag";
-import ScrollBar from "./scrollbar";
+import { default as ScrollBar } from "./scrollbar";
+import { default as Slider } from "./slider";
 
 export {
   Button,
@@ -31,8 +32,10 @@ export {
   CarouselItem,
   Message,
   ScrollBar,
+  Slider,
   Tag,
 };
+
 export default [
   Button,
   Link,
@@ -52,4 +55,5 @@ export default [
   Message,
   ScrollBar,
   Tag,
+  Slider,
 ];

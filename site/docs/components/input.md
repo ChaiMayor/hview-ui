@@ -1,10 +1,12 @@
 # Input 输入框
 
+通过鼠标或键盘输入字符
+
 ::: tip
 
 Input 为受控组件，它总会显示 Vue 绑定值。
 
-通常情况下，应当处理 input 事件，并更新组件的绑定值（或使用 v-model）。否则，输入框内显示的值将不会改变。
+通常情况下，应当处理 input 事件，并更新组件的绑定值（或使用 v-model）否则，输入框内显示的值将不会改变。
 
 不支持 v-model 修饰
 :::
@@ -127,11 +129,9 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 ```html
 <template>
   <div class="example">
-    <h-input v-model="value" placeholder="请输入" type="text" 
-      iconBefore="user"></h-input>
-    <h-input v-model="value" placeholder="请输入" type="text" 
-      iconAfter="calendar"></h-input>
-    </div>
+    <h-input v-model="value" placeholder="请输入" type="text" iconBefore="user"></h-input>
+    <h-input v-model="value" placeholder="请输入" type="text" iconAfter="calendar"></h-input>
+  </div>
 </template>
 <script lang="ts" setup>
   import { ref } from "vue";

@@ -1,5 +1,6 @@
 ---
 layout: home
+lang: zh-CN
 
 title: HviewUI
 titleTemplate: 一个Vue3组件库
@@ -7,9 +8,9 @@ titleTemplate: 一个Vue3组件库
 hero:
   name: HviewUI
   text: 一个Vue3组件库
-  tagline: 提供完整搭建教程
+  tagline: 提供完整使用文档
   image:
-    src: /logo.png
+    src: /logo@2x.png
     alt: HviewUI
   actions:
     - theme: brand

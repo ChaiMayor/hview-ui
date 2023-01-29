@@ -2,6 +2,8 @@ import vueSetupExtend from "unplugin-vue-setup-extend-plus/vite";
 import type { UserConfigExport } from "vite";
 import svgLoader from "vite-svg-loader";
 import DefineOptions from "unplugin-vue-define-options/vite";
+import { resolve } from "path";
+
 export default (): UserConfigExport => {
   return {
     plugins: [vueSetupExtend() as any, svgLoader(), DefineOptions()],
@@ -26,6 +28,14 @@ export default (): UserConfigExport => {
     },
     server: {
       port: 9999,
+    },
+    resolve: {
+      alias: [
+        {
+          find: "exam",
+          replacement: resolve(__dirname, "./examples"),
+        },
+      ],
     },
   };
 };

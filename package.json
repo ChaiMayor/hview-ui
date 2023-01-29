@@ -61,7 +61,13 @@
     "vue": "^3.2.45"
   },
   "dependencies": {
-    "vue-i18n": "^9.2.2"
+    "vue-i18n": "^9.2.2",
+    "@popperjs/core": "npm:@sxzz/popperjs-es@^2.11.7",
+    "dayjs": "^1.11.3",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "@vue/shared": "^3.2.37",
+    "lodash-unified": "^1.0.2"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,vue}": "pnpm run lint-staged:js",

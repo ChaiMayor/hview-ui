@@ -153,8 +153,8 @@ function setDrawScrollThumb(dom: HTMLDivElement, move: "moveX" | "moveY") {
     };
     document.onmouseup = function () {
       document.onmousemove = null;
-      document.onmousemove = null;
       document.onmouseup = null;
+      document.onmousedown = null;
       nextTick(() => {
         isDraw.value = false;
         emits("update:isDraw", isDraw.value);

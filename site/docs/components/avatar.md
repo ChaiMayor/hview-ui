@@ -34,7 +34,7 @@
 
 # Avatar 头像
 
-> 用于展示头像，支持使用图片、图标或者文字作为头像。
+用于展示头像，支持使用图片、图标或者文字作为头像。
 
 ## 基础用法
 
@@ -239,11 +239,11 @@ const { fits, url, size } = toRefs(state)
 | ------- | ------------------------ | ---------------------- | ---------------------------------------------------- | ------- |
 | icon    | 设置头像的图标类型       | `string` / `Component` | —                                                    | default |
 | size    | 头像大小                 | `number` / ` string`   | `large` / `default` / `small`                        | circle  |
-| shape   | 头像形状                 | `string`               | `circle` / `square`                                  | ------  |
+| shape   | 头像形状                 | `string`               | `circle` / `square`                                  | —       |
 | border  | 头像边框                 | `string`               | `none` / `solid` / `dot`                             | solid   |
-| src     | 图片的源地址             | `string`               | —                                                    | ------  |
-| src-set | 图片的原生 `srcset` 属性 | `string`               | —                                                    | ------  |
-| alt     | 图片的原生 `alt` 属性    | `string`               | —                                                    | ------  |
+| src     | 图片的源地址             | `string`               | —                                                    | —       |
+| src-set | 图片的原生 `srcset` 属性 | `string`               | —                                                    | —       |
+| alt     | 图片的原生 `alt` 属性    | `string`               | —                                                    | —       |
 | fit     | 设置头像图片如何适应容器 | `string`               | `fill` / `contain` / `cover` / `none` / `scale-down` | cover   |
 
 ### Events

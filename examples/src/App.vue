@@ -23,6 +23,7 @@
     </div>
   </div>
 </template>
+
 <script lang="ts" setup>
 const clickT = () => {
   console.log("点击");
@@ -31,14 +32,3 @@ const closeT = () => {
   console.log("关闭");
 };
 </script>
-
-<style lang="less" scoped>
-.container {
-  display: flex;
-  flex-direction: column;
-  .con {
-    margin: 2px auto;
-    display: block;
-  }
-}
-</style>
