@@ -10,9 +10,10 @@
     "escape-html": "^1.0.3",
     "hview-plus": "workspace:*",
     "markdown-it-container": "^3.0.0",
+    "nprogress": "^0.2.0",
     "prismjs": "^1.29.0",
     "unplugin-vue-setup-extend-plus": "^0.3.2",
-    "vitepress": "1.0.0-alpha.40"
+    "vitepress": "1.0.0-alpha.36"
   },
   "devDependencies": {
     "markdown-it": "^13.0.1",

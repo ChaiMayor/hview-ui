@@ -1,5 +1,6 @@
 .dark {
   --vp-c-bg-alt: #141414 !important; // 深色模式侧边栏
+  --vp-c-bg: #141414 !important;
   --vp-c-black-soft: #141414;
   --vp-c-indigo-lighter: #e5eaf3;
   --vp-c-bg-alpha-with-backdrop: #141414;
@@ -30,6 +31,14 @@
   --shiki-token-constant: #e5eaf3 !important;
   --shiki-token-string-expression: #c3e88d !important;
   --shiki-token-function: #82aaff !important;
+  // search
+  --search-bg-color: rgba(0, 0, 0, 0.8) !important;
+  --seach-bg-pla-color: #161618 !important;
+
+  .tip.custom-block {
+    background-color: #7593f71a !important;
+    color: #e5eaf3;
+  }
 
   .vp-doc :not(pre) > code {
     color: #e5eaf3;
@@ -85,5 +94,15 @@
   // 滚动条容器
   .example_scrollbar {
     border: 1px solid rgba(84, 84, 84, 0.48) !important;
+  }
+}
+
+.VPNav {
+  .VPNavBar {
+    .container {
+      .title {
+        background: var(--vp-c-bg) !important;
+      }
+    }
   }
 }

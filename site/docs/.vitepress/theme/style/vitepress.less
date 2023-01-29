@@ -21,9 +21,10 @@
   --vp-button-brand-hover-bg: #426bf5;
   --vp-c-indigo: #303133;
   --vp-nav-height-desktop: 60px;
+  --vp-nav-height: 55px;
   --vp-code-font-size: 1em;
   --vp-code-block-bg: #f5f7fa;
-  --vp-z-index-nav: 9999;
+  --vp-z-index-nav: 30;
   // code
   --code-color: #303133;
   --code-script-color: #303133;
@@ -54,6 +55,25 @@
   --shiki-token-link: #ee0000;
   --shiki-token-comment: #848486;
   --shiki-token-string: #6196cc;
+  // h-code
+  --h-code-icon-color: #909399;
+  --h-code-icon-color-hover: #303133;
+  --dark-h-code-icon-color: #a3a6ad;
+  --dark-h-code-icon-color-hover: #e5eaf3;
+  // search
+  --search-bg-color: rgba(255, 255, 255, 0.8);
+  --seach-bg-pla-color: #f6f6f7;
+  --docsearch-modal-shadow: inset 1px 1px 0 0 hsla(0, 0%, 100%, 0.2), 0 3px 16px 0 #d4d4d4;
+}
+
+#nprogress {
+  .bar {
+    z-index: 9999 !important;
+    background-color: var(--vp-c-green) !important;
+  }
+  .spinner {
+    z-index: 9999 !important;
+  }
 }
 
 .vp-doc .custom-block div[class*="language-"] code {
@@ -71,6 +91,7 @@
 }
 
 .aside {
+  padding-left: 52px !important;
   .aside-container {
     overflow: visible;
   }
@@ -94,7 +115,7 @@
 
 .tip.custom-block {
   border: 0;
-  background-color: lighten(#2d5af1, 39%) !important;
+  background-color: lighten(#2d5af1, 39%);
   color: var(--vp-c-indigo);
   border-left: 5px solid var(--vp-c-brand-dark);
   border-radius: 4px;
@@ -292,7 +313,7 @@ details > summary:first-of-type {
 .VPNav {
   border-bottom: 1px solid #dcdfe6;
   padding: 0 12px 0 24px;
-  background-image: radial-gradient(transparent 2px, #ffffff 1px);
+  background-image: radial-gradient(transparent 1px, #ffffff 1px);
   background-size: 4px 4px;
   backdrop-filter: saturate(50%) blur(4px);
   -webkit-backdrop-filter: saturate(50%) blur(4px);
@@ -317,7 +338,7 @@ details > summary:first-of-type {
 
 // 菜单栏
 .VPSidebar.open {
-  z-index: 99999;
+  z-index: 1000;
 }
 
 #VPSidebarNav {
@@ -348,12 +369,95 @@ details > summary:first-of-type {
 .VPContent {
   .VPDoc {
     & > .container {
-      max-width: 1220px;
-      width: calc(100vw * 1220 / 1700);
+      max-width: 1120px;
+      width: calc(100vw * 1120 / 1700);
       .content-container {
         margin: 0 10px;
-        max-width: 1220px;
+        max-width: 1120px;
         width: 100%;
+      }
+    }
+  }
+}
+
+/* 取消40版本默认样式 */
+// 导航条
+.VPNavBar.has-sidebar .content-body {
+  background-color: transparent !important;
+}
+.VPNav {
+  .VPNavBar {
+    .container {
+      .title {
+        background: #fff;
+        a.title {
+          border: 0;
+        }
+      }
+      .content {
+        // 模糊效果
+        .curtain {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// search
+.DocSearch-Container {
+  z-index: 9999;
+  background-color: var(--search-bg-color);
+}
+
+// .content-body {
+@media screen and (min-width: 769px) {
+  .VPHero {
+    .container {
+      .image {
+        .image-src {
+          transform: scale(1.1) translate(-40%, -24%);
+        }
+      }
+    }
+  }
+  .VPNavBarSearch.search {
+    justify-content: flex-end;
+    padding-right: 12px;
+    #docsearch {
+      .DocSearch.DocSearch-Button {
+        background-color: var(--seach-bg-pla-color);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Layout {
+    .VPNav,
+    .no-sidebar {
+      .VPNavScreen {
+        height: 100vh;
+        z-index: 20000;
+      }
+    }
+    .VPSidebar,
+    .open {
+      z-index: 20000;
+    }
+  }
+}
+
+.VPFlyout {
+  .menu {
+    .items {
+      .VPMenuLink {
+        .active {
+          color: #303133;
+          &:hover {
+            color: #5d80f4;
+          }
+        }
       }
     }
   }

@@ -84,9 +84,9 @@ const toPlayground = () => {
     margin-right: 16px;
     cursor: pointer;
     transition: color 0.3s;
-    color: #909399;
+    color: var(--h-code-icon-color);
     &:hover {
-      color: #303133;
+      color: var(--h-code-icon-color-hover);
     }
     &:last-of-type {
       margin-right: 0;
@@ -101,7 +101,20 @@ const toPlayground = () => {
 }
 .example-showcase {
   padding: 1.5rem;
-  margin: 0.5px;
+  // border-bottom: 1px solid #dcdcdcb3 !important;
+}
+html.dark {
+  .example-showcase {
+    border-bottom: 1px solid rgba(84, 84, 84, 0.48) !important;
+  }
+  .op-btns {
+    .hview-icon {
+      color: var(--dark-h-code-icon-color) !important;
+      &:hover {
+        color: var(--dark-h-code-icon-color-hover) !important;
+      }
+    }
+  }
 }
 .example {
   border: 1px solid var(--vp-c-divider-light);
