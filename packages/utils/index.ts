@@ -1,9 +1,13 @@
 export { default as withInstall } from "./withinstall";
 export * from "./vue";
 
+interface objType {
+  [propName: string]: any;
+}
+
 function typeOf(obj: any) {
   const toString = Object.prototype.toString;
-  const map = {
+  const map: objType = {
     "[object Boolean]": "boolean",
     "[object Number]": "number",
     "[object String]": "string",
@@ -15,29 +19,26 @@ function typeOf(obj: any) {
     "[object Null]": "null",
     "[object Object]": "object",
   };
-  return map[toString.call(obj)];
+  const str: string = toString.call(obj);
+  return map[str];
 }
 
 export function deepCopy(data: any) {
   const t = typeOf(data);
-  let o;
 
   if (t === "array") {
-    o = [];
+    const arr: Object[] = [];
+    for (let i = 0; i < data.length; i++) {
+      arr.push(deepCopy(data[i]));
+    }
+    return arr;
   } else if (t === "object") {
-    o = {};
+    const arr: objType = {};
+    for (const i in data) {
+      arr[i] = deepCopy(data[i]);
+    }
+    return arr;
   } else {
     return data;
   }
-
-  if (t === "array") {
-    for (let i = 0; i < data.length; i++) {
-      o.push(deepCopy(data[i]));
-    }
-  } else if (t === "object") {
-    for (const i in data) {
-      o[i] = deepCopy(data[i]);
-    }
-  }
-  return o;
 }
