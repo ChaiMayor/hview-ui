@@ -21,10 +21,17 @@
   "license": "MIT",
   "typings": "hview-ui/lib/index.d.ts",
   "dependencies": {
-    "@hview-plus/utils": "workspace:*",
-    "@hview-plus/locale": "workspace:*",
     "@hview-plus/constants": "workspace:*",
     "@hview-plus/hooks": "workspace:*",
-    "@hview-plus/theme": "workspace:*"
+    "@hview-plus/locale": "workspace:*",
+    "@hview-plus/theme": "workspace:*",
+    "@hview-plus/utils": "workspace:*",
+    "@vue/shared": "^3.2.37",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "lodash-unified": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.191"
   }
 }
