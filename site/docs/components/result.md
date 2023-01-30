@@ -1,6 +1,6 @@
 <script setup>
-import basic from 'exam/result/basic.vue'
-import customize from 'exam/result/customize.vue'
+  import basic from 'exam/result/basic.vue'
+  import customize from 'exam/result/customize.vue'
 </script>
 
 ## Result 结果
@@ -21,11 +21,11 @@ import customize from 'exam/result/customize.vue'
 
 ## Result 属性
 
-| 属性名    | 说明     | 类型   | 可选值                           | 默认 |
-| --------- | -------- | ------ | -------------------------------- | ---- |
-| title     | 标题     | string | —                                | —    |
-| sub-title | 二级标题 | string | —                                | —    |
-| icon      | 图标类型 | string | success / warning / info / error | info |
+| 属性名    | 说明     | 类型     | 可选值                           | 默认 |
+| --------- | -------- | -------- | -------------------------------- | ---- |
+| title     | 标题     | `string` | —                                | —    |
+| sub-title | 二级标题 | `string` | —                                | —    |
+| icon      | 图标类型 | `string` | success / warning / info / error | info |
 
 ## Result 插槽
 

@@ -1,22 +1,12 @@
-<style scoped>
-.container-style{
-  border: 1px solid #e7e7e7;
-  border-radius: 5px;
-  padding:20px
-}
-.h-header,
-.h-aside,
-.h-main,
-.h-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.h-main {
-  height:150px
-}
-
-</style>
+<script setup>
+  import basic1 from 'exam/container/basic1.vue'
+  import basic2 from 'exam/container/basic2.vue'
+  import basic3 from 'exam/container/basic3.vue'
+  import basic4 from 'exam/container/basic4.vue'
+  import basic5 from 'exam/container/basic5.vue'
+  import basic6 from 'exam/container/basic6.vue'
+  import basic7 from 'exam/container/basic7.vue'
+</script>
 
 # Container 布局容器
 
@@ -38,175 +28,37 @@
 
 ## 常见页面布局
 
-<div class="container-style">
-  <h-container>
-    <h-header>Header</h-header>
-    <h-main>Main</h-main>
-  </h-container>
-</div>
-
-::: details 显示代码
-
-```html
-<template>
-  <div class="container-style">
-    <h-container>
-      <h-header>Header</h-header>
-      <h-main>Main</h-main>
-    </h-container>
-  </div>
-</template>
-```
-
+::: code container/basic1
+<basic1></basic1>
 :::
-
-<div class="container-style">
-  <h-container>
-    <h-header>Header</h-header>
-    <h-main>Main</h-main>
-    <h-footer>Footer</h-footer>
-  </h-container>
-</div>
-
-::: details 显示代码
-
-```html
-<template>
-  <div class="container-style">
-    <h-container>
-      <h-header>Header</h-header>
-      <h-main>Main</h-main>
-      <h-footer>Footer</h-footer>
-    </h-container>
-  </div>
-</template>
-```
-
+::: code container/basic2
+<basic2></basic2>
 :::
-
-<div class="container-style">
-  <h-container>
-    <h-aside width="200px">Aside</h-aside>
-    <h-main>Main</h-main>
-  </h-container>
-</div>
-
-::: details 显示代码
-
-```html
-<template>
-  <div class="container-style">
-    <h-container>
-      <h-aside width="200px">Aside</h-aside>
-      <h-main>Main</h-main>
-    </h-container>
-  </div>
-</template>
-```
-
+::: code container/basic3
+<basic3></basic3>
 :::
-
-<div class="container-style">
-  <h-container>
-    <h-header>Header</h-header>
-    <h-container>
-      <h-aside width="200px">Aside</h-aside>
-      <h-container>
-        <h-main>Main</h-main>
-        <h-footer>Footer</h-footer>
-      </h-container>
-    </h-container>
-  </h-container>
-</div>
-
-::: details 显示代码
-
-```html
-<template>
-  <div class="container-style">
-    <h-container>
-      <h-header>Header</h-header>
-      <h-container>
-        <h-aside width="200px">Aside</h-aside>
-        <h-container>
-          <h-main>Main</h-main>
-          <h-footer>Footer</h-footer>
-        </h-container>
-      </h-container>
-    </h-container>
-  </div>
-</template>
-```
-
+::: code container/basic4
+<basic4></basic4>
 :::
-
-<div class="container-style">
-  <h-container>
-    <h-aside width="200px">Aside</h-aside>
-    <h-container>
-      <h-header>Header</h-header>
-      <h-main>Main</h-main>
-    </h-container>
-  </h-container>
-</div>
-
-::: details 显示代码
-
-```html
-<template>
-  <div class="container-style">
-    <h-container>
-      <h-aside width="200px">Aside</h-aside>
-      <h-container>
-        <h-header>Header</h-header>
-        <h-main>Main</h-main>
-      </h-container>
-    </h-container>
-  </div>
-</template>
-```
-
+::: code container/basic5
+<basic5></basic5>
 :::
-
-<div class="container-style">
-  <h-container>
-    <h-aside width="200px">Aside</h-aside>
-    <h-container>
-      <h-header>Header</h-header>
-      <h-main>Main</h-main>
-      <h-footer>Footer</h-footer>
-    </h-container>
-  </h-container>
-</div>
-
-::: details 显示代码
-
-```html
-<template>
-  <div class="container-style">
-    <h-container>
-      <h-aside width="200px">Aside</h-aside>
-      <h-container>
-        <h-header>Header</h-header>
-        <h-main>Main</h-main>
-        <h-footer>Footer</h-footer>
-      </h-container>
-    </h-container>
-  </div>
-</template>
-```
-
+::: code container/basic6
+<basic6></basic6>
+:::
+::: code container/basic7
+<basic7></basic7>
 :::
 
 ## Container API
 
-### Container Attributes
+### Container 属性
 
-| 属性名    | 说明             | 类型 | 默认                                                                 |
-| --------- | ---------------- | ---- | -------------------------------------------------------------------- |
-| direction | 子元素的排列方向 | enum | 子元素中有 `h-header` 或 `h-footer` 时为 vertical，否则为 horizontal |
+| 属性名    | 说明             | 类型   | 默认                                                                 |
+| --------- | ---------------- | ------ | -------------------------------------------------------------------- |
+| direction | 子元素的排列方向 | `enum` | 子元素中有 `h-header` 或 `h-footer` 时为 vertical，否则为 horizontal |
 
-### Container Slots
+### Container 插槽
 
 | 插槽名  | 说明           | 子标签                                     |
 | ------- | -------------- | ------------------------------------------ |
@@ -214,13 +66,13 @@
 
 ## Header API
 
-### Header Attributes
+### Header 属性
 
-| 属性名 | 说明     | 类型   | 默认 |
-| ------ | -------- | ------ | ---- |
-| height | 顶栏高度 | string | 60px |
+| 属性名 | 说明     | 类型     | 默认 |
+| ------ | -------- | -------- | ---- |
+| height | 顶栏高度 | `string` | 60px |
 
-### Header Slots
+### Header 插槽
 
 | 插槽名  | 说明           |
 | ------- | -------------- |
@@ -228,13 +80,13 @@
 
 ## Aside API
 
-### Aside Attributes
+### Aside 属性
 
-| 属性名 | 说明       | 类型   | 默认  |
-| ------ | ---------- | ------ | ----- |
-| width  | 侧边栏宽度 | string | 300px |
+| 属性名 | 说明       | 类型     | 默认  |
+| ------ | ---------- | -------- | ----- |
+| width  | 侧边栏宽度 | `string` | 300px |
 
-### Aside Slots
+### Aside 插槽
 
 | 插槽名  | 说明           |
 | ------- | -------------- |
@@ -242,7 +94,7 @@
 
 ## Main API
 
-### Main Slots
+### Main 插槽
 
 | 插槽名  | 说明           |
 | ------- | -------------- |
@@ -250,13 +102,13 @@
 
 ## Footer API
 
-### Footer Attributes
+### Footer 属性
 
-| 属性名 | 说明     | 类型   | 默认 |
-| ------ | -------- | ------ | ---- |
-| height | 底栏高度 | string | 60px |
+| 属性名 | 说明     | 类型     | 默认 |
+| ------ | -------- | -------- | ---- |
+| height | 底栏高度 | `string` | 60px |
 
-### Footer Slots
+### Footer 插槽
 
 | 插槽名  | 说明           |
 | ------- | -------------- |

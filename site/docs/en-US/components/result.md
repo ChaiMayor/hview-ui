@@ -1,6 +1,6 @@
 <script setup>
-import basic from 'exam/result/basic.vue'
-import customize from 'exam/result/customize.vue'
+  import basic from 'exam/result/basic.vue'
+  import customize from 'exam/result/customize.vue'
 </script>
 
 ## Result
@@ -21,17 +21,17 @@ Used to give feedback on the result of user's operation or access exception.
 
 ## Result Attributes
 
-| 属性名    | 说明     | 类型   | 可选值                           | 默认 |
-| --------- | -------- | ------ | -------------------------------- | ---- |
-| title     | 标题     | string | —                                | —    |
-| sub-title | 二级标题 | string | —                                | —    |
-| icon      | 图标类型 | string | success / warning / info / error | info |
+| Name      | Description | Type     | Accepted Values                  | Default |
+| --------- | ----------- | -------- | -------------------------------- | ------- |
+| title     | title       | `string` | —                                | —       |
+| sub-title | sub title   | `string` | —                                | —       |
+| icon      | icon type   | `string` | success / warning / info / error | info    |
 
 ## Result Slots
 
-| 属性名    | 说明               |
-| --------- | ------------------ |
-| icon      | 自定义图标         |
-| title     | 自定义标题         |
-| sub-title | 自定义二级标题     |
-| extra     | 自定义底部额外区域 |
+| Name      | Description       |
+| --------- | ----------------- |
+| icon      | custom icon       |
+| title     | custom title      |
+| sub-title | custom sub title  |
+| extra     | custom extra area |
