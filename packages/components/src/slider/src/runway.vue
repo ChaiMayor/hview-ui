@@ -37,10 +37,11 @@
 ></template>
 
 <script setup lang="ts">
-import { ref, watch, onMounted, onUnmounted, computed, nextTick } from "vue";
+import { ref, watch, onMounted, onUnmounted, computed } from "vue";
 import { SliderProps } from "./slider";
 import HSliderMarker from "./marker.vue";
-import { isArray, cloneDeep } from "lodash";
+// eslint-disable-next-line vue/prefer-import-from-vue
+import { isArray } from "@vue/shared";
 import { cutChunk, judgeLocation } from "./utils";
 import { toFixed, offsetTop, offsetLeft } from "@hview-plus/utils";
 
@@ -68,7 +69,7 @@ const site = ref<number>(0);
 // 传入数值获得离当前哪个数组下标最近
 const getStepArrIndex = (val: number): [number[], number] => {
   let index = 0;
-  const arr = cloneDeep(stepArr.value);
+  const arr = JSON.parse(JSON.stringify(stepArr.value));
   arr.unshift(0);
   // isFull(props.max - props.min, props.step) ? arr.push(Number.MAX_SAFE_INTEGER) : null;
   arr.push(Number.MAX_SAFE_INTEGER);
@@ -173,10 +174,6 @@ const update = () => {
     setMarkerSite(getPartWidth.value * ((props.modelValue as number) - props.min), "btn1");
   }
   // console.log("————————————————————————————————————执行次数————————————————————————————————————");
-
-  // 放置最后一个元素用于判定是否移动到指定区域
-  // stepArr.value = cloneDeep(stepArr.value);
-  // stepArr.value.push(Number.MAX_SAFE_INTEGER);
 };
 
 watch([() => props.width, () => props.step, () => props.max, () => props.min], () => {

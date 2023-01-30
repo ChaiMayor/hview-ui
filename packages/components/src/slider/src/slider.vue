@@ -30,7 +30,8 @@ import { ref, watch, nextTick } from "vue";
 import { SliderProps } from "./slider";
 import HSliderRunway from "./runway.vue";
 import { isOutBounds } from "./utils";
-import { isArray } from "lodash";
+// eslint-disable-next-line vue/prefer-import-from-vue
+import { isArray } from "@vue/shared";
 
 const props = defineProps(SliderProps);
 
