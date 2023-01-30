@@ -2,7 +2,7 @@
   <div class="h-result">
     <div :class="iconClass">
       <slot name="icon">
-        <h-icon :name="props.icon" :class="iconClass"></h-icon>
+        <h-icon :name="props.icon" :class="iconClass" style="font-size: 64px"></h-icon>
       </slot>
     </div>
     <div v-if="title || $slots.title" class="h-result-title">
