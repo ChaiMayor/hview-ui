@@ -1,0 +1,50 @@
+.h-tree {
+  position: relative;
+  background: #fff;
+  color: #606266;
+  cursor: default;
+}
+
+.h-tree-node {
+  width: 100%;
+  white-space: nowrap;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.h-tree-node__content {
+  display: flex;
+  align-items: center;
+  height: 26px;
+  cursor: pointer;
+  &:hover {
+    background: #f5f5f5;
+  }
+}
+
+.h-tree-node__expand-icon {
+  cursor: pointer;
+  color: #c0c4cc;
+  width: 14px;
+  height: 14px;
+  padding: 6px;
+  display: inline-block;
+  line-height: 14px;
+  transition: all 0.2s ease;
+}
+i {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  display: inline-block;
+  color: #969696;
+}
+.expanded {
+  transform: rotate(90deg);
+}
+.h-tree-node-checkbox {
+  margin-right: 0;
+}
+.h-tree-ul-box {
+  padding-left: 5px;
+}
