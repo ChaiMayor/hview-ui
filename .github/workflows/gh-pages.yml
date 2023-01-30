@@ -28,14 +28,16 @@ jobs:
       
       - uses: actions/cache@v3
         name: Setup pnpm cache
+        id: pnpm-cache
         with:
           path: |
             **/node_modules
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+            ${{ runner.os }}-pnpm-
 
       - name: Install dependencies
+        if: steps.pnpm-cache.outputs.cache-hit != 'true'
         run: pnpm i --frozen-lockfile
 
 
