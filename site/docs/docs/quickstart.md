@@ -11,6 +11,7 @@
 ```ts
 // main.ts
 import { createApp } from "vue";
+// HviewUI 样式文件自动引入
 import HviewPlus from "hview-plus";
 import App from "./App.vue";
 

@@ -1,2 +1,2 @@
-export { default as withInstall } from "./withinstall";
 export * from "./vue";
+export * from "./dom";
