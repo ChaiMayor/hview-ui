@@ -10,7 +10,10 @@ import { default as Message } from "./message";
 import { Container, Header, Aside, Main, Footer } from "./container";
 import { default as Carousel } from "./carousel";
 import { default as CarouselItem } from "./carousel-item";
+import { default as Tree } from "./tree";
 import ScrollBar from "./scrollbar";
+import { default as CheckboxGroup } from "./checkboxGroup";
+import { default as Checkbox } from "./checkbox";
 
 export {
   Button,
@@ -30,6 +33,9 @@ export {
   CarouselItem,
   Message,
   ScrollBar,
+  Tree,
+  CheckboxGroup,
+  Checkbox,
 };
 export default [
   Button,
@@ -49,4 +55,7 @@ export default [
   CarouselItem,
   Message,
   ScrollBar,
+  Tree,
+  CheckboxGroup,
+  Checkbox,
 ];
