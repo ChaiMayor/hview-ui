@@ -16,6 +16,9 @@ jobs:
           
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
+        with:
+          # 选择要使用的 pnpm 版本
+          pnpm-version: 7
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
