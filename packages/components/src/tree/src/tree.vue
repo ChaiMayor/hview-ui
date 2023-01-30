@@ -9,6 +9,9 @@
       :show-checkbox="showCheckbox"
       :index="0"
       :node-key="nodeKey"
+      :default-expanded-keys="defaultExpandedKeys"
+      :default-checked-keys="checkedKeys"
+      :default-expand-all="defaultExpandAll"
       :render-content="renderContent"
       :parent-data="copyData">
     </tree-node>
@@ -20,49 +23,9 @@ import "../style/index.less";
 import { ref, onMounted, provide, watch } from "vue";
 import treeNode from "./treeNode.vue";
 import { deepCopy } from "../../../../utils";
-// import { TreeProps } from "./tree";
-// const props = defineProps(TreeProps);
-const props = defineProps({
-  data: {
-    type: Array,
-    default: () => [],
-  },
-  label: {
-    type: String,
-    default: "label",
-  },
-  children: {
-    type: String,
-    default: "children",
-  },
-  showCheckbox: {
-    type: Boolean,
-    default: false,
-  },
-  nodeKey: {
-    type: String,
-    default: "",
-  },
-  // 默认展开项
-  defaultExpandedKeys: {
-    type: Array,
-    default: () => [],
-  },
-  // 默认选中项
-  defaultCheckedKeys: {
-    type: Array,
-    default: () => [],
-  },
-  // 默认展开所有
-  defaultExpandAll: {
-    type: Boolean,
-    default: false,
-  },
-  // 自定义渲染函数
-  renderContent: {
-    type: Function,
-  },
-});
+import { TreeProps } from "./tree";
+const props = defineProps(TreeProps);
+const emits = defineEmits(["toggle-change", "checked-change"]);
 const copyData = ref([]);
 const checkedKeys = ref(props.defaultCheckedKeys);
 
@@ -100,6 +63,20 @@ const initFn = (data: any) => {
   });
 };
 
+const checkboxChange = () => {
+  updateChecked(copyData.value);
+};
+
+// 展开/收起子节点时触发
+const toggleChange = (val: any) => {
+  emits("toggle-change", val);
+};
+
+const checkedChange = (data: any) => {
+  const checkedNodes = getCheckedNodes();
+  emits("checked-change", checkedNodes, data);
+};
+
 // 子有一个选中，父为半选
 // 子全选中，父为全选
 // 子一个都没选中，父不选
@@ -129,6 +106,17 @@ const updateChecked = (data: any) => {
   });
 };
 
+// 对外暴露，通过传入keys数组设置选中
+const setCheckedKeys = (keys: any) => {
+  if (!props.showCheckbox) return;
+  checkedKeys.value = keys;
+};
+
+// 对外暴露，获取选中项的keys数组
+const getCheckedKeys = () => {
+  return getCheckedNodes().map((ele: any) => ele.id);
+};
+
 // 对外暴露，获取选中项的数据数组
 const getCheckedNodes = () => {
   const checkedNodes: Object[] = [];
@@ -151,6 +139,16 @@ const getCheckedNodes = () => {
 
   return checkedNodes;
 };
+
+provide("checkboxChange", checkboxChange);
+provide("toggle-change", toggleChange);
+provide("checked-change", checkedChange);
+
+defineExpose({
+  setCheckedKeys,
+  getCheckedKeys,
+  getCheckedNodes,
+});
 </script>
 
 <script lang="ts">
