@@ -1,20 +1,58 @@
 <template>
-  <div>
-    <h-input placeholder="请输入" type="text" iconBefore="success"></h-input>
-    <h-input placeholder="请输入" type="text" iconAfter="info"></h-input>
-    <h-button type="primary" @click="showMessage">test</h-button>
-  </div>
+  <h-tree :data="list"></h-tree>
 </template>
-<script lang="ts" setup>
-import { getCurrentInstance } from "vue";
-const instance = getCurrentInstance();
-const { $message } = instance!.appContext.config.globalProperties;
-const showMessage = () => {
-  $message({
-    message: "Message!!!",
-    type: "info",
-    duration: 3000,
-    dangerouslyUseHTMLString: true,
-  });
-};
+
+<script setup lang="ts">
+const list = [
+  {
+    label: "一级 1",
+    children: [
+      {
+        label: "二级 1-1",
+        children: [
+          {
+            label: "三级 1-1-1",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    label: "一级 2",
+    children: [
+      {
+        label: "二级 2-1",
+        children: [
+          {
+            label: "三级 2-1-1",
+          },
+        ],
+      },
+      {
+        label: "二级 2-2",
+      },
+    ],
+  },
+  {
+    label: "一级 3",
+    children: [
+      {
+        label: "二级 3-1",
+        children: [
+          {
+            label: "三级 3-1-1",
+          },
+        ],
+      },
+      {
+        label: "二级 3-2",
+        children: [
+          {
+            label: "三级 3-2-1",
+          },
+        ],
+      },
+    ],
+  },
+];
 </script>
