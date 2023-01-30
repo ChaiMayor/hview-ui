@@ -1,6 +1,6 @@
 <template>
   <div class="h-result">
-    <div :class="iconClass">
+    <div>
       <slot name="icon">
         <h-icon :name="props.icon" :class="iconClass" style="font-size: 64px"></h-icon>
       </slot>
