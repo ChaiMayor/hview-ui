@@ -12,6 +12,7 @@ import { default as Carousel } from "./carousel";
 import { default as CarouselItem } from "./carousel-item";
 import { default as Tag } from "./tag";
 import ScrollBar from "./scrollbar";
+import { default as Result } from "./result";
 
 export {
   Button,
@@ -32,6 +33,7 @@ export {
   Message,
   ScrollBar,
   Tag,
+  Result,
 };
 export default [
   Button,
@@ -52,4 +54,5 @@ export default [
   Message,
   ScrollBar,
   Tag,
+  Result,
 ];

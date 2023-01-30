@@ -1,36 +1,29 @@
 <template>
   <div class="container">
-    <div class="con">
-      <h-tag closable theme="dark" size="small" round @click="clickT">primary</h-tag>
-      <h-tag closable theme="dark" size="small" type="success" round @close="closeT">primary</h-tag>
-      <h-tag closable theme="dark" size="small" type="info" round>primary</h-tag>
-      <h-tag closable theme="dark" size="small" type="warning" round>primary</h-tag>
-      <h-tag closable theme="dark" size="small" type="danger" round>primary</h-tag>
-    </div>
-    <div class="con">
-      <h-tag closable theme="dark">primary</h-tag>
-      <h-tag closable theme="dark" type="success">primary</h-tag>
-      <h-tag closable theme="dark" type="info">primary</h-tag>
-      <h-tag closable theme="dark" type="warning">primary</h-tag>
-      <h-tag closable theme="dark" type="danger">primary</h-tag>
-    </div>
-    <div class="con">
-      <h-tag closable theme="plain" size="large">primary</h-tag>
-      <h-tag closable theme="plain" size="large" type="success">primary</h-tag>
-      <h-tag closable theme="plain" size="large" type="info">primary</h-tag>
-      <h-tag closable theme="plain" size="large" type="warning">primary</h-tag>
-      <h-tag closable theme="plain" size="large" type="danger">primary</h-tag>
-    </div>
+    <h-result icon="success" title="Success Tip" sub-title="Please follow the instructions">
+      <template #extra>
+        <h-button type="primary">Back</h-button>
+      </template>
+    </h-result>
+    <h-result icon="warning" title="Success Tip" sub-title="Please follow the instructions">
+      <template #extra>
+        <h-button type="primary">Back</h-button>
+      </template>
+    </h-result>
+    <h-result icon="error" title="Success Tip" sub-title="Please follow the instructions">
+      <template #extra>
+        <h-button type="primary">Back</h-button>
+      </template>
+    </h-result>
+    <h-result icon="info" title="Success Tip" sub-title="Please follow the instructions">
+      <template #extra>
+        <h-button type="primary">Back</h-button>
+      </template>
+    </h-result>
   </div>
 </template>
-<script lang="ts" setup>
-const clickT = () => {
-  console.log("点击");
-};
-const closeT = () => {
-  console.log("关闭");
-};
-</script>
+
+<script lang="ts" setup></script>
 
 <style lang="less" scoped>
 .container {
