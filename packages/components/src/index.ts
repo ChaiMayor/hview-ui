@@ -11,6 +11,7 @@ import { Container, Header, Aside, Main, Footer } from "./container";
 import { default as Carousel } from "./carousel";
 import { default as CarouselItem } from "./carousel-item";
 import { default as Tag } from "./tag";
+import { default as Progress } from "./progress";
 import { default as ScrollBar } from "./scrollbar";
 import { default as Slider } from "./slider";
 import { default as Result } from "./result";
@@ -34,6 +35,7 @@ export {
   Message,
   ScrollBar,
   Tag,
+  Progress,
   Result,
   Slider,
 };
@@ -57,6 +59,7 @@ export default [
   Message,
   ScrollBar,
   Tag,
+  Progress,
   Result,
   Slider,
 ];
