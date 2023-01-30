@@ -7,8 +7,6 @@
 import "../style/index.less";
 import { getCurrentInstance, defineComponent, onUnmounted, onMounted, toRefs, ref, watchEffect, nextTick } from "vue";
 import { TooltipProps } from "./tooltip";
-import { compileScript } from "vue/compiler-sfc";
-
 const props = defineProps(TooltipProps);
 // 获取当前组件的实例
 const instance = getCurrentInstance();

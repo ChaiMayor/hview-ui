@@ -7,12 +7,12 @@
             <div class="logo-img"></div>
           </router-link>
         </teleport>
-        
+
         <!-- 右侧边栏导航区域 -->
         <div v-for="(menu, i) in navBar" class="menu" :key="i">
           <dl><dt># 常用组件</dt></dl>
           <router-link :to="menu.routePath">
-            {{menu.title}}
+            {{ menu.title }}
           </router-link>
         </div>
       </div>
@@ -21,19 +21,18 @@
   </div>
 </template>
 <script lang="ts">
-import { data } from './router/data'
-import View from './views/View.vue'
+import { data } from "./router/data";
+import View from "./views/View.vue";
 export default {
   components: {
     View,
   },
   setup() {
-    const navBar = data
+    const navBar = data;
     return {
-      navBar
-    }
+      navBar,
+    };
   },
-}
+};
 </script>
-<style lang="less">
-</style>
+<style lang="less"></style>

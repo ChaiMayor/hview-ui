@@ -15,6 +15,9 @@ import { default as Progress } from "./progress";
 import { default as ScrollBar } from "./scrollbar";
 import { default as Slider } from "./slider";
 import { default as Result } from "./result";
+import { default as Tree } from "./tree";
+import { default as CheckboxGroup } from "./checkboxGroup";
+import { default as Checkbox } from "./checkbox";
 
 export {
   Button,
@@ -38,6 +41,9 @@ export {
   Progress,
   Result,
   Slider,
+  Tree,
+  CheckboxGroup,
+  Checkbox,
 };
 
 export default [
@@ -62,4 +68,7 @@ export default [
   Progress,
   Result,
   Slider,
+  Tree,
+  CheckboxGroup,
+  Checkbox,
 ];

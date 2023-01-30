@@ -1,21 +1,58 @@
 <template>
-  <div class="container">
-    <div class="con">
-      <h-progress :percentage="10" :indeterminate="true" :duration="1" />
-      <h-progress :percentage="10"> 进度 </h-progress>
-      <h-progress :percentage="10" strokeWidth="26" :text-inside="true"> 进度 </h-progress>
-    </div>
-  </div>
+  <h-tree :data="list"></h-tree>
 </template>
-<script lang="ts" setup></script>
 
-<style lang="less" scoped>
-.container {
-  display: flex;
-  .con {
-    margin: 2px auto;
-    display: block;
-    width: 50%;
-  }
-}
-</style>
+<script setup lang="ts">
+const list = [
+  {
+    label: "一级 1",
+    children: [
+      {
+        label: "二级 1-1",
+        children: [
+          {
+            label: "三级 1-1-1",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    label: "一级 2",
+    children: [
+      {
+        label: "二级 2-1",
+        children: [
+          {
+            label: "三级 2-1-1",
+          },
+        ],
+      },
+      {
+        label: "二级 2-2",
+      },
+    ],
+  },
+  {
+    label: "一级 3",
+    children: [
+      {
+        label: "二级 3-1",
+        children: [
+          {
+            label: "三级 3-1-1",
+          },
+        ],
+      },
+      {
+        label: "二级 3-2",
+        children: [
+          {
+            label: "三级 3-2-1",
+          },
+        ],
+      },
+    ],
+  },
+];
+</script>
