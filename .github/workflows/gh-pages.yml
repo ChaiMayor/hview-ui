@@ -1,58 +1,32 @@
-on: # 触发条件
-  # 每当 push 到 dev 分支时触发部署
+name: Deploy
+
+on:
   push:
-    branches: [dev]
-  # 是否手动触发部署
-  workflow_dispatch:
+    branches:
+      - dev
 jobs:
   site:
-    runs-on: ubuntu-latest # 指定运行所需要的虚拟机环境（必填）
-
+    strategy:
+      matrix:
+        node-version: [16]
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
-          fetch-depth: 0
-          persist-credentials: false
-          
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          # 选择要使用的 pnpm 版本
-          version: 7
-
-      - name: Setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        id: pnpm-cache
-        with:
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-
-
-      - name: Install dependencies
-        if: steps.pnpm-cache.outputs.cache-hit != 'true'
-        run: pnpm i --frozen-lockfile
-
-
-      - name: Local build
-        run: pnpm run docs:build
-          
-      # 查看 workflow 的文档来获取更多信息
-      # @see https://github.com/crazy-max/ghaction-github-pages
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v2
-        # 环境变量
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACTION_SECRET }}
-        with:
-          # 部署到 gh-pages 分支
-          target_branch: gh-pages
-          # 部署目录为 VitePress 的默认输出目录
-          build_dir: site/docs/.vitepress/dist
+    - uses: actions/checkout@v3
+    - uses: pnpm/action-setup@v2.2.2
+      with:
+        version: 7
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'pnpm'
+    - name: Install dependencies
+      run: pnpm install
+    - name: Build
+      run: pnpm run docs:build
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.ACTION_SECRET }}
+        # publish_dir:这里填写打包后的路径地址
+        publish_dir: ./site/docs/.vitepress/dist  //这里是打包文件的路径
