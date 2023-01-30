@@ -15,9 +15,6 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
           
-      - name: Add dev branch
-        run: git branch dev origin/dev
-          
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
