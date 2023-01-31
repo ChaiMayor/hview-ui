@@ -4,23 +4,23 @@ import disabled from 'exam/link/disabled.vue'
 import underline from 'exam/link/underline.vue'
 </script>
 
-# Link 文字链接
+# Link
 
 text hyperlink
 
-## 基础用法
+## Basic usage
 
 ::: code link/basic
 <basic></basic>
 :::
 
-## 禁用状态
+## Disabled state
 
 ::: code link/disabled
 <disabled></disabled>
 :::
 
-## 下划线
+## Underline
 
 ::: code link/underline
 <underline></underline>

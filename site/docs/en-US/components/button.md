@@ -5,11 +5,11 @@ import size from 'exam/button/size.vue'
 import icon from 'exam/button/icon.vue'
 </script>
 
-# Button 按钮
+# Button
 
 Commonly used action buttons.
 
-## 基础用法
+## Basic usage
 
 Buttons can set different colors according to `type`, `primary` `success` `info` `danger` `warning` `text`
 
@@ -19,7 +19,7 @@ Set the `plain` attribute to set the hollow button, set the `round` attribute to
 <basic></basic>
 :::
 
-## 禁用状态
+## Disabled state
 
 You can use the `disabled` attribute to define whether the button is disabled or not.
 
@@ -29,7 +29,7 @@ Use the `disabled` attribute to control whether the button is disabled. This pro
 <disabled></disabled>
 :::
 
-## 调整尺寸
+## Resize
 
 The button changes size according to `size`, providing `medium` `small` `mini` three kinds
 
@@ -37,7 +37,7 @@ The button changes size according to `size`, providing `medium` `small` `mini` t
 <size></size>
 :::
 
-## 图标按钮
+## Icon button
 
 ::: code button/icon
 <icon></icon>
