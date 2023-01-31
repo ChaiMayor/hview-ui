@@ -22,7 +22,7 @@
 
 <script lang="ts" setup>
 import "../style/index.less";
-import { computed } from "vue";
+import { computed, unref } from "vue";
 import { tagEmits, tagProps } from "./tag";
 
 const props = defineProps(tagProps);
@@ -32,9 +32,9 @@ const tagClasses = computed(() => {
   const { type, border, theme, round, size } = props;
   return {
     [`h-tag-round`]: round,
-    [`h-tag--${type}`]: type,
-    [`h-tag--${size}`]: size,
-    [`is-${theme}`]: theme,
+    [`h-tag--${type}`]: unref(type),
+    [`h-tag--${size}`]: unref(size),
+    [`is-${theme}`]: unref(theme),
   };
 });
 

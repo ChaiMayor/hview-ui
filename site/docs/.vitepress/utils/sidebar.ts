@@ -49,6 +49,7 @@ const sidebar = {
         { text: "Card 卡片", link: "/components/card" },
         { text: "Avatar 头像", link: "/components/avatar" },
         { text: "Carousel 轮播图", link: "/components/carousel" },
+        { text: "Tag 标签", link: "/components/tag" },
         { text: "Result 结果", link: "/components/result" },
       ],
     },
@@ -106,6 +107,8 @@ const sidebarEN = {
       items: [
         { text: "Card", link: "/components/card" },
         { text: "Avatar", link: "/components/avatar" },
+        { text: "Carousel", link: "/components/carousel" },
+        { text: "Tag", link: "/components/tag" },
         { text: "Result", link: "/components/result" },
       ],
     },
