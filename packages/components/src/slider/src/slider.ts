@@ -22,8 +22,7 @@ type SliderMarks = Record<number, string | SliderMarkerProps["mark"]>;
 
 export const SliderProps = {
   modelValue: {
-    type: Array as PropType<number | number[]>,
-    // definePropType<Arrayable<number>>([Number, Array]),
+    type: [Number, Array<Number>],
     default: 0,
   },
   id: {

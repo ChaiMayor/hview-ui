@@ -42,7 +42,7 @@ export default defineConfig({
   },
   base: process.env.NODE_ENV === "production" ? "/hview-ui/" : "/",
   head: [
-    ["link", { rel: "icon", href: "/favicon.png" }],
+    ["link", { rel: "icon", href: "https://oss.zhishiyu.online/common/hview-logo.png" }],
     [
       "meta",
       {

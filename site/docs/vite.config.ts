@@ -35,6 +35,14 @@ export default (): UserConfigExport => {
           find: "exam",
           replacement: resolve(__dirname, "./examples"),
         },
+        {
+          find: "locale",
+          replacement: resolve(__dirname, "../../packages/locale"),
+        },
+        {
+          find: "utils",
+          replacement: resolve(__dirname, "../../packages/utils"),
+        },
       ],
     },
   };
