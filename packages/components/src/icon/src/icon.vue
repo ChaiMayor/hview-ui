@@ -5,7 +5,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { computed, onMounted } from "vue";
+import { computed } from "vue";
 import "../style/index.less";
 import { iconProps } from "./icon";
 const props = defineProps(iconProps);
@@ -23,17 +23,6 @@ const iconColor = computed(() => {
   return {
     color: props.color,
   };
-});
-onMounted(() => {
-  import("../../../asset/js/iconfont.js" as any).then((module) => {
-    ({
-      setup() {
-        return {
-          badge,
-        };
-      },
-    });
-  });
 });
 </script>
 

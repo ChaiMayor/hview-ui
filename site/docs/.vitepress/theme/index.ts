@@ -14,13 +14,15 @@ NProgress.configure({ showSpinner: true });
 import hp from "hview-plus";
 
 import MyLayout from "../src/layout.vue";
-import { useRouter, useData, useRoute } from "vitepress";
+import { useRouter, useData, useRoute, inBrowser } from "vitepress";
 
 export default {
   ...Theme,
 
   enhanceApp({ app }) {
-    app.use(hp);
+    if (inBrowser) {
+      app.use(hp);
+    }
     app.use(ElementPlus);
     app.component("HCode", hpCode);
   },

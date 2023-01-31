@@ -25,13 +25,13 @@ const handleLang = () => {
 // import { getCurrentInstance } from "vue";  更改使用i18n使用模式
 // const instance = getCurrentInstance() as any;
 // setTimeout(() => {
-//   instance.ctx.$i18n.locale = "en";
+//   instance.ctx.$i18n.locale = "en-US";
 // }, 0);
 
 export default {
   install(app: App) {
     const i18n = createI18n({
-      locale: localStorage?.getItem("lang") || "zh-CN",
+      locale: localStorage.getItem("hp_lang") || "zh-CN",
       messages: handleLang(),
     });
     app.use(i18n);
