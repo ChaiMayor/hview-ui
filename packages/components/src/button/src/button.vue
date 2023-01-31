@@ -8,7 +8,7 @@
 </template>
 <script setup lang="ts">
 import "../style/index.less";
-import { computed, defineComponent, toRefs } from "vue";
+import { computed, toRefs } from "vue";
 import { ButtonProps } from "./button";
 const props = defineProps(ButtonProps);
 const { icon } = toRefs(props);
@@ -24,7 +24,7 @@ const styleClass = computed(() => {
 </script>
 
 <script lang="ts">
-export default defineComponent({
+export default {
   name: "HButton",
-});
+};
 </script>

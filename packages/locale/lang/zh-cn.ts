@@ -1,5 +1,5 @@
 export default {
-  name: "zh-cn",
+  name: "zh-CN",
   hp: {
     colorpicker: {
       confirm: "确定",

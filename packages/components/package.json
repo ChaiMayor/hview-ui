@@ -2,7 +2,7 @@
   "name": "hview-plus",
   "version": "1.0.0",
   "description": "",
-  "module": "index.ts",
+  "module": "./hview-ui/es/packages/components/index.js",
   "main": "./hview-ui/lib/index.js",
   "scripts": {
     "build": "vite build",
@@ -21,17 +21,13 @@
   "license": "MIT",
   "typings": "hview-ui/lib/index.d.ts",
   "dependencies": {
+    "@vue/shared": "^3.2.37",
+    "dayjs": "^1.11.3",
+    "vue-i18n": "^9.2.2",
     "@hview-plus/constants": "workspace:*",
     "@hview-plus/hooks": "workspace:*",
     "@hview-plus/locale": "workspace:*",
     "@hview-plus/theme": "workspace:*",
-    "@hview-plus/utils": "workspace:*",
-    "@vue/shared": "^3.2.37",
-    "lodash": "^4.17.21",
-    "lodash-es": "^4.17.21",
-    "lodash-unified": "^1.0.2"
-  },
-  "devDependencies": {
-    "@types/lodash": "^4.14.191"
+    "@hview-plus/utils": "workspace:*"
   }
 }

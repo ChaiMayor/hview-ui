@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 import "../style/index.less";
-import { ref, defineComponent } from "vue";
+import { ref } from "vue";
 import { radioProps, IItem } from "./radio";
 
 const props = defineProps(radioProps);
@@ -41,9 +41,9 @@ const change = (item: IItem, index: number): void => {
 </script>
 
 <script lang="ts">
-export default defineComponent({
+export default {
   name: "HRadio",
-});
+};
 </script>
 
 <style scoped></style>

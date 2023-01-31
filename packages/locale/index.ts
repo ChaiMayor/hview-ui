@@ -1,5 +1,8 @@
-export { default as en } from "./lang/en";
-export { default as zhCn } from "./lang/zh-cn";
+import enUS from "./lang/en-US";
+import zhCn from "./lang/zh-CN";
+import { createI18n } from "vue-i18n";
+import { App } from "vue";
+
 export type TranslatePair = {
   [key: string]: string | string[] | TranslatePair;
 };
@@ -8,11 +11,8 @@ export type Language = {
   hp: TranslatePair;
 };
 
-import en from "./lang/en";
-import zhCn from "./lang/zh-cn";
-
 const handleLang = () => {
-  const before = [en, zhCn];
+  const before = [enUS, zhCn];
   const message: any = {};
   before.reduce((pre, cur: Language) => {
     pre[cur.name] = cur.hp;
@@ -20,9 +20,6 @@ const handleLang = () => {
   }, message);
   return message;
 };
-
-import { createI18n } from "vue-i18n";
-import { App } from "vue";
 
 // <p>{{ $t("colorpicker.confirm") }}</p>   模板代码
 // import { getCurrentInstance } from "vue";  更改使用i18n使用模式
@@ -34,7 +31,7 @@ import { App } from "vue";
 export default {
   install(app: App) {
     const i18n = createI18n({
-      locale: localStorage?.getItem("lang") || "zh-cn",
+      locale: localStorage?.getItem("lang") || "zh-CN",
       messages: handleLang(),
     });
     app.use(i18n);

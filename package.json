@@ -6,13 +6,14 @@
   "scripts": {
     "prepare": "husky install",
     "dev": "pnpm run --filter ./examples dev",
-    "build": "gulp -f packages/components/script/build/gulpfile.ts",
+    "build": "gulp -f packages/components/script/build/gulpfile.ts & gulp -f packages/components/script/build/gulpfile2.ts",
     "publish": "cd ./packages/components/hview-ui & pnpm run release",
+    "publish:build": "gulp -f packages/components/script/publish/gulpfile.ts",
     "publish:gulp": "pnpm run build & gulp -f packages/components/script/publish/gulpfile.ts",
     "docs:dev": "pnpm run --filter ./site docs:dev",
     "docs:build": "pnpm run --filter ./site docs:build",
     "lint-staged": "lint-staged --allow-empty",
-    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx,.vue",
+    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx,.vue --no-ignore",
     "test": "pnpm run --filter ./packages/components test",
     "coverage": "pnpm run --filter ./packages/components coverage"
   },
@@ -60,12 +61,7 @@
     "vitest": "^0.21.1",
     "vue": "^3.2.45"
   },
-  "dependencies": {
-    "vue-i18n": "^9.2.2",
-    "@popperjs/core": "npm:@sxzz/popperjs-es@^2.11.7",
-    "dayjs": "^1.11.3",
-    "@vue/shared": "^3.2.37"
-  },
+  "dependencies": {},
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,vue}": "pnpm run lint-staged:js",
     "**/*.{js,jsx,tsx,ts,md,json,vue}": [

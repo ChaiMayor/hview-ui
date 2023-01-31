@@ -13,7 +13,7 @@
 </template>
 <script setup lang="ts">
 import "../style/index.less";
-import { computed, defineComponent } from "vue";
+import { computed } from "vue";
 import { cardProps } from "./card";
 const props = defineProps(cardProps);
 const styleClass = computed(() => {
@@ -24,7 +24,7 @@ const styleClass = computed(() => {
 </script>
 
 <script lang="ts">
-export default defineComponent({
+export default {
   name: "HCard",
-});
+};
 </script>

@@ -24,7 +24,7 @@
 <script setup lang="ts">
 import "../style/index.less";
 import { InputProps } from "./input";
-import { defineComponent, toRefs, ref, watchEffect, computed } from "vue";
+import { toRefs, ref, watchEffect, computed } from "vue";
 
 const props = defineProps(InputProps);
 const emit = defineEmits(["update:modelValue"]);
@@ -52,7 +52,7 @@ const textLength = computed(() => {
 </script>
 
 <script lang="ts">
-export default defineComponent({
+export default {
   name: "HInput",
-});
+};
 </script>

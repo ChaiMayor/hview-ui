@@ -51,7 +51,7 @@
 
 <script lang="ts" setup>
 import "../style/index.less";
-import { computed, unref, defineComponent } from "vue";
+import { computed, unref } from "vue";
 import { carouselEmits, carouselProps } from "./carousel";
 import { useCarousel } from "./utils";
 
@@ -103,7 +103,7 @@ defineExpose({
 </script>
 
 <script lang="ts">
-export default defineComponent({
+export default {
   name: "HCarousel",
-});
+};
 </script>

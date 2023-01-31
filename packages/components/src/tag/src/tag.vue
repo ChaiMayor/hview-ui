@@ -22,7 +22,7 @@
 
 <script lang="ts" setup>
 import "../style/index.less";
-import { computed, defineComponent } from "vue";
+import { computed } from "vue";
 import { tagEmits, tagProps } from "./tag";
 
 const props = defineProps(tagProps);
@@ -49,7 +49,7 @@ const handleClick = (event: MouseEvent) => {
 </script>
 
 <script lang="ts">
-export default defineComponent({
+export default {
   name: "HTag",
-});
+};
 </script>

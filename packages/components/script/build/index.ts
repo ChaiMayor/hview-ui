@@ -13,9 +13,15 @@ export const removeDist = (floor: number) => {
 export const buildStyle = () => {
   return src(`${componentPath}/src/**/style/**.less`)
     .pipe(less())
-    .pipe(autoprefixer())
-    .pipe(dest(`${componentPath}/hview-ui/lib/src`))
-    .pipe(dest(`${componentPath}/hview-ui/es/src`));
+    .pipe(
+      autoprefixer({
+        // @ts-ignore
+        overrideBrowserslist: ["> 1%", "last 2 versions"],
+        cascade: false, //  是否美化属性值
+      }),
+    )
+    .pipe(dest(`${componentPath}/hview-ui/lib/packages/components/src`))
+    .pipe(dest(`${componentPath}/hview-ui/es/packages/components/src`));
 };
 
 //打包组件

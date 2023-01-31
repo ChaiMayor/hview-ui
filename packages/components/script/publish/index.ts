@@ -16,7 +16,7 @@ export const publish = async () => {
   await run("pnpm version patch", `${pkgPath}/transitpkg`);
   //复制到dist目录
   await copypackage();
-  //在dist下执行发布命令
+  //在 hview-ui 下执行发布命令
   await run("npm publish --access=public", `${componentPath}/hview-ui`);
   // run('pnpm publish')
 };

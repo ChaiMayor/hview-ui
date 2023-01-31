@@ -1,5 +1,5 @@
 export default {
-  name: "en",
+  name: "en-US",
   hp: {
     colorpicker: {
       confirm: "OK",

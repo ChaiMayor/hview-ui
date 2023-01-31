@@ -5,7 +5,7 @@
 </template>
 <script setup lang="ts">
 import "../style/index.less";
-import { computed, defineComponent, useAttrs } from "vue";
+import { computed, useAttrs } from "vue";
 import { LinkProps } from "./link";
 const props = defineProps(LinkProps);
 const attrs = useAttrs();
@@ -19,7 +19,7 @@ const styleClass = computed(() => {
 </script>
 
 <script lang="ts">
-export default defineComponent({
+export default {
   name: "HLink",
-});
+};
 </script>

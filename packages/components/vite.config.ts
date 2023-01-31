@@ -4,10 +4,6 @@ import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
 import { resolve } from "path";
 import DefineOptions from "unplugin-vue-define-options/vite";
-// 本地打包测试
-// "module": "./hview-ui/es/index.mjs",
-// 本地代码测试
-// "main": "./hview-ui/lib/index.js",
 
 export default defineConfig({
   build: {
@@ -17,16 +13,25 @@ export default defineConfig({
     //压缩
     minify: true,
     //css分离
-    //cssCodeSplit: true,
+    cssCodeSplit: true,
     rollupOptions: {
       //忽略打包vue文件
-      external: ["vue", /\.less/, "@hview-plus/utils"],
+      external: [
+        "vue",
+        /\.less/,
+        "@hview-plus/utils",
+        "@hview-plus/locale",
+        "@hview-plus/theme",
+        "@hview-plus/constants",
+        "@hview-plus/hooks",
+      ],
+      // external: [/\.less/],
       input: ["index.ts"],
       output: [
         {
           format: "es",
           //不用打包成.es.js,这里我们想把它打包成.js
-          entryFileNames: "[name].mjs",
+          entryFileNames: "[name].js",
           //让打包目录和我们目录对应
           preserveModules: true,
           exports: "named",

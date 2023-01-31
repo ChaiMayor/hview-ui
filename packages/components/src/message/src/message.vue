@@ -12,7 +12,7 @@
 </template>
 <script setup lang="ts">
 import { MessageProps } from "./message";
-import { toRefs, computed, onMounted, ref, onUnmounted, defineComponent } from "vue";
+import { toRefs, computed, onMounted, ref, onUnmounted } from "vue";
 import "../style/index.less";
 const props = defineProps(MessageProps);
 const { message, showClose, type, duration, center, dangerouslyUseHTMLString, onClose } = toRefs(props);
@@ -46,7 +46,7 @@ onUnmounted(() => {
 });
 </script>
 <script lang="ts">
-export default defineComponent({
+export default {
   name: "HMessage",
-});
+};
 </script>
