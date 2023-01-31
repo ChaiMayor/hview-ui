@@ -1,88 +1,38 @@
+<script setup>
+import basic from 'exam/link/basic.vue'
+import disabled from 'exam/link/disabled.vue'
+import underline from 'exam/link/underline.vue'
+</script>
+
 # Link 文字链接
 
 文字超链接
 
 ## 基础用法
 
-<div class="example">
-  <div>
-    <h-link type="primary" class="primary">primary</h-link>
-    <h-link type="success" class="success">success</h-link>
-    <h-link type="warning" class="warning">warning</h-link>
-    <h-link type="danger" class="danger">danger</h-link>
-    <h-link type="info" class="info">info</h-link>
-  </div>
-</div>
-
-::: details 显示代码
-
-```html
-<template>
-  <div>
-    <h-link type="primary">primary</h-link>
-    <h-link type="success">success</h-link>
-    <h-link type="warning">warning</h-link>
-    <h-link type="danger">danger</h-link>
-    <h-link type="info">info</h-link>
-  </div>
-</template>
-```
-
+::: code link/basic
+<basic></basic>
 :::
 
 ## 禁用状态
 
-<div class="example">
-  <h-link type="primary" class="primary-distbled" disabled>primary</h-link>     
-  <h-link type="success" class="success-distbled"  disabled>success</h-link>     
-  <h-link type="warning" class="warning-distbled" disabled>warning</h-link>     
-  <h-link type="danger" class="danger-distbled"  disabled>danger</h-link>     
-  <h-link type="info" class="info-distbled"  disabled>info</h-link>     
-</div>
-
-::: details 显示代码
-
-```html
-<template>
-  <div>
-    <h-link type="primary" disabled>primary</h-link>
-    <h-link type="success" disabled>success</h-link>
-    <h-link type="warning" disabled>warning</h-link>
-    <h-link type="danger" disabled>danger</h-link>
-    <h-link type="info" disabled>info</h-link>
-  </div>
-</template>
-```
-
+::: code link/disabled
+<disabled></disabled>
 :::
 
 ## 下划线
 
-<div class="example">
-  <div>  
-    <h-link type="primary" class="primary " underline>primary</h-link>     
-    <h-link type="success" class="sucesss" underline>success</h-link>     
-    <h-link type="warning" class="warning"  underline>warning</h-link>     
-    <h-link type="danger" class="danger"  underline>danger</h-link>     
-    <h-link type="info" class="info" underline>info</h-link>  
-  </div>
-</div>
-
-::: details 显示代码
-
-```html
-<template>
-  <div>
-    <h-link type="primary" underline>primary</h-link>
-    <h-link type="success" underline>success</h-link>
-    <h-link type="warning" underline>warning</h-link>
-    <h-link type="danger" underline>danger</h-link>
-    <h-link type="info" underline>info</h-link>
-  </div>
-</template>
-```
-
+::: code link/underline
+<underline></underline>
 :::
+
+## Attributes
+
+| 参数      | 说明           | 类型    | 可选值                                      | 默认  |
+| --------- | -------------- | ------- | ------------------------------------------- | ----- |
+| type      | 类型           | string  | primary / success / warning / danger / info | —     |
+| disabled  | 是否禁用       | boolean | —                                           | false |
+| underline | 是否显示下划线 | boolean | —                                           | false |
 
 <style>
 .example a {
