@@ -18,6 +18,10 @@ import { default as Result } from "./result";
 import { default as Tree } from "./tree";
 import { default as CheckboxGroup } from "./checkboxGroup";
 import { default as Checkbox } from "./checkbox";
+import { default as Badge } from "./badge";
+import { default as Modal } from "./modal";
+import { default as  upload} from "./upload";
+
 
 export {
   Button,
@@ -44,6 +48,9 @@ export {
   Tree,
   CheckboxGroup,
   Checkbox,
+  Badge,
+  Modal,
+  upload
 };
 
 export default [
@@ -71,4 +78,7 @@ export default [
   Tree,
   CheckboxGroup,
   Checkbox,
+  Badge,
+  Modal,
+  upload
 ];

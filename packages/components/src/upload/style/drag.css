@@ -1,0 +1,29 @@
+.h-upload-dragger {
+  background-color: #fff;
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  box-sizing: border-box;
+  width: 360px;
+  height: 180px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.h-upload-dragger:hover {
+  border: 1px dashed #409eff;
+}
+.h-upload-dragger .h-upload-content {
+  text-align: center;
+  color: #606266;
+}
+.h-upload-dragger .h-upload-content .h-upload-icon {
+  font-size: 20px;
+}
+.h-upload-dragger .h-upload-content em {
+  color: #409eff;
+  font-style: normal;
+}
+.h-upload-draggerenter {
+  border: 1px dashed #409eff;
+}
