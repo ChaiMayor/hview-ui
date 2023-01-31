@@ -2,7 +2,7 @@
   <ul class="h-tree-node" :style="nodeStyle">
     <div :class="['h-tree-node__content']" @click.stop="handleToggle(items)">
       <span :class="expandIconClass">
-        <i class="h-icon-you1" :class="iconClass"></i>
+        <i class="h-icon-you1"></i>
       </span>
       <h-checkbox
         v-if="showCheckbox"
@@ -94,12 +94,6 @@ const expandIconClass = computed(() => {
       expanded: props.items.isOpen,
     },
   ];
-});
-
-const iconClass = computed(() => {
-  return {
-    "icon-arrow-right-filling": props.items.children && props.items.children.length,
-  };
 });
 
 const handleToggle = (item: any) => {
