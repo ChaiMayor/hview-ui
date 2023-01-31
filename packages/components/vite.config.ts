@@ -5,6 +5,8 @@ import dts from "vite-plugin-dts";
 import { resolve } from "path";
 import DefineOptions from "unplugin-vue-define-options/vite";
 
+// "./hview-ui/es/packages/components/index.js"
+
 export default defineConfig({
   build: {
     target: "modules",

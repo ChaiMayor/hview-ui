@@ -54,7 +54,7 @@
 
 <script lang="ts" setup>
 import "../style/index.less";
-import { computed, defineComponent } from "vue";
+import { computed } from "vue";
 // eslint-disable-next-line vue/prefer-import-from-vue
 import { isFunction, isString } from "@vue/shared";
 import { progressProps } from "./progress";
@@ -181,7 +181,7 @@ const getCurrentColor = (percentage: number) => {
 </script>
 
 <script lang="ts">
-export default defineComponent({
+export default {
   name: "HProgress",
-});
+};
 </script>

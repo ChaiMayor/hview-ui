@@ -2,7 +2,7 @@
   "name": "hview-plus",
   "version": "1.0.0",
   "description": "",
-  "module": "./hview-ui/es/packages/components/index.js",
+  "module": "./index.ts",
   "main": "./hview-ui/lib/index.js",
   "scripts": {
     "build": "vite build",

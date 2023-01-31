@@ -22,7 +22,7 @@
 import "../style/index.less";
 import { ref, onMounted, provide, watch } from "vue";
 import treeNode from "./treeNode.vue";
-import { deepCopy } from "../../../../utils";
+import { deepCopy } from "@hview-plus/utils";
 import { TreeProps } from "./tree";
 const props = defineProps(TreeProps);
 const emits = defineEmits(["toggle-change", "checked-change"]);
