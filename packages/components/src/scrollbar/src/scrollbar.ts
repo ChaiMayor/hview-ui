@@ -51,4 +51,4 @@ export const ScrollBarProps = {
   },
 };
 
-export type ButtonProps = ExtractPropTypes<typeof ScrollBarProps>;
+export type ScrollBarProps = ExtractPropTypes<typeof ScrollBarProps>;

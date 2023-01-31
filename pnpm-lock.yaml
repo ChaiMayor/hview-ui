@@ -6,7 +6,6 @@ importers:
     specifiers:
       '@commitlint/cli': ^17.4.2
       '@commitlint/config-conventional': ^17.4.2
-      '@popperjs/core': npm:@sxzz/popperjs-es@^2.11.7
       '@release-it/conventional-changelog': ^5.1.1
       '@rushstack/eslint-patch': ^1.2.0
       '@types/gulp': ^4.0.10
@@ -18,14 +17,12 @@ importers:
       '@vue/compiler-sfc': ^3.2.45
       '@vue/eslint-config-prettier': ^7.0.0
       '@vue/eslint-config-typescript': ^11.0.2
-      '@vue/shared': ^3.2.37
       '@vue/test-utils': ^2.0.0
       agent-base: ^6.0.2
       c8: ^7.12.0
       commitlint: ^17.4.2
       cpy: ^9.0.1
       cross-env: ^7.0.3
-      dayjs: ^1.11.3
       eslint: ^8.32.0
       eslint-plugin-vue: ^9.9.0
       fast-glob: ^3.2.12
@@ -46,12 +43,6 @@ importers:
       vite-plugin-libcss: ^1.0.5
       vitest: ^0.21.1
       vue: ^3.2.45
-      vue-i18n: ^9.2.2
-    dependencies:
-      '@popperjs/core': /@sxzz/popperjs-es/2.11.7
-      '@vue/shared': 3.2.45
-      dayjs: 1.11.7
-      vue-i18n: 9.2.2_vue@3.2.45
     devDependencies:
       '@commitlint/cli': 17.4.2
       '@commitlint/config-conventional': 17.4.2
@@ -106,23 +97,20 @@ importers:
       '@hview-plus/locale': workspace:*
       '@hview-plus/theme': workspace:*
       '@hview-plus/utils': workspace:*
-      '@types/lodash': ^4.14.191
+      '@popperjs/core': npm:@sxzz/popperjs-es@^2.11.7
       '@vue/shared': ^3.2.37
-      lodash: ^4.17.21
-      lodash-es: ^4.17.21
-      lodash-unified: ^1.0.2
+      dayjs: ^1.11.3
+      vue-i18n: ^9.2.2
     dependencies:
       '@hview-plus/constants': link:../constants
       '@hview-plus/hooks': link:../hooks
       '@hview-plus/locale': link:../locale
       '@hview-plus/theme': link:../theme
       '@hview-plus/utils': link:../utils
+      '@popperjs/core': /@sxzz/popperjs-es/2.11.7
       '@vue/shared': 3.2.45
-      lodash: 4.17.21
-      lodash-es: 4.17.21
-      lodash-unified: 1.0.3_3ib2ivapxullxkx3xftsimdk7u
-    devDependencies:
-      '@types/lodash': 4.14.191
+      dayjs: 1.11.7
+      vue-i18n: 9.2.2_vue@3.2.45
 
   packages/constants:
     specifiers: {}
@@ -1308,6 +1296,7 @@ packages:
 
   /@types/lodash/4.14.191:
     resolution: {integrity: sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==}
+    dev: false
 
   /@types/minimatch/5.1.2:
     resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}

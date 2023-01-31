@@ -5,7 +5,7 @@
 </template>
 <script setup lang="ts">
 import "../style/index.less";
-import { getCurrentInstance, defineComponent, onUnmounted, onMounted, toRefs, ref, watchEffect, nextTick } from "vue";
+import { getCurrentInstance, onUnmounted, onMounted, toRefs, ref, watchEffect, nextTick } from "vue";
 import { TooltipProps } from "./tooltip";
 import { compileScript } from "vue/compiler-sfc";
 
@@ -158,7 +158,7 @@ onMounted(() => {
 });
 </script>
 <script lang="ts">
-export default defineComponent({
+export default {
   name: "HTooltip",
-});
+};
 </script>

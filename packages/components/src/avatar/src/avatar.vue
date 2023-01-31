@@ -14,7 +14,7 @@
 
 <script lang="ts" setup>
 import "../style/index.less";
-import { computed, defineComponent, ref, watch } from "vue";
+import { computed, ref, watch } from "vue";
 import { avatarEmits, avatarProps } from "./avatar";
 import type { CSSProperties } from "vue";
 
@@ -52,7 +52,7 @@ function handleError(e: Event) {
 </script>
 
 <script lang="ts">
-export default defineComponent({
+export default {
   name: "HAvatar",
-});
+};
 </script>

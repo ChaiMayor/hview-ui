@@ -2,14 +2,15 @@
   "compilerOptions": {
     "baseUrl": ".",
     "jsx": "preserve",
-    "strict": true,
+    "strict": false,
     "target": "ES2015",
     "module": "commonjs",
     "skipLibCheck": true,
     "esModuleInterop": true,
     "moduleResolution": "Node",
     "lib": ["esnext", "dom"],
-    "rootDirs": ["./", "./packages/components"],
+    // "rootDir": ".",
+    "rootDirs": ["./", "./packages", "./packages/components"],
     "paths": {
       "@/*": ["packages/components/src/*"],
       "exam/*": ["site/docs/examples/*"]

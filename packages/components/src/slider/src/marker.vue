@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch, onMounted, onUnmounted, computed, nextTick, useAttrs } from "vue";
+import { ref, onMounted, computed, useAttrs } from "vue";
 import { SliderProps } from "./slider";
 import { offsetTop, offsetLeft } from "@hview-plus/utils";
 
@@ -58,9 +58,9 @@ const mountMouseEvent = (dom: HTMLDivElement) => {
   };
 };
 
-const onDrawing = () => {};
+// const onDrawing = () => {};
 
-const onDrawed = () => {};
+// const onDrawed = () => {};
 
 onMounted(() => {
   mountMouseEvent(btn.value as HTMLDivElement);

@@ -23,7 +23,7 @@
 
 <script lang="ts" setup>
 import "../style/index.less";
-import { computed, defineProps } from "vue";
+import { computed } from "vue";
 import { ResultProps } from "./result";
 const props = defineProps(ResultProps);
 const iconClass = computed(() => {

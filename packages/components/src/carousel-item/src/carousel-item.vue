@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import "../style/index.less";
-import { computed, unref, defineComponent } from "vue";
+import { computed, unref } from "vue";
 import { carouselItemProps } from "./carousel-item";
 import { useCarouselItem } from "./utils";
 import type { CSSProperties } from "vue";
@@ -40,7 +40,7 @@ const itemStyle = computed<CSSProperties>(() => {
 </script>
 
 <script lang="ts">
-export default defineComponent({
+export default {
   name: "HCarouselItem",
-});
+};
 </script>

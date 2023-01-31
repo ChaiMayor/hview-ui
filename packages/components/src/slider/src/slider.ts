@@ -1,14 +1,15 @@
 import { definePropType } from "@hview-plus/utils";
 import { placements } from "@popperjs/core";
-import { Arrayable } from "vitest";
+// import { Arrayable } from "vitest";
 import type { SliderMarkerProps } from "./marker";
-import { ExtractPropTypes } from "vue";
+import { ExtractPropTypes, PropType } from "vue";
 
 type SliderMarks = Record<number, string | SliderMarkerProps["mark"]>;
 
 export const SliderProps = {
   modelValue: {
-    type: definePropType<Arrayable<number>>([Number, Array]),
+    type: Array as PropType<number | number[]>,
+    // definePropType<Arrayable<number>>([Number, Array]),
     default: 0,
   },
   id: {
@@ -87,4 +88,4 @@ export const SliderProps = {
   },
 };
 
-export type ButtonProps = ExtractPropTypes<typeof SliderProps>;
+export type SliderProps = ExtractPropTypes<typeof SliderProps>;
