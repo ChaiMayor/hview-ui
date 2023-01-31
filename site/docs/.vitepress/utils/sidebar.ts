@@ -106,6 +106,7 @@ const sidebarEN = {
       items: [
         { text: "Card", link: "/components/card" },
         { text: "Avatar", link: "/components/avatar" },
+        { text: "Carousel", link: "/components/carousel" },
         { text: "Result", link: "/components/result" },
       ],
     },
