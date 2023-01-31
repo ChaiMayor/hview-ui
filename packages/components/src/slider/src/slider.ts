@@ -1,8 +1,22 @@
 import { definePropType } from "@hview-plus/utils";
-import { placements } from "@popperjs/core";
-// import { Arrayable } from "vitest";
 import type { SliderMarkerProps } from "./marker";
 import { ExtractPropTypes, PropType } from "vue";
+
+type BasePlacement = "top" | "bottom" | "right" | "left";
+type AutoPlacement = "auto" | "auto-start" | "auto-end";
+type VariationPlacement =
+  | "top-start"
+  | "top-end"
+  | "bottom-start"
+  | "bottom-end"
+  | "right-start"
+  | "right-end"
+  | "left-start"
+  | "left-end";
+
+export type Placement = AutoPlacement | BasePlacement | VariationPlacement;
+
+const placements = Array<Placement>;
 
 type SliderMarks = Record<number, string | SliderMarkerProps["mark"]>;
 

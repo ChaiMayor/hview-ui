@@ -2,7 +2,7 @@
   "name": "hview-plus",
   "version": "1.0.0",
   "description": "",
-  "module": "./hview-ui/es/packages/components/index.mjs",
+  "module": "./hview-ui/es/packages/components/index.js",
   "main": "./hview-ui/lib/index.js",
   "scripts": {
     "build": "vite build",
@@ -24,7 +24,6 @@
     "@vue/shared": "^3.2.37",
     "dayjs": "^1.11.3",
     "vue-i18n": "^9.2.2",
-    "@popperjs/core": "npm:@sxzz/popperjs-es@^2.11.7",
     "@hview-plus/constants": "workspace:*",
     "@hview-plus/hooks": "workspace:*",
     "@hview-plus/locale": "workspace:*",
