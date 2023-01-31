@@ -11,7 +11,7 @@ hero:
   tagline: Complete usage documentation is provided
 
   image:
-    src: /logo@2x.png
+    src: https://oss.zhishiyu.online/common/hview-logo%402x.png
     alt: HviewUI
   actions:
     - theme: brand

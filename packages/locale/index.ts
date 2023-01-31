@@ -1,5 +1,5 @@
-import enUS from "./lang/en-US";
-import zhCn from "./lang/zh-CN";
+import enUS from "locale/lang/en-US";
+import zhCn from "locale/lang/zh-CN";
 import { createI18n } from "vue-i18n";
 import { App } from "vue";
 

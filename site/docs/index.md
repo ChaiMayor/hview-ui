@@ -10,7 +10,7 @@ hero:
   text: 一个Vue3组件库
   tagline: 提供完整使用文档
   image:
-    src: /logo@2x.png
+    src: https://oss.zhishiyu.online/common/hview-logo%402x.png
     alt: HviewUI
   actions:
     - theme: brand

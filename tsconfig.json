@@ -13,7 +13,9 @@
     "rootDirs": ["./", "./packages", "./packages/components"],
     "paths": {
       "@/*": ["packages/components/src/*"],
-      "exam/*": ["site/docs/examples/*"]
+      "exam/*": ["site/docs/examples/*"],
+      "locale/*": ["packages/locale/*"],
+      "utils/*": ["packages/utils/*"]
     }
   }
 }
