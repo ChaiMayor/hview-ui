@@ -7,7 +7,7 @@
       </slot>
     </div>
     <div class="h-empty-description">
-      <slot v-if="$slots.description" name="description" />
+      <slot v-if="$slots.description" name="No data" />
       <p v-else>{{ emptyDescription }}</p>
     </div>
     <div v-if="$slots.default" class="h-empty-bottom">
@@ -17,6 +17,7 @@
 </template>
 
 <script lang="ts" setup>
+import "../style/index.less";
 import { computed } from "vue";
 import EmptyImg from "./empty-img.vue";
 import { emptyProps } from "./empty";
@@ -29,4 +30,10 @@ const emptyDescription = computed(() => props.description || "description");
 const imageStyle = computed<CSSProperties>(() => ({
   width: props.imageSize ? `${props.imageSize}px` : "",
 }));
+</script>
+
+<script lang="ts">
+export default {
+  name: "HEmpty",
+};
 </script>
