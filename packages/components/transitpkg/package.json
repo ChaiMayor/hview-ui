@@ -27,7 +27,7 @@
     "@types/lodash": "^4.14.182",
     "@types/lodash-es": "^4.17.6",
     "@vueuse/core": "^9.1.0",
-    "@hview-plus/locale": "workspace:*",
+    "@hview-plus/locale": "*",
     "@hview-plus/utils": "workspace:*"
   },
   "devDependencies": {

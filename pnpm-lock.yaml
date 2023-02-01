@@ -90,10 +90,7 @@ importers:
 
   packages/components:
     specifiers:
-      '@hview-plus/constants': workspace:*
-      '@hview-plus/hooks': workspace:*
-      '@hview-plus/locale': workspace:*
-      '@hview-plus/theme': workspace:*
+      '@hview-plus/locale': '*'
       '@hview-plus/utils': workspace:*
       '@types/lodash': ^4.14.182
       '@types/lodash-es': ^4.17.6
@@ -106,10 +103,7 @@ importers:
       lodash-unified: ^1.0.2
       vue: ^3.2.37
     dependencies:
-      '@hview-plus/constants': link:../constants
-      '@hview-plus/hooks': link:../hooks
       '@hview-plus/locale': link:../locale/dist
-      '@hview-plus/theme': link:../theme/transitpkg
       '@hview-plus/utils': link:../utils
       '@types/lodash': 4.14.191
       '@types/lodash-es': 4.17.6
