@@ -14,7 +14,7 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
           persist-credentials: false
-          
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
@@ -25,24 +25,25 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16.8.x
-      
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        id: pnpm-cache
-        with:
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-
+
+      # - uses: actions/cache@v3
+      #   name: Setup pnpm cache
+      #   id: pnpm-cache
+      #   with:
+      #     path: |
+      #       **/node_modules
+      #     key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-pnpm-
 
       - name: Install dependencies
-        if: steps.pnpm-cache.outputs.cache-hit != 'true'
-        run: pnpm i --frozen-lockfile
+        # if: steps.pnpm-cache.outputs.cache-hit != 'true'
+        # --frozen-lockfile
+        run: pnpm i
 
       - name: Local build
         run: pnpm run docs:build
-          
+
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
       - name: Deploy to GitHub Pages

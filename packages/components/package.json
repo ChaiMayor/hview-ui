@@ -2,8 +2,8 @@
   "name": "hview-plus",
   "version": "1.0.0",
   "description": "",
-  "module": "./hview-ui/es/index.js",
-  "main": "./hview-ui/lib/index.js",
+  "module": "./index.ts",
+  "main": "./index.ts",
   "scripts": {
     "build": "vite build",
     "test": "vitest",
@@ -29,10 +29,7 @@
     "@types/lodash": "^4.14.182",
     "@types/lodash-es": "^4.17.6",
     "@vueuse/core": "^9.1.0",
-    "@hview-plus/constants": "workspace:*",
-    "@hview-plus/hooks": "workspace:*",
     "@hview-plus/locale": "workspace:*",
-    "@hview-plus/theme": "workspace:*",
     "@hview-plus/utils": "workspace:*"
   },
   "devDependencies": {
