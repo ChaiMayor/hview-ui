@@ -27,6 +27,21 @@ export const buildStyle = () => {
     .pipe(dest(`${componentPath}/hview-ui/es/${dirName}`));
 };
 
+//处理样式
+export const buildCommonStyle = () => {
+  return src(`${componentPath}/common/src/index.less`)
+    .pipe(less())
+    .pipe(
+      autoprefixer({
+        // @ts-ignore
+        overrideBrowserslist: ["> 1%", "last 2 versions"],
+        cascade: false, //  是否美化属性值
+      }),
+    )
+    .pipe(dest(`${componentPath}/hview-ui/lib/common/${dirName}`))
+    .pipe(dest(`${componentPath}/hview-ui/es/common/${dirName}`));
+};
+
 //打包组件
 export const buildComponent = async () => {
   run("pnpm run build", componentPath);

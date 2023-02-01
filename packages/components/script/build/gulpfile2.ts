@@ -1,4 +1,7 @@
 import { series } from "gulp";
-import { buildStyle } from "./index";
+import { buildStyle, buildCommonStyle } from "./index";
 
-export default series(() => buildStyle());
+export default series(
+  async () => buildStyle(),
+  async () => buildCommonStyle(),
+);

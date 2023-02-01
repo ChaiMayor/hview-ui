@@ -1,4 +1,5 @@
 <template>
+  {{ $t("colorpicker.confirm") }}
   <h-tree :data="list"></h-tree>
 </template>
 

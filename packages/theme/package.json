@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
-  "main": "index.ts",
-  "module": "index.ts"
+  "main": "./dist/theme.umd.js",
+  "module": "./dist/theme.mjs",
+  "scripts": {
+    "start": "gulp -f script/build/gulpfile.ts",
+    "build": "vite build"
+  }
 }

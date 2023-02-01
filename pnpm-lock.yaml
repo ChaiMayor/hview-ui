@@ -109,7 +109,7 @@ importers:
       '@hview-plus/constants': link:../constants
       '@hview-plus/hooks': link:../hooks
       '@hview-plus/locale': link:../locale/dist
-      '@hview-plus/theme': link:../theme
+      '@hview-plus/theme': link:../theme/transitpkg
       '@hview-plus/utils': link:../utils
       '@types/lodash': 4.14.191
       '@types/lodash-es': 4.17.6
@@ -176,6 +176,9 @@ importers:
       vite: 2.9.15
 
   packages/theme:
+    specifiers: {}
+
+  packages/theme/transitpkg:
     specifiers: {}
 
   packages/utils:
