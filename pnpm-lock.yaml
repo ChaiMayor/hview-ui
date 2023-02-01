@@ -103,7 +103,7 @@ importers:
       lodash-unified: ^1.0.2
       vue: ^3.2.37
     dependencies:
-      '@hview-plus/locale': link:../locale/dist
+      '@hview-plus/locale': link:../locale
       '@hview-plus/utils': link:../utils
       '@types/lodash': 4.14.191
       '@types/lodash-es': 4.17.6
@@ -124,12 +124,6 @@ importers:
     specifiers: {}
 
   packages/locale:
-    specifiers:
-      vue-i18n: ^9.2.2
-    dependencies:
-      vue-i18n: 9.2.2_vue@3.2.45
-
-  packages/locale/dist:
     specifiers:
       vue-i18n: ^9.2.2
     dependencies:

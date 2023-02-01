@@ -6,7 +6,7 @@ coverage
 *.log
 examples/dist  
 cache
-site/**/dist
+# site/**/dist
 packages/**/dist
 package-lock.json
 # pnpm-lock.yaml
