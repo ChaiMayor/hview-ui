@@ -6,6 +6,8 @@ importers:
     specifiers:
       '@commitlint/cli': ^17.4.2
       '@commitlint/config-conventional': ^17.4.2
+      '@hview-plus/locale': ^1.0.1
+      '@hview-plus/utils': workspace:*
       '@release-it/conventional-changelog': ^5.1.1
       '@rushstack/eslint-patch': ^1.2.0
       '@types/gulp': ^4.0.10
@@ -42,6 +44,9 @@ importers:
       vite-plugin-libcss: ^1.0.5
       vitest: ^0.21.1
       vue: ^3.2.45
+    dependencies:
+      '@hview-plus/locale': link:packages/locale/dist
+      '@hview-plus/utils': link:packages/utils
     devDependencies:
       '@commitlint/cli': 17.4.2
       '@commitlint/config-conventional': 17.4.2
