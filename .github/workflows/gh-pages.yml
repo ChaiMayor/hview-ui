@@ -38,7 +38,7 @@ jobs:
 
       - name: Install dependencies
         # if: steps.pnpm-cache.outputs.cache-hit != 'true'
-        run: pnpm i --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Local build
         run: pnpm run docs:build
