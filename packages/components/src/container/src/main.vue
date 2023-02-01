@@ -5,11 +5,8 @@
 </template>
 
 <script lang="ts">
+import "../style/index.less";
 export default {
   name: "HMain",
 };
 </script>
-
-<style lang="less" scoped>
-@import "../style/index.less";
-</style>

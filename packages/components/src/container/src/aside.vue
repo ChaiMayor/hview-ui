@@ -4,6 +4,7 @@
   </aside>
 </template>
 <script lang="ts" setup>
+import "../style/index.less";
 import { computed } from "vue";
 import { AsideProps } from "./container";
 
@@ -20,7 +21,3 @@ export default {
   name: "HAside",
 };
 </script>
-
-<style lang="less" scoped>
-@import "../style/index.less";
-</style>
