@@ -3,8 +3,8 @@
   "version": "1.0.2",
   "description": "HviewUI locale",
   "license": "MIT",
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "main": "./index.js",
+  "module": "./index.js",
   "scripts": {
     "start": "gulp -f script/build/gulpfile.ts",
     "build": "vite build"

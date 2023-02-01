@@ -60,10 +60,6 @@
     "vitest": "^0.21.1",
     "vue": "^3.2.45"
   },
-  "dependencies": {
-    "@hview-plus/locale": "^1.0.1",
-    "@hview-plus/utils": "workspace:*"
-  },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,vue}": "pnpm run lint-staged:js",
     "**/*.{js,jsx,tsx,ts,md,json,vue}": [

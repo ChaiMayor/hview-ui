@@ -29,7 +29,7 @@
     "@vueuse/core": "^9.1.0",
     "@hview-plus/constants": "workspace:*",
     "@hview-plus/hooks": "workspace:*",
-    "@hview-plus/locale": "^1.0.0",
+    "@hview-plus/locale": "workspace:*",
     "@hview-plus/theme": "workspace:*",
     "@hview-plus/utils": "workspace:*"
   },

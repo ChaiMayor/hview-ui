@@ -6,8 +6,6 @@ importers:
     specifiers:
       '@commitlint/cli': ^17.4.2
       '@commitlint/config-conventional': ^17.4.2
-      '@hview-plus/locale': ^1.0.1
-      '@hview-plus/utils': workspace:*
       '@release-it/conventional-changelog': ^5.1.1
       '@rushstack/eslint-patch': ^1.2.0
       '@types/gulp': ^4.0.10
@@ -44,9 +42,6 @@ importers:
       vite-plugin-libcss: ^1.0.5
       vitest: ^0.21.1
       vue: ^3.2.45
-    dependencies:
-      '@hview-plus/locale': link:packages/locale/dist
-      '@hview-plus/utils': link:packages/utils
     devDependencies:
       '@commitlint/cli': 17.4.2
       '@commitlint/config-conventional': 17.4.2
@@ -97,7 +92,7 @@ importers:
     specifiers:
       '@hview-plus/constants': workspace:*
       '@hview-plus/hooks': workspace:*
-      '@hview-plus/locale': ^1.0.0
+      '@hview-plus/locale': workspace:*
       '@hview-plus/theme': workspace:*
       '@hview-plus/utils': workspace:*
       '@types/lodash': ^4.14.182
@@ -113,7 +108,7 @@ importers:
     dependencies:
       '@hview-plus/constants': link:../constants
       '@hview-plus/hooks': link:../hooks
-      '@hview-plus/locale': link:../locale/dist
+      '@hview-plus/locale': link:../locale
       '@hview-plus/theme': link:../theme/transitpkg
       '@hview-plus/utils': link:../utils
       '@types/lodash': 4.14.191
@@ -135,12 +130,6 @@ importers:
     specifiers: {}
 
   packages/locale:
-    specifiers:
-      vue-i18n: ^9.2.2
-    dependencies:
-      vue-i18n: 9.2.2_vue@3.2.45
-
-  packages/locale/dist:
     specifiers:
       vue-i18n: ^9.2.2
     dependencies:
