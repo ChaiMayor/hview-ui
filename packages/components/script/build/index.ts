@@ -4,6 +4,9 @@ import less from "gulp-less";
 import autoprefixer from "gulp-autoprefixer";
 import delpath from "../utils/delpath";
 import run from "../utils/run";
+
+const dirName = "src";
+
 //删除dist
 export const removeDist = (floor: number) => {
   return delpath(`${componentPath}/hview-ui`, floor);
@@ -20,8 +23,8 @@ export const buildStyle = () => {
         cascade: false, //  是否美化属性值
       }),
     )
-    .pipe(dest(`${componentPath}/hview-ui/lib/packages/components/src`))
-    .pipe(dest(`${componentPath}/hview-ui/es/packages/components/src`));
+    .pipe(dest(`${componentPath}/hview-ui/lib/${dirName}`))
+    .pipe(dest(`${componentPath}/hview-ui/es/${dirName}`));
 };
 
 //打包组件

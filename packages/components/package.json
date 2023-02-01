@@ -23,11 +23,20 @@
   "dependencies": {
     "@vue/shared": "^3.2.37",
     "dayjs": "^1.11.3",
-    "vue-i18n": "^9.2.2",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "lodash-unified": "^1.0.2",
+    "@types/lodash": "^4.14.182",
+    "@types/lodash-es": "^4.17.6",
+    "@vueuse/core": "^9.1.0",
     "@hview-plus/constants": "workspace:*",
     "@hview-plus/hooks": "workspace:*",
-    "@hview-plus/locale": "workspace:*",
+    "@hview-plus/locale": "^1.0.0",
     "@hview-plus/theme": "workspace:*",
     "@hview-plus/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "vue": "^3.2.37"
   }
 }

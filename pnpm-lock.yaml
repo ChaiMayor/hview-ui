@@ -92,21 +92,36 @@ importers:
     specifiers:
       '@hview-plus/constants': workspace:*
       '@hview-plus/hooks': workspace:*
-      '@hview-plus/locale': workspace:*
+      '@hview-plus/locale': ^1.0.0
       '@hview-plus/theme': workspace:*
       '@hview-plus/utils': workspace:*
+      '@types/lodash': ^4.14.182
+      '@types/lodash-es': ^4.17.6
+      '@types/node': '*'
       '@vue/shared': ^3.2.37
+      '@vueuse/core': ^9.1.0
       dayjs: ^1.11.3
-      vue-i18n: ^9.2.2
+      lodash: ^4.17.21
+      lodash-es: ^4.17.21
+      lodash-unified: ^1.0.2
+      vue: ^3.2.37
     dependencies:
       '@hview-plus/constants': link:../constants
       '@hview-plus/hooks': link:../hooks
-      '@hview-plus/locale': link:../locale
+      '@hview-plus/locale': link:../locale/dist
       '@hview-plus/theme': link:../theme
       '@hview-plus/utils': link:../utils
+      '@types/lodash': 4.14.191
+      '@types/lodash-es': 4.17.6
       '@vue/shared': 3.2.45
+      '@vueuse/core': 9.12.0_vue@3.2.45
       dayjs: 1.11.7
-      vue-i18n: 9.2.2_vue@3.2.45
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+      lodash-unified: 1.0.3_3ib2ivapxullxkx3xftsimdk7u
+    devDependencies:
+      '@types/node': 18.11.18
+      vue: 3.2.45
 
   packages/constants:
     specifiers: {}
@@ -115,7 +130,16 @@ importers:
     specifiers: {}
 
   packages/locale:
-    specifiers: {}
+    specifiers:
+      vue-i18n: ^9.2.2
+    dependencies:
+      vue-i18n: 9.2.2_vue@3.2.45
+
+  packages/locale/dist:
+    specifiers:
+      vue-i18n: ^9.2.2
+    dependencies:
+      vue-i18n: 9.2.2_vue@3.2.45
 
   packages/playground:
     specifiers:
@@ -1218,7 +1242,7 @@ packages:
   /@types/concat-stream/1.6.1:
     resolution: {integrity: sha512-eHE4cQPoj6ngxBZMvVf6Hw7Mh4jMW4U9lpGmS5GBPB9RYxlFg+CHaVN7ErNY4W9XfLIEn20b4VDYaIrbq0q4uA==}
     dependencies:
-      '@types/node': 8.10.66
+      '@types/node': 18.11.18
     dev: true
 
   /@types/estree/1.0.0:
@@ -1236,7 +1260,7 @@ packages:
   /@types/form-data/0.0.33:
     resolution: {integrity: sha512-8BSvG1kGm83cyJITQMZSulnl6QV8jqAGreJsc5tPu1Jq0vTSOiY/k24Wx82JRpWwZSqrala6sd5rWi6aNXvqcw==}
     dependencies:
-      '@types/node': 8.10.66
+      '@types/node': 18.11.18
     dev: true
 
   /@types/glob-stream/6.1.1:

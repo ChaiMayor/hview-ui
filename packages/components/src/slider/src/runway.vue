@@ -164,8 +164,8 @@ const update = () => {
   if (props.range && isArray(props.modelValue)) {
     // 起点位置
     // btn1Site.value = tip1.value = props.modelValue[0];
-    setMarkerSite(getPartWidth.value * (props.modelValue[0] - props.min), "btn1");
-    setMarkerSite(getPartWidth.value * (props.modelValue[1] - props.min), "btn2");
+    setMarkerSite(getPartWidth.value * ((props.modelValue[0] as number) - props.min), "btn1");
+    setMarkerSite(getPartWidth.value * ((props.modelValue[1] as number) - props.min), "btn2");
     // 区分大值和小值
     barStart.value = Math.min(btn2Site.value, btn1Site.value);
     barEnd.value = Math.max(btn2Site.value, btn1Site.value) - Math.min(btn2Site.value, btn1Site.value);

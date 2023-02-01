@@ -3,6 +3,23 @@
   "version": "1.0.0",
   "description": "HviewUI locale",
   "license": "MIT",
-  "main": "index.ts",
-  "module": "index.ts"
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "start": "gulp -f script/build/gulpfile.ts",
+    "build": "vite build",
+    "publish": "gulp -f script/publish/gulpfile.ts"
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "dependencies": {
+    "vue-i18n": "^9.2.2"
+  },
+  "keywords": [
+    "hview-ui",
+    "vue3组件库"
+  ],
+  "typings": "lib/index.d.ts"
 }

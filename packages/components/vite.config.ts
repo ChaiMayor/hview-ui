@@ -17,10 +17,18 @@ export default defineConfig({
     //css分离
     cssCodeSplit: true,
     rollupOptions: {
-      //忽略打包vue文件
+      //忽略打包文件
       external: [
         "vue",
         /\.less/,
+        "@vue/shared",
+        "dayjs",
+        "lodash",
+        "lodash-es",
+        "lodash-unified",
+        "@types/lodash",
+        "@types/lodash-es",
+        "@vueuse/core",
         "@hview-plus/utils",
         "@hview-plus/locale",
         "@hview-plus/theme",
