@@ -11,3 +11,4 @@ packages/**/dist
 package-lock.json
 # pnpm-lock.yaml
 package-lock.json 
+.github
