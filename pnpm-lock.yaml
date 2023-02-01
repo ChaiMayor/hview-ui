@@ -108,7 +108,7 @@ importers:
     dependencies:
       '@hview-plus/constants': link:../constants
       '@hview-plus/hooks': link:../hooks
-      '@hview-plus/locale': link:../locale
+      '@hview-plus/locale': link:../locale/dist
       '@hview-plus/theme': link:../theme/transitpkg
       '@hview-plus/utils': link:../utils
       '@types/lodash': 4.14.191
@@ -130,6 +130,12 @@ importers:
     specifiers: {}
 
   packages/locale:
+    specifiers:
+      vue-i18n: ^9.2.2
+    dependencies:
+      vue-i18n: 9.2.2_vue@3.2.45
+
+  packages/locale/dist:
     specifiers:
       vue-i18n: ^9.2.2
     dependencies:
