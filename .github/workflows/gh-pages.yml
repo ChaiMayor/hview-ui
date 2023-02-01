@@ -1,7 +1,7 @@
 on: # 触发条件
   # 每当 push 到 dev 分支时触发部署
   push:
-    branches: [dev]
+    branches: []
   # 是否手动触发部署
   workflow_dispatch:
 jobs:
