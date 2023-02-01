@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="100px" style="margin-bottom:24px;" src="https://oss.zhishiyu.online/markdown_images/202301191908896.png">
+  <img width="100px" style="margin-bottom:24px;" src="https://oss.zhishiyu.online/common/hview-logo.png">
 </p>
 <p align="center">
   <a href="https://www.npmjs.com/package/hview-plus">
@@ -27,7 +27,7 @@
 
 代码风格：eslint、prettier
 
-文档库：vitePress [HviewUI | 一个 Vue3 组件库 (chaimayor.github.io)](https://chaimayor.github.io/hview-ui/)
+文档库：vitePress [HviewUI | 一个 Vue3 组件库 (chai-mayor.gitee.io)](https://chai-mayor.gitee.io/hview-ui)
 
 国际化：vue-i18n
 
@@ -44,7 +44,7 @@ CI：release-it、gulp
 logo：
 
 <p style="text-align:left;">
-  <img width="100px" style="margin-bottom:24px;" src="https://oss.zhishiyu.online/markdown_images/202301191908896.png">
+  <img width="100px" style="margin-bottom:24px;" src="https://oss.zhishiyu.online/common/hview-logo.png">
 </p>
 
 logo 设计：view 有透视、视图的意思，这里就用了三个不同视图方向的图案组成这个 H
@@ -58,3 +58,7 @@ logo 寓意：我们的组件库还存在很多不完善的地方，非常希望
 <a href="https://github.com/ChaiMayor/hview-ui/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=ChaiMayor/hview-ui" />
 </a>
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
