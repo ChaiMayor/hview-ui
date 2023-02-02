@@ -20,8 +20,8 @@ import { default as CheckboxGroup } from "./checkboxGroup";
 import { default as Checkbox } from "./checkbox";
 import { default as Badge } from "./badge";
 import { default as Modal } from "./modal";
-import { default as  upload} from "./upload";
-
+import { default as upload } from "./upload";
+import { default as Empty } from "./empty";
 
 export {
   Button,
@@ -50,7 +50,8 @@ export {
   Checkbox,
   Badge,
   Modal,
-  upload
+  upload,
+  Empty,
 };
 
 export default [
@@ -80,5 +81,6 @@ export default [
   Checkbox,
   Badge,
   Modal,
-  upload
+  upload,
+  Empty,
 ];

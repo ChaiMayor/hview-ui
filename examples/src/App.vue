@@ -1,6 +1,7 @@
 <template>
   {{ $t("colorpicker.confirm") }}
   <h-tree :data="list"></h-tree>
+  <h-empty></h-empty>
 </template>
 
 <script setup lang="ts">

@@ -61,8 +61,8 @@
     "vue": "^3.2.45"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx,vue}": "pnpm run lint-staged:js",
-    "**/*.{js,jsx,tsx,ts,md,json,vue}": [
+    "**/*.{jsx,ts,tsx,vue}": "pnpm run lint-staged:js",
+    "**/*.{jsx,tsx,ts,md,json,vue}": [
       "prettier --write"
     ]
   }

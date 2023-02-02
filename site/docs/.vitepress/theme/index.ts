@@ -20,6 +20,8 @@ export default {
   ...Theme,
 
   enhanceApp({ app }) {
+    // console.log(inBrowser);
+
     if (inBrowser) {
       app.use(hp);
     }
