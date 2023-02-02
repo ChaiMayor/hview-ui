@@ -1,0 +1,43 @@
+.h-divider {
+  --border-style: solid;
+  position: relative;
+
+  // 插槽中内容显示位置
+  &-content {
+    position: absolute;
+    background-color: var(--hv-bg-color);
+    padding: 0 20px;
+    font-weight: 500;
+    color: var(--hv-text-color-primary);
+    font-size: 14px;
+  }
+  .content-position--left {
+    left: 20px;
+    transform: translateY(-50%);
+  }
+  .content-position--center {
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .content-position--right {
+    right: 20px;
+    transform: translateY(-50%);
+  }
+}
+// 方向：水平&垂直
+.direction--horizontal {
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin: 24px 0;
+  border-top: 1px var(--hv-text-color-placeholder) var(--border-style);
+}
+.direction--vertical {
+  display: inline-block;
+  width: 1px;
+  height: 1em;
+  margin: 0 8px;
+  vertical-align: middle;
+  position: relative;
+  border-left: 1px var(--hv-text-color-placeholder) var(--border-style);
+}

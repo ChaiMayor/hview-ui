@@ -22,6 +22,7 @@ import { default as Badge } from "./badge";
 import { default as Modal } from "./modal";
 import { default as upload } from "./upload";
 import { default as Empty } from "./empty";
+import { default as Divider } from "./divider";
 
 export {
   Button,
@@ -52,6 +53,7 @@ export {
   Modal,
   upload,
   Empty,
+  Divider,
 };
 
 export default [
@@ -83,4 +85,5 @@ export default [
   Modal,
   upload,
   Empty,
+  Divider,
 ];
