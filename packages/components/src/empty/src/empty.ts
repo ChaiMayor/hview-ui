@@ -1,5 +1,5 @@
 import type { ExtractPropTypes } from "vue";
-import type Empty from "./src/empty.vue";
+// import Empty from "./src/empty.vue";
 
 export const emptyProps = {
   image: {
@@ -14,4 +14,4 @@ export const emptyProps = {
 } as const;
 export type EmptyProps = ExtractPropTypes<typeof emptyProps>;
 
-export type EmptyInstance = InstanceType<typeof Empty>;
+// export type EmptyInstance = InstanceType<typeof Empty>;

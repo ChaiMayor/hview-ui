@@ -6,15 +6,18 @@ import Moon from "./icons/Moon.vue";
 import Share from "./icons/Share.vue";
 import Download from "./icons/Download.vue";
 import GitHub from "./icons/GitHub.vue";
+import axios from "axios";
 
 // @ts-ignore
 const props = defineProps(["store", "dev", "ssr"]);
+// eslint-disable-next-line vue/no-setup-props-destructure
 const { store } = props;
-
+// @ts-ignore
 const currentCommit = __COMMIT__;
 const activeVersion = ref(`@${currentCommit}`);
 const publishedVersions = ref<string[]>();
 const expanded = ref(false);
+const ver = ref<string>("");
 
 async function toggle() {
   expanded.value = !expanded.value;
@@ -81,23 +84,34 @@ async function fetchVersions(): Promise<string[]> {
   }
   return filteredVersions;
 }
+
+const getVersionHp = async () => {
+  await axios.get("https://registry.npmjs.org/hview-plus").then((res: any) => {
+    let versions = Object.keys(res.data.versions);
+    ver.value = "v" + versions[versions.length - 1];
+  });
+};
+
+getVersionHp();
 </script>
 
-<!-- <h-button>666</h-button> -->
 <template>
   <nav>
     <h1>
-      <img alt="logo" src="/logo.svg" />
-      <span>Vue SFC Playground</span>
+      <img alt="logo" src="https://oss.zhishiyu.online/common/hview-logo.png" />
+      <span style="margin-top: -2px; margin-right: 6px">Hview UI Playground</span>
+      <h-tag size="small" style="margin: 0 8px"> {{ ver }}</h-tag>
+      <h-tag size="small"> repl v1.3.0 </h-tag>
     </h1>
     <div class="links">
-      <div class="version" @click.stop>
+      <!-- <div class="version" @click.stop>
         <span class="active-version" @click="toggle">
           Version
           <span class="number">{{ activeVersion }}</span>
         </span>
         <ul class="versions" :class="{ expanded }">
           <li v-if="!publishedVersions"><a>loading versions...</a></li>
+           eslint-disable-next-line vue/require-v-for-key
           <li v-for="version of publishedVersions">
             <a @click="setVueVersion(version)">v{{ version }}</a>
           </li>
@@ -108,21 +122,14 @@ async function fetchVersions(): Promise<string[]> {
             <a href="https://app.netlify.com/sites/vue-sfc-playground/deploys" target="_blank">Commits History</a>
           </li>
         </ul>
-      </div>
-      <button
+      </div> -->
+      <!-- <button
         title="Toggle development production mode"
         class="toggle-dev"
         :class="{ dev }"
         @click="$emit('toggle-dev')">
         <span>{{ dev ? "DEV" : "PROD" }}</span>
-      </button>
-      <button
-        title="Toggle server rendering mode"
-        class="toggle-ssr"
-        :class="{ enabled: ssr }"
-        @click="$emit('toggle-ssr')">
-        <span>{{ ssr ? "SSR ON" : "SSR OFF" }}</span>
-      </button>
+      </button> -->
       <button title="Toggle dark mode" class="toggle-dark" @click="toggleDark">
         <Sun class="light" />
         <Moon class="dark" />
@@ -134,7 +141,7 @@ async function fetchVersions(): Promise<string[]> {
         <Download />
       </button>
       <button title="View on GitHub" class="github">
-        <a href="https://github.com/vuejs/core/tree/main/packages/sfc-playground" target="_blank">
+        <a href="https://github.com/ChaiMayor/hview-ui/tree/dev" target="_blank">
           <GitHub />
         </a>
       </button>
@@ -152,13 +159,14 @@ nav {
   --green: #3ca877;
   --purple: #904cbc;
   --btn-bg: #eee;
+  --h-color-primary: #5d80f4;
 
   color: var(--base);
   height: var(--nav-height);
   box-sizing: border-box;
   padding: 0 1em;
   background-color: var(--bg);
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.33);
+  box-shadow: 0 0 6px var(--h-color-primary);
   position: relative;
   z-index: 999;
   display: flex;
@@ -180,7 +188,13 @@ nav {
 h1 {
   font-weight: 500;
   display: inline-flex;
+  align-items: center;
   place-items: center;
+  color: #000;
+}
+
+.dark h1 {
+  color: #fff;
 }
 
 h1 img {

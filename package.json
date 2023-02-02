@@ -14,6 +14,7 @@
     "docs:build": "pnpm run --filter ./site docs:build",
     "lint-staged": "lint-staged --allow-empty",
     "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx,.vue --no-ignore",
+    "lint-fix": "eslint --fix --ext .ts,.vue",
     "test": "pnpm run --filter ./packages/components test",
     "coverage": "pnpm run --filter ./packages/components coverage"
   },

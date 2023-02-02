@@ -3,98 +3,71 @@ import { compileFile, File } from "@vue/repl";
 import { utoa, atou } from "./utils/encode";
 import * as defaultCompiler from "vue/compiler-sfc";
 import type { Store, SFCOptions, StoreState, OutputModes } from "@vue/repl";
-// "hview-plus": "workspace:*",
 
-// const publicPath = "./";
-const defaultMainFile = "App.vue";
-// const varletReplPlugin = "varlet-repl-plugin.js";
-const varletImports = {
-  // "hview-plus": `${publicPath}varlet.esm.js`,
-  "hview-plus": `hview-plus`,
-  // "@varlet/touch-emulator": `${publicPath}varlet-touch-emulator.js`,
-  // "@varlet/ui/json/area.json": `${publicPath}varlet-area.js`,
+import welcomeCode from "./template/welcome.vue?raw";
+
+const ver = "1.3.11";
+
+const hviewImports = {
+  "hview-plus": `https://unpkg.com/hview-plus@${ver}/es/index.mjs`,
+  "@hview-plus/locale": "https://unpkg.com/@hview-plus/locale@1.0.1/es/index.js",
+  "@hview-plus/utils": "https://unpkg.com/@hview-plus/utils@1.0.1/es/index.js",
+  "@vueuse/core": "https://unpkg.com/@vueuse/core@9.12.0/index.mjs",
+  "@vue/shared": "https://unpkg.com/@vue/shared@3.2.45/dist/shared.esm-bundler.js",
+  "@vueuse/shared": "https://unpkg.com/@vueuse/shared@9.12.0/index.mjs",
+  "vue-demi": "https://unpkg.com/vue-demi@0.13.11/lib/index.mjs",
+  "vue-i18n": "https://unpkg.com/vue-i18n@9.2.2/dist/vue-i18n.esm-bundler.js",
+  "@intlify/shared": "https://unpkg.com/@intlify/shared@9.2.2/dist/shared.esm-bundler.js",
+  "@intlify/core-base": "https://unpkg.com/@intlify/core-base@9.2.2/dist/core-base.esm-bundler.js",
+  "@vue/devtools-api": "https://unpkg.com/@vue/devtools-api@6.5.0/lib/esm/index.js",
+  "@intlify/vue-devtools": "https://unpkg.com/@intlify/vue-devtools@9.2.2/dist/vue-devtools.esm-bundler.js",
+  "@intlify/message-compiler": "https://unpkg.com/@intlify/message-compiler@9.2.2/dist/message-compiler.esm-bundler.js",
+  "@intlify/devtools-if": "https://unpkg.com/@intlify/devtools-if@9.2.2/dist/devtools-if.esm-bundler.js",
 };
-// const varletCss = `${publicPath}varlet.css`;
 
-const welcomeCode = `\
-<script setup lang='ts'>
-import { ref } from 'vue'
+const hviewReplPluginCode = `
+import hp from "hview-plus";
+import { getCurrentInstance } from "vue";
 
-const msg = ref('Hello Varlet!')
+export let installed = false;
+
+await loadStyle();
+
+export function installHviewUI() {
+  if ( installed ) return
+  const instance = getCurrentInstance();
+  instance.appContext.app.use(hp);
+  installed = true;
+}
+
+export function loadStyle() {
+  return new Promise((resolve, reject) => {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "https://unpkg.com/hview-plus@${ver}/es/style.css";
+    link.addEventListener("load", resolve);
+    link.addEventListener("error", reject);
+    document.body.append(link);
+  });
+}
+`;
+
+const MAIN_CONTAINER = "Playground.vue";
+const defaultMainFile = "App.vue";
+const hviewReplPlugin = "hview-repl-plugin.js";
+
+const containerCode = `
+<script setup>
+import App from "./App.vue";
+import { installHviewUI, installed } from "./hview-repl-plugin.js";
+
+installHviewUI();
 </script>
 
 <template>
-  <var-button type="primary">{{ msg }}</var-button>
+  <App />
 </template>
 `;
-
-// const varletReplPluginCode = `\
-// import VarletUI, { Context } from '@varlet/ui'
-// import '@varlet/touch-emulator'
-// import { getCurrentInstance } from 'vue'
-
-// Context.touchmoveForbid = false
-
-// await appendStyle()
-
-// export function installVarletUI() {
-//   const { parent } = window
-
-//   const style = document.createElement('style')
-//   style.innerHTML = \`
-//     body {
-//       min-height: 100vh;
-//       padding: 16px;
-//       margin: 0;
-//       color: var(--color-text);
-//       background-color: var(--color-body);
-//     }
-
-//     *::-webkit-scrollbar {
-//       display: none;
-//     }
-//   \`
-//   document.head.appendChild(style)
-
-//   if (parent.document.documentElement.classList.contains('dark')) {
-//     VarletUI.StyleProvider(VarletUI.Themes.dark)
-//   }
-
-//   window.addEventListener('message', ({ data }) => {
-//     if (data.action === 'theme-change') {
-//       VarletUI.StyleProvider(data.value === 'dark' ? VarletUI.Themes.dark : null)
-//     }
-//   })
-
-//   const instance = getCurrentInstance()
-//   instance.appContext.app.use(VarletUI)
-// }
-
-// export function appendStyle() {
-//   return new Promise((resolve, reject) => {
-//     const link = document.createElement('link')
-//     link.rel = 'stylesheet'
-//     link.onload = resolve
-//     link.onerror = reject
-//     document.body.appendChild(link)
-//   })
-// }
-// `;
-// link.href = '${varletCss}'
-
-const MAIN_CONTAINER = "Playground.vue";
-// const containerCode = `\
-// <script setup>
-// import App from './${defaultMainFile}'
-// import { installVarletUI } from './${varletReplPlugin}'
-
-// installVarletUI()
-// </script>
-
-// <template>
-//   <App />
-// </template>
-// `;
 
 export class ReplStore implements Store {
   state: StoreState;
@@ -136,6 +109,7 @@ export class ReplStore implements Store {
     }
 
     this.defaultVueRuntimeURL = defaultVueRuntimeURL;
+
     this.initialShowOutput = showOutput;
     this.initialOutputMode = outputMode as OutputModes;
 
@@ -144,8 +118,8 @@ export class ReplStore implements Store {
       mainFile = Object.keys(files)[0];
     }
 
-    // files[MAIN_CONTAINER] = new File(MAIN_CONTAINER, containerCode, true);
-
+    files[MAIN_CONTAINER] = new File(MAIN_CONTAINER, containerCode, true);
+    // @ts-ignore
     this.state = reactive({
       mainFile: MAIN_CONTAINER,
       files,
@@ -159,7 +133,7 @@ export class ReplStore implements Store {
 
     // varlet inject
     // @ts-ignore
-    // this.state.files[varletReplPlugin] = new File(varletReplPlugin, varletReplPluginCode, !import.meta.env.DEV);
+    this.state.files[hviewReplPlugin] = new File(hviewReplPlugin, hviewReplPluginCode, !import.meta.env.DEV);
 
     watchEffect(() => compileFile(this, this.state.activeFile));
 
@@ -184,18 +158,20 @@ export class ReplStore implements Store {
   }
 
   deleteFile(filename: string) {
-    // if (filename === varletReplPlugin) {
-    //   Snackbar.warning("Varlet depends on this file");
-    //   return;
-    // }
-    // Dialog(`Are you sure you want to delete ${filename}?`).then((action) => {
-    //   if (action === "confirm") {
-    //     if (this.state.activeFile.filename === filename) {
-    //       this.state.activeFile = this.state.files[defaultMainFile];
-    //     }
-    //     delete this.state.files[filename];
-    //   }
-    // });
+    if (filename === hviewReplPlugin) {
+      // @ts-ignore
+      Snackbar.warning("Varlet depends on this file");
+      return;
+    }
+    // @ts-ignore
+    Dialog(`Are you sure you want to delete ${filename}?`).then((action) => {
+      if (action === "confirm") {
+        if (this.state.activeFile.filename === filename) {
+          this.state.activeFile = this.state.files[defaultMainFile];
+        }
+        delete this.state.files[filename];
+      }
+    });
   }
 
   serialize() {
@@ -239,7 +215,7 @@ export class ReplStore implements Store {
           {
             imports: {
               vue: this.defaultVueRuntimeURL,
-              ...varletImports,
+              ...hviewImports,
             },
           },
           null,

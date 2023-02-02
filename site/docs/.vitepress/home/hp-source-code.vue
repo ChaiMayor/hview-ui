@@ -34,9 +34,10 @@
 </template>
 
 <script setup lang="ts">
-import { useClipboard, useToggle } from "@vueuse/core";
+import { useClipboard, useToggle, isClient } from "@vueuse/core";
 import { ElMessage } from "element-plus";
 import SourceCode from "./hp-code.vue";
+import { usePlayground } from "./composables/use-playground";
 
 const [sourceVisible, toggleSourceVisible] = useToggle();
 
@@ -58,7 +59,9 @@ const copyCode = async () => {
       message: "复制成功！",
       type: "success",
     });
-  } catch (e: any) {}
+  } catch (e: any) {
+    console.log(e);
+  }
 };
 
 const toGithub = () => {
@@ -70,10 +73,9 @@ const toGithub = () => {
 };
 
 const toPlayground = () => {
-  ElMessage({
-    type: "info",
-    message: "正在开发中~",
-  });
+  const { link } = usePlayground(props.rawSource);
+  if (!isClient) return;
+  window.open(link);
 };
 </script>
 
