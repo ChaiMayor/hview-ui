@@ -1,7 +1,7 @@
 <template>
   <button class="h-button" :class="styleClass">
-    <span class="">
-      <h-icon v-if="!icon" :name="icon"></h-icon>
+    <span>
+      <i v-if="icon !== ''" :class="`h-icon-${icon}`"></i>
     </span>
     <slot />
   </button>
