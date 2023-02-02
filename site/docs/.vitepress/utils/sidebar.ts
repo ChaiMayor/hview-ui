@@ -41,6 +41,7 @@ const sidebar = {
         { text: "Radio 单选框", link: "/components/radio" },
         { text: "Slider 滑块", link: "/components/slider" },
         { text: "Upload 上传", link: "/components/upload" },
+        { text: "Checkbox 复选框", link: "/components/checkbox" },
       ],
     },
     {
@@ -53,6 +54,7 @@ const sidebar = {
         { text: "Progress 进度条", link: "/components/progress" },
         { text: "Empty 空状态", link: "/components/empty" },
         { text: "Result 结果", link: "/components/result" },
+        { text: "Message 消息", link: "/components/message" },
       ],
     },
     {
@@ -102,6 +104,7 @@ const sidebarEN = {
         { text: "Radio", link: "/components/radio" },
         { text: "Slider", link: "/components/slider" },
         { text: "Upload", link: "/components/upload" },
+        { text: "Checkbox", link: "/components/checkbox" },
       ],
     },
     {
@@ -114,6 +117,7 @@ const sidebarEN = {
         { text: "Progress", link: "/components/progress" },
         { text: "Empty", link: "/components/empty" },
         { text: "Result", link: "/components/result" },
+        { text: "Message", link: "/components/message" },
       ],
     },
     {
