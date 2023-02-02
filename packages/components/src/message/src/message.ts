@@ -12,7 +12,7 @@ export const MessageProps = {
   },
   duration: {
     type: Number,
-    default: 1500,
+    default: 3000,
   },
   center: {
     type: Boolean,
