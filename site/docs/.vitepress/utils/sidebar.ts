@@ -41,6 +41,7 @@ const sidebar = {
         { text: "Radio 单选框", link: "/components/radio" },
         { text: "Slider 滑块", link: "/components/slider" },
         { text: "Upload 上传", link: "/components/upload" },
+        { text: "Checkbox 复选框", link: "/components/checkbox" },
       ],
     },
     {
@@ -51,6 +52,7 @@ const sidebar = {
         { text: "Carousel 轮播图", link: "/components/carousel" },
         { text: "Tag 标签", link: "/components/tag" },
         { text: "Result 结果", link: "/components/result" },
+        { text: "Message 消息", link: "/components/message" },
       ],
     },
     {
@@ -100,6 +102,7 @@ const sidebarEN = {
         { text: "Radio", link: "/components/radio" },
         { text: "Slider", link: "/components/slider" },
         { text: "Upload", link: "/components/upload" },
+        { text: "Checkbox", link: "/components/checkbox" },
       ],
     },
     {
@@ -110,6 +113,7 @@ const sidebarEN = {
         { text: "Carousel", link: "/components/carousel" },
         { text: "Tag", link: "/components/tag" },
         { text: "Result", link: "/components/result" },
+        { text: "Message", link: "/components/message" },
       ],
     },
     {
