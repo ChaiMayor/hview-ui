@@ -61,6 +61,10 @@ const sidebar = {
       text: "Feedback 反馈组件",
       items: [{ text: "Tooltip 文字提示", link: "/components/tooltip" }],
     },
+    {
+      text: "Ohters 其他",
+      items: [{ text: "Divider 分割线", link: "/components/divider" }],
+    },
   ],
 };
 const sidebarEN = {
@@ -123,6 +127,10 @@ const sidebarEN = {
     {
       text: "Feedback",
       items: [{ text: "Tooltip", link: "/components/tooltip" }],
+    },
+    {
+      text: "Ohters",
+      items: [{ text: "Divider", link: "/components/divider" }],
     },
   ],
 };
