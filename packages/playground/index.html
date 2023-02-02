@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg" href="/logo.svg" />
-    <title>Vue SFC Playground</title>
+    <link rel="icon" type="image/svg" href="https://oss.zhishiyu.online/common/hview-logo.png" />
+    <title>Hview UI Playground</title>
     <script>
       // process shim for old versions of @vue/compiler-sfc dependency
-      window.process = { env: {} }
-      const savedPreferDark = localStorage.getItem('vue-sfc-playground-prefer-dark')
+      window.process = { env: {} };
+      const savedPreferDark = localStorage.getItem("vue-sfc-playground-prefer-dark");
       if (
-        savedPreferDark === 'true' ||
-        (!savedPreferDark && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        savedPreferDark === "true" ||
+        (!savedPreferDark && window.matchMedia("(prefers-color-scheme: dark)").matches)
       ) {
-        document.documentElement.classList.add('dark')
+        document.documentElement.classList.add("dark");
       }
     </script>
     <script type="module" src="/src/main.ts"></script>

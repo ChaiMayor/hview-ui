@@ -3,10 +3,25 @@ import path from "path";
 import { defineConfig, Plugin } from "vite";
 import vue from "@vitejs/plugin-vue";
 import execa from "execa";
+// import { resolve } from "path";
+
+// const hviewCSSFile = resolve(__dirname, "../components/hview-ui/es/style.css");
+// const hviewCSSFile = resolve(__dirname, "../components/hview-ui/es/style.css");
+
+// function copyHviewDependencies(): Plugin {
+//   return {
+//     name: "copy-hview-dependencies",
+
+//     buildStart() {
+//       fs.copyFileSync(hviewCSSFile, resolve("public/style.css"));
+//     },
+//   };
+// }
 
 const commit = execa.sync("git", ["rev-parse", "HEAD"]).stdout.slice(0, 7);
 
 export default defineConfig({
+  // @ts-ignore
   plugins: [vue(), copyVuePlugin()],
   define: {
     __COMMIT__: JSON.stringify(commit),
