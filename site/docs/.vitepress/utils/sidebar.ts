@@ -59,7 +59,10 @@ const sidebar = {
     },
     {
       text: "Feedback 反馈组件",
-      items: [{ text: "Tooltip 文字提示", link: "/components/tooltip" }],
+      items: [
+        { text: "Alert 提示", link: "/components/alert" },
+        { text: "Tooltip 文字提示", link: "/components/tooltip" },
+      ],
     },
     {
       text: "Ohters 其他",
@@ -126,7 +129,10 @@ const sidebarEN = {
     },
     {
       text: "Feedback",
-      items: [{ text: "Tooltip", link: "/components/tooltip" }],
+      items: [
+        { text: "Alert", link: "/components/alert" },
+        { text: "Tooltip", link: "/components/tooltip" },
+      ],
     },
     {
       text: "Ohters",
