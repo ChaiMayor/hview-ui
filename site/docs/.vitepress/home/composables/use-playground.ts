@@ -11,7 +11,7 @@ export const usePlayground = (source: string) => {
   };
 
   const encoded = utoa(JSON.stringify(originCode));
-  const link = `http://localhost:5173/#${encoded}`;
+  const link = `https://playground.zhishiyu.online/#${encoded}`;
   return {
     encoded,
     link,

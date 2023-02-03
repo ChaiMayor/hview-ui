@@ -12,6 +12,9 @@ import axios from "axios";
 const props = defineProps(["store", "dev", "ssr"]);
 // eslint-disable-next-line vue/no-setup-props-destructure
 const { store } = props;
+
+console.log(store);
+
 // @ts-ignore
 const currentCommit = __COMMIT__;
 const activeVersion = ref(`@${currentCommit}`);
@@ -111,7 +114,8 @@ getVersionHp();
         </span>
         <ul class="versions" :class="{ expanded }">
           <li v-if="!publishedVersions"><a>loading versions...</a></li>
-           eslint-disable-next-line vue/require-v-for-key
+          eslint-disable-next-line vue/require-v-for-key
+          eslint-disable-next-line vue/require-v-for-key
           <li v-for="version of publishedVersions">
             <a @click="setVueVersion(version)">v{{ version }}</a>
           </li>
