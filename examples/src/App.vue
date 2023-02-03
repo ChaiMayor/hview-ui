@@ -9,9 +9,17 @@
     <h-divider direction="vertical" border-style="dashed" />
     <span>Grass</span>
   </div>
+  <h-alert title="success alert" type="success" description="more text description" show-icon />
+  <h-alert title="info alert" type="info" description="more text description" show-icon />
+  <h-alert title="warning alert" type="warning" description="more text description" show-icon />
+  <h-alert title="error alert" type="error" description="more text description" show-icon />
 </template>
 
 <script setup lang="ts">
+const hello = () => {
+  // eslint-disable-next-line no-alert
+  alert("Hello World!");
+};
 const list = [
   {
     label: "一级 1",

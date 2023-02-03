@@ -23,6 +23,7 @@ import { default as Modal } from "./modal";
 import { default as upload } from "./upload";
 import { default as Empty } from "./empty";
 import { default as Divider } from "./divider";
+import { default as Alert } from "./alert";
 
 export {
   Button,
@@ -54,6 +55,7 @@ export {
   upload,
   Empty,
   Divider,
+  Alert,
 };
 
 export default [
@@ -86,4 +88,5 @@ export default [
   upload,
   Empty,
   Divider,
+  Alert,
 ];
