@@ -31,6 +31,8 @@
 </template>
 
 <script lang="ts" setup>
+import "../style/timeline-item.less";
+import "../style/timeline.less";
 import { computed } from "vue";
 import { timelineItemProps } from "./timeline-item";
 

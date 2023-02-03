@@ -1,7 +1,8 @@
+@import "../../../common/index.less";
 .@{prefix}-timeline {
-  margin: 0;
-  font-size: getCssVar("font-size", "base");
-  list-style: none;
+  margin: 0 !important;
+  font-size: var(--hv-font-size-base);
+  list-style: none !important;
 
   &-item:last-child {
     .@{prefix}-timeline-item-tail {
