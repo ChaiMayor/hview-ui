@@ -56,6 +56,9 @@ export {
   upload,
   Empty,
   Divider,
+  Alert,
+  Timeline,
+  TimelineItem,
 };
 
 export default [
@@ -88,4 +91,7 @@ export default [
   upload,
   Empty,
   Divider,
+  Alert,
+  Timeline,
+  TimelineItem,
 ];
