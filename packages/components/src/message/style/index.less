@@ -1,7 +1,7 @@
 @import "../../../common/index.less";
 
 .h-message {
-  min-width: 250px;
+  // min-width: 250px;
   box-sizing: border-box;
   border-radius: 5px;
   border: 1px solid #ebeef5;
@@ -15,6 +15,7 @@
   padding: 15px 15px 15px 20px;
   display: flex;
   align-items: center;
+  z-index: 50;
 }
 
 .h-message-fade-enter-active,
@@ -87,10 +88,8 @@
 }
 
 .h-message__closeBtn {
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  transform: translateY(-50%);
+  transform: translateY(10%);
+  margin-left: 6px;
   cursor: pointer;
   color: #c0c4cc;
   font-size: 20px;

@@ -78,7 +78,7 @@ Alert 组件提供了两个不同的主题：`light` 和 `dark`。
 <icon-and-description></icon-and-description>
 :::
 
-## Alert API
+## API
 
 ### 属性
 

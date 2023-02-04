@@ -11,8 +11,9 @@
 ```ts
 // main.ts
 import { createApp } from "vue";
-// HviewUI 样式文件自动引入
 import HviewPlus from "hview-plus";
+import "hview-plus/es/style.css";
+
 import App from "./App.vue";
 
 const app = createApp(App);
@@ -27,6 +28,8 @@ app.mount("#app");
 // main.ts
 import { createApp } from "vue";
 import { Button } from "hview-plus";
+import "hview-plus/es/src/button/style/index.css";
+
 import App from "./App.vue";
 
 const app = createApp(App);

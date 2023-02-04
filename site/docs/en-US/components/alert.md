@@ -78,9 +78,9 @@ At last, this is an example with both icon and description.
 <icon-and-description></icon-and-description>
 :::
 
-## Alert API
+## API
 
-### 属性
+### Attributes
 
 | Name        | Description                              | Type      | Accepted Values                  | Default |
 | :---------- | :--------------------------------------- | :-------- | -------------------------------- | :------ |
@@ -93,13 +93,13 @@ At last, this is an example with both icon and description.
 | show-icon   | whether a type icon is displayed.        | `boolean` | —                                | `false` |
 | effect      | theme style.                             | `enum`    | light / dark                     | `light` |
 
-### 事件
+### Events
 
 | Name  | Description                   | Type       |                               |
 | :---- | :---------------------------- | :--------- | ----------------------------- |
 | close | trigger when alert is closed. | `Function` | `(event: MouseEvent) => void` |
 
-### 插槽
+### Slots
 
 | Name    | Description                       |
 | :------ | :-------------------------------- |

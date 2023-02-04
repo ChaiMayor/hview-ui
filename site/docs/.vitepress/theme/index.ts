@@ -1,8 +1,7 @@
 import Theme from "vitepress/theme";
 import "./style/vitepress.less";
-import ElementPlus from "element-plus";
-import "element-plus/dist/index.css";
 // import "prismjs/themes/prism.css";
+import "element-plus/dist/index.css";
 import "./style/themes.less";
 // @ts-ignore
 import hpCode from "../home/hp-source-code.vue";
@@ -40,7 +39,6 @@ export default {
     if (inBrowser) {
       app.use(hp);
     }
-    app.use(ElementPlus);
     app.component("HCode", hpCode);
   },
 

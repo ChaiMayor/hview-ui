@@ -41,13 +41,15 @@ Center the Timeline-Item vertically.
 <middle></middle>
 :::
 
-## API
+## Timeline API
 
 ### Timeline Slots
 
 | Name | Description                 | Subtags       |
 | ---- | --------------------------- | ------------- |
 | —    | Custom content for timeline | Timeline-Item |
+
+## Timeline-Item API
 
 ### Timeline-Item Attributes
 

@@ -35,9 +35,13 @@
 
 <script setup lang="ts">
 import { useClipboard, useToggle, isClient } from "@vueuse/core";
-import { ElMessage } from "element-plus";
+import { ElTooltip, ElCollapseTransition } from "element-plus";
 import SourceCode from "./hp-code.vue";
 import { usePlayground } from "./composables/use-playground";
+
+import { getCurrentInstance } from "vue";
+const instance = getCurrentInstance();
+const { $message } = instance!.appContext.config.globalProperties;
 
 const [sourceVisible, toggleSourceVisible] = useToggle();
 
@@ -55,7 +59,7 @@ const { copy } = useClipboard({
 const copyCode = async () => {
   try {
     await copy();
-    ElMessage({
+    $message({
       message: "复制成功！",
       type: "success",
     });
