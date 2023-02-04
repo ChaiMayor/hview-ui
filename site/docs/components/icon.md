@@ -46,11 +46,13 @@ h-icon 传入 dot，图标右上角展示徽标红点，badge 值用于徽标显
 
 <iconList></iconList>
 
-## Attributes
+## API
 
-| 参数  | 说明             | 类型          | 可选值 | 默认  |
-| ----- | ---------------- | ------------- | ------ | ----- |
-| name  | 图标名称         | string        | —      | —     |
-| color | 图标颜色         | string        | —      | —     |
-| dot   | 图标是否展示徽标 | boolean       | —      | false |
-| badge | 徽标 value       | string/number | —      | —     |
+### 属性
+
+| 参数  | 说明             | 类型            | 可选值 | 默认  |
+| ----- | ---------------- | --------------- | ------ | ----- |
+| name  | 图标名称         | `string`        | —      | —     |
+| color | 图标颜色         | `string`        | —      | —     |
+| dot   | 图标是否展示徽标 | `boolean`       | —      | false |
+| badge | 徽标 value       | `string/number` | —      | —     |

@@ -14,7 +14,7 @@
           @mouseenter="handleButtonEnter('left')"
           @mouseleave="handleButtonLeave"
           @click.stop="throttledArrowClick(activeIndex - 1)">
-          <h-icon name="arrow-left"></h-icon>
+          <h-icon name="icon-arrow-left2"></h-icon>
         </button>
       </transition>
       <transition v-if="arrowDisplay" name="carousel-arrow-right">
@@ -25,7 +25,7 @@
           @mouseenter="handleButtonEnter('right')"
           @mouseleave="handleButtonLeave"
           @click.stop="throttledArrowClick(activeIndex + 1)">
-          <h-icon name="arrow-right"></h-icon>
+          <h-icon name="youjiantou"></h-icon>
         </button>
       </transition>
       <slot />

@@ -29,7 +29,7 @@ const marks = reactive<Marks>({
 });
 </script>
 
-<style lang="less" scoped>
+<style scoped>
 .slider-demo-block {
   display: block;
   margin: 14px 0;

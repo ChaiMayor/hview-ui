@@ -70,3 +70,21 @@ import maxHeight from 'exam/scrollbar/max-height.vue'
 | setScrollTop  | 设置滚动条到顶部的距离 | `function` |
 | setScrollLeft | 设置滚动条到左边的距离 | `function` |
 | wrapRef       | 滚动条包裹的 ref 对象  | `object`   |
+
+<style lang="less">
+  html.dark {
+    p.h-scrollbar-demo-item {
+      background-color: #18222c; 
+    }
+    .scrollbar-flex-content{
+      .scrollbar-demo-item{
+        background-color: #2b1d1d;
+      }
+    }
+    .h-scrollbar__view{
+      .scrollbar-demo-item{
+        background-color: #18222c; 
+      }
+    }
+  }
+</style>

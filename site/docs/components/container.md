@@ -113,3 +113,17 @@
 | 插槽名  | 说明           |
 | ------- | -------------- |
 | default | 自定义默认内容 |
+
+<style>
+.h-header,
+.h-aside,
+.h-main,
+.h-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.h-main {
+  height: 150px;
+}
+</style>

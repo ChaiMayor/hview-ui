@@ -10,7 +10,3 @@
     </h-container>
   </h-container>
 </template>
-
-<style scoped lang="less">
-@import "./index.less";
-</style>

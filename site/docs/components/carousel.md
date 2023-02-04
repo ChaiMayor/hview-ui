@@ -8,7 +8,7 @@ import direction from 'exam/carousel/direction.vue'
 
 # Carousel 走马灯
 
-> 在区域内展示相同类型的文字、图片等内容。
+在区域内展示相同类型的文字、图片等内容。
 
 ## 基础用法
 
@@ -43,9 +43,9 @@ import direction from 'exam/carousel/direction.vue'
 <direction></direction>
 :::
 
-## API
+## Carousel API
 
-### Carousel Attributes
+### Carousel 属性
 
 | 属性名             | 说明                       | 类型      | 可选值                 | 默认值     |
 | ------------------ | -------------------------- | --------- | ---------------------- | ---------- |
@@ -61,13 +61,13 @@ import direction from 'exam/carousel/direction.vue'
 | direction          | carousel 的布局方式        | `string`  | horizontal / vertical  | horizontal |
 | pause-on-hover     | 鼠标悬浮时是否停止自动切换 | `boolean` | -                      | true       |
 
-### Carousel Events
+### Carousel 事件
 
 | 事件名 | 说明       | 回调参数               |
 | ------ | ---------- | ---------------------- |
 | change | 切换时触发 | 目前的索引，原来的索引 |
 
-### Carousel Methods
+### Carousel 方法
 
 | 方法名        | 说明         | 参数                                                        |
 | ------------- | ------------ | ----------------------------------------------------------- |
@@ -75,20 +75,22 @@ import direction from 'exam/carousel/direction.vue'
 | prev          | 切换至上一张 | —                                                           |
 | next          | 切换至下一张 | —                                                           |
 
-### Carousel Slots
+### Carousel 插槽
 
 | 插槽名 | 说明         | 子标签        |
 | ------ | ------------ | ------------- |
 | -      | 自定义的内容 | Carousel-Item |
 
-### Carousel-Item Attributes
+## Carousel-Item API
+
+### Carousel-Item 属性
 
 | 属性名 | 说明                                                    | 类型     | 可选值 | 默认值 |
 | ------ | ------------------------------------------------------- | -------- | ------ | ------ |
 | name   | `carousel-item` 的名字，可以做为 `setActiveItem` 的参数 | `string` | —      | —      |
 | label  | 该 `carousel-item` 所对应指示器的文本                   | `string` | —      | —      |
 
-### Carousel-Item Slots
+### Carousel-Item 插槽
 
 | 插槽名 | 说明         |
 | ------ | ------------ |

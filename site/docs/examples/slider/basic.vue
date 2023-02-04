@@ -33,7 +33,7 @@ const formatTooltip = (val: number) => {
 };
 </script>
 
-<style lang="less" scoped>
+<style scoped>
 .slider-demo-block {
   display: flex;
   align-items: center;

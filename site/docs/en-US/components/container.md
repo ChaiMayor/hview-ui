@@ -113,3 +113,17 @@ These components use flex for layout, so please make sure your browser supports 
 | Name    | Description               |
 | ------- | ------------------------- |
 | default | customize default content |
+
+<style>
+.h-header,
+.h-aside,
+.h-main,
+.h-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.h-main {
+  height: 150px;
+}
+</style>

@@ -44,7 +44,7 @@ Use the `clearable` attribute to get an input box that can be cleared with one c
 <clearable></clearable>
 :::
 
-## password box
+## Password box
 
 Use `password` in type to become a password box
 
@@ -60,7 +60,7 @@ Icons can be added to the head and tail of the input component through the `icon
 <icon></icon>
 :::
 
-## text field
+## Text field
 
 Used to enter multi-line text information by specifying the value of the type attribute as textarea.
 
@@ -68,24 +68,26 @@ Used to enter multi-line text information by specifying the value of the type at
 <InputTextarea></InputTextarea>
 :::
 
-## size
+## Size
 
-Use the size attribute to change the size of the input box. In addition to the default size, there are two other options: large, small.
+Use the size attribute to change the size of the input box. In addition to the default size, there are two other options: `large`, `small`.
 
 ::: code input/size
 <size></size>
 :::
 
-## Attributes
+## API
 
-| parameter  | illustrate                          | Type    | optional value             | default |
-| ---------- | ----------------------------------- | ------- | -------------------------- | ------- |
-| size       | size                                | string  | large / small              | —       |
-| type       | type                                | string  | text / password / textarea | —       |
-| clearable  | Whether to display the clear button | boolean | —                          | false   |
-| disabled   | Whether to disable                  | boolean | —                          | false   |
-| iconAfter  | add icon after                      | string  | —                          | —       |
-| iconBefore | add icon in front                   | string  | —                          | —       |
+### Attributes
+
+| parameter  | illustrate                          | Type      | optional value             | default |
+| ---------- | ----------------------------------- | --------- | -------------------------- | ------- |
+| size       | size                                | `string`  | large / small              | —       |
+| type       | type                                | `string`  | text / password / textarea | —       |
+| clearable  | Whether to display the clear button | `boolean` | —                          | false   |
+| disabled   | Whether to disable                  | `boolean` | —                          | false   |
+| iconAfter  | add icon after                      | `string`  | —                          | —       |
+| iconBefore | add icon in front                   | `string`  | —                          | —       |
 
 <style>
 .h-icon-h, .h-after{

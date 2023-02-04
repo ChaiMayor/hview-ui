@@ -1,25 +1,27 @@
-interface IItem {
+import { ExtractPropTypes, PropType } from "vue";
+export interface OptionsItem {
   label: string;
   id: number;
-  disabled: boolean;
-  inline: string;
+  disabled?: boolean;
 }
 
-const radioProps = {
+export const RadioProps = {
+  modelValue: {
+    type: [String, Number],
+    default: -1,
+  },
   options: {
-    type: Array,
+    type: Array as PropType<OptionsItem[]>,
     default: () => [],
   },
   inline: {
     type: Boolean,
     default: true,
   },
-  customColor: {
-    type: String,
-    default: "#0e80eb",
-  },
+  // customColor: {
+  //   type: String,
+  //   default: "",
+  // },
 };
 
-export { radioProps };
-
-export type { IItem };
+export type RadioProps = ExtractPropTypes<typeof RadioProps>;

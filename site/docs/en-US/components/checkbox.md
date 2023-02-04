@@ -51,21 +51,23 @@ Setting the border property can be rendered as a multi-select box with a border
 <border></border>
 :::
 
-## Checkbox Attributes
+## Checkbox API
 
-| parameter     | illustrate                                                                                        | Type                      | optional value | default |
-| ------------- | ------------------------------------------------------------------------------------------------- | ------------------------- | -------------- | ------- |
-| v-model       | bind value                                                                                        | boolean                   | —              | —       |
-| label         | The value of the checked state (only valid when `checkbox-group` or bound object type is `array`) | string / number / boolean | —              | —       |
-| disabled      | Whether to disable                                                                                | boolean                   | —              | false   |
-| border        | Whether to display the border                                                                     | boolean                   | —              | false   |
-| name          | native name attribute                                                                             | string                    | —              | —       |
-| checked       | Is it currently checked                                                                           | boolean                   | —              | false   |
-| indeterminate | Set the indeterminate state, only responsible for style control                                   | boolean                   | —              | false   |
+### Checkbox Attributes
+
+| parameter     | illustrate                                                                                        | Type                            | optional value | default |
+| ------------- | ------------------------------------------------------------------------------------------------- | ------------------------------- | -------------- | ------- |
+| v-model       | bind value                                                                                        | `boolean`                       | —              | —       |
+| label         | The value of the checked state (only valid when `checkbox-group` or bound object type is `array`) | `string` / `number` / `boolean` | —              | —       |
+| disabled      | Whether to disable                                                                                | `boolean`                       | —              | false   |
+| border        | Whether to display the border                                                                     | `boolean`                       | —              | false   |
+| name          | native name attribute                                                                             | `string`                        | —              | —       |
+| checked       | Is it currently checked                                                                           | `boolean`                       | —              | false   |
+| indeterminate | Set the indeterminate state, only responsible for style control                                   | `boolean`                       | —              | false   |
 
 <br/>
 
-## Checkbox Events
+### Checkbox Events
 
 | event name | illustrate                           | callback parameter |
 | ---------- | ------------------------------------ | ------------------ |
@@ -73,16 +75,18 @@ Setting the border property can be rendered as a multi-select box with a border
 
 <br/>
 
-## Checkbox-group Attributes
+## Checkbox-group API
 
-| parameter       | illustrate         | Type    | optional value | default |
-| --------------- | ------------------ | ------- | -------------- | ------- |
-| value / v-model | bind value         | array   | —              | —       |
-| disabled        | Whether to disable | boolean | —              | false   |
+### Checkbox-group Attributes
+
+| parameter       | illustrate         | Type      | optional value | default |
+| --------------- | ------------------ | --------- | -------------- | ------- |
+| value / v-model | bind value         | `array`   | —              | —       |
+| disabled        | Whether to disable | `boolean` | —              | false   |
 
 <br/>
 
-## Checkbox-group Events
+### Checkbox-group Events
 
 | event name | illustrate                           | callback parameter |
 | ---------- | ------------------------------------ | ------------------ |

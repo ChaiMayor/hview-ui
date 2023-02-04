@@ -23,7 +23,7 @@
 .h-checkbox .h-checkbox__input .h-checkbox__inner {
   display: inline-block;
   position: relative;
-  border: 1px solid #dcdfe6;
+  border: 1px solid var(--hv-border-color);
   border-radius: 2px;
   box-sizing: border-box;
   width: 14px;
@@ -61,8 +61,8 @@
 }
 
 .h-checkbox .is-checked .h-checkbox__inner {
-  background-color: #409eff;
-  border-color: #409eff;
+  background-color: var(--hv-color-primary);
+  border-color: var(--hv-color-primary);
 }
 
 .h-checkbox .is-checked .h-checkbox__inner::after {
@@ -70,18 +70,18 @@
 }
 
 .h-checkbox .is-checked.is-disabled .h-checkbox__inner {
-  background-color: #f2f6fc;
-  border-color: #dcdfe6;
+  background-color: var(--hv-border-color-extra-light);
+  border-color: var(--hv-border-color);
   cursor: no-drop;
 }
 
 .h-checkbox .is-checked.is-disabled .h-checkbox__inner::after {
-  border-color: #c0c4cc;
+  border-color: var(--hv-text-color-disabled);
 }
 
 .h-checkbox .is-indeterminate .h-checkbox__inner {
-  background-color: #409eff;
-  border-color: #409eff;
+  background-color: var(--hv-color-primary);
+  border-color: var(--hv-color-primary);
 }
 
 .h-checkbox .is-indeterminate .h-checkbox__inner::before {
@@ -98,12 +98,12 @@
 
 .h-checkbox .is-disabled {
   cursor: no-drop;
-  color: #c0c4cc;
+  color: var(--hv-text-color-disabled);
 }
 
 .h-checkbox .is-disabled .h-checkbox__inner {
-  background-color: #edf2fc;
-  border-color: #dcdfe6;
+  background-color: var(--hv-check-bg-disabled);
+  border-color: var(--hv-border-color);
   cursor: not-allowed;
 }
 
@@ -116,30 +116,39 @@
 
 .is-disabled {
   cursor: no-drop;
-  color: #c0c4cc;
+  color: var(--hv-text-color-disabled);
 }
 
 .is-disabled .h-checkbox__inner {
-  background-color: #edf2fc;
-  border-color: #dcdfe6;
+  background-color: var(--hv-check-bg-disabled);
+  border-color: var(--hv-border-color);
   cursor: not-allowed;
 }
 
 .is-disabled.is-indeterminate .h-checkbox__inner::before {
-  background-color: #c0c4cc;
-  border-color: #c0c4cc;
+  background-color: var(--hv-text-color-disabled);
+  border-color: var(--hv-text-color-disabled);
 }
 
 .is-bordered {
   padding: 9px 20px 9px 10px;
   border-radius: 4px;
-  border: 1px solid #dcdfe6;
+  border: 1px solid var(--hv-border-color);
   box-sizing: border-box;
   line-height: normal;
   height: 40px;
 }
 
 .is-bordered.is-checked {
-  border-color: #409eff;
-  color: #409eff;
+  border-color: var(--hv-color-primary);
+  color: var(--hv-color-primary);
+}
+
+html.dark {
+  .h-checkbox .h-checkbox__input .h-checkbox__inner {
+    background-color: transparent;
+    .h-checkbox .h-checkbox__input .h-checkbox__inner::after {
+      background-color: transparent;
+    }
+  }
 }

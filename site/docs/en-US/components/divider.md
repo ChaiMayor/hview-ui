@@ -37,7 +37,9 @@ You can set the style of divider.
 <vertical></vertical>
 :::
 
-## Divider Attributes
+## API
+
+### Attributes
 
 | Name             | Description            | Type     | Accepted Values       | Default    |
 | :--------------- | :--------------------- | :------- | :-------------------- | :--------- |
@@ -45,7 +47,7 @@ You can set the style of divider.
 | border-style     | 设置分隔符样式         | `string` | solid/dashed/dotted   | solid      |
 | content-position | 自定义分隔线内容的位置 | `string` | left / right / center | center     |
 
-## Slots
+### Slots
 
 | Name | Description          |
 | :--- | :------------------- |

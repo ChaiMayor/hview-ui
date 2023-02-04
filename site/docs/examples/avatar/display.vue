@@ -1,7 +1,7 @@
 <template>
   <div class="demo">
     <div class="block">
-      <h-avatar icon="user-solid" />
+      <h-avatar icon="user" />
     </div>
     <div class="block">
       <h-avatar src="https://img1.baidu.com/it/u=3898423942,4076211846&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500" />

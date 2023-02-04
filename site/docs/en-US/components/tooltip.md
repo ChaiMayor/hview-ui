@@ -37,7 +37,9 @@ Use the `content` property to determine the tooltip on `hover`. The display effe
 <settingWidth></settingWidth>
 :::
 
-## Attributes
+## API
+
+### Attributes
 
 | parameter | illustrate              | Type   | optional value                                                                                            | default |
 | --------- | ----------------------- | ------ | --------------------------------------------------------------------------------------------------------- | ------- |

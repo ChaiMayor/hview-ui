@@ -37,7 +37,9 @@
 <vertical></vertical>
 :::
 
-## Divider 属性
+## API
+
+### 属性
 
 | 属性名           | 说明                   | 类型     | 可选值                | 默认值     |
 | :--------------- | :--------------------- | :------- | :-------------------- | :--------- |
@@ -45,7 +47,7 @@
 | border-style     | 设置分隔符样式         | `string` | solid/dashed/dotted   | solid      |
 | content-position | 自定义分隔线内容的位置 | `string` | left / right / center | center     |
 
-## 插槽
+### 插槽
 
 | 事件名 | 说明                 |
 | :----- | :------------------- |

@@ -43,13 +43,15 @@ import icon from 'exam/button/icon.vue'
 <icon></icon>
 :::
 
-## Attributes
+## API
 
-| 参数     | 说明         | 类型    | 可选值                                             | 默认  |
-| -------- | ------------ | ------- | -------------------------------------------------- | ----- |
-| size     | 尺寸         | string  | medium / small / mini                              | —     |
-| type     | 类型         | string  | primary / success / warning / danger / info / text | —     |
-| plain    | 是否朴素按钮 | boolean | —                                                  | false |
-| round    | 是否圆角按钮 | boolean | —                                                  | false |
-| disabled | 是否禁用     | boolean | —                                                  | false |
-| icon     | 图标类型     | string  | —                                                  | —     |
+### 属性
+
+| 参数     | 说明         | 类型      | 可选值                                             | 默认  |
+| -------- | ------------ | --------- | -------------------------------------------------- | ----- |
+| size     | 尺寸         | `string`  | medium / small / mini                              | —     |
+| type     | 类型         | `string`  | primary / success / warning / danger / info / text | —     |
+| plain    | 是否朴素按钮 | `boolean` | —                                                  | false |
+| round    | 是否圆角按钮 | `boolean` | —                                                  | false |
+| disabled | 是否禁用     | `boolean` | —                                                  | false |
+| icon     | 图标类型     | `string`  | —                                                  | —     |

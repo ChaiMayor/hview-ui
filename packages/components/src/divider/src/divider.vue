@@ -8,7 +8,7 @@
 
 <script lang="ts" setup>
 import "../style/index.less";
-import { computed, defineProps } from "vue";
+import { computed } from "vue";
 import { DividerProps } from "./divider";
 import type { CSSProperties } from "vue";
 

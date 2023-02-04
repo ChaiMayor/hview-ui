@@ -2,7 +2,6 @@
 
 .h-from-input {
   position: relative;
-  width: 180px;
   .h-textarea {
     padding-bottom: 2.3em;
   }
@@ -11,13 +10,13 @@
     position: absolute;
     left: 10px;
     bottom: 10px;
-    font-size: 13px;
+    font-size: 14px;
     color: var(--color-default);
   }
 
   &.h-input-icon-before {
     .h-input {
-      padding-left: 25px;
+      padding-left: 30px;
     }
 
     .h-before {
@@ -27,7 +26,7 @@
 
   &.h-input-icon-after {
     .h-input {
-      padding-right: 25px;
+      padding-right: 30px;
     }
 
     .h-after {
@@ -36,17 +35,29 @@
   }
 
   .h-after,
-  .h-before,
-  .h-icon-h {
+  .h-before {
     top: 50%;
     color: #d9e1f0;
     transform: translateY(-50%);
     position: absolute;
-    transition: color 0.25s ease;
+    color: #adadad;
+  }
+  .h-after {
+    transform: translate(-30%, -50%);
   }
 
   .h-icon-h {
-    right: -34px;
+    top: 50%;
+    color: #d9e1f0;
+    transform: translate(-40%, -50%);
+    position: absolute;
+    transition: color 0.25s ease;
+    border-radius: 50%;
+    border: 1px solid #abaeb5;
+  }
+
+  .h-icon-h {
+    right: -40px;
     cursor: pointer;
     width: 15px;
     height: 15px;
@@ -61,25 +72,24 @@
 
   .h-icon-h::before {
     content: "\00D7";
+    font-size: 12px;
     color: #acaeb3;
     position: absolute;
-    top: -5px;
+    top: -7px;
   }
-}
-
-.h-input {
-  width: inherit;
 }
 
 .h-input,
 .h-textarea {
   padding: 5px 10px;
-  border: 1px solid #c0c4cc;
-  border-radius: 3px;
-  font-size: 13px;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
   transition-property: border-color, box-shadow;
   transition-duration: 0.25s;
+  font-family: var(--hv-font-family);
   transition-timing-function: ease-in-out;
+  font-size: 14px;
+  width: 100%;
 
   &:disabled {
     cursor: no-drop;
@@ -89,25 +99,24 @@
       border-color: var(--color-default);
     }
   }
+  &:hover {
+    border-color: #adadad;
+  }
 
   &:focus,
   &.is-focus {
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 2px rgba(45, 148, 244, 0.3);
+    border-color: transparent;
+    box-shadow: 0 0 0 2px #5d80f48c;
     outline: none;
   }
 
   &.is-blur {
-    border-color: var(--color-default);
+    border-color: #adadad;
     box-shadow: none;
 
     &::placeholder {
       color: #abaeb5;
     }
-  }
-
-  &:hover {
-    border-color: var(--color-primary);
   }
 
   &.h-input-large {
@@ -122,5 +131,48 @@
 
   &::placeholder {
     color: #abaeb5;
+  }
+}
+
+.h-input {
+  border-color: #d8d8d8;
+  border-radius: 4px;
+  &:hover {
+    border-color: #adadad;
+  }
+  &:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 2px #5d80f48c;
+  }
+  &:disabled {
+    cursor: no-drop;
+    background-color: #f7f7fa;
+
+    &:hover {
+      border-color: #d8d8d8;
+    }
+  }
+}
+
+html.dark {
+  .h-input {
+    border-color: rgb(78, 78, 78);
+    color: #a1a4ac;
+    &:hover {
+      border-color: rgb(99, 99, 99);
+    }
+    &:focus {
+      border-color: transparent;
+    }
+    &::placeholder {
+      color: #8f9299;
+    }
+    &:disabled {
+      background-color: #262727;
+    }
+  }
+  .h-textarea {
+    border-color: rgb(78, 78, 78);
+    color: #a1a4ac;
   }
 }

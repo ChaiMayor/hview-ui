@@ -70,3 +70,21 @@ The scrollbar is displayed only when the element height exceeds the max height.
 | setScrollTop  | Set distance to scroll top  | `function` |
 | setScrollLeft | Set distance to scroll left | `function` |
 | wrapRef       | scrollbar wrap ref          | `object`   |
+
+<style lang="less">
+  html.dark {
+    p.h-scrollbar-demo-item {
+      background-color: #18222c; 
+    }
+    .scrollbar-flex-content{
+      .scrollbar-demo-item{
+        background-color: #2b1d1d;
+      }
+    }
+    .h-scrollbar__view{
+      .scrollbar-demo-item{
+        background-color: #18222c; 
+      }
+    }
+  }
+</style>

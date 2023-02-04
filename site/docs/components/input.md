@@ -10,7 +10,7 @@ import password from 'exam/input/password.vue'
 
 # Input 输入框
 
-通过鼠标或键盘输入字符
+通过鼠标或键盘输入字符。
 
 ::: tip
 
@@ -30,7 +30,7 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 
 ## 禁用状态
 
-通过 `disabled` 属性指定是否禁用 input 组件
+通过 `disabled` 属性指定是否禁用 `input` 组件
 
 ::: code input/disabled
 <disabled></disabled>
@@ -38,7 +38,7 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 
 ## 一键清空
 
-使用`clearable`属性即可得到一个可一键清空的输入框
+使用 `clearable` 属性即可得到一个可一键清空的输入框
 
 ::: code input/clearable
 <clearable></clearable>
@@ -54,7 +54,7 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 
 ## 带 Icon 的输入框
 
-可以通过 `iconAfter` 和 `iconBefore` 属性在 input 组件首部和尾部增加显示图标
+可以通过 `iconAfter` 和 `iconBefore` 属性在 `input` 组件首部和尾部增加显示图标
 
 ::: code input/icon
 <icon></icon>
@@ -62,7 +62,7 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 
 ## 文本域
 
-用于输入多行文本信息，通过将 type 属性的值指定为 textarea。
+用于输入多行文本信息，通过将 `type` 属性的值指定为 `textarea`
 
 ::: code input/textarea
 <InputTextarea></InputTextarea>
@@ -70,22 +70,24 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 
 ## 尺寸
 
-使用 size 属性改变输入框大小。 除了默认大小外，还有另外两个选项：large, small。
+使用 size 属性改变输入框大小。 除了默认大小外，还有另外两个选项：`large`, `small`
 
 ::: code input/size
 <size></size>
 :::
 
-## Attributes
+## API
 
-| 参数       | 说明             | 类型    | 可选值                     | 默认  |
-| ---------- | ---------------- | ------- | -------------------------- | ----- |
-| size       | 尺寸             | string  | large / small              | —     |
-| type       | 类型             | string  | text / password / textarea | —     |
-| clearable  | 是否显示清空按钮 | boolean | —                          | false |
-| disabled   | 是否禁用         | boolean | —                          | false |
-| iconAfter  | 在后面增加图标   | string  | —                          | —     |
-| iconBefore | 在前面增加图标   | string  | —                          | —     |
+### 属性
+
+| 参数       | 说明             | 类型      | 可选值                     | 默认  |
+| ---------- | ---------------- | --------- | -------------------------- | ----- |
+| size       | 尺寸             | `string`  | large / small              | —     |
+| type       | 类型             | `string`  | text / password / textarea | —     |
+| clearable  | 是否显示清空按钮 | `boolean` | —                          | false |
+| disabled   | 是否禁用         | `boolean` | —                          | false |
+| iconAfter  | 在后面增加图标   | `string`  | —                          | —     |
+| iconBefore | 在前面增加图标   | `string`  | —                          | —     |
 
 <style>
 .h-icon-h, .h-after{

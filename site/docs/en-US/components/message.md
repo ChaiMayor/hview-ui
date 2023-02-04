@@ -56,7 +56,9 @@ By setting the dangerouslyUseHTMLString property to true, the message will be tr
 <HTMLString></HTMLString>
 :::
 
-## Attributes
+## API
+
+### Attributes
 
 | parameter | illustrate                                                                       | Type     | optional value                            | default |
 | --------- | -------------------------------------------------------------------------------- | -------- | ----------------------------------------- | ------- |

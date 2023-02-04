@@ -46,11 +46,13 @@ The `h-icon` is passed in dot, the red dot of the logo is displayed on the upper
 
 <iconList></iconList>
 
-## Attributes
+## API
 
-| parameter | illustrate                         | Type          | optional | default |
-| --------- | ---------------------------------- | ------------- | -------- | ------- |
-| name      | icon name                          | string        | —        | —       |
-| color     | icon color                         | string        | —        | —       |
-| dot       | Whether the icon displays the logo | boolean       | —        | false   |
-| badge     | badge value                        | string/number | —        | —       |
+### Attributes
+
+| parameter | illustrate                         | Type            | optional | default |
+| --------- | ---------------------------------- | --------------- | -------- | ------- |
+| name      | icon name                          | `string`        | —        | —       |
+| color     | icon color                         | `string`        | —        | —       |
+| dot       | Whether the icon displays the logo | `boolean`       | —        | false   |
+| badge     | badge value                        | `string/number` | —        | —       |

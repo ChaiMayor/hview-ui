@@ -33,7 +33,7 @@ import fit from 'exam/avatar/fit.vue'
 
 ## API
 
-### Attributes
+### 属性
 
 | 属性名  | 说明                     | 类型                   | 可选值                                     | 默认值  |
 | ------- | ------------------------ | ---------------------- | ------------------------------------------ | ------- |
@@ -46,13 +46,13 @@ import fit from 'exam/avatar/fit.vue'
 | alt     | 图片的原生 `alt` 属性    | `string`               | —                                          | —       |
 | fit     | 设置头像图片如何适应容器 | `string`               | fill / contain / cover / none / scale-down | cover   |
 
-### Events
+### 事件
 
 | 事件名 | 说明                     | 类型       |
 | ------ | ------------------------ | ---------- |
 | error  | 图片加载失败时触发的事件 | `Function` |
 
-### Slots
+### 插槽
 
 | 插槽名  | 说明           |
 | ------- | -------------- |

@@ -43,13 +43,15 @@ The button changes size according to `size`, providing `medium` `small` `mini` t
 <icon></icon>
 :::
 
-## Attributes
+## API
 
-| parameter | illustrate                  | Type    | optional value                                     | default |
-| --------- | --------------------------- | ------- | -------------------------------------------------- | ------- |
-| size      | size                        | string  | medium / small / mini                              | —       |
-| type      | type                        | string  | primary / success / warning / danger / info / text | —       |
-| plain     | Whether plain button        | boolean | —                                                  | false   |
-| round     | Whether to round the button | boolean | —                                                  | false   |
-| disabled  | Whether to disable          | boolean | —                                                  | false   |
-| icon      | icon type                   | string  | —                                                  | —       |
+### Attributes
+
+| parameter | illustrate                  | Type      | optional value                                     | default |
+| --------- | --------------------------- | --------- | -------------------------------------------------- | ------- |
+| size      | size                        | `string`  | medium / small / mini                              | —       |
+| type      | type                        | `string`  | primary / success / warning / danger / info / text | —       |
+| plain     | Whether plain button        | `boolean` | —                                                  | false   |
+| round     | Whether to round the button | `boolean` | —                                                  | false   |
+| disabled  | Whether to disable          | `boolean` | —                                                  | false   |
+| icon      | icon type                   | `string`  | —                                                  | —       |

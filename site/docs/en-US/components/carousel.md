@@ -8,7 +8,7 @@ import direction from 'exam/carousel/direction.vue'
 
 # Carousel
 
-> Display the same type of text, pictures and other content in the area.
+Display the same type of text, pictures and other content in the area.
 
 ## Basic usage
 
@@ -42,7 +42,7 @@ The layout of the carousel can be changed by setting the `direction` property , 
 <direction></direction>
 :::
 
-## API
+## Carousel API
 
 ### Carousel Attributes
 
@@ -79,6 +79,8 @@ The layout of the carousel can be changed by setting the `direction` property , 
 | Name | Description    | Subtag        |
 | ---- | -------------- | ------------- |
 | -    | custom content | Carousel-Item |
+
+## Carousel-Item API
 
 ### Carousel-Item Attributes
 

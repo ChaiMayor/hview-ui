@@ -3,7 +3,7 @@
   import customize from 'exam/result/customize.vue'
 </script>
 
-## Result
+# Result
 
 Used to give feedback on the result of user's operation or access exception.
 
@@ -19,7 +19,9 @@ Used to give feedback on the result of user's operation or access exception.
 <customize></customize>
 :::
 
-## Result Attributes
+## API
+
+### Attributes
 
 | Name      | Description | Type     | Accepted Values                  | Default |
 | --------- | ----------- | -------- | -------------------------------- | ------- |
@@ -27,7 +29,7 @@ Used to give feedback on the result of user's operation or access exception.
 | sub-title | sub title   | `string` | —                                | —       |
 | icon      | icon type   | `string` | success / warning / info / error | info    |
 
-## Result Slots
+### Slots
 
 | Name      | Description       |
 | --------- | ----------------- |

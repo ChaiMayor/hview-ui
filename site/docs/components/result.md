@@ -3,7 +3,7 @@
   import customize from 'exam/result/customize.vue'
 </script>
 
-## Result 结果
+# Result 结果
 
 用于对用户操作结果或者异常状态做反馈。
 
@@ -19,7 +19,9 @@
 <customize></customize>
 :::
 
-## Result 属性
+## API
+
+### 属性
 
 | 属性名    | 说明     | 类型     | 可选值                           | 默认 |
 | --------- | -------- | -------- | -------------------------------- | ---- |
@@ -27,7 +29,7 @@
 | sub-title | 二级标题 | `string` | —                                | —    |
 | icon      | 图标类型 | `string` | success / warning / info / error | info |
 
-## Result 插槽
+### 插槽
 
 | 属性名    | 说明               |
 | --------- | ------------------ |

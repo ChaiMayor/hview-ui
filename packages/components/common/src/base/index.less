@@ -1,33 +1,11 @@
 @import "./icon.less";
 
 :root {
-  // 正常颜色
-  --color-primary: #5d80f4;
-  --color-success: #67c23a;
-  --color-info: #909399;
-  --color-danger: #f56c6c;
-  --color-warning: #e6a23c;
-
-  // 选中时的高亮
-  --color-hover-primary: #66b1ff;
-  --color-hover-success: #95d475;
-  --color-hover-info: #b1b3b8;
-  --color-hover-danger: #f89898;
-  --color-hover-warning: #eebe77;
-  // 禁选
-  --color-disabled-primary: #a0cfff;
-  --color-disabled-success: #b3e19d;
-  --color-disabled-info: #c8c9cc;
-  --color-disabled-danger: #f3d19e;
-  --color-disabled-warning: #fab6b6;
-}
-
-:root {
-  --hv-main: h;
+  // 主要颜色
   --hv-color-white: #ffffff;
   --hv-color-black: #000000;
   --hv-color-primary: #5d80f4;
-  --hv-color-primary-light-3: #89a0eb;
+  --hv-color-primary-light-3: #7792eb;
   --hv-color-primary-light-5: #93a6e5;
   --hv-color-primary-light-7: #acb9e4;
   --hv-color-primary-light-8: #c1c8e0;
@@ -89,6 +67,10 @@
   --hv-fill-color-dark: #ebedf0;
   --hv-fill-color-darker: #e6e8eb;
   --hv-fill-color-blank: #ffffff;
+  --hv-check-bg-disabled: #edf2fc;
+  --hv-divider-bg-color: #fff;
+  --hv-divider-color: #2b2b2c;
+
   --hv-box-shadow: 0px 12px 32px 4pxrgba (0, 0, 0, 0.04), 0px 8px 20pxrgba (0, 0, 0, 0.08);
   --hv-box-shadow-light: 0px 0px 12pxrgba (0, 0, 0, 0.12);
   --hv-box-shadow-lighter: 0px 0px 6pxrgba (0, 0, 0, 0.12);
@@ -161,4 +143,23 @@
   --hv-categories-c-line: #e5e9f2;
 
   --hv-scrollbar-thumb-hover: #909399;
+
+  // button
+  --hv-button-border-color: #dcdfe6;
+  --hv-button-bg-color: #fff;
+  --hv-button-disabled-text-color: #606266;
+  --hv-button-primary-plain: #ecf5ff;
+  --hv-button-primary-plain-border: #acbbec;
+
+  --hv-button-success-plain: #f0f9eb;
+  --hv-button-success-plain-border: var(--hv-color-success);
+
+  --hv-button-info-plain: #f4f4f5;
+  --hv-button-info-plain-border: #f4f4f5;
+
+  --hv-button-warning-plain: #fdf6ec;
+  --hv-button-warning-plain-border: #f3d19e;
+
+  --hv-button-danger-plain: #fef0f0;
+  --hv-button-danger-plain-border: #fde2e2;
 }
