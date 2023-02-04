@@ -49,17 +49,21 @@ const sidebar = {
       items: [
         { text: "Card 卡片", link: "/components/card" },
         { text: "Avatar 头像", link: "/components/avatar" },
-        { text: "Carousel 轮播图", link: "/components/carousel" },
+        { text: "Carousel 走马灯", link: "/components/carousel" },
         { text: "Tag 标签", link: "/components/tag" },
         { text: "Progress 进度条", link: "/components/progress" },
         { text: "Empty 空状态", link: "/components/empty" },
         { text: "Result 结果", link: "/components/result" },
         { text: "Message 消息", link: "/components/message" },
+        { text: "Timeline 时间线", link: "/components/timeline" },
       ],
     },
     {
       text: "Feedback 反馈组件",
-      items: [{ text: "Tooltip 文字提示", link: "/components/tooltip" }],
+      items: [
+        { text: "Alert 提示", link: "/components/alert" },
+        { text: "Tooltip 文字提示", link: "/components/tooltip" },
+      ],
     },
     {
       text: "Ohters 其他",
@@ -122,11 +126,15 @@ const sidebarEN = {
         { text: "Empty", link: "/components/empty" },
         { text: "Result", link: "/components/result" },
         { text: "Message", link: "/components/message" },
+        { text: "Timeline", link: "/components/timeline" },
       ],
     },
     {
       text: "Feedback",
-      items: [{ text: "Tooltip", link: "/components/tooltip" }],
+      items: [
+        { text: "Alert", link: "/components/alert" },
+        { text: "Tooltip", link: "/components/tooltip" },
+      ],
     },
     {
       text: "Ohters",

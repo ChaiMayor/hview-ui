@@ -1,0 +1,56 @@
+// 容器
+.h-alert {
+  width: 100%;
+  padding: 8px 16px;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease-in-out;
+
+  // 内容左侧的图标
+  .icon {
+    font-size: 24px;
+    margin-right: 5px;
+  }
+
+  // 提示内容
+  .content {
+    display: table-cell;
+    margin: 0 8px;
+    // 标题
+    .title {
+      font-size: 13px;
+      line-height: 25px;
+    }
+    // 标题是否加粗
+    .is-bold {
+      font-weight: bold;
+    }
+    // 描述内容
+    .description {
+      font-size: 12px;
+      margin: 5px 0 0 0;
+    }
+    // 关闭按钮
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      cursor: pointer;
+    }
+    // 自定义关闭按钮内容
+    .is-customed {
+      font-size: 13px;
+      top: 9px;
+    }
+  }
+}
+// 内容居中
+.is-center {
+  justify-content: center;
+}

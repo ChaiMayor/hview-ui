@@ -21,7 +21,6 @@ const dividerClass = computed(() => {
 });
 // 分割线样式（使用css变量）
 const dividerStyle = computed(() => {
-  console.log(props.borderStyle);
   return {
     "--border-style": props.borderStyle,
   } as CSSProperties;
