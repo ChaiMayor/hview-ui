@@ -7,6 +7,7 @@ coverage
 examples/dist  
 cache
 site/**/dist
+packages/playground/dist
 # packages/**/dist
 package-lock.json
 # pnpm-lock.yaml

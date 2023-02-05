@@ -1,6 +1,6 @@
 {
   "name": "@hview-plus/playground",
-  "version": "3.2.45",
+  "version": "1.3.11",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -19,9 +19,8 @@
   },
   "dependencies": {
     "@vue/repl": "^1.3.0",
-    "axios": "^1.3.1",
     "file-saver": "^2.0.5",
-    "hview-plus": "^1.3.11",
+    "hview-plus": "*",
     "jszip": "^3.6.0",
     "vue": "3.2.45"
   },
