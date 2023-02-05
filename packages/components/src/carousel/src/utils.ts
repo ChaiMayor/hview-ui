@@ -18,6 +18,7 @@ import { CarouselItemContext, carouselContextKey } from "./carousel";
 import type { CarouselEmits, CarouselProps } from "./carousel";
 // eslint-disable-next-line vue/prefer-import-from-vue
 import { isString, isArray } from "@vue/shared";
+import { throttle } from "lodash";
 
 export type RawSlots = Exclude<VNodeNormalizedChildren, Array<any>>;
 export type VNodeChildAtom = Exclude<VNodeChild, Array<any>>;
@@ -78,7 +79,7 @@ export const useOrderedChildren = <T extends { uid: number }>(
 };
 
 // 防抖间隔
-const THROTTLE_TIME = 300;
+const THROTTLE_TIME = 350;
 
 export const useCarousel = (props: CarouselProps, emit: SetupContext<CarouselEmits>["emit"], componentName: string) => {
   const {
@@ -103,27 +104,17 @@ export const useCarousel = (props: CarouselProps, emit: SetupContext<CarouselEmi
   const isVertical = computed(() => props.direction === "vertical");
 
   // methods
-  const throttledArrowClick = (index: number) => {
-    let timer: any = null;
-    if (timer) {
-      return;
-    }
-    timer = setTimeout(() => {
+  const throttledArrowClick = throttle(
+    (index: number) => {
       setActiveItem(index);
-      timer = null;
-    }, THROTTLE_TIME);
-  };
+    },
+    THROTTLE_TIME,
+    { trailing: true },
+  );
 
-  const throttledIndicatorHover = (index: number) => {
-    let timer: any = null;
-    if (timer) {
-      return;
-    }
-    timer = setTimeout(() => {
-      handleIndicatorHover(index);
-      timer = null;
-    }, THROTTLE_TIME);
-  };
+  const throttledIndicatorHover = throttle((index: number) => {
+    handleIndicatorHover(index);
+  }, THROTTLE_TIME);
 
   function pauseTimer() {
     if (timer.value) {
