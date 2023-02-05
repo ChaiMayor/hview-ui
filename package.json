@@ -13,7 +13,7 @@
     "docs:dev": "pnpm run --filter ./site docs:dev",
     "docs:build-other": "pnpm run --filter ./site docs:build",
     "docs:build": "gulp -f script/build/gulpfile.ts",
-    "play:build": "cd ./packages/playground & npm run build",
+    "play:build": "cd ./packages/playground & pnpm run build",
     "lint-staged": "lint-staged --allow-empty",
     "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx,.vue --no-ignore",
     "lint-fix": "eslint --fix --ext .ts,.vue",
