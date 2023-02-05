@@ -3,10 +3,12 @@ import { compileFile, File } from "@vue/repl";
 import { utoa, atou } from "./utils/encode";
 import * as defaultCompiler from "vue/compiler-sfc";
 import type { Store, SFCOptions, StoreState, OutputModes } from "@vue/repl";
+// @ts-ignore
+import pkg from "../package.json";
 
 import welcomeCode from "./template/welcome.vue?raw";
 
-const ver = "1.3.11";
+const ver = pkg.version;
 
 const hviewImports = {
   "hview-plus": `https://unpkg.com/hview-plus@${ver}/es/index.mjs`,

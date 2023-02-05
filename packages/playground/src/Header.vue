@@ -7,7 +7,7 @@ import Share from "./icons/Share.vue";
 import Download from "./icons/Download.vue";
 import GitHub from "./icons/GitHub.vue";
 // @ts-ignore
-import pkg from "../package.json";
+// import pkg from "../package.json";
 
 // @ts-ignore
 const props = defineProps(["store", "dev", "ssr"]);
