@@ -1,18 +1,4 @@
 <template>
-  {{ $t("colorpicker.confirm") }}
-  <h-tree :data="list"></h-tree>
-  <h-empty></h-empty>
-  <div>
-    <span>Rain</span>
-    <h-divider direction="vertical" />
-    <span>Home</span>
-    <h-divider direction="vertical" border-style="dashed" />
-    <span>Grass</span>
-  </div>
-  <h-alert title="success alert" type="success" description="more text description" show-icon />
-  <h-alert title="info alert" type="info" description="more text description" show-icon />
-  <h-alert title="warning alert" type="warning" description="more text description" show-icon />
-  <h-alert title="error alert" type="error" description="more text description" show-icon />
   <h-tree :data="list" label="name" children="children" show-checkbox></h-tree>
 </template>
 

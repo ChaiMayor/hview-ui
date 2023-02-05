@@ -55,6 +55,7 @@ const sidebar = {
         { text: "Result 结果", link: "/components/result" },
         { text: "Message 消息", link: "/components/message" },
         { text: "Timeline 时间线", link: "/components/timeline" },
+        { text: "Tree 树形控件", link: "/components/tree" },
       ],
     },
     {
@@ -125,6 +126,7 @@ const sidebarEN = {
         { text: "Result", link: "/components/result" },
         { text: "Message", link: "/components/message" },
         { text: "Timeline", link: "/components/timeline" },
+        { text: "Tree", link: "/components/tree" },
       ],
     },
     {
