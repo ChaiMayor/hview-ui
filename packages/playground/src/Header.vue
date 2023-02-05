@@ -104,8 +104,8 @@ async function fetchVersions(): Promise<string[]> {
     <h1>
       <img alt="logo" src="https://oss.zhishiyu.online/common/hview-logo.png" />
       <span style="margin-top: -2px; margin-right: 6px">Hview UI Playground</span>
-      <h-tag size="small" style="margin: 0 8px">{{ pkg.version }}</h-tag>
-      <h-tag size="small"> repl v1.3.0 </h-tag>
+      <!-- <h-tag size="small" style="margin: 0 8px">{{ pkg.version }}</h-tag> -->
+      <!-- <h-tag size="small"> repl v1.3.0 </h-tag> -->
     </h1>
     <div class="links">
       <!-- <div class="version" @click.stop>
