@@ -55,6 +55,7 @@ const sidebar = {
         { text: "Empty 空状态", link: "/components/empty" },
         { text: "Result 结果", link: "/components/result" },
         { text: "Message 消息", link: "/components/message" },
+        { text: "Tree 树形控件", link: "/components/tree" },
       ],
     },
     {
@@ -118,6 +119,7 @@ const sidebarEN = {
         { text: "Empty", link: "/components/empty" },
         { text: "Result", link: "/components/result" },
         { text: "Message", link: "/components/message" },
+        { text: "Tree", link: "/components/tree" },
       ],
     },
     {
