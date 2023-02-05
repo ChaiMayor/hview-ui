@@ -1,68 +1,12 @@
 <template>
-  {{ $t("colorpicker.confirm") }}
-  <h-tree :data="list"></h-tree>
-  <h-empty></h-empty>
-  <div>
-    <span>Rain</span>
-    <h-divider direction="vertical" />
-    <span>Home</span>
-    <h-divider direction="vertical" border-style="dashed" />
-    <span>Grass</span>
-  </div>
-  <h-alert title="success alert" type="success" description="more text description" show-icon />
-  <h-alert title="info alert" type="info" description="more text description" show-icon />
-  <h-alert title="warning alert" type="warning" description="more text description" show-icon />
-  <h-alert title="error alert" type="error" description="more text description" show-icon />
-  <h-tree :data="list" label="name" children="children" show-checkbox></h-tree>
+  <h-button type="default" @click="handerClick">Show Message</h-button>
 </template>
 
 <script setup lang="ts">
-const list = [
-  {
-    name: "Level one 1",
-    children: [
-      {
-        name: "Level two 1-1",
-        children: [
-          {
-            name: "Level three 1-1-1",
-          },
-          {
-            name: "Level three 1-1-2",
-          },
-        ],
-      },
-      {
-        name: "Level two 1-2",
-      },
-    ],
-  },
-  {
-    name: "Level one 2",
-    children: [
-      {
-        name: "Level two 2-1",
-        children: [
-          {
-            name: "Level three 2-1-1",
-          },
-        ],
-      },
-      {
-        name: "Level two 2-2",
-      },
-    ],
-  },
-  {
-    name: "Level one 3",
-    children: [
-      {
-        name: "Level two 3-1",
-      },
-      {
-        name: "Level two 3-2",
-      },
-    ],
-  },
-];
+import { getCurrentInstance } from "vue";
+const instance = getCurrentInstance();
+const { $message } = instance.appContext.config.globalProperties;
+const handerClick = () => {
+  $message("Hello,This is a message");
+};
 </script>
