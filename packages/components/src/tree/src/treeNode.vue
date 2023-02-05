@@ -17,9 +17,9 @@
     <HCollapseTransition :duration="0.3" animate="linear">
       <div class="h-tree-ul-box" v-if="isShow" v-show="items.isOpen">
         <tree-node
-          v-for="(it, j) in items.children"
+          v-for="(i, j) in items.children"
           :key="j"
-          :items="it"
+          :items="i"
           :label="label"
           :children="children"
           :show-checkbox="showCheckbox"

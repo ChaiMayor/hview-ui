@@ -1,58 +1,52 @@
 <template>
-  {{ $t("colorpicker.confirm") }}
-  <h-tree :data="list"></h-tree>
-  <h-empty></h-empty>
+  <h-tree :data="list" label="name" children="children" show-checkbox></h-tree>
 </template>
 
 <script setup lang="ts">
 const list = [
   {
-    label: "一级 1",
+    name: "Level one 1",
     children: [
       {
-        label: "二级 1-1",
+        name: "Level two 1-1",
         children: [
           {
-            label: "三级 1-1-1",
+            name: "Level three 1-1-1",
+          },
+          {
+            name: "Level three 1-1-2",
           },
         ],
+      },
+      {
+        name: "Level two 1-2",
       },
     ],
   },
   {
-    label: "一级 2",
+    name: "Level one 2",
     children: [
       {
-        label: "二级 2-1",
+        name: "Level two 2-1",
         children: [
           {
-            label: "三级 2-1-1",
+            name: "Level three 2-1-1",
           },
         ],
       },
       {
-        label: "二级 2-2",
+        name: "Level two 2-2",
       },
     ],
   },
   {
-    label: "一级 3",
+    name: "Level one 3",
     children: [
       {
-        label: "二级 3-1",
-        children: [
-          {
-            label: "三级 3-1-1",
-          },
-        ],
+        name: "Level two 3-1",
       },
       {
-        label: "二级 3-2",
-        children: [
-          {
-            label: "三级 3-2-1",
-          },
-        ],
+        name: "Level two 3-2",
       },
     ],
   },
