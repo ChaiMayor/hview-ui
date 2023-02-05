@@ -33,7 +33,7 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Build
-        run: pnpm run play:build --if-present
+        run: pnpm run play:build
 
       - name: Deploy to Server
         uses: AEnterprise/rsync-deploy@v1.0
