@@ -59,6 +59,10 @@ const sidebar = {
       ],
     },
     {
+      text: "Navigation 导航",
+      items: [{ text: "Backtop 回到顶部", link: "/components/backtop" }],
+    },
+    {
       text: "Feedback 反馈组件",
       items: [
         { text: "Alert 提示", link: "/components/alert" },
@@ -128,6 +132,10 @@ const sidebarEN = {
         { text: "Timeline", link: "/components/timeline" },
         { text: "Tree", link: "/components/tree" },
       ],
+    },
+    {
+      text: "Navigation ",
+      items: [{ text: "Backtop", link: "/components/backtop" }],
     },
     {
       text: "Feedback",
