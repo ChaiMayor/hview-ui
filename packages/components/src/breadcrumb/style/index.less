@@ -1,0 +1,25 @@
+.h-breadcrumb {
+  font-size: 14px;
+  line-height: 1;
+  color: var(--hv-text-color-regular);
+  &__item {
+    .is-link {
+      color: var(--hv-text-color-primary);
+      font-weight: bold;
+    }
+    .is-link:hover {
+      color: var(--hv-color-primary);
+      cursor: pointer;
+    }
+    .item__separator {
+      span {
+        margin: 0 9px;
+      }
+    }
+  }
+  &__item:last-child {
+    .item__separator {
+      display: none !important;
+    }
+  }
+}

@@ -26,6 +26,7 @@ import { default as Divider } from "./divider";
 import { default as Alert } from "./alert";
 import { Timeline, TimelineItem } from "./timeline";
 import { default as Backtop } from "./backtop";
+import { Breadcrumb, BreadcrumbItem } from "./breadcrumb";
 
 export {
   Button,
@@ -61,6 +62,8 @@ export {
   Timeline,
   TimelineItem,
   Backtop,
+  Breadcrumb,
+  BreadcrumbItem,
 };
 
 export default [
@@ -97,4 +100,6 @@ export default [
   Timeline,
   TimelineItem,
   Backtop,
+  Breadcrumb,
+  BreadcrumbItem,
 ];
