@@ -13,12 +13,12 @@
 <script lang="ts" setup>
 import "../style/index.less";
 import { computed, inject, toRefs, getCurrentInstance, onMounted } from "vue";
-import { useRouter, useRoute, createRouter } from "vue-router";
+// import { useRouter, useRoute, createRouter } from "vue-router";
 import { BreadcrumbItemProps } from "./breadcrumb-item";
 const props = defineProps(BreadcrumbItemProps);
 const instance = getCurrentInstance();
 const router = instance.appContext.config.globalProperties.$router;
-const route = useRoute();
+// const route = useRoute();
 const breadcrumbProps = inject("breadcrumbProps", undefined);
 const { separator, separatorIcon } = toRefs(breadcrumbProps);
 const innerClass = computed(() => {

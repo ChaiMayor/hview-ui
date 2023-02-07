@@ -60,7 +60,10 @@ const sidebar = {
     },
     {
       text: "Navigation 导航",
-      items: [{ text: "Backtop 回到顶部", link: "/components/backtop" }],
+      items: [
+        { text: "Backtop 回到顶部", link: "/components/backtop" },
+        { text: "Breadcrumb 面包屑", link: "/components/breadcrumb" },
+      ],
     },
     {
       text: "Feedback 反馈组件",
@@ -135,7 +138,10 @@ const sidebarEN = {
     },
     {
       text: "Navigation ",
-      items: [{ text: "Backtop", link: "/components/backtop" }],
+      items: [
+        { text: "Backtop", link: "/components/backtop" },
+        { text: "Breadcrumb", link: "/components/breadcrumb" },
+      ],
     },
     {
       text: "Feedback",
