@@ -12,7 +12,7 @@ import { default as Carousel } from "./carousel";
 import { default as CarouselItem } from "./carousel-item";
 import { default as Tag } from "./tag";
 import { default as Progress } from "./progress";
-import { default as ScrollBar } from "./scrollbar";
+import { default as Scrollbar } from "./scrollbar";
 import { default as Slider } from "./slider";
 import { default as Result } from "./result";
 import { default as Tree } from "./tree";
@@ -45,7 +45,7 @@ export {
   Carousel,
   CarouselItem,
   Message,
-  ScrollBar,
+  Scrollbar,
   Tag,
   Progress,
   Result,
@@ -82,7 +82,7 @@ export default [
   Carousel,
   CarouselItem,
   Message,
-  ScrollBar,
+  Scrollbar,
   Tag,
   Progress,
   Result,

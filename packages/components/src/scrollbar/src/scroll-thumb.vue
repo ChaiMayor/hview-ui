@@ -18,6 +18,7 @@
 import "../style/thumb.less";
 import { ref, onUnmounted, watch, onMounted, nextTick, computed } from "vue";
 import { SetScrollTop, SetScrollLeft } from "./scorllbar-fn";
+import { throttle } from "lodash-es";
 
 const props = defineProps<{
   // 传入的height高度
@@ -45,7 +46,7 @@ const props = defineProps<{
   move: "moveX" | "moveY";
 }>();
 
-const emits = defineEmits(["update:isDraw", "setScrollViewTop", "setScrollViewLeft"]);
+const emits = defineEmits(["update:isDraw", "setScrollViewTop", "setScrollViewLeft", "setScrollTumb"]);
 const scrollTop = ref<number>(0);
 const scrollLeft = ref<number>(0);
 
@@ -145,12 +146,12 @@ const isHide = computed(() => {
 function setDrawScrollThumb(dom: HTMLDivElement, move: "moveX" | "moveY") {
   dom.onmousedown = function (ev: MouseEvent) {
     let pTop = move === "moveX" ? ev.pageX - dom.offsetLeft : ev.pageY - dom.offsetTop;
-    document.onmousemove = function (e: MouseEvent) {
+    document.onmousemove = throttle(function (e: MouseEvent) {
       // thumb的滚动高度
       let Y = move === "moveX" ? e.pageX - pTop : e.pageY - pTop;
       handleDrawScrollVal(Y, move === "moveX" ? "moveX" : "moveY");
       return false;
-    };
+    }, 20);
     document.onmouseup = function () {
       document.onmousemove = null;
       document.onmouseup = null;
