@@ -85,8 +85,10 @@ importers:
   examples:
     specifiers:
       hview-plus: workspace:*
+      vue-router: ^4.1.6
     dependencies:
       hview-plus: link:../packages/components
+      vue-router: 4.1.6_vue@3.2.45
 
   packages/components:
     specifiers:
@@ -9641,6 +9643,15 @@ packages:
       '@intlify/core-base': 9.2.2
       '@intlify/shared': 9.2.2
       '@intlify/vue-devtools': 9.2.2
+      '@vue/devtools-api': 6.5.0
+      vue: 3.2.45
+    dev: false
+
+  /vue-router/4.1.6_vue@3.2.45:
+    resolution: {integrity: sha512-DYWYwsG6xNPmLq/FmZn8Ip+qrhFEzA14EI12MsMgVxvHFDYvlr4NXpVF5hrRH1wVcDP8fGi5F4rxuJSl8/r+EQ==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
       '@vue/devtools-api': 6.5.0
       vue: 3.2.45
     dev: false

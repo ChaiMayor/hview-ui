@@ -3,10 +3,15 @@
   line-height: 1;
   color: var(--hv-text-color-regular);
   &__item {
+    a {
+      text-decoration: none;
+    }
+    a,
     .is-link {
       color: var(--hv-text-color-primary);
       font-weight: bold;
     }
+    a:hover,
     .is-link:hover {
       color: var(--hv-color-primary);
       cursor: pointer;

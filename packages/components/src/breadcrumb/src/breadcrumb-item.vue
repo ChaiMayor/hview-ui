@@ -13,30 +13,31 @@
 <script lang="ts" setup>
 import "../style/index.less";
 import { computed, inject, toRefs, getCurrentInstance, onMounted } from "vue";
-// import { useRouter, useRoute, createRouter } from "vue-router";
 import { BreadcrumbItemProps } from "./breadcrumb-item";
+
 const props = defineProps(BreadcrumbItemProps);
-const instance = getCurrentInstance();
-const router = instance.appContext.config.globalProperties.$router;
-// const route = useRoute();
+// 接收父组件props
 const breadcrumbProps = inject("breadcrumbProps", undefined);
 const { separator, separatorIcon } = toRefs(breadcrumbProps);
+// 获取vue实例
+const instance = getCurrentInstance();
+const router = instance.appContext.config.globalProperties.$router;
+// 文本内容样式类
 const innerClass = computed(() => {
   return {
     item__inner: true,
     "is-link": !!props.to,
   };
 });
+// 点击事件
 const onClick = () => {
   if (!props.to || !router) return;
   props.replace ? router.replace(props.to) : router.push(props.to);
 };
-// onMounted(() => {
-//   const router1 = createRouter({
-//     history: VueRouter.createWebHashHistory(),
-//     routes, // `routes: routes` 的缩写
-//   });
-// });
+
+onMounted(() => {
+  // console.log();
+});
 </script>
 
 <script lang="ts">

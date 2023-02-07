@@ -5,6 +5,9 @@ const app = createApp(App);
 import hviewPlus from "hview-plus";
 app.use(hviewPlus);
 
+import router from "./router";
+app.use(router);
+
 // import { Button } from "hview-plus";
 // app.use(Button);
 
