@@ -1,8 +1,8 @@
 {
-  "name": "@hview-plus/constants",
-  "private": true,
-  "license": "MIT",
-  "main": "index.ts",
-  "version": "1.0.0",
-  "module": "index.ts"
+	"name": "@hview-plus/constants",
+	"private": true,
+	"license": "MIT",
+	"main": "index.ts",
+	"version": "1.0.0",
+	"module": "index.ts"
 }

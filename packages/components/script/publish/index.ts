@@ -3,7 +3,9 @@ import run from "../utils/run";
 import { src, dest } from "gulp";
 //复制
 export const copypackage = async () => {
-  return src(`${pkgPath}/transitpkg/**`).pipe(dest(`${componentPath}/hview-ui/`));
+	return src(`${pkgPath}/transitpkg/**`).pipe(
+		dest(`${componentPath}/hview-ui/`),
+	);
 };
 
 // pnpm version major 版本号（第一个 +1）
@@ -12,12 +14,12 @@ export const copypackage = async () => {
 
 //发布组件
 export const publish = async () => {
-  //先给transitpkg升个版本
-  await run("pnpm version patch", `${pkgPath}/transitpkg`);
-  await run("pnpm version patch", `${playPath}`);
-  //复制到dist目录
-  await copypackage();
-  //在 hview-ui 下执行发布命令
-  await run("npm publish --access=public", `${componentPath}/hview-ui`);
-  // run('pnpm publish')
+	//先给transitpkg升个版本
+	await run("pnpm version patch", `${pkgPath}/transitpkg`);
+	await run("pnpm version patch", `${playPath}`);
+	//复制到dist目录
+	await copypackage();
+	//在 hview-ui 下执行发布命令
+	await run("npm publish --access=public", `${componentPath}/hview-ui`);
+	// run('pnpm publish')
 };

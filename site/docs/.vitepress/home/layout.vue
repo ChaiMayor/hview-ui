@@ -18,19 +18,19 @@ const { Layout } = DefaultTheme;
 </script>
 
 <template>
-  <!-- refer: https://vitepress.vuejs.org/guide/theme-introduction#extending-the-default-theme -->
-  <Layout>
-    <!-- 首页下面 -->
-    <template #home-features-after>
-      <!-- <VPTeamMembers size="small" :members="members" /> -->
-    </template>
-    <!-- 文档页面最后 -->
-    <!-- <template #doc-footer-before> </template> -->
-    <!-- 左侧导航栏上面 -->
-    <!-- <template #sidebar-nav-before> </template> -->
-    <!-- 右侧大纲上面 -->
-    <!-- <template #aside-top> </template> -->
-    <!-- 导航末尾 -->
-    <!-- <template #nav-bar-content-after> </template> -->
-  </Layout>
+	<!-- refer: https://vitepress.vuejs.org/guide/theme-introduction#extending-the-default-theme -->
+	<Layout>
+		<!-- 首页下面 -->
+		<template #home-features-after>
+			<!-- <VPTeamMembers size="small" :members="members" /> -->
+		</template>
+		<!-- 文档页面最后 -->
+		<!-- <template #doc-footer-before> </template> -->
+		<!-- 左侧导航栏上面 -->
+		<!-- <template #sidebar-nav-before> </template> -->
+		<!-- 右侧大纲上面 -->
+		<!-- <template #aside-top> </template> -->
+		<!-- 导航末尾 -->
+		<!-- <template #nav-bar-content-after> </template> -->
+	</Layout>
 </template>

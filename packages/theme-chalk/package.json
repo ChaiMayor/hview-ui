@@ -1,12 +1,11 @@
 {
-  "name": "@hview-plus/theme",
-  "version": "1.0.0",
-  "private": true,
-  "license": "MIT",
-  "main": "./dist/theme.umd.js",
-  "module": "./dist/theme.mjs",
-  "scripts": {
-    "start": "gulp -f script/build/gulpfile.ts",
-    "build": "vite build"
-  }
+	"name": "@hview-plus/theme-chalk",
+	"version": "1.0.0",
+	"license": "MIT",
+	"main": "./dist/theme.umd.js",
+	"module": "./dist/theme.mjs",
+	"scripts": {
+		"start": "gulp -f script/build/gulpfile.ts",
+		"build": "vite build"
+	}
 }

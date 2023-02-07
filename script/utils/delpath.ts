@@ -7,15 +7,15 @@ import path from "path";
  * @returns {boolean} true 不存在，false 存在
  */
 function getStat(path) {
-  return new Promise((resolve) => {
-    fs.stat(path, (err, stats) => {
-      if (err) {
-        resolve(false);
-      } else {
-        resolve(stats);
-      }
-    });
-  });
+	return new Promise((resolve) => {
+		fs.stat(path, (err, stats) => {
+			if (err) {
+				resolve(false);
+			} else {
+				resolve(stats);
+			}
+		});
+	});
 }
 
 /**
@@ -23,17 +23,17 @@ function getStat(path) {
  * @param {*} path
  */
 export function emptyDir(path) {
-  const files = fs.readdirSync(path);
-  files.forEach((file) => {
-    const filePath = `${path}/${file}`;
-    const stats = fs.statSync(filePath);
-    if (stats.isDirectory()) {
-      emptyDir(filePath);
-    } else {
-      fs.unlinkSync(filePath);
-      console.log(`删除${file}文件成功`);
-    }
-  });
+	const files = fs.readdirSync(path);
+	files.forEach((file) => {
+		const filePath = `${path}/${file}`;
+		const stats = fs.statSync(filePath);
+		if (stats.isDirectory()) {
+			emptyDir(filePath);
+		} else {
+			fs.unlinkSync(filePath);
+			console.log(`删除${file}文件成功`);
+		}
+	});
 }
 
 /**
@@ -41,16 +41,16 @@ export function emptyDir(path) {
  * @param {*} path
  */
 export async function removeDir(p) {
-  if (!(await getStat(p))) return;
-  const statObj = fs.statSync(p);
-  if (statObj.isDirectory()) {
-    let dirs = fs.readdirSync(p);
-    dirs = dirs.map((dir) => path.join(p, dir));
-    for (let i = 0; i < dirs.length; i++) {
-      await removeDir(dirs[i]);
-    }
-    fs.rmdirSync(p);
-  } else {
-    fs.unlinkSync(p);
-  }
+	if (!(await getStat(p))) return;
+	const statObj = fs.statSync(p);
+	if (statObj.isDirectory()) {
+		let dirs = fs.readdirSync(p);
+		dirs = dirs.map((dir) => path.join(p, dir));
+		for (let i = 0; i < dirs.length; i++) {
+			await removeDir(dirs[i]);
+		}
+		fs.rmdirSync(p);
+	} else {
+		fs.unlinkSync(p);
+	}
 }

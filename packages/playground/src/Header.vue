@@ -24,69 +24,76 @@ const expanded = ref(false);
 // const ver = ref<string>("");
 
 async function toggle() {
-  expanded.value = !expanded.value;
-  if (!publishedVersions.value) {
-    publishedVersions.value = await fetchVersions();
-  }
+	expanded.value = !expanded.value;
+	if (!publishedVersions.value) {
+		publishedVersions.value = await fetchVersions();
+	}
 }
 
 async function setVueVersion(v: string) {
-  activeVersion.value = `loading...`;
-  await store.setVueVersion(v);
-  activeVersion.value = `v${v}`;
-  expanded.value = false;
+	activeVersion.value = `loading...`;
+	await store.setVueVersion(v);
+	activeVersion.value = `v${v}`;
+	expanded.value = false;
 }
 
 function resetVueVersion() {
-  store.resetVueVersion();
-  activeVersion.value = `@${currentCommit}`;
-  expanded.value = false;
+	store.resetVueVersion();
+	activeVersion.value = `@${currentCommit}`;
+	expanded.value = false;
 }
 
 async function copyLink() {
-  await navigator.clipboard.writeText(location.href);
-  alert("Sharable URL has been copied to clipboard.");
+	await navigator.clipboard.writeText(location.href);
+	alert("Sharable URL has been copied to clipboard.");
 }
 
 function toggleDark() {
-  const cls = document.documentElement.classList;
-  cls.toggle("dark");
-  localStorage.setItem("vue-sfc-playground-prefer-dark", String(cls.contains("dark")));
+	const cls = document.documentElement.classList;
+	cls.toggle("dark");
+	localStorage.setItem(
+		"vue-sfc-playground-prefer-dark",
+		String(cls.contains("dark")),
+	);
 }
 
 onMounted(async () => {
-  window.addEventListener("click", () => {
-    expanded.value = false;
-  });
-  window.addEventListener("blur", () => {
-    if (document.activeElement?.tagName === "IFRAME") {
-      expanded.value = false;
-    }
-  });
+	window.addEventListener("click", () => {
+		expanded.value = false;
+	});
+	window.addEventListener("blur", () => {
+		if (document.activeElement?.tagName === "IFRAME") {
+			expanded.value = false;
+		}
+	});
 });
 
 async function fetchVersions(): Promise<string[]> {
-  const res = await fetch(`https://api.github.com/repos/vuejs/core/releases?per_page=100`);
-  const releases: any[] = await res.json();
-  const versions = releases.map((r) => (/^v/.test(r.tag_name) ? r.tag_name.slice(1) : r.tag_name));
-  // if the latest version is a pre-release, list all current pre-releases
-  // otherwise filter out pre-releases
-  let isInPreRelease = versions[0].includes("-");
-  const filteredVersions: string[] = [];
-  for (const v of versions) {
-    if (v.includes("-")) {
-      if (isInPreRelease) {
-        filteredVersions.push(v);
-      }
-    } else {
-      filteredVersions.push(v);
-      isInPreRelease = false;
-    }
-    if (filteredVersions.length >= 30 || v === "3.0.10") {
-      break;
-    }
-  }
-  return filteredVersions;
+	const res = await fetch(
+		`https://api.github.com/repos/vuejs/core/releases?per_page=100`,
+	);
+	const releases: any[] = await res.json();
+	const versions = releases.map((r) =>
+		/^v/.test(r.tag_name) ? r.tag_name.slice(1) : r.tag_name,
+	);
+	// if the latest version is a pre-release, list all current pre-releases
+	// otherwise filter out pre-releases
+	let isInPreRelease = versions[0].includes("-");
+	const filteredVersions: string[] = [];
+	for (const v of versions) {
+		if (v.includes("-")) {
+			if (isInPreRelease) {
+				filteredVersions.push(v);
+			}
+		} else {
+			filteredVersions.push(v);
+			isInPreRelease = false;
+		}
+		if (filteredVersions.length >= 30 || v === "3.0.10") {
+			break;
+		}
+	}
+	return filteredVersions;
 }
 
 // const getVersionHp = async () => {
@@ -100,15 +107,17 @@ async function fetchVersions(): Promise<string[]> {
 </script>
 
 <template>
-  <nav>
-    <h1>
-      <img alt="logo" src="https://oss.zhishiyu.online/common/hview-logo.png" />
-      <span style="margin-top: -2px; margin-right: 6px">Hview UI Playground</span>
-      <!-- <h-tag size="small" style="margin: 0 8px">{{ pkg.version }}</h-tag> -->
-      <!-- <h-tag size="small"> repl v1.3.0 </h-tag> -->
-    </h1>
-    <div class="links">
-      <!-- <div class="version" @click.stop>
+	<nav>
+		<h1>
+			<img alt="logo" src="https://oss.zhishiyu.online/common/hview-logo.png" />
+			<span style="margin-top: -2px; margin-right: 6px"
+				>Hview UI Playground</span
+			>
+			<!-- <h-tag size="small" style="margin: 0 8px">{{ pkg.version }}</h-tag> -->
+			<!-- <h-tag size="small"> repl v1.3.0 </h-tag> -->
+		</h1>
+		<div class="links">
+			<!-- <div class="version" @click.stop>
         <span class="active-version" @click="toggle">
           Version
           <span class="number">{{ activeVersion }}</span>
@@ -128,223 +137,228 @@ async function fetchVersions(): Promise<string[]> {
           </li>
         </ul>
       </div> -->
-      <!-- <button
+			<!-- <button
         title="Toggle development production mode"
         class="toggle-dev"
         :class="{ dev }"
         @click="$emit('toggle-dev')">
         <span>{{ dev ? "DEV" : "PROD" }}</span>
       </button> -->
-      <button title="Toggle dark mode" class="toggle-dark" @click="toggleDark">
-        <Sun class="light" />
-        <Moon class="dark" />
-      </button>
-      <button title="Copy sharable URL" class="share" @click="copyLink">
-        <Share />
-      </button>
-      <button title="Download project files" class="download" @click="downloadProject(store)">
-        <Download />
-      </button>
-      <button title="View on GitHub" class="github">
-        <a href="https://github.com/ChaiMayor/hview-ui/tree/dev" target="_blank">
-          <GitHub />
-        </a>
-      </button>
-    </div>
-  </nav>
+			<button title="Toggle dark mode" class="toggle-dark" @click="toggleDark">
+				<Sun class="light" />
+				<Moon class="dark" />
+			</button>
+			<button title="Copy sharable URL" class="share" @click="copyLink">
+				<Share />
+			</button>
+			<button
+				title="Download project files"
+				class="download"
+				@click="downloadProject(store)">
+				<Download />
+			</button>
+			<button title="View on GitHub" class="github">
+				<a
+					href="https://github.com/ChaiMayor/hview-ui/tree/dev"
+					target="_blank">
+					<GitHub />
+				</a>
+			</button>
+		</div>
+	</nav>
 </template>
 
 <style>
 nav {
-  --bg: #fff;
-  --bg-light: #fff;
-  --border: #ddd;
-  --btn: #666;
-  --highlight: #333;
-  --green: #3ca877;
-  --purple: #904cbc;
-  --btn-bg: #eee;
-  --h-color-primary: #5d80f4;
+	--bg: #fff;
+	--bg-light: #fff;
+	--border: #ddd;
+	--btn: #666;
+	--highlight: #333;
+	--green: #3ca877;
+	--purple: #904cbc;
+	--btn-bg: #eee;
+	--h-color-primary: #5d80f4;
 
-  color: var(--base);
-  height: var(--nav-height);
-  box-sizing: border-box;
-  padding: 0 1em;
-  background-color: var(--bg);
-  box-shadow: 0 0 6px var(--h-color-primary);
-  position: relative;
-  z-index: 999;
-  display: flex;
-  justify-content: space-between;
+	color: var(--base);
+	height: var(--nav-height);
+	box-sizing: border-box;
+	padding: 0 1em;
+	background-color: var(--bg);
+	box-shadow: 0 0 6px var(--h-color-primary);
+	position: relative;
+	z-index: 999;
+	display: flex;
+	justify-content: space-between;
 }
 
 .dark nav {
-  --base: #ddd;
-  --bg: #1a1a1a;
-  --bg-light: #242424;
-  --border: #383838;
-  --highlight: #fff;
-  --btn-bg: #333;
+	--base: #ddd;
+	--bg: #1a1a1a;
+	--bg-light: #242424;
+	--border: #383838;
+	--highlight: #fff;
+	--btn-bg: #333;
 
-  box-shadow: none;
-  border-bottom: 1px solid var(--border);
+	box-shadow: none;
+	border-bottom: 1px solid var(--border);
 }
 
 h1 {
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  place-items: center;
-  color: #000;
+	font-weight: 500;
+	display: inline-flex;
+	align-items: center;
+	place-items: center;
+	color: #000;
 }
 
 .dark h1 {
-  color: #fff;
+	color: #fff;
 }
 
 h1 img {
-  height: 24px;
-  margin-right: 10px;
+	height: 24px;
+	margin-right: 10px;
 }
 
 @media (max-width: 560px) {
-  h1 span {
-    font-size: 0.9em;
-  }
+	h1 span {
+		font-size: 0.9em;
+	}
 }
 
 @media (max-width: 520px) {
-  h1 span {
-    display: none;
-  }
+	h1 span {
+		display: none;
+	}
 }
 
 .links {
-  display: flex;
+	display: flex;
 }
 
 .version {
-  margin-right: 12px;
-  position: relative;
+	margin-right: 12px;
+	position: relative;
 }
 
 .active-version {
-  cursor: pointer;
-  position: relative;
-  display: inline-flex;
-  place-items: center;
+	cursor: pointer;
+	position: relative;
+	display: inline-flex;
+	place-items: center;
 }
 
 .active-version .number {
-  color: var(--green);
-  margin-left: 4px;
+	color: var(--green);
+	margin-left: 4px;
 }
 
 .active-version::after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 6px solid #aaa;
-  margin-left: 8px;
+	content: "";
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 6px solid #aaa;
+	margin-left: 8px;
 }
 
 .toggle-dev span,
 .toggle-ssr span {
-  font-size: 12px;
-  border-radius: 4px;
-  padding: 4px 6px;
+	font-size: 12px;
+	border-radius: 4px;
+	padding: 4px 6px;
 }
 
 .toggle-dev span {
-  background: var(--purple);
-  color: #fff;
+	background: var(--purple);
+	color: #fff;
 }
 
 .toggle-dev.dev span {
-  background: var(--green);
+	background: var(--green);
 }
 
 .toggle-ssr span {
-  background-color: var(--btn-bg);
+	background-color: var(--btn-bg);
 }
 
 .toggle-ssr.enabled span {
-  color: #fff;
-  background-color: var(--green);
+	color: #fff;
+	background-color: var(--green);
 }
 
 .toggle-dark svg {
-  width: 18px;
-  height: 18px;
+	width: 18px;
+	height: 18px;
 }
 
 .toggle-dark .dark,
 .dark .toggle-dark .light {
-  display: none;
+	display: none;
 }
 
 .dark .toggle-dark .dark {
-  display: inline-block;
+	display: inline-block;
 }
 
 .links button,
 .links button a {
-  color: var(--btn);
+	color: var(--btn);
 }
 
 .links button:hover,
 .links button:hover a {
-  color: var(--highlight);
+	color: var(--highlight);
 }
 
 .version:hover .active-version::after {
-  border-top-color: var(--btn);
+	border-top-color: var(--btn);
 }
 
 .dark .version:hover .active-version::after {
-  border-top-color: var(--highlight);
+	border-top-color: var(--highlight);
 }
 
 .versions {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 40px;
-  background-color: var(--bg-light);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  list-style-type: none;
-  padding: 8px;
-  margin: 0;
-  width: 200px;
-  max-height: calc(100vh - 70px);
-  overflow: scroll;
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 40px;
+	background-color: var(--bg-light);
+	border: 1px solid var(--border);
+	border-radius: 4px;
+	list-style-type: none;
+	padding: 8px;
+	margin: 0;
+	width: 200px;
+	max-height: calc(100vh - 70px);
+	overflow: scroll;
 }
 
 .versions a {
-  display: block;
-  padding: 6px 12px;
-  text-decoration: none;
-  cursor: pointer;
-  color: var(--base);
+	display: block;
+	padding: 6px 12px;
+	text-decoration: none;
+	cursor: pointer;
+	color: var(--base);
 }
 
 .versions a:hover {
-  color: var(--green);
+	color: var(--green);
 }
 
 .versions.expanded {
-  display: block;
+	display: block;
 }
 
 .links > * {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .links > * + * {
-  margin-left: 4px;
+	margin-left: 4px;
 }
 </style>

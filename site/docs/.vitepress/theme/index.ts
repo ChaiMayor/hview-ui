@@ -16,16 +16,18 @@ import hp from "hview-plus";
 import axios from "axios";
 
 const getVersionHp = () => {
-  axios.get("https://registry.npmjs.org/hview-plus").then((res: any) => {
-    const versions = Object.keys(res.data.versions);
-    const version = "v" + versions[versions.length - 1];
-    const el: HTMLSpanElement = document.querySelector(".VPNavBarMenu .VPFlyout .text")!;
-    if (el) el.childNodes[1].nodeValue = version;
-    // @ts-ignore
-    // let screenEl = (HTMLSpanElement = document.querySelector(".VPNavScreen .button-text"));
-    // @ts-ignore
-    // if (screenEl) screenEl.innerText = version;
-  });
+	axios.get("https://registry.npmjs.org/hview-plus").then((res: any) => {
+		const versions = Object.keys(res.data.versions);
+		const version = "v" + versions[versions.length - 1];
+		const el: HTMLSpanElement = document.querySelector(
+			".VPNavBarMenu .VPFlyout .text",
+		)!;
+		if (el) el.childNodes[1].nodeValue = version;
+		// @ts-ignore
+		// let screenEl = (HTMLSpanElement = document.querySelector(".VPNavScreen .button-text"));
+		// @ts-ignore
+		// if (screenEl) screenEl.innerText = version;
+	});
 };
 
 // @ts-ignore
@@ -33,29 +35,29 @@ import MyLayout from "../home/layout.vue";
 import { useRouter, useData, useRoute, inBrowser } from "vitepress";
 
 export default {
-  ...Theme,
+	...Theme,
 
-  enhanceApp({ app }) {
-    if (inBrowser) {
-      app.use(hp);
-    }
-    app.component("HCode", hpCode);
-  },
+	enhanceApp({ app }) {
+		if (inBrowser) {
+			app.use(hp);
+		}
+		app.component("HCode", hpCode);
+	},
 
-  setup() {
-    if (inBrowser) {
-      getVersionHp();
-    }
+	setup() {
+		if (inBrowser) {
+			getVersionHp();
+		}
 
-    const router = useRouter();
-    // refer: https://github.com/vuejs/vitepress/issues/318
-    watch(router.route, (newVal, oldVal) => {
-      NProgress.start();
-      nextTick(() => {
-        NProgress.done();
-      });
-    });
-  },
+		const router = useRouter();
+		// refer: https://github.com/vuejs/vitepress/issues/318
+		watch(router.route, (newVal, oldVal) => {
+			NProgress.start();
+			nextTick(() => {
+				NProgress.done();
+			});
+		});
+	},
 
-  Layout: MyLayout,
+	Layout: MyLayout,
 };

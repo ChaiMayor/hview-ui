@@ -4,21 +4,21 @@ import { createI18n } from "vue-i18n";
 import { App } from "vue";
 
 export type TranslatePair = {
-  [key: string]: string | string[] | TranslatePair;
+	[key: string]: string | string[] | TranslatePair;
 };
 export type Language = {
-  name: string;
-  hp: TranslatePair;
+	name: string;
+	hp: TranslatePair;
 };
 
 const handleLang = () => {
-  const before = [enUS, zhCn];
-  const message: any = {};
-  before.reduce((pre, cur: Language) => {
-    pre[cur.name] = cur.hp;
-    return pre;
-  }, message);
-  return message;
+	const before = [enUS, zhCn];
+	const message: any = {};
+	before.reduce((pre, cur: Language) => {
+		pre[cur.name] = cur.hp;
+		return pre;
+	}, message);
+	return message;
 };
 
 // <p>{{ $t("colorpicker.confirm") }}</p>   模板代码
@@ -29,11 +29,11 @@ const handleLang = () => {
 // }, 0);
 
 export default {
-  install(app: App) {
-    const i18n = createI18n({
-      locale: localStorage.getItem("hp_lang") || "zh-CN",
-      messages: handleLang(),
-    });
-    app.use(i18n);
-  },
+	install(app: App) {
+		const i18n = createI18n({
+			locale: localStorage.getItem("hp_lang") || "zh-CN",
+			messages: handleLang(),
+		});
+		app.use(i18n);
+	},
 };

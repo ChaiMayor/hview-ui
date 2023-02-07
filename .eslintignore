@@ -6,5 +6,12 @@ coverage
 *.js
 *.css
 playground
+site
+
+packages
+github
+script
+typings
+
 # !.*
  

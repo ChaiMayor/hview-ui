@@ -1,14 +1,19 @@
 <template>
-  <Header :store="store" :dev="useDevMode" :ssr="useSSRMode" @toggle-dev="toggleDevMode" @toggle-ssr="toggleSSR" />
-  <Repl
-    @keydown.ctrl.s.prevent
-    @keydown.meta.s.prevent
-    :ssr="useSSRMode"
-    :store="store"
-    :showCompileOutput="true"
-    :autoResize="true"
-    :sfc-options="sfcOptions"
-    :clearConsole="false" />
+	<Header
+		:store="store"
+		:dev="useDevMode"
+		:ssr="useSSRMode"
+		@toggle-dev="toggleDevMode"
+		@toggle-ssr="toggleSSR" />
+	<Repl
+		@keydown.ctrl.s.prevent
+		@keydown.meta.s.prevent
+		:ssr="useSSRMode"
+		:store="store"
+		:showCompileOutput="true"
+		:autoResize="true"
+		:sfc-options="sfcOptions"
+		:clearConsole="false" />
 </template>
 
 <script setup lang="ts">
@@ -19,7 +24,7 @@ import { Repl } from "@vue/repl";
 import { ref, watchEffect } from "vue";
 
 const setVH = () => {
-  document.documentElement.style.setProperty("--vh", window.innerHeight + `px`);
+	document.documentElement.style.setProperty("--vh", window.innerHeight + `px`);
 };
 window.addEventListener("resize", setVH);
 setVH();
@@ -29,12 +34,12 @@ const useSSRMode = ref(false);
 
 let hash = location.hash.slice(1);
 if (hash.startsWith("__DEV__")) {
-  hash = hash.slice(7);
-  useDevMode.value = true;
+	hash = hash.slice(7);
+	useDevMode.value = true;
 }
 if (hash.startsWith("__SSR__")) {
-  hash = hash.slice(7);
-  useSSRMode.value = true;
+	hash = hash.slice(7);
+	useSSRMode.value = true;
 }
 
 // const store = new ReplStore({
@@ -50,24 +55,26 @@ if (hash.startsWith("__SSR__")) {
 // });
 
 const store = new ReplStore({
-  serializedState: location.hash.slice(1),
-  // @ts-ignore
-  defaultVueRuntimeURL: import.meta.env.PROD ? undefined : `${location.origin}/src/vue-dev-proxy`,
+	serializedState: location.hash.slice(1),
+	// @ts-ignore
+	defaultVueRuntimeURL: import.meta.env.PROD
+		? undefined
+		: `${location.origin}/src/vue-dev-proxy`,
 });
 
 // enable experimental features
 const sfcOptions = {
-  script: {
-    inlineTemplate: !useDevMode.value,
-    isProd: !useDevMode.value,
-    reactivityTransform: true,
-  },
-  style: {
-    isProd: !useDevMode.value,
-  },
-  template: {
-    isProd: !useDevMode.value,
-  },
+	script: {
+		inlineTemplate: !useDevMode.value,
+		isProd: !useDevMode.value,
+		reactivityTransform: true,
+	},
+	style: {
+		isProd: !useDevMode.value,
+	},
+	template: {
+		isProd: !useDevMode.value,
+	},
 };
 
 // persist state
@@ -82,55 +89,55 @@ watchEffect(() => history.replaceState({}, "", store.serialize()));
 
 // enable experimental features
 function toggleDevMode() {
-  const dev = (useDevMode.value = !useDevMode.value);
-  sfcOptions.script.inlineTemplate =
-    sfcOptions.script.isProd =
-    sfcOptions.template.isProd =
-    sfcOptions.style.isProd =
-      !dev;
-  store.setFiles(store.getFiles());
+	const dev = (useDevMode.value = !useDevMode.value);
+	sfcOptions.script.inlineTemplate =
+		sfcOptions.script.isProd =
+		sfcOptions.template.isProd =
+		sfcOptions.style.isProd =
+			!dev;
+	store.setFiles(store.getFiles());
 }
 
 function toggleSSR() {
-  useSSRMode.value = !useSSRMode.value;
-  store.setFiles(store.getFiles());
+	useSSRMode.value = !useSSRMode.value;
+	store.setFiles(store.getFiles());
 }
 </script>
 
 <style>
 .import-map-wrapper {
-  display: none;
+	display: none;
 }
 
 .dark {
-  color-scheme: dark;
+	color-scheme: dark;
 }
 
 body {
-  font-size: 13px;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue,
-    sans-serif;
-  margin: 0;
-  --base: #444;
-  --nav-height: 50px;
+	font-size: 13px;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+	margin: 0;
+	--base: #444;
+	--nav-height: 50px;
 }
 
 .vue-repl {
-  height: calc(var(--vh) - var(--nav-height));
+	height: calc(var(--vh) - var(--nav-height));
 }
 
 .vue-repl .file.active {
-  --color-branding: #5d80f4;
+	--color-branding: #5d80f4;
 
-  color: var(--color-branding) !important;
-  border-bottom: 3px solid var(--color-branding) !important;
+	color: var(--color-branding) !important;
+	border-bottom: 3px solid var(--color-branding) !important;
 }
 
 button {
-  border: none;
-  outline: none;
-  cursor: pointer;
-  margin: 0;
-  background-color: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	margin: 0;
+	background-color: transparent;
 }
 </style>

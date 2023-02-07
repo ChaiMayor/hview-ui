@@ -9,22 +9,22 @@ const dirName = "src";
 
 //删除dist
 export const removeDist = (floor: number) => {
-  return delpath(`${componentPath}/hview-ui`, floor);
+	return delpath(`${componentPath}/hview-ui`, floor);
 };
 
 //处理样式
 export const buildStyle = () => {
-  return src(`${componentPath}/src/**/style/**.less`)
-    .pipe(less())
-    .pipe(
-      autoprefixer({
-        // @ts-ignore
-        overrideBrowserslist: ["> 1%", "last 2 versions"],
-        cascade: false, //  是否美化属性值
-      }),
-    )
-    .pipe(dest(`${componentPath}/hview-ui/lib/${dirName}`))
-    .pipe(dest(`${componentPath}/hview-ui/es/${dirName}`));
+	return src(`${componentPath}/src/**/style/**.less`)
+		.pipe(less())
+		.pipe(
+			autoprefixer({
+				// @ts-ignore
+				overrideBrowserslist: ["> 1%", "last 2 versions"],
+				cascade: false, //  是否美化属性值
+			}),
+		)
+		.pipe(dest(`${componentPath}/hview-ui/lib/${dirName}`))
+		.pipe(dest(`${componentPath}/hview-ui/es/${dirName}`));
 };
 
 //处理样式
@@ -44,5 +44,5 @@ export const buildStyle = () => {
 
 //打包组件
 export const buildComponent = async () => {
-  run("pnpm run build", componentPath);
+	run("pnpm run build", componentPath);
 };

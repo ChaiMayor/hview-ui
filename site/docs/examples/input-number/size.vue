@@ -1,9 +1,9 @@
 <template>
-  <div class="input-container">
-    <h-input-number v-model="num1" size="large" />
-    <h-input-number v-model="num2" class="mx-4" />
-    <h-input-number v-model="num3" size="small" />
-  </div>
+	<div class="input-container">
+		<h-input-number v-model="num1" size="large" />
+		<h-input-number v-model="num2" class="mx-4" />
+		<h-input-number v-model="num3" size="small" />
+	</div>
 </template>
 
 <script lang="ts" setup>
@@ -16,10 +16,10 @@ const num3 = ref(3);
 
 <style scoped>
 .input-container {
-  display: flex;
-  align-items: baseline;
+	display: flex;
+	align-items: baseline;
 }
 .input-container > * {
-  margin-right: 12px;
+	margin-right: 12px;
 }
 </style>

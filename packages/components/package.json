@@ -1,40 +1,40 @@
 {
-  "name": "@hview-plus/components",
-  "version": "1.0.0",
-  "description": "",
-  "module": "./index.ts",
-  "main": "./index.ts",
-  "scripts": {
-    "build": "vite build",
-    "test": "vitest",
-    "coverage": "vitest run --coverage"
-  },
-  "files": [
-    "hview-ui/es",
-    "hview-ui/lib"
-  ],
-  "keywords": [
-    "hview-ui",
-    "vue3组件库"
-  ],
-  "author": "芜湖起飞队",
-  "license": "MIT",
-  "typings": "hview-ui/lib/index.d.ts",
-  "dependencies": {
-    "@hview-plus/locale": "workspace:*",
-    "@hview-plus/utils": "workspace:*",
-    "@types/lodash": "^4.14.182",
-    "@types/lodash-es": "^4.17.6",
-    "@vue/shared": "^3.2.37",
-    "@vueuse/core": "^9.1.0",
-    "dayjs": "^1.11.3",
-    "lodash": "^4.17.21",
-    "lodash-es": "^4.17.21",
-    "lodash-unified": "^1.0.2"
-  },
-  "devDependencies": {
-    "@rollup/plugin-terser": "^0.4.0",
-    "@types/node": "*",
-    "vue": "^3.2.37"
-  }
+	"name": "@hview-plus/components",
+	"version": "1.0.0",
+	"description": "",
+	"module": "./index.ts",
+	"main": "./index.ts",
+	"scripts": {
+		"build": "vite build",
+		"test": "vitest",
+		"coverage": "vitest run --coverage"
+	},
+	"files": [
+		"hview-ui/es",
+		"hview-ui/lib"
+	],
+	"keywords": [
+		"hview-ui",
+		"vue3组件库"
+	],
+	"author": "芜湖起飞队",
+	"license": "MIT",
+	"typings": "hview-ui/lib/index.d.ts",
+	"dependencies": {
+		"@hview-plus/locale": "workspace:*",
+		"@hview-plus/utils": "workspace:*",
+		"@types/lodash": "^4.14.182",
+		"@types/lodash-es": "^4.17.6",
+		"@vue/shared": "^3.2.37",
+		"@vueuse/core": "^9.1.0",
+		"dayjs": "^1.11.3",
+		"lodash": "^4.17.21",
+		"lodash-es": "^4.17.21",
+		"lodash-unified": "^1.0.2"
+	},
+	"devDependencies": {
+		"@rollup/plugin-terser": "^0.4.0",
+		"@types/node": "*",
+		"vue": "^3.2.37"
+	}
 }

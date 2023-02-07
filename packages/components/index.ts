@@ -4,8 +4,8 @@ import i18n from "@hview-plus/locale";
 export * from "./src/index"; // 将index分别暴露的内容再次分别暴露出去
 
 export default {
-  install: (app: App) => {
-    components.forEach((comp) => app.use(comp));
-    app.use(i18n); // 注册i18n
-  },
+	install: (app: App) => {
+		components.forEach((comp) => app.use(comp));
+		app.use(i18n); // 注册i18n
+	},
 };

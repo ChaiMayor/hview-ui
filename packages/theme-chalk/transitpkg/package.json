@@ -1,8 +1,0 @@
-{
-  "name": "@hview-plus/theme",
-  "version": "1.0.0",
-  "private": true,
-  "license": "MIT",
-  "main": "index.ts",
-  "module": "index.ts"
-}

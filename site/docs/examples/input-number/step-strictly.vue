@@ -1,5 +1,5 @@
 <template>
-  <h-input-number v-model="num" :step="2" step-strictly />
+	<h-input-number v-model="num" :step="2" step-strictly />
 </template>
 
 <script lang="ts" setup>

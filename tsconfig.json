@@ -1,21 +1,21 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "jsx": "preserve",
-    "strict": false,
-    "target": "ES2015",
-    "module": "commonjs",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "moduleResolution": "Node",
-    "lib": ["esnext", "dom"],
-    // "rootDir": ".",
-    "rootDirs": ["./", "./packages", "./packages/components"],
-    "paths": {
-      "@/*": ["packages/components/src/*"],
-      "exam/*": ["site/docs/examples/*"],
-      "locale/*": ["packages/locale/*"],
-      "utils/*": ["packages/utils/*"]
-    }
-  }
+	"compilerOptions": {
+		"baseUrl": ".",
+		"jsx": "preserve",
+		"strict": false,
+		"target": "ES2015",
+		"module": "commonjs",
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"moduleResolution": "Node",
+		"lib": ["esnext", "dom"],
+		// "rootDir": ".",
+		"rootDirs": ["./", "./packages", "./packages/components"],
+		"paths": {
+			"@/*": ["packages/components/src/*"],
+			"exam/*": ["site/docs/examples/*"],
+			"locale/*": ["packages/locale/*"],
+			"utils/*": ["packages/utils/*"]
+		}
+	}
 }

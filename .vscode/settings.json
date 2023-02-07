@@ -1,17 +1,19 @@
 {
-  "editor.formatOnSave": true,
-  // 开启自动修复
-  "editor.codeActionsOnSave": {
-    "source.fixAll": false,
-    "source.fixAll.eslint": true
-  },
-  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[javascript|react]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[typescript|react]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[less]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "prettier.configPath": ".prettierrc.json",
-  "i18n-ally.localesPaths": ["packages/locale", "packages/locale/lang"]
+	// 保存格式化代码
+	"editor.formatOnSave": true,
+	// 开启自动修复
+	"editor.codeActionsOnSave": {
+		"source.fixAll": true,
+		"source.fixAll.eslint": true
+	},
+	"eslint.validate": ["html", "vue", "javascript", "jsx", "ts", "typescript"],
+	"[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+	"[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+	"[javascript|react]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+	"[typescript|react]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+	"[less]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+	"[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+	"[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+	"prettier.configPath": "prettier.config.js",
+	"i18n-ally.localesPaths": ["packages/locale", "packages/locale/lang"]
 }
