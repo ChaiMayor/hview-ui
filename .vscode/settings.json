@@ -1,5 +1,4 @@
 {
-  "compile-hero.disable-compile-files-on-did-save-code": true,
   "editor.formatOnSave": true,
   // 开启自动修复
   "editor.codeActionsOnSave": {

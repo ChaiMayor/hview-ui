@@ -1,5 +1,5 @@
 {
-  "name": "hview-ui",
+  "name": "hview-plus",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -23,6 +23,11 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "dependencies": {
+    "@hview-plus/components": "workspace: *",
+    "@hview-plus/utils": "workspace: *",
+    "@hview-plus/locale": "workspace: *"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
