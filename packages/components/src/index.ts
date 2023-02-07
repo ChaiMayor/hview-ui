@@ -29,6 +29,7 @@ import { Timeline, TimelineItem } from "./timeline";
 import { default as Backtop } from "./backtop";
 import { default as InputNumber } from "./input-number";
 import { Breadcrumb, BreadcrumbItem } from "./breadcrumb";
+import { Descriptions, DescriptionsItem } from "./descriptions";
 
 export {
   Button,
@@ -68,6 +69,8 @@ export {
   InputNumber,
   Breadcrumb,
   BreadcrumbItem,
+  Descriptions,
+  DescriptionsItem,
 };
 
 export default [
@@ -108,4 +111,6 @@ export default [
   InputNumber,
   Breadcrumb,
   BreadcrumbItem,
+  Descriptions,
+  DescriptionsItem,
 ];
