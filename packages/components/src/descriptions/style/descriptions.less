@@ -22,10 +22,21 @@
   .@{prefix}-descriptions-body {
     background-color: var(--hv-fill-color-blank);
 
-    &-table {
+    .@{prefix}-descriptions-table {
       border-collapse: collapse;
       width: 100%;
-
+      border: none;
+      border-spacing: 0;
+      border-color: #fff;
+      tbody {
+        border: none !important;
+      }
+      tr {
+        border: none !important;
+      }
+      tr:nth-child(2n) {
+        background-color: inherit !important;
+      }
       .@{prefix}-descriptions-cell {
         box-sizing: border-box;
         text-align: left;
@@ -46,17 +57,20 @@
         }
       }
 
-      &.is-bordered {
+      &.is-bordered-des {
         .@{prefix}-descriptions-cell {
-          border: getCssVar('descriptions-table-border');
+          border: 1px solid var(--hv-border-color-light);
           padding: 5px;/////////////////
         }
       }
 
-      &:not(.is-bordered) {
+      &:not(.is-bordered-des) {
         .@{prefix}-descriptions-cell{
-          padding-bottom: 6px;///////////////////
+          padding-bottom: 6px !important;
+          border: none !important;
         }
+        
+        
       }
     }
   }
@@ -95,3 +109,4 @@
   //   }
   // }
 }
+

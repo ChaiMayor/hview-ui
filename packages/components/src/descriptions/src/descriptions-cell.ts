@@ -35,10 +35,10 @@ export default defineComponent({
     const label = this.cell?.children?.label?.() || item.label;
     const content = this.cell?.children?.default?.();
     const span = item.span;
-    const borderLabel = border ? "h-descriptions-bordered-label" : "";
-    const borderedCon = border ? "h-descriptions-bordered-content" : "";
-    const verticalLabel = isVertical ? "h-descriptions-vertical-label" : "";
-    const verticalCon = isVertical ? "h-descriptions-vertical-content" : "";
+    const borderLabel = border ? "is-bordered-label" : "";
+    const borderedCon = border ? "is-bordered-content" : "";
+    const verticalLabel = isVertical ? "is-vertical-label" : "";
+    const verticalCon = isVertical ? "is-vertical-content" : "";
     const align = item.align ? `is-${item.align}` : "";
     const labelAlign = item.labelAlign ? `is-${item.labelAlign}` : "" || align;
     const className = item.className;

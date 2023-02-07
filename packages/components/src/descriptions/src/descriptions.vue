@@ -10,7 +10,7 @@
     </div>
 
     <div class="h-descriptions-body">
-      <table class="h-descriptions-table" :class="{ [`h-descriptions-bordered`]: border }">
+      <table class="h-descriptions-table" :class="{ [`is-bordered-des`]: border }">
         <tbody>
           <template v-for="(row, index) in getRows()" :key="index">
             <h-descriptions-row :row="row" />
@@ -23,6 +23,8 @@
 
 <script lang="ts" setup>
 // @ts-nocheck
+import "../style/descriptions.less";
+import "../style/descriptions-item.less";
 import { computed, provide, useSlots } from "vue";
 import { flattedChildren } from "@hview-plus/utils";
 
