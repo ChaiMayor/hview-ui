@@ -1,5 +1,5 @@
-import scrollBar from "./src/scrollbar.vue";
+import scrollbar from "./src/scrollbar.vue";
 import { withInstall } from "@hview-plus/utils";
 
-const ScrollBar = withInstall(scrollBar);
-export default ScrollBar;
+const Scrollbar = withInstall(scrollbar);
+export default Scrollbar;

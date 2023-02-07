@@ -1,75 +1,36 @@
 <template>
-  {{ $t("colorpicker.confirm") }}
-  <h-tree :data="list"></h-tree>
-  <h-empty></h-empty>
-  <div>
-    <span>Rain</span>
-    <h-divider direction="vertical" />
-    <span>Home</span>
-    <h-divider direction="vertical" border-style="dashed" />
-    <span>Grass</span>
-  </div>
-  <h-alert title="success alert" type="success" description="more text description" show-icon />
-  <h-alert title="info alert" type="info" description="more text description" show-icon />
-  <h-alert title="warning alert" type="warning" description="more text description" show-icon />
-  <h-alert title="error alert" type="error" description="more text description" show-icon />
+  <router-view></router-view>
+  <h-breadcrumb>
+    <h-breadcrumb-item to="/about">homepage</h-breadcrumb-item>
+    <h-breadcrumb-item>promotion management</h-breadcrumb-item>
+    <h-breadcrumb-item>promotion list</h-breadcrumb-item>
+    <h-breadcrumb-item>promotion detail</h-breadcrumb-item>
+  </h-breadcrumb>
+  <h-breadcrumb separator="*">
+    <h-breadcrumb-item :to="{ path: '/' }">homepage</h-breadcrumb-item>
+    <h-breadcrumb-item><a href="/">promotion management</a></h-breadcrumb-item>
+    <h-breadcrumb-item>promotion list</h-breadcrumb-item>
+    <h-breadcrumb-item>promotion detail</h-breadcrumb-item>
+  </h-breadcrumb>
+  <br />
+  <div class="a"></div>
+  <h-button type="default" @click="handerClick">Show Message</h-button>
+  <h-backtop :visibilityHeight="500" :right="200" :bottom="200">
+    <div
+      style="
+        height: 100%;
+        width: 100%;
+        background-color: var(--el-bg-color-overlay);
+        box-shadow: var(--el-box-shadow-lighter);
+        text-align: center;
+        line-height: 40px;
+        color: #1989fa;
+      ">
+      UP
+    </div>
+  </h-backtop>
+  <div> </div>
 </template>
 
-<script setup lang="ts">
-const hello = () => {
-  // eslint-disable-next-line no-alert
-  alert("Hello World!");
-};
-const list = [
-  {
-    label: "一级 1",
-    children: [
-      {
-        label: "二级 1-1",
-        children: [
-          {
-            label: "三级 1-1-1",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    label: "一级 2",
-    children: [
-      {
-        label: "二级 2-1",
-        children: [
-          {
-            label: "三级 2-1-1",
-          },
-        ],
-      },
-      {
-        label: "二级 2-2",
-      },
-    ],
-  },
-  {
-    label: "一级 3",
-    children: [
-      {
-        label: "二级 3-1",
-        children: [
-          {
-            label: "三级 3-1-1",
-          },
-        ],
-      },
-      {
-        label: "二级 3-2",
-        children: [
-          {
-            label: "三级 3-2-1",
-          },
-        ],
-      },
-    ],
-  },
-];
-</script>
+<script lang="ts" setup></script>
+<style scoped></style>

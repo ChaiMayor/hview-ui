@@ -35,7 +35,6 @@ export default defineComponent({
       if (!dom) return;
       for (const key in styles) {
         if (Object.prototype.hasOwnProperty.call(styles, key)) {
-          // dom.style[key] = styles[key];
           (dom.style as any)[key] = styles[key];
         }
       }

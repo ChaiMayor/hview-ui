@@ -13,7 +13,7 @@ import { default as Carousel } from "./carousel";
 import { default as CarouselItem } from "./carousel-item";
 import { default as Tag } from "./tag";
 import { default as Progress } from "./progress";
-import { default as ScrollBar } from "./scrollbar";
+import { default as Scrollbar } from "./scrollbar";
 import { default as Slider } from "./slider";
 import { default as Result } from "./result";
 import { default as Tree } from "./tree";
@@ -26,6 +26,9 @@ import { default as Empty } from "./empty";
 import { default as Divider } from "./divider";
 import { default as Alert } from "./alert";
 import { Timeline, TimelineItem } from "./timeline";
+import { default as Backtop } from "./backtop";
+import { default as InputNumber } from "./input-number";
+import { Breadcrumb, BreadcrumbItem } from "./breadcrumb";
 
 export {
   Button,
@@ -45,7 +48,7 @@ export {
   Carousel,
   CarouselItem,
   Message,
-  ScrollBar,
+  Scrollbar,
   Tag,
   Progress,
   Result,
@@ -61,6 +64,10 @@ export {
   Alert,
   Timeline,
   TimelineItem,
+  Backtop,
+  InputNumber,
+  Breadcrumb,
+  BreadcrumbItem,
 };
 
 export default [
@@ -81,7 +88,7 @@ export default [
   Carousel,
   CarouselItem,
   Message,
-  ScrollBar,
+  Scrollbar,
   Tag,
   Progress,
   Result,
@@ -97,4 +104,8 @@ export default [
   Alert,
   Timeline,
   TimelineItem,
+  Backtop,
+  InputNumber,
+  Breadcrumb,
+  BreadcrumbItem,
 ];

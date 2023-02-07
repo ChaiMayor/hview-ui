@@ -9,6 +9,7 @@ export const MessageProps = {
     validator(value: string) {
       return MessageType.includes(value);
     },
+    default: "info",
   },
   duration: {
     type: Number,

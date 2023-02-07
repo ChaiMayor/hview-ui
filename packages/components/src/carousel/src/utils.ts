@@ -18,7 +18,7 @@ import { CarouselItemContext, carouselContextKey } from "./carousel";
 import type { CarouselEmits, CarouselProps } from "./carousel";
 // eslint-disable-next-line vue/prefer-import-from-vue
 import { isString, isArray } from "@vue/shared";
-import { throttle } from "lodash";
+import { throttle } from "lodash-es";
 
 export type RawSlots = Exclude<VNodeNormalizedChildren, Array<any>>;
 export type VNodeChildAtom = Exclude<VNodeChild, Array<any>>;

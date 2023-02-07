@@ -5,3 +5,5 @@ export const componentPath = resolve(__dirname, "../../");
 
 //pkg根目录
 export const pkgPath = resolve(__dirname, "../../");
+
+export const playPath = resolve(__dirname, "../../../playground");

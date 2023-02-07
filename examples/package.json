@@ -9,6 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "hview-plus": "workspace:*"
+    "hview-plus": "workspace:*",
+    "vue-router": "^4.1.6"
   }
 }

@@ -28,6 +28,13 @@ export default defineConfig({
     __COMMIT__: JSON.stringify(commit),
     __VUE_PROD_DEVTOOLS__: JSON.stringify(true),
   },
+  // build:{
+  //   rollupOptions:{
+  //     external:[
+  //       ""
+  //     ]
+  //   }
+  // },
   optimizeDeps: {
     exclude: ["@vue/repl"],
   },
