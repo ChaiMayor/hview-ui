@@ -26,6 +26,7 @@ import { default as Divider } from "./divider";
 import { default as Alert } from "./alert";
 import { Timeline, TimelineItem } from "./timeline";
 import { default as Backtop } from "./backtop";
+import { default as InputNumber } from "./input-number";
 
 export {
   Button,
@@ -61,6 +62,7 @@ export {
   Timeline,
   TimelineItem,
   Backtop,
+  InputNumber,
 };
 
 export default [
@@ -97,4 +99,5 @@ export default [
   Timeline,
   TimelineItem,
   Backtop,
+  InputNumber,
 ];
