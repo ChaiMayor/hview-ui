@@ -57,7 +57,9 @@ The content of the node supports customization, and you can add buttons or icons
 <renderTree></renderTree>
 :::
 
-## Attributes
+## API
+
+### Attributes
 
 | parameter             | illustrate                                                                                      | Type                              | optional value | default  |
 | --------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------- | -------------- | -------- |
@@ -74,7 +76,7 @@ The content of the node supports customization, and you can add buttons or icons
 
 <br/>
 
-## Events
+### Events
 
 | event name     | illustrate                                        | Callback function parameters                   |
 | -------------- | ------------------------------------------------- | ---------------------------------------------- |
@@ -83,7 +85,7 @@ The content of the node supports customization, and you can add buttons or icons
 
 <br/>
 
-## Methods
+### Methods
 
 | method name     | illustrate                                     | parameters |
 | --------------- | ---------------------------------------------- | ---------- |

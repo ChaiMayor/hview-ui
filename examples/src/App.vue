@@ -29,20 +29,8 @@
       UP
     </div>
   </h-backtop>
+  <div> </div>
 </template>
 
-<script setup lang="ts">
-import { getCurrentInstance } from "vue";
-const instance = getCurrentInstance();
-const { $message } = instance.appContext.config.globalProperties;
-const handerClick = () => {
-  $message("Hello,This is a message");
-};
-</script>
-<style scoped>
-.a {
-  width: 100%;
-  height: 1800px;
-  background-color: aqua;
-}
-</style>
+<script lang="ts" setup></script>
+<style scoped></style>

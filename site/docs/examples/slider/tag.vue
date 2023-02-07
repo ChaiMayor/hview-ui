@@ -1,6 +1,6 @@
 <template>
   <div class="slider-demo-block">
-    <h-slider v-model="value" range :marks="marks" />
+    <h-slider v-model="value" range :marks="marks" showStops />
   </div>
 </template>
 
@@ -22,7 +22,7 @@ const marks = reactive<Marks>({
   37: "37°C",
   50: {
     style: {
-      color: "#1989FA",
+      color: "#5d80f4",
     },
     label: "50%",
   },

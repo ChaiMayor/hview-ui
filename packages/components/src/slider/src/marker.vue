@@ -11,6 +11,7 @@
 import { ref, onMounted, computed, useAttrs } from "vue";
 import { SliderProps } from "./slider";
 import { offsetTop, offsetLeft } from "@hview-plus/utils";
+import { throttle } from "lodash-es";
 
 const props = defineProps(SliderProps);
 const emits = defineEmits(["update:isDraw", "setMarkerSite"]);
@@ -31,7 +32,7 @@ const buttonStyle = computed(() => {
 
 const mountMouseEvent = (dom: HTMLDivElement) => {
   dom.onmousedown = function () {
-    document.onmousemove = function (e: MouseEvent) {
+    document.onmousemove = throttle(function (e: MouseEvent) {
       if (props.disabled) return false;
       emits("update:isDraw", true);
       if (props.vertical) {
@@ -44,7 +45,7 @@ const mountMouseEvent = (dom: HTMLDivElement) => {
       }
       emits("setMarkerSite", site.value, attrs.yname);
       return false;
-    };
+    }, 20);
     document.onmouseup = function () {
       document.onmousemove = null;
       document.onmousedown = null;

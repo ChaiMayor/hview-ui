@@ -1,6 +1,8 @@
 <script setup>
 import basic from 'exam/slider/basic.vue'
 import disperse from 'exam/slider/disperse.vue'
+import inputBox from 'exam/slider/input-box.vue'
+import sizes from 'exam/slider/sizes.vue'
 import site from 'exam/slider/site.vue'
 import scope from 'exam/slider/scope.vue'
 import vertical from 'exam/slider/vertical.vue'
@@ -30,6 +32,22 @@ import tag from 'exam/slider/tag.vue'
 
 ::: code slider/disperse
 <disperse></disperse>
+:::
+
+## 带有输入框的滑块
+
+通过输入框输入来改变当前的值。
+
+设置 `show-input` 属性会在右侧显示一个输入框
+
+::: code slider/input-box
+<inputBox></inputBox>
+:::
+
+## 不同尺寸
+
+::: code slider/sizes
+<sizes></sizes>
 :::
 
 ## 位置

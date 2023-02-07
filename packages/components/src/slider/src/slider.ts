@@ -1,6 +1,6 @@
 import { definePropType } from "@hview-plus/utils";
 import type { SliderMarkerProps } from "./marker";
-import { ExtractPropTypes } from "vue";
+import { ExtractPropTypes, PropType } from "vue";
 
 type BasePlacement = "top" | "bottom" | "right" | "left";
 type AutoPlacement = "auto" | "auto-start" | "auto-end";
@@ -15,6 +15,8 @@ type VariationPlacement =
   | "left-end";
 type Arrayable<T> = T | T[];
 
+type useSizeProp = "large" | "default" | "small";
+
 export type Placement = AutoPlacement | BasePlacement | VariationPlacement;
 
 const placements = Array<Placement>;
@@ -22,6 +24,14 @@ const placements = Array<Placement>;
 type SliderMarks = Record<number, string | SliderMarkerProps["mark"]>;
 
 export const SliderProps = {
+  size: {
+    type: String as PropType<useSizeProp>,
+    default: "default",
+  },
+  inputSize: {
+    type: String as PropType<useSizeProp>,
+    default: "default",
+  },
   modelValue: {
     // type: [Number, Array<Number>],
     type: definePropType<Arrayable<number>>([Number, Array]),
@@ -43,7 +53,10 @@ export const SliderProps = {
     type: Number,
     default: 1,
   },
-  showInput: Boolean,
+  showInput: {
+    type: Boolean,
+    default: false,
+  },
   showInputControls: {
     type: Boolean,
     default: true,

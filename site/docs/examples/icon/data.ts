@@ -6,7 +6,7 @@ export const iconList = [
   "xiangshang1",
   "xiala",
   "arrow-left2",
-  "youjiantou",
+  "arrow-right2",
   "you",
   "you1",
   "fuzhi",
