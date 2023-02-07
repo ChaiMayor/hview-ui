@@ -1,7 +1,6 @@
 <template>
-  <div class="scrollbar-container"> </div>
+  <div> </div>
 </template>
 
 <script lang="ts" setup></script>
-
 <style scoped></style>

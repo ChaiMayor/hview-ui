@@ -30,7 +30,7 @@ export const InputNumberProps = {
     type: Number,
     default: Number.NEGATIVE_INFINITY,
   },
-  modelValue: Number,
+  modelValue: [Number, String],
   readonly: Boolean,
   disabled: {
     type: Boolean,

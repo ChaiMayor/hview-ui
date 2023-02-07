@@ -217,6 +217,14 @@ watch(
   },
 );
 
+watch(
+  () => props.modelValue,
+  (newVal) => {
+    numberValue.value = newVal;
+    update();
+  },
+);
+
 onMounted(() => {
   update();
 });
