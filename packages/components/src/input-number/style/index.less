@@ -8,15 +8,15 @@
 // disabled
 .disabled() {
   cursor: not-allowed;
-  background-color: #f5f7fa;
+  background-color: var(--hv-input-number-bg-color);
   color: #c4c4c4;
 }
-@disabled-bg-color: #f3f3f3;
+@disabled-bg-color: var(--hv-input-number-bg-color-disabled);
 @disabled-text-color: #c4c4c4;
 @disabled-border-color: #e4e7ed;
 
 // crease
-@crease_bg_color: #f5f7fa;
+@crease_bg_color: var(--hv-input-number-bg-color);
 @crease_text_color: #a8abb2;
 
 .crease_base() {
@@ -41,7 +41,7 @@
 
 .crease_small() {
   flex: 0 0 24px;
-  height: 22px;
+  height: 24px;
   line-height: 16px;
 }
 
@@ -138,7 +138,8 @@
       }
       .h-input {
         font-size: 12px;
-        padding: 2px 4px;
+        padding: 0;
+        line-height: 0;
       }
     }
 

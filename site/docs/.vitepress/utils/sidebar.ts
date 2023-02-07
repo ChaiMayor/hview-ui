@@ -38,6 +38,7 @@ const sidebar = {
       text: "Form 表单组件",
       items: [
         { text: "Input 输入框", link: "/components/input" },
+        { text: "Input Number 数字输入框", link: "/components/input-number" },
         { text: "Radio 单选框", link: "/components/radio" },
         { text: "Slider 滑块", link: "/components/slider" },
         { text: "Checkbox 复选框", link: "/components/checkbox" },
@@ -109,6 +110,7 @@ const sidebarEN = {
       text: "Form",
       items: [
         { text: "Input", link: "/components/input" },
+        { text: "Input Number", link: "/components/input-number" },
         { text: "Radio", link: "/components/radio" },
         { text: "Slider", link: "/components/slider" },
         { text: "Checkbox", link: "/components/checkbox" },
