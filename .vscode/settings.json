@@ -4,7 +4,8 @@
 	// 开启自动修复
 	"editor.codeActionsOnSave": {
 		"source.fixAll": true,
-		"source.fixAll.eslint": true
+		"source.fixAll.eslint": true,
+		"source.fixAll.stylelint": true
 	},
 	"eslint.validate": ["html", "vue", "javascript", "jsx", "ts", "typescript"],
 	"[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
@@ -15,5 +16,6 @@
 	"[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
 	"[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
 	"prettier.configPath": "prettier.config.js",
-	"i18n-ally.localesPaths": ["packages/locale", "packages/locale/lang"]
+	"stylelint.customSyntax": "postcss-less",
+	"stylelint.validate": ["css", "less", "postcss", "scss", "vue", "sass"]
 }

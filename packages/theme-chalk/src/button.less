@@ -1,3 +1,288 @@
-@import "common/var.less";
-@import "mixnis/mixins.less";
-@import "mixins/utils";
+@import url("common/var.less");
+@import url("mixnis/mixins.less");
+@import url("mixins/utils");
+
+.@{prefix}-button {
+	box-sizing: border-box;
+	display: inline-block;
+	padding: 10px 16px;
+	margin: 0;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1;
+	color: var(--hv-button-disabled-text-color);
+	text-align: center;
+	white-space: nowrap;
+	cursor: pointer;
+	background: var(--hv-button-bg-color);
+	border: 1px solid #dcdfe6;
+	border: 1px solid var(--hv-button-border-color);
+	border-radius: 4px;
+	outline: none;
+	transition: 0.1s;
+	transition: color 0.3s, border 0.3s, background 0.3s;
+
+	.@{prefix}-button-text {
+		display: inline-block;
+		margin: 0 4px;
+	}
+
+	&:hover {
+		color: var(--hv-color-primary);
+		background-color: var(--hv-button-bg-color);
+	}
+}
+
+.@{prefix}-button.is-disabled {
+	color: var(--hv-button-disabled-text-color);
+	cursor: not-allowed;
+	background: var(--hv-button-bg-color);
+	background-image: none;
+}
+
+.@{prefix}-button--primary {
+	color: #fff;
+	background-color: #colors[primary];
+	border-color: var(--hv-color-primary);
+
+	&:hover {
+		color: #fff;
+		background: var(--hv-color-primary-light-3);
+		border-color: var(--hv-color-primary-light-3);
+	}
+}
+
+.@{prefix}-button--primary.is-plain {
+	color: var(--hv-color-primary);
+	background: var(--hv-button-primary-plain);
+	border-color: var(--hv-button-primary-plain-border);
+
+	&:hover {
+		color: #fff;
+		background-color: var(--hv-color-primary);
+		border-color: var(--hv-color-primary);
+	}
+}
+
+.@{prefix}-button--primary.is-disabled,
+.@{prefix}-button--primary.is-disabled:active,
+.@{prefix}-button--primary.is-disabled:focus,
+.@{prefix}-button--primary.is-disabled:hover {
+	color: #fff;
+	background-color: #a0cfff;
+	border-color: #a0cfff;
+}
+
+//朴素按钮禁用
+.@{prefix}-button--primary.is-disabled.is-plain,
+.@{prefix}-button--primary.is-disabled.is-plain:active,
+.@{prefix}-button--primary.is-disabled.is-plain:focus,
+.@{prefix}-button--primary.is-disabled.is-plain:hover {
+	color: #a0b1e7;
+	background: var(--hv-button-primary-plain);
+	border-color: var(--hv-button-primary-plain-border);
+}
+
+.@{prefix}-button--text {
+	padding-right: 0;
+	padding-left: 0;
+	color: var(--hv-color-primary);
+	background: transparent;
+	border-color: transparent;
+
+	&:hover {
+		color: var(--hv-color-primary-light-3);
+		background-color: transparent;
+		border-color: transparent;
+	}
+}
+
+.@{prefix}-button--success {
+	color: #fff;
+	background-color: #colors[success];
+	border-color: #67c23a;
+
+	&:hover {
+		color: #fff;
+		background: #85ce61;
+		border-color: #85ce61;
+	}
+}
+
+.@{prefix}-button--success.is-plain {
+	color: #67c23a;
+	background: var(--hv-button-success-plain);
+	border-color: 1px solid var(--hv-button-success-plain-border);
+
+	&:hover {
+		color: #fff;
+		background-color: #67c23a;
+		border-color: #67c23a;
+	}
+}
+
+.@{prefix}-button--success.is-disabled,
+.@{prefix}-button--success.is-disabled:active,
+.@{prefix}-button--success.is-disabled:focus,
+.@{prefix}-button--success.is-disabled:hover {
+	color: #fff;
+	background-color: #b3e19d;
+	border-color: #b3e19d;
+}
+
+//朴素按钮禁用
+.@{prefix}-button--success.is-disabled.is-plain,
+.@{prefix}-button--success.is-disabled.is-plain:active,
+.@{prefix}-button--success.is-disabled.is-plain:focus,
+.@{prefix}-button--success.is-disabled.is-plain:hover {
+	color: #a4da89;
+	background: var(--hv-button-success-plain);
+	border-color: 1px solid var(--hv-button-success-plain-border);
+}
+
+.@{prefix}-button--info {
+	color: #fff;
+	background-color: #colors[info];
+	border-color: #909399;
+
+	&:hover {
+		color: #fff;
+		background: #a6a9ad;
+		border-color: #a6a9ad;
+	}
+}
+
+.@{prefix}-button--info.is-plain {
+	color: #909399;
+	background: var(--hv-button-info-plain);
+	border-color: 1px solid var(--hv-button-info-plain-border);
+
+	&:hover {
+		color: #fff;
+		background-color: #909399;
+		border-color: #909399;
+	}
+}
+
+.@{prefix}-button--info.is-disabled,
+.@{prefix}-button--info.is-disabled:active,
+.@{prefix}-button--info.is-disabled:focus,
+.@{prefix}-button--info.is-disabled:hover {
+	color: #fff;
+	cursor: not-allowed;
+	background-color: #c8c9cc;
+	border-color: #c8c9cc;
+}
+
+//朴素按钮禁用
+.@{prefix}-button--info.is-disabled.is-plain,
+.@{prefix}-button--info.is-disabled.is-plain:active,
+.@{prefix}-button--info.is-disabled.is-plain:focus,
+.@{prefix}-button--info.is-disabled.is-plain:hover {
+	color: #bcbec2;
+	background: var(--hv-button-info-plain);
+	border-color: 1px solid var(--hv-button-info-plain-border);
+}
+
+.@{prefix}-button--warning {
+	color: #fff;
+	background-color: #e6a23c;
+	border-color: #e6a23c;
+
+	&:hover {
+		color: #fff;
+		background: #ebb563;
+		border-color: #ebb563;
+	}
+}
+
+.@{prefix}-button--warning.is-plain {
+	color: #e6a23c;
+	background: var(--hv-button-warning-plain);
+	border-color: 1px solid var(--hv-button-warning-plain-border);
+
+	&:hover {
+		color: #fff;
+		background-color: #e6a23c;
+		border-color: #e6a23c;
+	}
+}
+
+.@{prefix}-button--warning.is-disabled,
+.@{prefix}-button--warning.is-disabled:active,
+.@{prefix}-button--warning.is-disabled:focus,
+.@{prefix}-button--warning.is-disabled:hover {
+	color: #fff;
+	background-color: #f3d19e;
+	border-color: #f3d19e;
+}
+
+//朴素按钮禁用
+.@{prefix}-button--warning.is-disabled.is-plain,
+.@{prefix}-button--warning.is-disabled.is-plain:active,
+.@{prefix}-button--warning.is-disabled.is-plain:focus,
+.@{prefix}-button--warning.is-disabled.is-plain:hover {
+	color: #f0c78a;
+	background: var(--hv-button-warning-plain);
+	border-color: 1px solid var(--hv-button-warning-plain-border);
+}
+
+.@{prefix}-button--danger {
+	color: #fff;
+	background-color: #f56c6c;
+	border-color: #f56c6c;
+
+	&:hover {
+		color: #fff;
+		background: #f78989;
+		border-color: #f78989;
+	}
+}
+
+.@{prefix}-button--danger.is-disabled,
+.@{prefix}-button--danger.is-disabled:active,
+.@{prefix}-button--danger.is-disabled:focus,
+.@{prefix}-button--danger.is-disabled:hover {
+	color: #fff;
+	background-color: #fab6b6;
+	border-color: #fab6b6;
+}
+
+.@{prefix}-button--danger.is-plain,
+.@{prefix}-button--danger.is-plain:active,
+.@{prefix}-button--danger.is-plain:focus {
+	color: #f09d9d;
+	background: var(--hv-button-danger-plain);
+	border-color: 1px solid var(--hv-button-danger-plain-border);
+}
+
+.@{prefix}-button--danger.is-plain {
+	&:hover {
+		color: #fff;
+		background-color: #f78989;
+		border-color: #e6a23c;
+	}
+}
+
+.is-round {
+	border-radius: 20px;
+}
+
+// size
+.@{prefix}-button--medium {
+	padding: 10px 20px;
+	font-size: 14px;
+	border-radius: 4px;
+}
+
+.@{prefix}-button--small {
+	padding: 9px 15px;
+	font-size: 12px;
+	border-radius: 3px;
+}
+
+.@{prefix}-button--mini {
+	padding: 7px 15px;
+	font-size: 12px;
+	border-radius: 3px;
+}

@@ -1,0 +1,28 @@
+ls:
+  packages/components/src/**/{src, style}:
+    .dir: kebab-case
+    .vue: kebab-case
+    .js: kebab-case
+    .ts: kebab-case
+    .json: kebab-case
+    .d.ts: kebab-case
+    .tsx: kebab-case
+  # site/docs/**:
+  #   .dir: kebab-case
+  #   .vue: kebab-case
+  #   .js: kebab-case
+  #   .ts: kebab-case
+  #   .json: kebab-case
+  #   .d.ts: kebab-case
+  #   .tsx: kebab-case
+
+ignore:
+  - .git
+  - .vscode
+  - .lintstagedrc.js
+  - node_modules
+  - packages/components/node_modules
+  - packages/components/hview-ui
+  - site/docs/.vitepress
+  - site/docs/en-US
+  - site/docs/vite.config.ts

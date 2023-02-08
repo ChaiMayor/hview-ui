@@ -1,23 +1,23 @@
-@import "../../../common/index.less";
+@import url("../../../common/index.less");
 
 .@{prefix}-button {
+	box-sizing: border-box;
 	display: inline-block;
+	padding: 10px 16px;
+	margin: 0;
+	font-size: 14px;
+	font-weight: 500;
 	line-height: 1;
+	color: var(--hv-button-disabled-text-color);
+	text-align: center;
 	white-space: nowrap;
 	cursor: pointer;
 	background: var(--hv-button-bg-color);
 	border: 1px solid #dcdfe6;
-	color: var(--hv-button-disabled-text-color);
-	text-align: center;
 	border: 1px solid var(--hv-button-border-color);
-	box-sizing: border-box;
-	outline: none;
-	margin: 0;
-	transition: 0.1s;
-	font-weight: 500;
-	padding: 10px 16px;
-	font-size: 14px;
 	border-radius: 4px;
+	outline: none;
+	transition: 0.1s;
 	transition: color 0.3s, border 0.3s, background 0.3s;
 
 	.@{prefix}-button-text {
@@ -32,10 +32,10 @@
 }
 
 .@{prefix}-button.is-disabled {
-	cursor: not-allowed;
-	background-image: none;
-	background: var(--hv-button-bg-color);
 	color: var(--hv-button-disabled-text-color);
+	cursor: not-allowed;
+	background: var(--hv-button-bg-color);
+	background-image: none;
 }
 
 .@{prefix}-button--primary {
@@ -44,9 +44,9 @@
 	border-color: var(--hv-color-primary);
 
 	&:hover {
+		color: #fff;
 		background: var(--hv-color-primary-light-3);
 		border-color: var(--hv-color-primary-light-3);
-		color: #fff;
 	}
 }
 
@@ -82,16 +82,16 @@
 }
 
 .@{prefix}-button--text {
-	border-color: transparent;
+	padding-right: 0;
+	padding-left: 0;
 	color: var(--hv-color-primary);
 	background: transparent;
-	padding-left: 0;
-	padding-right: 0;
+	border-color: transparent;
 
 	&:hover {
 		color: var(--hv-color-primary-light-3);
-		border-color: transparent;
 		background-color: transparent;
+		border-color: transparent;
 	}
 }
 
@@ -101,9 +101,9 @@
 	border-color: #67c23a;
 
 	&:hover {
+		color: #fff;
 		background: #85ce61;
 		border-color: #85ce61;
-		color: #fff;
 	}
 }
 
@@ -144,9 +144,9 @@
 	border-color: #909399;
 
 	&:hover {
+		color: #fff;
 		background: #a6a9ad;
 		border-color: #a6a9ad;
-		color: #fff;
 	}
 }
 
@@ -167,9 +167,9 @@
 .@{prefix}-button--info.is-disabled:focus,
 .@{prefix}-button--info.is-disabled:hover {
 	color: #fff;
+	cursor: not-allowed;
 	background-color: #c8c9cc;
 	border-color: #c8c9cc;
-	cursor: not-allowed;
 }
 
 //朴素按钮禁用
@@ -188,9 +188,9 @@
 	border-color: #e6a23c;
 
 	&:hover {
+		color: #fff;
 		background: #ebb563;
 		border-color: #ebb563;
-		color: #fff;
 	}
 }
 
@@ -231,9 +231,9 @@
 	border-color: #f56c6c;
 
 	&:hover {
+		color: #fff;
 		background: #f78989;
 		border-color: #f78989;
-		color: #fff;
 	}
 }
 
