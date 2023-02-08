@@ -27,9 +27,7 @@
 
 <script lang="ts" setup>
 // @ts-nocheck
-import "../style/descriptions.less";
-import "../style/descriptions-item.less";
-import { computed, provide, useSlots } from "vue";
+import { provide, useSlots } from "vue";
 import { flattedChildren } from "@hview-plus/utils";
 
 import HDescriptionsRow from "./descriptions-row.vue";

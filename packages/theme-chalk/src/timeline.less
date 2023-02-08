@@ -1,0 +1,42 @@
+@import "common/icon.less";
+@import "common/color.less";
+@import "mixins/config.less";
+@import "mixins/mixins.less";
+.@{namespace}-timeline {
+	margin: 0 !important;
+	font-size: var(--hv-font-size-base);
+	list-style: none !important;
+
+	&-item:last-child {
+		.@{namespace}-timeline-item-tail {
+			display: none;
+		}
+	}
+
+	.@{namespace}-timeline-item-center {
+		display: flex;
+		align-items: center;
+
+		.@{namespace}-timeline-item-wrapper {
+			width: 100%;
+		}
+
+		.@{namespace}-timeline-item-tail {
+			top: 0;
+		}
+	}
+
+	.@{namespace}-timeline-item-enter:first-child {
+		.@{namespace}-timeline-item-tail {
+			top: calc(50% - 10px);
+			height: calc(50% + 10px);
+		}
+	}
+
+	.@{namespace}-timeline-item-center:last-child {
+		.@{namespace}-timeline-item-tail {
+			display: block;
+			height: calc(50% - 10px);
+		}
+	}
+}

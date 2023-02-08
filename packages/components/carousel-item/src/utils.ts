@@ -96,7 +96,7 @@ export const useCarouselItem = (
 		ready.value = true;
 	};
 
-	function handleItemClick() {}
+	// function handleItemClick() {}
 
 	// lifecycle
 	onMounted(() => {
@@ -129,6 +129,6 @@ export const useCarouselItem = (
 		translate,
 		scale,
 		ready,
-		handleItemClick,
+		// handleItemClick,
 	};
 };

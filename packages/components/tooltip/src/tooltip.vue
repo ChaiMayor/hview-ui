@@ -4,7 +4,6 @@
 	</span>
 </template>
 <script setup lang="ts">
-import "../style/index.less";
 import {
 	getCurrentInstance,
 	onUnmounted,
@@ -20,8 +19,8 @@ const props = defineProps(TooltipProps);
 const instance = getCurrentInstance();
 const { placement, content, width, modelValue } = toRefs(props);
 const isShow = ref(modelValue.value);
-let tip: any = null,
-	tid: string = "";
+let tip: any = null;
+let tid = "";
 
 // 隐藏tooltip
 function hide(tid: string) {

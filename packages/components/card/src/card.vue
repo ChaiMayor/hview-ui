@@ -12,7 +12,6 @@
 	</div>
 </template>
 <script setup lang="ts">
-import "../style/index.less";
 import { computed } from "vue";
 import { cardProps } from "./card";
 const props = defineProps(cardProps);

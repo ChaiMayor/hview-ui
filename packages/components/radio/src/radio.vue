@@ -20,7 +20,6 @@
 </template>
 
 <script setup lang="ts">
-import "../style/index.less";
 import { ref } from "vue";
 import { RadioProps, OptionsItem } from "./radio";
 

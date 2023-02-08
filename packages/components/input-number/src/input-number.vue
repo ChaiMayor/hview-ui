@@ -71,7 +71,6 @@
 </template>
 
 <script setup lang="ts">
-import "../style/index.less";
 import HInput from "../../input";
 import HIcon from "../../icon";
 import { InputNumberProps } from "./input-number";

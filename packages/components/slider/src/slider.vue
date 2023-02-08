@@ -40,7 +40,6 @@
 ></template>
 
 <script setup lang="ts">
-import "../style/index.less";
 import { ref, watch, nextTick } from "vue";
 import InputNumber from "../../input-number";
 import { SliderProps } from "./slider";

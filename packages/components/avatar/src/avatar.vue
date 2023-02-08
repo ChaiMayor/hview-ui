@@ -13,7 +13,6 @@
 </template>
 
 <script lang="ts" setup>
-import "../style/index.less";
 import { computed, ref, watch } from "vue";
 import { avatarEmits, avatarProps } from "./avatar";
 import type { CSSProperties } from "vue";

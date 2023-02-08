@@ -12,6 +12,8 @@ import "nprogress/nprogress.css";
 NProgress.configure({ showSpinner: true });
 
 import hp from "hview-plus";
+import "@hview-plus/theme-chalk";
+// import "hview-plus/theme-chalk/style.css";
 
 import axios from "axios";
 

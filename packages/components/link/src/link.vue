@@ -4,7 +4,6 @@
 	</a>
 </template>
 <script setup lang="ts">
-import "../style/index.less";
 import { computed, useAttrs } from "vue";
 import { LinkProps } from "./link";
 const props = defineProps(LinkProps);

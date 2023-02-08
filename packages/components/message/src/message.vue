@@ -27,7 +27,6 @@
 <script setup lang="ts">
 import { MessageProps } from "./message";
 import { toRefs, onMounted, ref, onUnmounted } from "vue";
-import "../style/index.less";
 const props = defineProps(MessageProps);
 const {
 	message,

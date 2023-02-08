@@ -58,7 +58,6 @@
 </template>
 
 <script lang="ts" setup>
-import "../style/index.less";
 import { computed } from "vue";
 // eslint-disable-next-line vue/prefer-import-from-vue
 import { isFunction, isString } from "@vue/shared";

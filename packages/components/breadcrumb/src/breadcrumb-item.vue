@@ -11,7 +11,6 @@
 </template>
 
 <script lang="ts" setup>
-import "../style/index.less";
 import { computed, inject, toRefs, getCurrentInstance, onMounted } from "vue";
 import { BreadcrumbItemProps } from "./breadcrumb-item";
 

@@ -24,7 +24,6 @@
 </template>
 
 <script lang="ts" setup>
-import "../style/index.less";
 import { computed, ref, useSlots } from "vue";
 import { AlertProps, AlertEmits } from "./alert";
 const props = defineProps(AlertProps);

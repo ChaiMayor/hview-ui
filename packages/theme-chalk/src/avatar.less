@@ -1,0 +1,49 @@
+@import "common/icon.less";
+@import "common/color.less";
+@import "mixins/config.less";
+@import "mixins/mixins.less";
+
+.@{namespace}-avatar {
+	box-sizing: border-box;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+	font-size: var(--hv-font-size-base);
+	color: var(--hv-color-white);
+	text-align: center;
+	background: #c0c4cc;
+
+	img {
+		display: block;
+		height: 100%;
+	}
+}
+
+.@{namespace}-avatar--circle {
+	border-radius: 50%;
+}
+
+.@{namespace}-avatar--square {
+	border-radius: var(--hv-border-radius-round);
+}
+
+.@{namespace}-avatar-size--large {
+	width: 56px;
+	height: 56px;
+}
+
+.@{namespace}-avatar-size--small {
+	width: 24px;
+	height: 24px;
+}
+
+.@{namespace}-avatar-border--solid {
+	border: var(--hv-border);
+}
+
+.@{namespace}-avatar-border--dot {
+	border: var(--hv-border-width) dashed var(--hv-border-color);
+}

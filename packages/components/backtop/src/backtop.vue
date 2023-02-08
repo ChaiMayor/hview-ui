@@ -11,7 +11,6 @@
 </template>
 
 <script lang="ts" setup>
-import "../style/index.less";
 import { computed } from "vue";
 import { BacktopProps, BacktopEmits } from "./backtop";
 import { useBacktop } from "./use-backtop";

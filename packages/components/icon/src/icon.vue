@@ -6,7 +6,6 @@
 </template>
 <script setup lang="ts">
 import { computed } from "vue";
-import "../style/index.less";
 import { iconProps } from "./icon";
 const props = defineProps(iconProps);
 

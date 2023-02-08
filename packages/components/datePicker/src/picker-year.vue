@@ -21,8 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import "../style/pickerYear.less";
-import { defineComponent, computed } from "vue";
+import { computed } from "vue";
 import { toMatrix } from "../utils/toMatrix";
 import { pickerMonthAndYearProps } from "./datePicker";
 const props = defineProps(pickerMonthAndYearProps);
@@ -45,9 +44,9 @@ let allYear = computed(() => {
 	return toMatrix(arr, 4);
 });
 </script>
+
 <script lang="ts">
-export default defineComponent({
+export default {
 	name: "PickerYear",
-});
+};
 </script>
-<style scoped></style>

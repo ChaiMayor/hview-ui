@@ -58,7 +58,6 @@
 </template>
 
 <script lang="ts" setup>
-import "../style/index.less";
 import { computed, unref } from "vue";
 import { carouselEmits, carouselProps } from "./carousel";
 import { useCarousel } from "./utils";

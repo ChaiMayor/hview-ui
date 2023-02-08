@@ -30,5 +30,8 @@ module.exports = {
 		// refer: https://blog.csdn.net/cc18868876837/article/details/116663244
 		"@typescript-eslint/ban-ts-comment": "off",
 		"@typescript-eslint/no-explicit-any": ["off"],
+		"@typescript-eslint/no-non-null-asserted-optional-chain": "off",
+		"@typescript-eslint/no-non-null-assertion": "off",
+		"@typescript-eslint/no-empty-function": "off",
 	},
 };

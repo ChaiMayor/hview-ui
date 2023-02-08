@@ -4,7 +4,6 @@
 	</footer>
 </template>
 <script lang="ts" setup>
-import "../style/index.less";
 import { computed } from "vue";
 import { FooterProps } from "./container";
 

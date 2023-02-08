@@ -1,0 +1,105 @@
+@import "common/icon.less";
+@import "common/color.less";
+@import "mixins/config.less";
+@import "mixins/mixins.less";
+
+.@{namespace}-descriptions {
+	box-sizing: border-box;
+	font-size: var(--hv-font-size-base);
+	color: var(--hv-text-color-primary);
+
+	&-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 5px;
+
+		.@{namespace}-descriptions-title {
+			font-size: var(--hv-font-size-medium);
+			font-weight: bold;
+			color: var(--hv-text-color-primary);
+		}
+	}
+
+	.@{namespace}-descriptions-body {
+		background-color: var(--hv-fill-color-blank);
+
+		.@{namespace}-descriptions-table {
+			width: 100%;
+			border-spacing: 0;
+			border-collapse: collapse;
+			border: none;
+			border-color: #fff;
+
+			tbody {
+				border: none !important;
+			}
+
+			tr {
+				border: none !important;
+			}
+
+			tr:nth-child(2n) {
+				background-color: inherit !important;
+			}
+			.@{namespace}-descriptions-cell {
+				box-sizing: border-box;
+				font-size: var(--hv-font-size-medium);
+				font-weight: normal;
+				line-height: 23px;
+				text-align: left;
+
+				&-left {
+					text-align: left;
+				}
+
+				&-center {
+					text-align: center;
+				}
+
+				&-right {
+					text-align: right;
+				}
+			}
+
+			&.is-bordered-des {
+				.@{namespace}-descriptions-cell {
+					padding: 5px;
+					border: 1px solid var(--hv-border-color-light); /////////////////
+				}
+			}
+
+			&:not(.is-bordered-des) {
+				.@{namespace}-descriptions-cell {
+					padding-bottom: 6px !important;
+					border: none !important;
+				}
+			}
+		}
+	}
+
+	.is-bordered-label {
+		font-weight: bold;
+		color: var(--hv-text-color-regular);
+		background: var(--hv-fill-color-light);
+	}
+
+	&:not(.is-bordered-label) {
+		margin-right: 5px;
+		color: var(--hv-text-color-primary);
+	}
+
+	:not(.is-bordered-label) .is-vertical-label {
+		padding-bottom: 5px;
+	}
+
+	.@{namespace}-descriptions-content {
+		.@{namespace}-descriptions-cell .is-bordered-content {
+			color: var(--hv-text-color-primary);
+		}
+
+		&:not(.is-bordered-label) {
+			color: var(--hv-text-color-regular);
+		}
+	}
+}

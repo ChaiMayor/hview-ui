@@ -25,7 +25,6 @@
 </template>
 
 <script lang="ts" setup>
-import "../style/index.less";
 import { computed } from "vue";
 import { ResultProps } from "./result";
 const props = defineProps(ResultProps);

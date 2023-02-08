@@ -1,0 +1,36 @@
+@import "common/icon.less";
+@import "common/color.less";
+@import "mixins/config.less";
+@import "mixins/mixins.less";
+
+.hview-icon {
+	position: relative;
+	display: inline-block;
+	vertical-align: -0.15em;
+
+	.hview-info {
+		position: absolute;
+		top: 1px;
+		right: -6px;
+		box-sizing: border-box;
+		min-width: 16px;
+		padding: 0 3px;
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 1.2;
+		color: #fff;
+		text-align: center;
+		background-color: #ee0a24;
+		border: 1px solid #fff;
+		border-radius: 16px;
+		transform: translate(50%, -50%);
+	}
+
+	.hview-dot {
+		width: 8px;
+		min-width: 0;
+		height: 8px;
+		background-color: #ee0a24;
+		border-radius: 100%;
+	}
+}

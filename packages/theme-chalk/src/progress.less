@@ -1,0 +1,143 @@
+@import "common/icon.less";
+@import "common/color.less";
+@import "mixins/config.less";
+@import "mixins/mixins.less";
+.@{namespace}-progress {
+	position: relative;
+	display: flex;
+	align-items: center;
+	line-height: 1;
+
+	&-text {
+		min-width: 50px;
+		margin-left: 5px;
+		font-size: 14px;
+		line-height: 1;
+		color: var(--hv-text-color-regular);
+
+		i {
+			display: block;
+		}
+	}
+
+	&--circle,
+	&--dashboard {
+		display: inline-block;
+
+		.@{namespace}-progress-text {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			margin: 0;
+			text-align: center;
+			transform: translate(0, -50%);
+
+			i {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	&-without-text {
+		.text {
+			display: none;
+		}
+
+		.h-progress-bar {
+			display: block;
+			padding-right: 0;
+			margin-right: 0;
+		}
+	}
+
+	&-text-inside .@{namespace}-progress-bar {
+		padding-right: 0;
+		margin-right: 0;
+	}
+}
+
+.h-progress--success .h-progress-text {
+	color: var(--hv-color-success);
+}
+
+.h-progress--success .h-progress-bar-inner {
+	background-color: var(--hv-color-success);
+}
+
+.h-progress--warning .h-progress-text {
+	color: var(--hv-color-warning);
+}
+
+.h-progress--warning .h-progress-bar-inner {
+	background-color: var(--hv-color-warning);
+}
+
+.h-progress--error .h-progress-text {
+	color: var(--hv-color-danger);
+}
+
+.h-progress--error .h-progress-bar-inner {
+	background-color: var(--hv-color-danger);
+}
+
+.@{namespace}-progress-bar {
+	box-sizing: border-box;
+	flex-grow: 1;
+
+	&-outer {
+		position: relative;
+		height: 6px;
+		overflow: hidden;
+		vertical-align: middle;
+		background-color: var(--hv-border-color-light);
+		border-radius: 100px;
+	}
+
+	&-inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		line-height: 1.4;
+		text-align: right;
+		white-space: nowrap;
+		background-color: var(--hv-color-primary);
+		border-radius: 100px;
+		transition: width 0.6s ease;
+
+		&Text {
+			display: inline-block;
+			margin: 0 5px;
+			font-size: 12px;
+			color: #fff;
+			vertical-align: middle;
+		}
+	}
+
+	&-innerindeterminate {
+		transform: translateZ(0);
+		animation: indeterminate 3s infinite;
+	}
+}
+
+@keyframes progress {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: 32px 0;
+	}
+}
+
+@keyframes indeterminate {
+	0% {
+		left: -100%;
+	}
+
+	100% {
+		left: 100%;
+	}
+}

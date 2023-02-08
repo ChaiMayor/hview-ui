@@ -19,7 +19,6 @@
 </template>
 
 <script setup lang="ts">
-import "../style/thumb.less";
 import { ref, onUnmounted, watch, onMounted, nextTick, computed } from "vue";
 import { SetScrollTop, SetScrollLeft } from "./scorllbar-fn";
 import { throttle } from "lodash-es";

@@ -34,7 +34,6 @@
 </template>
 
 <script setup lang="ts">
-import "../style/index.less";
 import { ref, watch, onMounted, onUnmounted, computed, nextTick } from "vue";
 import { ScrollBarProps } from "./scrollbar";
 import HThumb from "./scroll-thumb.vue";
@@ -184,6 +183,7 @@ onMounted(() => {
 		setScrollTumb();
 	}
 	nextTick(() => {
+		// @ts-ignore
 		observer!.observe(scrollbar_view.value!, {
 			childList: true, // 监听子节点的变化(增加，删除)
 			characterData: true, // 监听节点的内容或文本变化

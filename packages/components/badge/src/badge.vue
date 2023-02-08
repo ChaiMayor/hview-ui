@@ -10,7 +10,6 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import "../style/index.less";
 import { badgeProps } from "./badge";
 const props = defineProps(badgeProps);
 const styleClass = computed(() => {

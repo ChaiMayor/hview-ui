@@ -1,10 +1,10 @@
 import { ExtractPropTypes, PropType } from "vue";
 
-interface ICell {
+export interface ICell {
 	date: Date;
 	status: string;
 }
-interface IDateInfo {
+export interface IDateInfo {
 	[index: number]: number;
 }
 export const datePickerProps = {
@@ -21,5 +21,4 @@ export const pickerMonthAndYearProps = {
 		type: Array as PropType<IDateInfo>,
 	},
 };
-export { ICell };
 export type DatePickerProps = ExtractPropTypes<typeof datePickerProps>;

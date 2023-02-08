@@ -1,0 +1,82 @@
+@import "common/icon.less";
+@import "common/color.less";
+@import "mixins/config.less";
+@import "mixins/mixins.less";
+
+.@{namespace}-scrollbar {
+	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
+
+	.@{namespace}-scrollbar__wrap {
+		overflow: auto;
+
+		&:not(.native) {
+			&::-webkit-scrollbar {
+				width: 0;
+				height: 0;
+			}
+		}
+	}
+
+	&:hover {
+		.@{namespace}-scrollbar__bar {
+			opacity: 1;
+		}
+	}
+}
+
+.h {
+	&-scrollbar__bar {
+		position: absolute;
+		opacity: 0;
+		transition: opacity 0.3s;
+
+		&.is-horizontal {
+			bottom: 0;
+			left: 0;
+
+			.h-scrollbar__thumb {
+				height: 6px;
+			}
+		}
+
+		&.is-vertical {
+			top: 0;
+			right: 0;
+
+			.h-scrollbar__thumb {
+				width: 6px;
+			}
+		}
+
+		&.show {
+			opacity: 1;
+		}
+
+		&.hide {
+			display: none;
+		}
+
+		&.native {
+			display: none;
+		}
+
+		&.always {
+			opacity: 1;
+		}
+	}
+
+	&-scrollbar__thumb {
+		position: relative;
+		cursor: pointer;
+		background-color: var(--hv-scrollbar-thumb-hover);
+		border-radius: 6px;
+		opacity: 0.3;
+		transition: opacity 0.3s;
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+}

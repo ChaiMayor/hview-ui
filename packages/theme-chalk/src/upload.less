@@ -1,0 +1,168 @@
+.h-upload {
+	padding: 0;
+	margin: 0;
+
+	.h-upload-image {
+		width: 100%;
+
+		.preview-content {
+			display: flex;
+			flex-wrap: wrap;
+			// 预览图片列表
+			.preview-images-list {
+				display: flex;
+				flex-wrap: wrap;
+				padding: 0;
+				margin: 0;
+				list-style-type: none;
+
+				li {
+					position: relative;
+					width: 120px;
+					height: 120px;
+					margin-right: 6px;
+					margin-bottom: 8px;
+					overflow: hidden;
+					border-radius: 5px;
+
+					.preview-delete-icon {
+						position: absolute;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 120px;
+						height: 120px;
+						font-size: 18px;
+						color: #fff;
+						cursor: pointer;
+						opacity: 0;
+
+						.preview-icon {
+							padding-right: 4px;
+						}
+					}
+
+					.view {
+						width: 100%;
+						height: 100%;
+					}
+
+					.view:hover {
+						.preview-delete-icon {
+							background: rgb(0 0 0 / 40%);
+							opacity: 1;
+						}
+					}
+
+					img {
+						width: 100%;
+						max-width: 100%;
+						height: 100%;
+					}
+				}
+			}
+
+			.upload-area {
+				box-sizing: border-box;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				width: 120px;
+				height: 120px;
+				font-size: 30px;
+				color: #606266;
+				cursor: pointer;
+				background-color: #fafafa;
+				border: dashed 1px var(--color-info);
+				border-radius: 5px;
+
+				.tip {
+					font-size: 8px;
+				}
+			}
+
+			.upload-area:hover {
+				border: dashed 1px var(--color-primary);
+			}
+		}
+	}
+
+	.h-upload-list {
+		.h-upload-list_item:first-child {
+			margin-top: 10px;
+		}
+
+		.h-upload-list_item {
+			position: relative;
+			box-sizing: border-box;
+			width: 100%;
+			margin-top: 5px;
+			font-size: 14px;
+			line-height: 1.8;
+			color: #606266;
+			border-radius: 4px;
+			transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+
+			.h-upload-list_item-name {
+				display: block;
+				padding-left: 4px;
+				margin-right: 40px;
+				overflow: hidden;
+				color: #606266;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				transition: color 0.3s;
+			}
+
+			.h-upload-list_item-status-label {
+				position: absolute;
+				top: 0;
+				right: 5px;
+				line-height: inherit;
+			}
+
+			&:hover {
+				.h-upload-list_item-name {
+					color: #409eff;
+				}
+
+				cursor: pointer;
+				background: #f5f7fa;
+			}
+		}
+	}
+
+	.card {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 50%;
+		height: 70%;
+		background-color: #fff;
+		transform: translate(-50%, -50%);
+
+		img {
+			width: 300px;
+			height: 400px;
+		}
+	}
+}
+
+.modalContainer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	height: 70%;
+	background-color: #fff;
+	transform: translate(-50%, -50%);
+}
+
+.modalImg {
+	width: 500px !important;
+	height: 500px !important;
+}

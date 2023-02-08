@@ -4,6 +4,12 @@ module.exports = {
 	plugins: ["stylelint-less", "stylelint-order"],
 	extends: ["stylelint-config-standard", "stylelint-config-prettier"],
 	syntax: "less",
+	overrides: [
+		{
+			files: ["*.less", "**/*.less"],
+			customSyntax: "postcss-less",
+		},
+	],
 	rules: {
 		/* 禁止使用未知规则 */
 		"at-rule-no-unknown": [
@@ -22,6 +28,7 @@ module.exports = {
 				],
 			},
 		],
+		"no-invalid-double-slash-comments": null,
 		"import-notation": "string",
 		"function-no-unknown": null,
 		"annotation-no-unknown": null,

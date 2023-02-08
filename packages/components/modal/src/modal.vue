@@ -48,7 +48,6 @@
 </template>
 
 <script setup lang="ts">
-import "../style/index.less";
 import { modalProps } from "./modal";
 const props = defineProps(modalProps);
 

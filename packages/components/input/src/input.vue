@@ -45,7 +45,6 @@
 </template>
 
 <script setup lang="ts">
-import "../style/index.less";
 import { InputProps } from "./input";
 import { toRefs, ref, watchEffect, computed } from "vue";
 

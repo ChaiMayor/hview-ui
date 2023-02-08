@@ -4,7 +4,6 @@
 	</header>
 </template>
 <script lang="ts" setup>
-import "../style/index.less";
 import { computed } from "vue";
 import { HeaderProps } from "./container";
 

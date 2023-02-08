@@ -12,7 +12,7 @@
 			<div class="preview-content">
 				<!-- 预览图片列表 -->
 				<ul class="preview-images-list">
-					<li v-for="(file, index) in previewImgList">
+					<li v-for="(file, index) in previewImgList" :key="index">
 						<!-- 页面层 -->
 						<div class="view">
 							<!-- 图标 -->
@@ -72,7 +72,10 @@
 			<div class="h-upload-list-content">
 				<!-- 以文件列表的形式展示上传的文件 -->
 				<div class="h-upload-list">
-					<div v-for="(item, index) in fileList" class="h-upload-list_item">
+					<div
+						v-for="(item, index) in fileList"
+						:key="index"
+						class="h-upload-list_item">
 						<div class="h-upload-list_item-name">{{ item.name }}</div>
 						<div class="h-upload-list_item-status-label">
 							<h-icon name="delete-solid" @click="delFile(index)"></h-icon>
@@ -85,8 +88,6 @@
 </template>
 
 <script setup lang="ts">
-import "../style/index.less";
-import "../style/drag.less";
 import { ref, onMounted } from "vue";
 import { uploadProps } from "./upload";
 onMounted(() => {
@@ -122,15 +123,15 @@ const fileList = ref<File[]>([]);
 // 图片文件预览列表
 const previewImgList = ref<any[]>([]);
 //是否开启全屏遮罩层预览图片
-const showMask = ref<Boolean>(false);
-const isModalVisible = ref<Boolean>(false);
+// const showMask = ref<boolean>(false);
+const isModalVisible = ref<boolean>(false);
 
-const closeModal = () => {
-	isModalVisible.value = false;
-};
+// const closeModal = () => {
+// 	isModalVisible.value = false;
+// };
 //获取modal层的图片URL
 const modalImgUrl = ref<any>();
-const modalName = ref<String>("");
+// const modalName = ref<string>("");
 // 触发input点击事件
 const fileUpload = () => {
 	return hIpt.value.click();
@@ -175,4 +176,3 @@ export default {
 	name: "HUpload",
 };
 </script>
-<style lang="scss" scoped></style>

@@ -19,11 +19,15 @@
 </template>
 
 <script setup lang="ts">
-import "../style/index.less";
 import { ref, onMounted, provide, watch } from "vue";
 import treeNode from "./treeNode.vue";
 import { deepCopy } from "@hview-plus/utils";
 import { TreeProps } from "./tree";
+
+export interface CustomObject {
+	[key: string]: any;
+}
+
 const props = defineProps(TreeProps);
 const emits = defineEmits(["toggle-change", "checked-change"]);
 const copyData = ref([]);
@@ -119,7 +123,7 @@ const getCheckedKeys = () => {
 
 // 对外暴露，获取选中项的数据数组
 const getCheckedNodes = () => {
-	const checkedNodes: Object[] = [];
+	const checkedNodes: CustomObject[] = [];
 	const traverse = function (copyData: any) {
 		copyData.forEach((item: any) => {
 			if (item.isChecked) {

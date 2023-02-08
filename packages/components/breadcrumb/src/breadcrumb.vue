@@ -3,7 +3,6 @@
 </template>
 
 <script lang="ts" setup>
-import "../style/index.less";
 import { provide } from "vue";
 import { BreadcrumbProps } from "./breadcrumb";
 const props = defineProps(BreadcrumbProps);

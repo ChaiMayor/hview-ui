@@ -65,7 +65,6 @@
 </template>
 
 <script setup lang="ts">
-import "../style/index.less";
 import PickerMonth from "./picker-month.vue";
 import PickerYear from "./picker-year.vue";
 import { onClickOutside } from "@vueuse/core";

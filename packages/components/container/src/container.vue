@@ -4,7 +4,6 @@
 	</section>
 </template>
 <script lang="ts" setup>
-import "../style/index.less";
 import { computed, useSlots } from "vue";
 import { ContainerProps } from "./container";
 import type { Component, VNode } from "vue";
