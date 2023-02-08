@@ -1,0 +1,142 @@
+.h-upload {
+  margin: 0;
+  padding: 0;
+}
+.h-upload .h-upload-image {
+  width: 100%;
+}
+.h-upload .h-upload-image .preview-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.h-upload .h-upload-image .preview-content .preview-images-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.h-upload .h-upload-image .preview-content .preview-images-list li {
+  width: 120px;
+  height: 120px;
+  margin-right: 6px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+.h-upload .h-upload-image .preview-content .preview-images-list li .preview-delete-icon {
+  width: 120px;
+  height: 120px;
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+.h-upload .h-upload-image .preview-content .preview-images-list li .preview-delete-icon .preview-icon {
+  padding-right: 4px;
+}
+.h-upload .h-upload-image .preview-content .preview-images-list li .view {
+  width: 100%;
+  height: 100%;
+}
+.h-upload .h-upload-image .preview-content .preview-images-list li .view:hover .preview-delete-icon {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.4);
+}
+.h-upload .h-upload-image .preview-content .preview-images-list li img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+.h-upload .h-upload-image .preview-content .upload-area {
+  font-size: 30px;
+  color: #606266;
+  box-sizing: border-box;
+  width: 120px;
+  height: 120px;
+  border: dashed 1px var(--color-info);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #fafafa;
+}
+.h-upload .h-upload-image .preview-content .upload-area .tip {
+  font-size: 8px;
+}
+.h-upload .h-upload-image .preview-content .upload-area:hover {
+  border: dashed 1px var(--color-primary);
+}
+.h-upload .h-upload-list .h-upload-list_item:first-child {
+  margin-top: 10px;
+}
+.h-upload .h-upload-list .h-upload-list_item {
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  font-size: 14px;
+  color: #606266;
+  line-height: 1.8;
+  margin-top: 5px;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 100%;
+}
+.h-upload .h-upload-list .h-upload-list_item .h-upload-list_item-name {
+  color: #606266;
+  display: block;
+  margin-right: 40px;
+  overflow: hidden;
+  padding-left: 4px;
+  text-overflow: ellipsis;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+.h-upload .h-upload-list .h-upload-list_item .h-upload-list_item-status-label {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  line-height: inherit;
+}
+.h-upload .h-upload-list .h-upload-list_item:hover {
+  cursor: pointer;
+  background: #f5f7fa;
+}
+.h-upload .h-upload-list .h-upload-list_item:hover .h-upload-list_item-name {
+  color: #409eff;
+}
+.modalContainer {
+  width: 50%;
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+.card {
+  width: 50%;
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card img {
+  width: 300px;
+  height: 400px;
+}
+.modalImg {
+  width: 500px !important;
+  height: 500px !important;
+}

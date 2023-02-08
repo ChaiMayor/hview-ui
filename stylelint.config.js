@@ -22,6 +22,7 @@ module.exports = {
 				],
 			},
 		],
+		"import-notation": "string",
 		"function-no-unknown": null,
 		"annotation-no-unknown": null,
 		"selector-class-pattern": null,

@@ -1,0 +1,61 @@
+{
+	"name": "hview-plus",
+	"version": "1.3.13",
+	"main": "lib/components/index.js",
+	"module": "es/packages/index.mjs",
+	"unpkg": "dist/index.full.min.js",
+	"jsdelivr": "dist/index.full.min.js",
+	"files": [
+		"es",
+		"lib"
+	],
+	"exports": {
+		".": {
+			"types": "./es/components/index.d.ts",
+			"import": "./es/packages/index.mjs",
+			"require": "./lib/packages/index.js"
+		},
+		"./es": "./es/packages/index.mjs",
+		"./lib": "./lib/packages/index.js",
+		"./es/*.mjs": "./es/packages/*.mjs",
+		"./es/*": "./es/packages/*.mjs",
+		"./lib/*.js": "./lib/packages/*.js",
+		"./lib/*": "./lib/packages/*.js",
+		"./*": "./*"
+	},
+	"homepage": "https://chai-mayor.gitee.io/hview-ui/",
+	"scripts": {
+		"release": "release-it --only-version"
+	},
+	"repository": {
+		"type": "github",
+		"url": "https://github.com/ChaiMayor/hview-ui"
+	},
+	"keywords": [
+		"hview-plus",
+		"hview-ui",
+		"hview",
+		"component library",
+		"ui framework",
+		"ui",
+		"vue"
+	],
+	"dependencies": {
+		"@vue/shared": "^3.2.37",
+		"dayjs": "^1.11.3",
+		"lodash": "^4.17.21",
+		"lodash-es": "^4.17.21",
+		"lodash-unified": "^1.0.2",
+		"@types/lodash": "^4.14.182",
+		"@types/lodash-es": "^4.17.6",
+		"@vueuse/core": "^9.1.0"
+	},
+	"devDependencies": {
+		"@types/node": "*",
+		"vue": "^3.2.37"
+	},
+	"author": "芜湖起飞队",
+	"license": "MIT",
+	"description": "基于Vue3的UI组件库，搭配了完善了文档库供其参考",
+	"types": "es/components/index.d.ts"
+}

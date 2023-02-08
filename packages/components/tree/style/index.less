@@ -1,0 +1,47 @@
+@import "../../../common/index.less";
+
+.h-tree {
+  position: relative;
+  color: #606266;
+  cursor: default;
+}
+
+.h-tree-node {
+  width: 100%;
+  white-space: nowrap;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.h-tree-node__content {
+  display: flex;
+  align-items: center;
+  height: 26px;
+  cursor: pointer;
+  &:hover {
+    background: var(--hv-tree-hover-color);
+  }
+}
+
+.h-tree-node__expand-icon {
+  cursor: pointer;
+  color: #c0c4cc;
+  width: 14px;
+  height: 14px;
+  padding: 6px;
+  display: inline-block;
+  line-height: 14px;
+  // 覆盖docs的全局样式
+  box-sizing: content-box !important;
+  transition: all 0.2s ease;
+}
+
+.expanded {
+  transform: rotate(90deg);
+}
+.h-tree-node-checkbox {
+  margin-right: 0;
+}
+.h-tree-ul-box {
+  padding-left: 5px;
+}

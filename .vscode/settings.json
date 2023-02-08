@@ -19,3 +19,4 @@
 	"stylelint.customSyntax": "postcss-less",
 	"stylelint.validate": ["css", "less", "postcss", "scss", "vue", "sass"]
 }
+  

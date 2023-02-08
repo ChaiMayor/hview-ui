@@ -1,0 +1,167 @@
+@import "../../../common/index.less";
+
+.@{prefix}-carousel {
+  position: relative;
+  &--horizontal {
+    overflow-x: hidden;
+  }
+
+  &--vertical {
+    overflow-y: hidden;
+  }
+
+  &-container {
+    position: relative;
+    height: 300px;
+  }
+
+  &-arrow {
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    height: 45px;
+    width: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 25%;
+    background-color: rgba(31, 45, 61, 0.1);
+    color: white;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 12px;
+
+    &-left {
+      left: 10px;
+    }
+
+    &-right {
+      right: 10px;
+    }
+
+    &:hover {
+      background-color: rgba(31, 45, 61, 0.5);
+    }
+
+    i {
+      cursor: pointer;
+    }
+  }
+
+  &-indicators {
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+
+    &--horizontal {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--vertical {
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &-outside {
+      bottom: 26px;
+      text-align: center;
+      position: static;
+      transform: none;
+      &:hover button {
+        opacity: 0.64;
+      }
+      button {
+        background-color: var(--hv-border-color-hover);
+        opacity: 0.24;
+      }
+    }
+
+    &-labels {
+      left: 0;
+      right: 0;
+      transform: none;
+      text-align: center;
+
+      &-button {
+        height: auto;
+        width: auto;
+        padding: 2px 18px;
+        font-size: 12px;
+        color: black;
+      }
+
+      &-indicator {
+        padding: 6px 4px;
+      }
+    }
+  }
+
+  &-indicator {
+    background-color: transparent;
+    cursor: pointer;
+    list-style: none;
+    &:hover &-button {
+      opacity: 0.72;
+    }
+
+    &--horizontal {
+      display: inline-block;
+      padding: 12px 4px;
+    }
+
+    &--vertical {
+      padding: 4px 12px;
+      button {
+        width: 9px;
+        height: 9px;
+      }
+    }
+
+    &-active {
+      button {
+        opacity: 1;
+      }
+    }
+    &-button {
+      display: block;
+      opacity: 0.48;
+      background-color: var(--hv-mask-color);
+      border: none;
+      outline: none;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      transition: 0.5s;
+      &--circle {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+      &--rect {
+        width: 15px;
+        height: 4px;
+        border-radius: 5%;
+      }
+    }
+  }
+}
+
+.carousel-arrow-left-enter-from,
+.carousel-arrow-left-leave-active {
+  transform: translateY(-50%) translateX(-10px);
+  opacity: 0;
+}
+
+.carousel-arrow-right-enter-from,
+.carousel-arrow-right-leave-active {
+  transform: translateY(-50%) translateX(10px);
+  opacity: 0;
+}

@@ -1,0 +1,131 @@
+@import "../../../common/index.less";
+.@{prefix}-progress {
+  position: relative;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+
+  &-text {
+    font-size: 14px;
+    color: var(--hv-text-color-regular);
+    margin-left: 5px;
+    min-width: 50px;
+    line-height: 1;
+
+    i {
+      display: block;
+    }
+  }
+
+  &--circle,
+  &--dashboard {
+    display: inline-block;
+
+    .@{prefix}-progress-text {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      transform: translate(0, -50%);
+
+      i {
+        vertical-align: middle;
+        display: inline-block;
+      }
+    }
+  }
+
+  &-without-text {
+    .text {
+      display: none;
+    }
+
+    .h-progress-bar {
+      padding-right: 0;
+      margin-right: 0;
+      display: block;
+    }
+  }
+
+  &-text-inside .@{prefix}-progress-bar {
+    padding-right: 0;
+    margin-right: 0;
+  }
+}
+.h-progress--success .h-progress-text {
+  color: var(--hv-color-success);
+}
+.h-progress--success .h-progress-bar-inner {
+  background-color: var(--hv-color-success);
+}
+.h-progress--warning .h-progress-text {
+  color: var(--hv-color-warning);
+}
+.h-progress--warning .h-progress-bar-inner {
+  background-color: var(--hv-color-warning);
+}
+.h-progress--error .h-progress-text {
+  color: var(--hv-color-danger);
+}
+.h-progress--error .h-progress-bar-inner {
+  background-color: var(--hv-color-danger);
+}
+
+.@{prefix}-progress-bar {
+  flex-grow: 1;
+  box-sizing: border-box;
+
+  &-outer {
+    height: 6px;
+    border-radius: 100px;
+    background-color: var(--hv-border-color-light);
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+  }
+  &-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--hv-color-primary);
+    text-align: right;
+    border-radius: 100px;
+    line-height: 1.4;
+    white-space: nowrap;
+    transition: width 0.6s ease;
+    &Text {
+      display: inline-block;
+      vertical-align: middle;
+      color: #fff;
+      font-size: 12px;
+      margin: 0 5px;
+    }
+  }
+  &-innerindeterminate {
+    transform: translateZ(0);
+    animation: indeterminate 3s infinite;
+  }
+}
+
+@keyframes progress {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 32px 0;
+  }
+}
+
+@keyframes indeterminate {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}

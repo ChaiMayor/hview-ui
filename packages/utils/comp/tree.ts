@@ -24,7 +24,7 @@ export function deepCopy(data: any) {
 	const t = typeOf(data);
 
 	if (t === "array") {
-		const arr: Object[] = [];
+		const arr: object[] = [];
 		for (let i = 0; i < data.length; i++) {
 			arr.push(deepCopy(data[i]));
 		}

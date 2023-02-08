@@ -3,6 +3,7 @@ import App from "./App.vue";
 const app = createApp(App);
 
 import hviewPlus from "hview-plus";
+import "hview-plus/theme-chalk/style.css";
 app.use(hviewPlus);
 
 // import { Button } from "hview-plus";

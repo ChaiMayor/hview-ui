@@ -11,3 +11,23 @@
 		padding: @padding-vertical @padding-horizontal;
 	}
 }
+
+#colors() {
+	primary: var(--hv-color-primary);
+	success: var(--hv-color-success);
+	info: var(--hv-color-info);
+	danger: var(--hv-color-danger);
+	warning: var(--hv-color-warning);
+
+	-primary-hover: rgb(var(--hv-color-primary-rgb));
+	-success-hover: var(--hv-color-hover-success);
+	-info-hover: var(--hv-color-hover-info);
+	-danger-hover: var(--hv-color-hover-danger);
+	-warning-hover: var(--hv-color-hover-warning);
+
+	-primary-disabled: var(--hv-color-disabled-primary);
+	-success-disabled: var(--hv-color-disabled-success);
+	-info-disabled: var(--hv-color-disabled-info);
+	-danger-disabled: var(--hv-color-disabled-danger);
+	-warning-disabled: var(--hv-color-disabled-warning);
+}

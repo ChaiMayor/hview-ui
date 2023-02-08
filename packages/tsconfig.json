@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"jsx": "preserve",
+		"strict": false,
+		"target": "ES2015",
+		"rootDir": ".",
+		"removeComments": true,
+		"isolatedModules": true,
+		"module": "commonjs",
+		"declaration": true,
+		"sourceMap": true,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"moduleResolution": "Node",
+		"lib": ["esnext", "dom"]
+	}
+}

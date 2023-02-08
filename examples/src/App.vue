@@ -1,11 +1,9 @@
 <template>
 	<div>
-		<h-button>xixihaha</h-button>
+		<h-button type="primary">xixihaha</h-button>
 	</div>
 </template>
 
-<script lang="ts" setup>
-console.log("66");
-</script>
+<script lang="ts" setup></script>
 
 <style scoped></style>

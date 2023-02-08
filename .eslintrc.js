@@ -13,12 +13,12 @@ module.exports = {
 		"plugin:prettier/recommended",
 	],
 	overrides: [],
-	parser: "vue-eslint-parser",
 	parserOptions: {
 		ecmaVersion: "latest",
 		sourceType: "module",
 		parser: "@typescript-eslint/parser",
 	},
+	parser: "vue-eslint-parser",
 	plugins: ["vue", "@typescript-eslint"],
 	rules: {
 		// 组件名称不是多字母组成，会报这个错误“Component name “XXX“ should always be multi-word”。我们的组件很多是拼音简写，所以经常会有这个错误
@@ -29,5 +29,6 @@ module.exports = {
 		// 不检查 ts-ignore
 		// refer: https://blog.csdn.net/cc18868876837/article/details/116663244
 		"@typescript-eslint/ban-ts-comment": "off",
+		"@typescript-eslint/no-explicit-any": ["off"],
 	},
 };

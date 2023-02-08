@@ -9,8 +9,8 @@
 		"esModuleInterop": true,
 		"moduleResolution": "Node",
 		"lib": ["esnext", "dom"],
-		// "rootDir": ".",
-		"rootDirs": ["./", "./packages", "./packages/components"],
+		"rootDir": ".",
+		// "rootDirs": ["./", "./packages", "./packages/components"],
 		"paths": {
 			"@/*": ["packages/components/src/*"],
 			"exam/*": ["site/docs/examples/*"],

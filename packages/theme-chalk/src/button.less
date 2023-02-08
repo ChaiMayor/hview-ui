@@ -1,8 +1,9 @@
-@import url("common/var.less");
-@import url("mixnis/mixins.less");
-@import url("mixins/utils");
+@import "common/icon.less";
+@import "common/color.less";
+@import "mixins/config.less";
+@import "mixins/mixins.less";
 
-.@{prefix}-button {
+.@{namespace}-button {
 	box-sizing: border-box;
 	display: inline-block;
 	padding: 10px 16px;
@@ -22,7 +23,7 @@
 	transition: 0.1s;
 	transition: color 0.3s, border 0.3s, background 0.3s;
 
-	.@{prefix}-button-text {
+	.@{namespace}-button-text {
 		display: inline-block;
 		margin: 0 4px;
 	}
@@ -33,14 +34,14 @@
 	}
 }
 
-.@{prefix}-button.is-disabled {
+.@{namespace}-button.is-disabled {
 	color: var(--hv-button-disabled-text-color);
 	cursor: not-allowed;
 	background: var(--hv-button-bg-color);
 	background-image: none;
 }
 
-.@{prefix}-button--primary {
+.@{namespace}-button--primary {
 	color: #fff;
 	background-color: #colors[primary];
 	border-color: var(--hv-color-primary);
@@ -52,7 +53,7 @@
 	}
 }
 
-.@{prefix}-button--primary.is-plain {
+.@{namespace}-button--primary.is-plain {
 	color: var(--hv-color-primary);
 	background: var(--hv-button-primary-plain);
 	border-color: var(--hv-button-primary-plain-border);
@@ -64,26 +65,26 @@
 	}
 }
 
-.@{prefix}-button--primary.is-disabled,
-.@{prefix}-button--primary.is-disabled:active,
-.@{prefix}-button--primary.is-disabled:focus,
-.@{prefix}-button--primary.is-disabled:hover {
+.@{namespace}-button--primary.is-disabled,
+.@{namespace}-button--primary.is-disabled:active,
+.@{namespace}-button--primary.is-disabled:focus,
+.@{namespace}-button--primary.is-disabled:hover {
 	color: #fff;
 	background-color: #a0cfff;
 	border-color: #a0cfff;
 }
 
 //朴素按钮禁用
-.@{prefix}-button--primary.is-disabled.is-plain,
-.@{prefix}-button--primary.is-disabled.is-plain:active,
-.@{prefix}-button--primary.is-disabled.is-plain:focus,
-.@{prefix}-button--primary.is-disabled.is-plain:hover {
+.@{namespace}-button--primary.is-disabled.is-plain,
+.@{namespace}-button--primary.is-disabled.is-plain:active,
+.@{namespace}-button--primary.is-disabled.is-plain:focus,
+.@{namespace}-button--primary.is-disabled.is-plain:hover {
 	color: #a0b1e7;
 	background: var(--hv-button-primary-plain);
 	border-color: var(--hv-button-primary-plain-border);
 }
 
-.@{prefix}-button--text {
+.@{namespace}-button--text {
 	padding-right: 0;
 	padding-left: 0;
 	color: var(--hv-color-primary);
@@ -97,7 +98,7 @@
 	}
 }
 
-.@{prefix}-button--success {
+.@{namespace}-button--success {
 	color: #fff;
 	background-color: #colors[success];
 	border-color: #67c23a;
@@ -109,7 +110,7 @@
 	}
 }
 
-.@{prefix}-button--success.is-plain {
+.@{namespace}-button--success.is-plain {
 	color: #67c23a;
 	background: var(--hv-button-success-plain);
 	border-color: 1px solid var(--hv-button-success-plain-border);
@@ -121,26 +122,26 @@
 	}
 }
 
-.@{prefix}-button--success.is-disabled,
-.@{prefix}-button--success.is-disabled:active,
-.@{prefix}-button--success.is-disabled:focus,
-.@{prefix}-button--success.is-disabled:hover {
+.@{namespace}-button--success.is-disabled,
+.@{namespace}-button--success.is-disabled:active,
+.@{namespace}-button--success.is-disabled:focus,
+.@{namespace}-button--success.is-disabled:hover {
 	color: #fff;
 	background-color: #b3e19d;
 	border-color: #b3e19d;
 }
 
 //朴素按钮禁用
-.@{prefix}-button--success.is-disabled.is-plain,
-.@{prefix}-button--success.is-disabled.is-plain:active,
-.@{prefix}-button--success.is-disabled.is-plain:focus,
-.@{prefix}-button--success.is-disabled.is-plain:hover {
+.@{namespace}-button--success.is-disabled.is-plain,
+.@{namespace}-button--success.is-disabled.is-plain:active,
+.@{namespace}-button--success.is-disabled.is-plain:focus,
+.@{namespace}-button--success.is-disabled.is-plain:hover {
 	color: #a4da89;
 	background: var(--hv-button-success-plain);
 	border-color: 1px solid var(--hv-button-success-plain-border);
 }
 
-.@{prefix}-button--info {
+.@{namespace}-button--info {
 	color: #fff;
 	background-color: #colors[info];
 	border-color: #909399;
@@ -152,7 +153,7 @@
 	}
 }
 
-.@{prefix}-button--info.is-plain {
+.@{namespace}-button--info.is-plain {
 	color: #909399;
 	background: var(--hv-button-info-plain);
 	border-color: 1px solid var(--hv-button-info-plain-border);
@@ -164,10 +165,10 @@
 	}
 }
 
-.@{prefix}-button--info.is-disabled,
-.@{prefix}-button--info.is-disabled:active,
-.@{prefix}-button--info.is-disabled:focus,
-.@{prefix}-button--info.is-disabled:hover {
+.@{namespace}-button--info.is-disabled,
+.@{namespace}-button--info.is-disabled:active,
+.@{namespace}-button--info.is-disabled:focus,
+.@{namespace}-button--info.is-disabled:hover {
 	color: #fff;
 	cursor: not-allowed;
 	background-color: #c8c9cc;
@@ -175,16 +176,16 @@
 }
 
 //朴素按钮禁用
-.@{prefix}-button--info.is-disabled.is-plain,
-.@{prefix}-button--info.is-disabled.is-plain:active,
-.@{prefix}-button--info.is-disabled.is-plain:focus,
-.@{prefix}-button--info.is-disabled.is-plain:hover {
+.@{namespace}-button--info.is-disabled.is-plain,
+.@{namespace}-button--info.is-disabled.is-plain:active,
+.@{namespace}-button--info.is-disabled.is-plain:focus,
+.@{namespace}-button--info.is-disabled.is-plain:hover {
 	color: #bcbec2;
 	background: var(--hv-button-info-plain);
 	border-color: 1px solid var(--hv-button-info-plain-border);
 }
 
-.@{prefix}-button--warning {
+.@{namespace}-button--warning {
 	color: #fff;
 	background-color: #e6a23c;
 	border-color: #e6a23c;
@@ -196,7 +197,7 @@
 	}
 }
 
-.@{prefix}-button--warning.is-plain {
+.@{namespace}-button--warning.is-plain {
 	color: #e6a23c;
 	background: var(--hv-button-warning-plain);
 	border-color: 1px solid var(--hv-button-warning-plain-border);
@@ -208,26 +209,26 @@
 	}
 }
 
-.@{prefix}-button--warning.is-disabled,
-.@{prefix}-button--warning.is-disabled:active,
-.@{prefix}-button--warning.is-disabled:focus,
-.@{prefix}-button--warning.is-disabled:hover {
+.@{namespace}-button--warning.is-disabled,
+.@{namespace}-button--warning.is-disabled:active,
+.@{namespace}-button--warning.is-disabled:focus,
+.@{namespace}-button--warning.is-disabled:hover {
 	color: #fff;
 	background-color: #f3d19e;
 	border-color: #f3d19e;
 }
 
 //朴素按钮禁用
-.@{prefix}-button--warning.is-disabled.is-plain,
-.@{prefix}-button--warning.is-disabled.is-plain:active,
-.@{prefix}-button--warning.is-disabled.is-plain:focus,
-.@{prefix}-button--warning.is-disabled.is-plain:hover {
+.@{namespace}-button--warning.is-disabled.is-plain,
+.@{namespace}-button--warning.is-disabled.is-plain:active,
+.@{namespace}-button--warning.is-disabled.is-plain:focus,
+.@{namespace}-button--warning.is-disabled.is-plain:hover {
 	color: #f0c78a;
 	background: var(--hv-button-warning-plain);
 	border-color: 1px solid var(--hv-button-warning-plain-border);
 }
 
-.@{prefix}-button--danger {
+.@{namespace}-button--danger {
 	color: #fff;
 	background-color: #f56c6c;
 	border-color: #f56c6c;
@@ -239,24 +240,24 @@
 	}
 }
 
-.@{prefix}-button--danger.is-disabled,
-.@{prefix}-button--danger.is-disabled:active,
-.@{prefix}-button--danger.is-disabled:focus,
-.@{prefix}-button--danger.is-disabled:hover {
+.@{namespace}-button--danger.is-disabled,
+.@{namespace}-button--danger.is-disabled:active,
+.@{namespace}-button--danger.is-disabled:focus,
+.@{namespace}-button--danger.is-disabled:hover {
 	color: #fff;
 	background-color: #fab6b6;
 	border-color: #fab6b6;
 }
 
-.@{prefix}-button--danger.is-plain,
-.@{prefix}-button--danger.is-plain:active,
-.@{prefix}-button--danger.is-plain:focus {
+.@{namespace}-button--danger.is-plain,
+.@{namespace}-button--danger.is-plain:active,
+.@{namespace}-button--danger.is-plain:focus {
 	color: #f09d9d;
 	background: var(--hv-button-danger-plain);
 	border-color: 1px solid var(--hv-button-danger-plain-border);
 }
 
-.@{prefix}-button--danger.is-plain {
+.@{namespace}-button--danger.is-plain {
 	&:hover {
 		color: #fff;
 		background-color: #f78989;
@@ -269,19 +270,19 @@
 }
 
 // size
-.@{prefix}-button--medium {
+.@{namespace}-button--medium {
 	padding: 10px 20px;
 	font-size: 14px;
 	border-radius: 4px;
 }
 
-.@{prefix}-button--small {
+.@{namespace}-button--small {
 	padding: 9px 15px;
 	font-size: 12px;
 	border-radius: 3px;
 }
 
-.@{prefix}-button--mini {
+.@{namespace}-button--mini {
 	padding: 7px 15px;
 	font-size: 12px;
 	border-radius: 3px;

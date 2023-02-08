@@ -1,0 +1,125 @@
+@import "../../../common/index.less";
+
+.h-message {
+  // min-width: 250px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ebeef5;
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  background-color: #f4f4f5;
+  transform: translateX(-50%);
+  transition: opacity 0.3s, transform 0.4s, top 0.4s;
+  overflow: hidden;
+  padding: 15px 15px 15px 20px;
+  display: flex;
+  align-items: center;
+  z-index: 50;
+}
+
+.h-message-fade-enter-active,
+.h-message-fade-leave-active {
+  opacity: 0;
+  transform: translate(-50%, -100%);
+}
+
+.h-message.is-center {
+  justify-content: center;
+}
+
+.h-message.is-closable .h-message__content {
+  padding-right: 16px;
+}
+
+.h-message p {
+  margin: 0;
+}
+
+.h-message--info {
+  background-color: #f4f4f5;
+  border-color: #e1f3d8;
+}
+
+.h-message--info .h-message__content {
+  color: #9b9ea3;
+}
+
+.h-message--success {
+  background-color: #f0f9eb;
+  border-color: #e1f3d8;
+}
+
+.h-message--success .h-message__content {
+  color: #67c23a;
+}
+
+.h-message--warning {
+  background-color: #fdf6ec;
+  border-color: #faecd8;
+}
+
+.h-message--warning .h-message__content {
+  color: #e6a23c;
+}
+
+.h-message--error {
+  background-color: #fef0f0;
+  border-color: #fde2e2;
+}
+
+.h-message--error .h-message__content {
+  color: #f56c6c;
+}
+
+.h-message__icon {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.h-message__content {
+  padding: 0;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.h-message__content:focus {
+  outline-width: 0;
+}
+
+.h-message__closeBtn {
+  transform: translateY(10%);
+  margin-left: 6px;
+  cursor: pointer;
+  color: #c0c4cc;
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+
+.h-message__closeBtn:focus {
+  outline-width: 0;
+}
+
+.h-icon-close:before {
+  content: "\e6a7";
+}
+
+.h-message__closeBtn:hover {
+  color: #909399;
+}
+
+.h-message .h-icon-success {
+  color: #67c23a;
+}
+
+.h-message .h-icon-error {
+  color: #f56c6c;
+}
+
+.h-message .h-icon-info {
+  color: #909399;
+}
+
+.h-message .h-icon-warning {
+  color: #e6a23c;
+}
