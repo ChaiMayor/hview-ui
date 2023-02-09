@@ -1,7 +1,8 @@
 import type { ExtractPropTypes } from "vue";
-// import { definePropType } from "packages/utils";
+import { definePropType } from "@hview-plus/utils";
 import { PropType } from "vue";
-export const imageProps = {
+
+export const ImageProps = {
   hideOnClickModal: {
     type: Boolean,
     default: false,
@@ -24,7 +25,7 @@ export const imageProps = {
     default: false,
   },
   scrollContainer: {
-    type: HTMLElement,
+    type: definePropType<HTMLElement>(null),
   },
   // 懒加载的图片地址列表
   lazyList: {
@@ -59,4 +60,5 @@ export const imageProps = {
     default: 1.2,
   },
 };
-export type ImageProps = ExtractPropTypes<typeof imageProps>;
+
+export type ImageProps = ExtractPropTypes<typeof ImageProps>;

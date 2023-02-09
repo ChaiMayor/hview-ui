@@ -49,9 +49,9 @@ export default {
       router.onAfterRouteChanged = () => {
         NProgress.done();
       };
-    }
 
-    app.component("HCode", hpCode);
+      app.component("HCode", hpCode);
+    }
   },
 
   setup() {

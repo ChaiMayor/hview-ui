@@ -49,9 +49,11 @@
 </template>
 
 <script setup lang="ts">
-import { computed, nextTick, onMounted, ref } from "vue";
-import { imageProps } from "./image";
-const props = defineProps(imageProps);
+import { computed, watch, onMounted, ref } from "vue";
+import { ImageProps } from "./image";
+import HImageViewer from "../../image-viewer";
+
+const props = defineProps(ImageProps);
 const emits = defineEmits(["load", "error", "switch", "close"]);
 
 const imageSrc = ref<string | undefined>();
@@ -60,9 +62,9 @@ const isLoading = ref(true);
 
 const showViewer = ref<boolean>(null);
 // 获取容器结点
-const container = ref<HTMLElement>();
+const container = ref<any>(null);
 
-const scrollContainer = ref<HTMLElement>();
+const scrollContainer = ref<any>(null);
 
 // 动态加载图片的fit样式
 const imageStyle = computed(() => {
@@ -165,18 +167,26 @@ const lazyLoad = (elRef) => {
   // 监听滚动事件，做节流处理
   root.addEventListener("scroll", throttle(lazyHandleFn, 200, true));
 };
-onMounted(() => {
-  nextTick(() => {
+
+watch(
+  () => props.scrollContainer,
+  () => {
     //拿到滚动容器的dom
     let containerDom: any = null;
-    if (props.scrollContainer) {
-      containerDom = props.scrollContainer;
+    if (props?.scrollContainer) {
+      containerDom = props?.scrollContainer;
     } else {
       containerDom = window;
     }
     lazyLoad(containerDom);
-  });
-});
+  },
+);
+
+// onMounted(() => {
+//   nextTick(() => {
+
+//   });
+// });
 //初始预览图像索引
 const initialSrc = () => {
   if (preview.value) {
@@ -200,5 +210,3 @@ export default {
   name: "HImage",
 };
 </script>
-
-<style lang="scss" scoped></style>

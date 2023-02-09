@@ -48,6 +48,9 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue";
 import { imageViewerProps } from "./image-viewer";
+import HIcon from "../../icon";
+import HModal from "../../modal";
+
 const props = defineProps(imageViewerProps);
 const emits = defineEmits(["update:visable", "closePreview", "switch"]);
 
@@ -59,7 +62,7 @@ const transform = ref({
 });
 const canvs = ref<HTMLElement>(null);
 const imgRefs = ref<HTMLElement[]>([]);
-const modelVisable = ref<Boolean>(false);
+const modelVisable = ref<boolean>(false);
 const openModal = () => {
   if (props.visable === true) {
     modelVisable.value = true;
@@ -161,4 +164,3 @@ export default {
   name: "HImageViewer",
 };
 </script>
-<style lang="scss" scoped></style>

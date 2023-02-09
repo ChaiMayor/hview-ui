@@ -65,4 +65,3 @@ export default {
   name: "HModal",
 };
 </script>
-<style lang="less" scoped></style>

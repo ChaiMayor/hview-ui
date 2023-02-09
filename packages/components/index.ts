@@ -28,9 +28,9 @@ import { Timeline, TimelineItem } from "./timeline";
 import { default as Backtop } from "./backtop";
 import { default as InputNumber } from "./input-number";
 import { default as Switch } from "./switch";
-import { default as image } from "./image";
-import { default as imageViewer } from "./image-viewer";
-import { default as popover } from "./popover";
+import { default as Image } from "./image";
+import { default as ImageViewer } from "./image-viewer";
+import { default as Popover } from "./popover";
 import { Breadcrumb, BreadcrumbItem } from "./breadcrumb";
 import { Descriptions, DescriptionsItem } from "./descriptions";
 
@@ -70,9 +70,9 @@ export {
   Backtop,
   InputNumber,
   Switch,
-  image,
-  imageViewer,
-  popover,
+  Image,
+  ImageViewer,
+  Popover,
   Breadcrumb,
   BreadcrumbItem,
   Descriptions,
@@ -115,9 +115,9 @@ export default [
   Backtop,
   InputNumber,
   Switch,
-  image,
-  imageViewer,
-  popover,
+  Image,
+  ImageViewer,
+  Popover,
   Breadcrumb,
   BreadcrumbItem,
   Descriptions,
