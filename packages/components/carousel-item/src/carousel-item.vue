@@ -3,8 +3,7 @@
 		v-show="ready"
 		class="h-carousel-item"
 		:class="styleClass"
-		:style="itemStyle"
-		@click="handleItemClick">
+		:style="itemStyle">
 		<slot />
 	</div>
 </template>
@@ -27,7 +26,7 @@ const {
 	translate,
 	scale,
 	ready,
-	handleItemClick,
+	// handleItemClick,
 } = useCarouselItem(props, "HCarouselItem");
 
 const styleClass = computed(() => {

@@ -8,6 +8,7 @@ export const pkgPath = resolve(__dirname, `../`);
 export const playPath = resolve(__dirname, "../../packages/playground");
 export const reFinalPath = resolve(__dirname, `../../packages/${finalDir}`);
 export const reThemePath = resolve(__dirname, `../../packages/${themeDir}`);
+export const reRoot = resolve(__dirname, "../../");
 
 export const viteDist = resolve(__dirname, "../../site/docs/.vitepress/dist");
 // vitepress 目录

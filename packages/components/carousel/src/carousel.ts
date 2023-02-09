@@ -1,5 +1,5 @@
 import type { ExtractPropTypes, InjectionKey, Ref } from "vue";
-import type { CarouselItemProps } from "@/carousel-item/src/carousel-item";
+import type { CarouselItemProps } from "../../carousel-item/src/carousel-item";
 
 export const carouselProps = {
 	initialIndex: {

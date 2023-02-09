@@ -1,6 +1,6 @@
 // import { src, dest } from "gulp";
 import run from "../utils/run";
-import { root, viteDist, workflows } from "../utils/paths";
+import { reRoot, viteDist, workflows } from "../utils/paths";
 import { removeDir } from "../utils/delpath";
 import { copyDir } from "../utils/file";
 
@@ -16,7 +16,7 @@ export const removeVitepressDist = async () => {
 
 // 构建文档库 dist
 export const buildVitepressDist = async () => {
-	await run("pnpm run docs:build-other", root);
+	await run("pnpm run docs:build-other", reRoot);
 };
 
 // 复制 workflows 到指定目录

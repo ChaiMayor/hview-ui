@@ -200,7 +200,7 @@ importers:
     dependencies:
       '@vue/repl': 1.3.2_vue@3.2.45
       file-saver: 2.0.5
-      hview-plus: 1.3.13_vue@3.2.45
+      hview-plus: 1.3.15_vue@3.2.45
       jszip: 3.10.1
       vue: 3.2.45
     devDependencies:
@@ -905,18 +905,6 @@ packages:
     resolution: {integrity: sha512-H9XAx3hc0BQHY6l+IFSWHDySypcXsvsuLhgYLUGywmJ5pswRVQJUHpOsobnLYp2ZUaUlKiKDrgWWhosOwAEM8Q==}
     engines: {node: '>=6.9.0'}
     dev: true
-
-  /@hview-plus/locale/1.0.1_vue@3.2.45:
-    resolution: {integrity: sha512-4aLdJIebaOq5TkzykWnzZ3j+FUVWQ6l4GaAbwQzcuBSwbQKeqZ8jRmBb6YrZumxS+YXhfVd2ZZInZB/QWk8ViA==}
-    dependencies:
-      vue-i18n: 9.2.2_vue@3.2.45
-    transitivePeerDependencies:
-      - vue
-    dev: false
-
-  /@hview-plus/utils/1.0.1:
-    resolution: {integrity: sha512-NTweCDKilZdPJ+QwGqwdie4WxwETaxhgCPImBlN+Hm8tUdDYrWHXCFW5S0T2MKvNr6fEn/bkNj/i0JvknoTO3Q==}
-    dev: false
 
   /@iarna/toml/2.2.5:
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
@@ -5807,11 +5795,9 @@ packages:
     hasBin: true
     dev: true
 
-  /hview-plus/1.3.13_vue@3.2.45:
-    resolution: {integrity: sha512-niAawhOqgacprkg9/0TwuxXhzy9zwmp5OAW8Kf/6IXSmnRfkktdnJ68BfWtTDrW3wP4kveB2rGWERBQUdkybww==}
+  /hview-plus/1.3.15_vue@3.2.45:
+    resolution: {integrity: sha512-SwROE3HtEZLHl4212Y00zXAydY46FKz9veDY6OFmj8J6s/vpEqHDB9tQaYQjCj5Y9uxJFW/mhlBEU9lKF44RVQ==}
     dependencies:
-      '@hview-plus/locale': 1.0.1_vue@3.2.45
-      '@hview-plus/utils': 1.0.1
       '@types/lodash': 4.14.191
       '@types/lodash-es': 4.17.6
       '@vue/shared': 3.2.47
@@ -10547,19 +10533,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
-
-  /vue-i18n/9.2.2_vue@3.2.45:
-    resolution: {integrity: sha512-yswpwtj89rTBhegUAv9Mu37LNznyu3NpyLQmozF3i1hYOhwpG8RjcjIFIIfnu+2MDZJGSZPXaKWvnQA71Yv9TQ==}
-    engines: {node: '>= 14'}
-    peerDependencies:
-      vue: ^3.0.0
-    dependencies:
-      '@intlify/core-base': 9.2.2
-      '@intlify/shared': 9.2.2
-      '@intlify/vue-devtools': 9.2.2
-      '@vue/devtools-api': 6.5.0
-      vue: 3.2.45
-    dev: false
 
   /vue-i18n/9.2.2_vue@3.2.47:
     resolution: {integrity: sha512-yswpwtj89rTBhegUAv9Mu37LNznyu3NpyLQmozF3i1hYOhwpG8RjcjIFIIfnu+2MDZJGSZPXaKWvnQA71Yv9TQ==}

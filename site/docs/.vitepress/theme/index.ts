@@ -5,7 +5,6 @@ import "element-plus/dist/index.css";
 import "./style/themes.less";
 // @ts-ignore
 import hpCode from "../home/hp-source-code.vue";
-import { watch, nextTick } from "vue";
 
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
@@ -34,15 +33,24 @@ const getVersionHp = () => {
 
 // @ts-ignore
 import MyLayout from "../home/layout.vue";
-import { useRouter, useData, useRoute, inBrowser } from "vitepress";
+import { inBrowser } from "vitepress";
 
 export default {
 	...Theme,
 
-	enhanceApp({ app }) {
+	enhanceApp({ app, router }) {
 		if (inBrowser) {
 			app.use(hp);
+
+			// refer: https://github.com/vuejs/vitepress/issues/1910
+			router.onBeforeRouteChange = () => {
+				NProgress.start();
+			};
+			router.onAfterRouteChanged = () => {
+				NProgress.done();
+			};
 		}
+
 		app.component("HCode", hpCode);
 	},
 
@@ -50,15 +58,6 @@ export default {
 		if (inBrowser) {
 			getVersionHp();
 		}
-
-		const router = useRouter();
-		// refer: https://github.com/vuejs/vitepress/issues/318
-		watch(router.route, (newVal, oldVal) => {
-			NProgress.start();
-			nextTick(() => {
-				NProgress.done();
-			});
-		});
 	},
 
 	Layout: MyLayout,

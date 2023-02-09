@@ -82,11 +82,13 @@ export const useOrderedChildren = <T extends { uid: number }>(
 		);
 	};
 
-	return {
+	const result = {
 		children: orderedChildren,
 		addChild,
 		removeChild,
 	};
+
+	return result;
 };
 
 // 防抖间隔
@@ -326,7 +328,7 @@ export const useCarousel = (
 		setActiveItem,
 	});
 
-	return {
+	const result = {
 		root,
 		activeIndex,
 		arrowDisplay,
@@ -344,4 +346,6 @@ export const useCarousel = (
 		throttledArrowClick,
 		throttledIndicatorHover,
 	};
+
+	return result;
 };
