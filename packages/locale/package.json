@@ -1,10 +1,10 @@
 {
 	"name": "@hview-plus/locale",
 	"version": "1.0.2",
-	"description": "HviewUI locale",
+	"description": "Hview Plus locale",
 	"license": "MIT",
-	"main": "./index.ts",
-	"module": "./index.ts",
+	"main": "index.ts",
+	"module": "index.ts",
 	"scripts": {
 		"start": "gulp -f script/build/gulpfile.ts",
 		"build": "vite build"
@@ -19,6 +19,5 @@
 	"keywords": [
 		"hview-ui",
 		"vue3组件库"
-	],
-	"typings": "lib/index.d.ts"
+	]
 }

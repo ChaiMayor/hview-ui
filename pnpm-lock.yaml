@@ -141,6 +141,7 @@ importers:
 
   packages/components:
     specifiers:
+      '@hview-plus/hooks': workspace:*
       '@hview-plus/utils': workspace:*
       '@rollup/plugin-terser': ^0.4.0
       '@types/lodash': ^4.14.182
@@ -154,6 +155,7 @@ importers:
       lodash-unified: ^1.0.2
       vue: ^3.2.37
     dependencies:
+      '@hview-plus/hooks': link:../hooks
       '@hview-plus/utils': link:../utils
       '@types/lodash': 4.14.191
       '@types/lodash-es': 4.17.6

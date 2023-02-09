@@ -1,8 +1,12 @@
 {
 	"name": "@hview-plus/hooks",
-	"private": true,
+	"description": "Hview Plus composables",
 	"license": "MIT",
 	"main": "index.ts",
+	"module": "index.ts",
 	"version": "1.0.0",
-	"module": "index.ts"
+	"types": "index.d.ts",
+	"peerDependencies": {
+		"vue": "^3.2.37"
+	}
 }

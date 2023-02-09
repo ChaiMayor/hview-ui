@@ -13,6 +13,9 @@
 		"skipLibCheck": true,
 		"esModuleInterop": true,
 		"moduleResolution": "Node",
-		"lib": ["esnext", "dom"]
+		"lib": ["esnext", "dom"],
+		"paths": {
+			"@/*": ["components/*"]
+		}
 	}
 }

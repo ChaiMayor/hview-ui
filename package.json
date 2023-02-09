@@ -30,7 +30,9 @@
 	"license": "MIT",
 	"dependencies": {
 		"@hview-plus/components": "workspace: *",
-		"@hview-plus/eslint-config": "workspace: *",
+		"@hview-plus/directives": "workspace: *",
+		"@hview-plus/constants": "workspace: *",
+		"@hview-plus/hooks": "workspace: *",
 		"@hview-plus/locale": "workspace: *",
 		"@hview-plus/theme-chalk": "workspace: *",
 		"@hview-plus/utils": "workspace: *"
