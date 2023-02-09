@@ -38,6 +38,7 @@ const sidebar = {
       text: "Form 表单组件",
       items: [
         { text: "Input 输入框", link: "/components/input" },
+        { text: "Input Number 数字输入框", link: "/components/input-number" },
         { text: "Radio 单选框", link: "/components/radio" },
         { text: "Slider 滑块", link: "/components/slider" },
         { text: "Checkbox 复选框", link: "/components/checkbox" },
@@ -56,6 +57,13 @@ const sidebar = {
         { text: "Message 消息", link: "/components/message" },
         { text: "Timeline 时间线", link: "/components/timeline" },
         { text: "Tree 树形控件", link: "/components/tree" },
+      ],
+    },
+    {
+      text: "Navigation 导航",
+      items: [
+        { text: "Backtop 回到顶部", link: "/components/backtop" },
+        { text: "Breadcrumb 面包屑", link: "/components/breadcrumb" },
       ],
     },
     {
@@ -109,6 +117,7 @@ const sidebarEN = {
       text: "Form",
       items: [
         { text: "Input", link: "/components/input" },
+        { text: "Input Number", link: "/components/input-number" },
         { text: "Radio", link: "/components/radio" },
         { text: "Slider", link: "/components/slider" },
         { text: "Checkbox", link: "/components/checkbox" },
@@ -127,6 +136,13 @@ const sidebarEN = {
         { text: "Message", link: "/components/message" },
         { text: "Timeline", link: "/components/timeline" },
         { text: "Tree", link: "/components/tree" },
+      ],
+    },
+    {
+      text: "Navigation ",
+      items: [
+        { text: "Backtop", link: "/components/backtop" },
+        { text: "Breadcrumb", link: "/components/breadcrumb" },
       ],
     },
     {

@@ -2,6 +2,7 @@
 import basic from 'exam/scrollbar/basic.vue'
 import scrollbarX from 'exam/scrollbar/scrollbar-x.vue'
 import maxHeight from 'exam/scrollbar/max-height.vue'
+import manual from 'exam/scrollbar/manual.vue'
 // import  from './'
 </script>
 
@@ -31,6 +32,14 @@ import maxHeight from 'exam/scrollbar/max-height.vue'
 
 ::: code scrollbar/max-height
 <maxHeight></maxHeight>
+:::
+
+## 手动滚动
+
+通过使用 `setScrollTop` 与 `setScrollLeft` 方法，可以手动控制滚动条滚动。
+
+::: code scrollbar/manual
+<manual></manual>
 :::
 
 ## API

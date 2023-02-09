@@ -1,0 +1,270 @@
+.popover-box {
+  --geticonsite: 0;
+  display: inline-block;
+  position: relative;
+}
+.popover-box .popover-outbox {
+  min-width: 150px;
+  padding: 18px 20px;
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 1;
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1);
+}
+.popover-box-content {
+  overflow: auto;
+}
+.popover-box-content .popover-title {
+  color: #303133;
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.popover-box .top {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 12px;
+}
+.popover-box .top .popover-arrow {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  transform: translateX(-50%);
+  border-top: 6px solid #ffffff;
+  border-left: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+.popover-box .top-start {
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 12px;
+}
+.popover-box .top-start .popover-arrow {
+  position: absolute;
+  top: 100%;
+  left: var(--geticonsite);
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  transform: translateX(-50%);
+  border-top: 6px solid #ffffff;
+  border-left: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+.popover-box .top-end {
+  bottom: 100%;
+  right: 0;
+  margin-bottom: 12px;
+}
+.popover-box .top-end .popover-arrow {
+  position: absolute;
+  top: 100%;
+  right: var(--geticonsite);
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  transform: translateX(-50%);
+  border-top: 6px solid #ffffff;
+  border-left: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+.popover-box .bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 12px;
+}
+.popover-box .bottom .popover-arrow {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  transform: translateX(-50%);
+  border-top: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-bottom: 6px solid #ffffff;
+  border-right: 6px solid transparent;
+}
+.popover-box .bottom-start {
+  top: 100%;
+  left: 0;
+  margin-top: 12px;
+}
+.popover-box .bottom-start .popover-arrow {
+  position: absolute;
+  bottom: 100%;
+  left: var(--geticonsite);
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  transform: translateX(-50%);
+  border-top: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-bottom: 6px solid #ffffff;
+  border-right: 6px solid transparent;
+}
+.popover-box .bottom-end {
+  top: 100%;
+  right: 0;
+  margin-top: 12px;
+}
+.popover-box .bottom-end .popover-arrow {
+  position: absolute;
+  bottom: 100%;
+  right: var(--geticonsite);
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  transform: translateX(-50%);
+  border-top: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-bottom: 6px solid #ffffff;
+  border-right: 6px solid transparent;
+}
+.popover-box .left {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 12px;
+}
+.popover-box .left .popover-arrow {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  transform: translateY(-50%);
+  border-top: 6px solid transparent;
+  border-left: 6px solid #ffffff;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+.popover-box .left-start {
+  right: 100%;
+  background-color: #ffffff;
+  top: 0;
+  margin-right: 12px;
+}
+.popover-box .left-start .popover-arrow {
+  position: absolute;
+  left: 100%;
+  top: var(--geticonsite);
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  transform: translateY(-50%);
+  border-top: 6px solid transparent;
+  border-left: 6px solid #ffffff;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+.popover-box .left-end {
+  right: 100%;
+  background-color: #ffffff;
+  bottom: 0;
+  margin-right: 12px;
+}
+.popover-box .left-end .popover-arrow {
+  position: absolute;
+  left: 100%;
+  bottom: var(--geticonsite);
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  transform: translateY(-50%);
+  border-top: 6px solid transparent;
+  border-left: 6px solid #ffffff;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+.popover-box .right {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 12px;
+}
+.popover-box .right .popover-arrow {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  transform: translateY(-50%);
+  border-top: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid #ffffff;
+}
+.popover-box .right-start {
+  --geticonsite: 0;
+  left: 100%;
+  top: 0;
+  margin-left: 12px;
+}
+.popover-box .right-start .popover-arrow {
+  position: absolute;
+  right: 100%;
+  top: var(--geticonsite);
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  transform: translateY(-50%);
+  border-top: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid #ffffff;
+}
+.popover-box .right-end {
+  left: 100%;
+  bottom: 0;
+  margin-left: 12px;
+}
+.popover-box .right-end .popover-arrow {
+  position: absolute;
+  right: 100%;
+  bottom: var(--geticonsite);
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  transform: translateY(-50%);
+  border-top: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid #ffffff;
+}
+.popover-box .reference-content {
+  display: inline-block;
+}
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.6, 1);
+}
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  opacity: 0;
+}

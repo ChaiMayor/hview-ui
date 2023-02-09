@@ -10,7 +10,6 @@ export function useCtrlStyle() {
     return {
       pre: cell.status === "pre",
       next: cell.status === "next",
-      // active: isSameDay(),
       beSel: cell.status === "beSel",
       today: isToday(cell.date),
     };

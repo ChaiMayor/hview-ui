@@ -2,6 +2,7 @@
 import basic from 'exam/scrollbar/basic.vue'
 import scrollbarX from 'exam/scrollbar/scrollbar-x.vue'
 import maxHeight from 'exam/scrollbar/max-height.vue'
+import manual from 'exam/scrollbar/manual.vue'
 // import  from './'
 </script>
 
@@ -31,6 +32,14 @@ The scrollbar is displayed only when the element height exceeds the max height.
 
 ::: code scrollbar/max-height
 <maxHeight></maxHeight>
+:::
+
+## Manual scroll
+
+Use setScrollTop and setScrollLeft methods can control scrollbar manually.
+
+::: code scrollbar/manual
+<manual></manual>
 :::
 
 ## API

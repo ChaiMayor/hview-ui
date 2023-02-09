@@ -1,0 +1,112 @@
+@import "../../../common/index.less";
+
+
+.@{prefix}-descriptions {
+  box-sizing: border-box;
+  font-size: var(--hv-font-size-base);
+  color: var(--hv-text-color-primary);
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+
+    .@{prefix}-descriptions-title {
+      color: var(--hv-text-color-primary);
+      font-size: var(--hv-font-size-medium);
+      font-weight: bold;
+    }
+  }
+
+  .@{prefix}-descriptions-body {
+    background-color: var(--hv-fill-color-blank);
+
+    .@{prefix}-descriptions-table {
+      border-collapse: collapse;
+      width: 100%;
+      border: none;
+      border-spacing: 0;
+      border-color: #fff;
+      tbody {
+        border: none !important;
+      }
+      tr {
+        border: none !important;
+      }
+      tr:nth-child(2n) {
+        background-color: inherit !important;
+      }
+      .@{prefix}-descriptions-cell {
+        box-sizing: border-box;
+        text-align: left;
+        font-weight: normal;
+        line-height: 23px;
+        font-size: var(--hv-font-size-medium);
+
+        &-left {
+          text-align: left;
+        }
+
+        &-center {
+          text-align: center;
+        }
+
+        &-right {
+          text-align: right;
+        }
+      }
+
+      &.is-bordered-des {
+        .@{prefix}-descriptions-cell {
+          border: 1px solid var(--hv-border-color-light);
+          padding: 5px;/////////////////
+        }
+      }
+
+      &:not(.is-bordered-des) {
+        .@{prefix}-descriptions-cell{
+          padding-bottom: 6px !important;
+          border: none !important;
+        }
+        
+        
+      }
+    }
+  }
+
+  // @each $size in (large, small) {
+  //   @include m($size) {
+  //     font-size: map.get($input-font-size, $size);
+
+  //     @include e(header) {
+  //       margin-bottom: map.get($descriptions-header-margin-bottom, $size);
+
+  //       @include e(title) {
+  //         font-size: map.get($descriptions-title-font-size, $size);
+  //       }
+  //     }
+
+  //     .@{prefix}-descriptions-body{
+  //       .#{$namespace}-descriptions__table {
+  //         .#{$namespace}-descriptions__cell {
+  //           font-size: map.get($descriptions-cell-font-size, $size);
+  //         }
+
+  //         &.is-bordered {
+  //           .#{$namespace}-descriptions__cell {
+  //             padding: map.get($descriptions-bordered-cell-padding, $size);
+  //           }
+  //         }
+
+  //         &:not(.is-bordered) {
+  //           .#{$namespace}-descriptions__cell {
+  //             padding-bottom: map.get($descriptions-cell-padding-bottom, $size);
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+}
+

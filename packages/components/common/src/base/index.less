@@ -1,6 +1,7 @@
 @import "./icon.less";
 
 :root {
+  color-scheme: light;
   // 主要颜色
   --hv-color-white: #ffffff;
   --hv-color-black: #000000;
@@ -71,11 +72,11 @@
   --hv-divider-bg-color: #fff;
   --hv-divider-color: #2b2b2c;
 
-  --hv-box-shadow: 0px 12px 32px 4pxrgba (0, 0, 0, 0.04), 0px 8px 20pxrgba (0, 0, 0, 0.08);
-  --hv-box-shadow-light: 0px 0px 12pxrgba (0, 0, 0, 0.12);
-  --hv-box-shadow-lighter: 0px 0px 6pxrgba (0, 0, 0, 0.12);
-  --hv-box-shadow-dark: 0px 16px 48px 16pxrgba (0, 0, 0, 0.08), 0px 12px 32pxrgba (0, 0, 0, 0.12),
-    0px 8px 16px -8pxrgba (0, 0, 0, 0.16);
+  --hv-box-shadow: 0px 12px 32px 4px rgba(0, 0, 0, 0.04), 0px 8px 20px rgba(0, 0, 0, 0.08);
+  --hv-box-shadow-light: 0px 0px 12px rgba(0, 0, 0, 0.12);
+  --hv-box-shadow-lighter: 0px 0px 6px rgba(0, 0, 0, 0.12);
+  --hv-box-shadow-dark: 0px 16px 48px 16px rgba(0, 0, 0, 0.08), 0px 12px 32px rgba(0, 0, 0, 0.12),
+    0px 8px 16px -8px rgba(0, 0, 0, 0.16);
   --hv-disabled-bg-color: var(--hv-fill-color-light);
   --hv-disabled-text-color: var(--hv-text-color-placeholder);
   --hv-disabled-border-color: var(--hv-border-color-light);
@@ -165,4 +166,8 @@
 
   // tree
   --hv-tree-hover-color: #f5f5f5;
+
+  // input-number
+  --hv-input-number-bg-color: #f5f7fa;
+  --hv-input-number-bg-color-disabled: #f3f3f3;
 }

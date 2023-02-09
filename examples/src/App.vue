@@ -33,3 +33,14 @@ const switchVal2 = ref(true);
 const switchVal3 = ref(true);
 const switchVal4 = ref(true);
 </script>
+<style lang="less" scoped>
+.h-image {
+  height: 100px;
+  width: 100px;
+}
+.box {
+  margin-top: 100px;
+  margin-left: 100px;
+  display: flex;
+}
+</style>

@@ -2,6 +2,8 @@
 import basic from 'exam/slider/basic.vue'
 import disperse from 'exam/slider/disperse.vue'
 import site from 'exam/slider/site.vue'
+import inputBox from 'exam/slider/input-box.vue'
+import sizes from 'exam/slider/sizes.vue'
 import scope from 'exam/slider/scope.vue'
 import vertical from 'exam/slider/vertical.vue'
 import tag from 'exam/slider/tag.vue'
@@ -30,6 +32,22 @@ Set step size with the `step` attribute. You can display breakpoints by setting 
 
 ::: code slider/disperse
 <disperse></disperse>
+:::
+
+## Slider with input box
+
+Set value via a input box.
+
+Set the `show-input` attribute to display an input box on the right.
+
+::: code slider/input-box
+<inputBox></inputBox>
+:::
+
+## Sizes
+
+::: code slider/sizes
+<sizes></sizes>
 :::
 
 ## Placement

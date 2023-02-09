@@ -1,7 +1,17 @@
 @import "../../../common/index.less";
 
+// 移出number上下箭头
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .h-from-input {
   position: relative;
+  box-sizing: border-box;
   .h-textarea {
     padding-bottom: 2.3em;
   }
@@ -81,6 +91,7 @@
 
 .h-input,
 .h-textarea {
+  box-sizing: border-box;
   padding: 5px 10px;
   border: 1px solid #d8d8d8;
   border-radius: 4px;
@@ -137,6 +148,7 @@
 .h-input {
   border-color: #d8d8d8;
   border-radius: 4px;
+  height: 100%;
   &:hover {
     border-color: #adadad;
   }
