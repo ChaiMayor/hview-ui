@@ -7,6 +7,7 @@
   import withDescription from 'exam/alert/with-description.vue'
   import iconAndDescription from 'exam/alert/icon-and-description.vue'
 </script>
+
 # Alert
 
 Displays important alert messages.
