@@ -25,6 +25,7 @@ import { default as Empty } from "./empty";
 import { default as Divider } from "./divider";
 import { default as Alert } from "./alert";
 import { Timeline, TimelineItem } from "./timeline";
+import { default as Switch } from "./switch";
 
 export {
   Button,
@@ -59,6 +60,7 @@ export {
   Alert,
   Timeline,
   TimelineItem,
+  Switch,
 };
 
 export default [
@@ -94,4 +96,5 @@ export default [
   Alert,
   Timeline,
   TimelineItem,
+  Switch,
 ];
