@@ -30,7 +30,7 @@ import HDescriptionsCell from "./descriptions-cell";
 import { descriptionsKey } from "./token";
 import { descriptionsRowProps } from "./descriptions-row";
 
-import type { IDescriptionsInject } from "./descriptions.type";
+import type { IDescriptionsInject } from "./token";
 
 defineProps(descriptionsRowProps);
 

@@ -1,3 +1,4 @@
+// @ts-ignore
 import type Description from "./description.vue";
 
 export const descriptionProps = {

@@ -1,9 +1,14 @@
+@import "common/icon.less";
+@import "common/color.less";
+@import "mixins/config.less";
+@import "mixins/mixins.less";
+
 dialog::backdrop {
   z-index: 1;
   background-color: rgb(0 0 0 / 50%);
 }
 
-.h-image-viewer {
+.@{namespace}image-viewer {
   .content {
     position: relative;
     display: flex;

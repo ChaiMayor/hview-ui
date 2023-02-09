@@ -8,12 +8,12 @@ import gulpMinifyCss from "gulp-minify-css";
 import { themeDir, finalDir } from "../utils/constant";
 
 export const removeCompDist = async (floor: number) => {
-  // await removeDir(reFinalPath);
+  // 一定要使用 await 同步加载，否则会出错
   return await delPath(`${root}/${finalDir}`, floor);
 };
 
 export const buildCompDist = async () => {
-  run("pnpm run build", root);
+  return await run("pnpm run build", root);
 };
 
 export const removeThemeDist = async () => {
@@ -21,7 +21,7 @@ export const removeThemeDist = async () => {
 };
 
 export const buildThemeDist = async () => {
-  run("pnpm run build", themePath);
+  return await run("pnpm run build", themePath);
 };
 
 export const buildStyle = async () => {
