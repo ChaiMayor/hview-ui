@@ -11,10 +11,10 @@
           <!-- ARROW -->
           <div class="arrow">
             <span @click="prev" class="arrowLeft">
-              <h-icon name="ArrowLeft"></h-icon>
+              <h-icon name="arrow-left2"></h-icon>
             </span>
-            <span @click="next">
-              <h-icon name="ArrowRight" class="arrowRight"></h-icon>
+            <span @click="next" class="arrowRight">
+              <h-icon name="arrow-right2"></h-icon>
             </span>
           </div>
           <!-- ACTIONS -->

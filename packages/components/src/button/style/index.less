@@ -27,8 +27,7 @@
 
   &:hover {
     color: var(--hv-color-primary);
-    border-color: #c6e2ff;
-    background-color: #ecf5ff;
+    background-color: var(--hv-button-bg-color);
   }
 }
 
@@ -249,11 +248,18 @@
 
 .@{prefix}-button--danger.is-plain,
 .@{prefix}-button--danger.is-plain:active,
-.@{prefix}-button--danger.is-plain:focus,
-.@{prefix}-button--danger.is-plain:hover {
+.@{prefix}-button--danger.is-plain:focus {
   color: #f09d9d;
   background: var(--hv-button-danger-plain);
   border-color: 1px solid var(--hv-button-danger-plain-border);
+}
+
+.@{prefix}-button--danger.is-plain {
+  &:hover {
+    color: #fff;
+    background-color: #f78989;
+    border-color: #e6a23c;
+  }
 }
 
 .is-round {

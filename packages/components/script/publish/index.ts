@@ -1,4 +1,4 @@
-import { componentPath, pkgPath } from "../utils/paths";
+import { componentPath, pkgPath, playPath } from "../utils/paths";
 import run from "../utils/run";
 import { src, dest } from "gulp";
 //复制
@@ -14,6 +14,7 @@ export const copypackage = async () => {
 export const publish = async () => {
   //先给transitpkg升个版本
   await run("pnpm version patch", `${pkgPath}/transitpkg`);
+  await run("pnpm version patch", `${playPath}`);
   //复制到dist目录
   await copypackage();
   //在 hview-ui 下执行发布命令

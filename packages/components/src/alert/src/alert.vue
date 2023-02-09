@@ -15,7 +15,7 @@
           <div v-if="closeText" class="close-btn is-customed" @click="close">
             {{ closeText }}
           </div>
-          <h-icon v-else name="close" class="close-btn" @click="close"> </h-icon>
+          <h-icon v-else name="close1" class="close-btn" @click="close"> </h-icon>
         </template>
       </div>
     </div>

@@ -2,12 +2,25 @@
   <div class="h-slider__runway" ref="slider_runway" :style="{ height: `${height}px` }">
     <div class="h-slider__bar" :style="barStyle"> </div>
     <!-- 间断点 -->
-    <div class="h-slider__stop" v-if="showStops">
+    <div :class="['h-slider__stop', { showEffect: marks }]" v-if="showStops">
       <div
         class="h-slider__stop_item"
         v-for="(step, i) in stepArr"
-        :style="vertical ? `bottom: ${step}px` : `left: ${step}px`"
-        :key="i"></div>
+        :style="[
+          vertical ? `bottom: ${step}px` : `left: ${step}px`,
+          { display: handleMarks.includes(String(i + 1)) ? 'block' : 'none' },
+        ]"
+        :key="i">
+      </div>
+      <div class="h-slider__stop_label_box">
+        <div
+          class="h-slider__stop_label"
+          v-for="(val, key) in marks"
+          :key="key"
+          :style="[{ left: stepArr[key - 1] + 'px' }, val['style']]">
+          {{ isObject(val) ? val["label"] : val }}
+        </div>
+      </div>
     </div>
     <HSliderMarker
       ref="btn1"
@@ -41,9 +54,10 @@ import { ref, watch, onMounted, onUnmounted, computed } from "vue";
 import { SliderProps } from "./slider";
 import HSliderMarker from "./marker.vue";
 // eslint-disable-next-line vue/prefer-import-from-vue
-import { isArray } from "@vue/shared";
+import { isArray, isObject } from "@vue/shared";
 import { cutChunk, judgeLocation } from "./utils";
 import { toFixed, offsetTop, offsetLeft } from "@hview-plus/utils";
+import { throttle } from "lodash-es";
 
 const props = defineProps(SliderProps);
 const slider_runway = ref<null | HTMLDivElement>(null);
@@ -65,6 +79,11 @@ const tip2 = ref<string | number>(0);
 const isDraw = ref<boolean>(false);
 // 当前点击的坐标
 const site = ref<number>(0);
+const emits = defineEmits(["input", "change"]);
+
+const handleMarks = computed(() => {
+  return props.marks ? Object.keys(props.marks) : [];
+});
 
 // 传入数值获得离当前哪个数组下标最近
 const getStepArrIndex = (val: number): [number[], number] => {
@@ -112,6 +131,8 @@ const setMarkerSite = (val: number, flag: "btn1" | "btn2") => {
   }
   // 更新进度条
   setBarStartEnd();
+  // 返回事件
+  emits("input", tip1.value, tip2.value);
   // 格式化tip提示内容
   if (props.formatTooltip) {
     tip1.value = props.formatTooltip(tip1.value as number);
@@ -148,6 +169,8 @@ const runwayClick = (e: MouseEvent) => {
     judgeLocation(site.value, stepArr.value[minV], stepArr.value[maxV]) === min ? (name = "btn1") : (name = "btn2");
   }
   setMarkerSite(site.value, name);
+
+  emits("change", tip1.value, tip2.value);
   return false;
 };
 // 根据max和min大小获取每份的宽度
@@ -176,9 +199,12 @@ const update = () => {
   // console.log("————————————————————————————————————执行次数————————————————————————————————————");
 };
 
-watch([() => props.width, () => props.step, () => props.max, () => props.min], () => {
-  update();
-});
+watch(
+  [() => props.modelValue, () => props.width, () => props.step, () => props.max, () => props.min],
+  throttle(() => {
+    update();
+  }, 20),
+);
 
 onMounted(() => {
   update();

@@ -6,21 +6,22 @@ import Moon from "./icons/Moon.vue";
 import Share from "./icons/Share.vue";
 import Download from "./icons/Download.vue";
 import GitHub from "./icons/GitHub.vue";
-import axios from "axios";
+// @ts-ignore
+// import pkg from "../package.json";
 
 // @ts-ignore
 const props = defineProps(["store", "dev", "ssr"]);
 // eslint-disable-next-line vue/no-setup-props-destructure
 const { store } = props;
 
-console.log(store);
+// console.log(store);
 
 // @ts-ignore
 const currentCommit = __COMMIT__;
 const activeVersion = ref(`@${currentCommit}`);
 const publishedVersions = ref<string[]>();
 const expanded = ref(false);
-const ver = ref<string>("");
+// const ver = ref<string>("");
 
 async function toggle() {
   expanded.value = !expanded.value;
@@ -88,14 +89,14 @@ async function fetchVersions(): Promise<string[]> {
   return filteredVersions;
 }
 
-const getVersionHp = async () => {
-  await axios.get("https://registry.npmjs.org/hview-plus").then((res: any) => {
-    let versions = Object.keys(res.data.versions);
-    ver.value = "v" + versions[versions.length - 1];
-  });
-};
+// const getVersionHp = async () => {
+//   await axios.get("https://registry.npmjs.org/hview-plus").then((res: any) => {
+//     let versions = Object.keys(res.data.versions);
+//     ver.value = "v" + versions[versions.length - 1];
+//   });
+// };
 
-getVersionHp();
+// getVersionHp();
 </script>
 
 <template>
@@ -103,8 +104,8 @@ getVersionHp();
     <h1>
       <img alt="logo" src="https://oss.zhishiyu.online/common/hview-logo.png" />
       <span style="margin-top: -2px; margin-right: 6px">Hview UI Playground</span>
-      <h-tag size="small" style="margin: 0 8px"> {{ ver }}</h-tag>
-      <h-tag size="small"> repl v1.3.0 </h-tag>
+      <!-- <h-tag size="small" style="margin: 0 8px">{{ pkg.version }}</h-tag> -->
+      <!-- <h-tag size="small"> repl v1.3.0 </h-tag> -->
     </h1>
     <div class="links">
       <!-- <div class="version" @click.stop>

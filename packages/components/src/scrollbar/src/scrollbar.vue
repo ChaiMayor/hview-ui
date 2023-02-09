@@ -9,6 +9,7 @@
       ref="scrollThumb"
       @setScrollViewTop="setScrollViewTop"
       @setScrollViewLeft="setScrollViewLeft"
+      @setScrollTumb="setScrollTumb"
       :always="always"
       v-model:isDraw="isDraw"
       :height="height"
@@ -80,7 +81,6 @@ const setScrollLeft = (left: number) => {
 };
 // 设置滚动条的thumb的函数
 const setScrollTumb = () => {
-  if (isDraw.value) return;
   const sTop =
     move.value === "moveX"
       ? Number(scrollbar_wrap.value!.scrollLeft.toFixed(5))

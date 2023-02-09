@@ -3,10 +3,12 @@ import { compileFile, File } from "@vue/repl";
 import { utoa, atou } from "./utils/encode";
 import * as defaultCompiler from "vue/compiler-sfc";
 import type { Store, SFCOptions, StoreState, OutputModes } from "@vue/repl";
+// @ts-ignore
+import pkg from "../package.json";
 
 import welcomeCode from "./template/welcome.vue?raw";
 
-const ver = "1.3.11";
+const ver = pkg.version;
 
 const hviewImports = {
   "hview-plus": `https://unpkg.com/hview-plus@${ver}/es/index.mjs`,
@@ -23,6 +25,7 @@ const hviewImports = {
   "@intlify/vue-devtools": "https://unpkg.com/@intlify/vue-devtools@9.2.2/dist/vue-devtools.esm-bundler.js",
   "@intlify/message-compiler": "https://unpkg.com/@intlify/message-compiler@9.2.2/dist/message-compiler.esm-bundler.js",
   "@intlify/devtools-if": "https://unpkg.com/@intlify/devtools-if@9.2.2/dist/devtools-if.esm-bundler.js",
+  "lodash-es": "https://unpkg.com/lodash-es@4.17.21/lodash.js",
 };
 
 const hviewReplPluginCode = `
