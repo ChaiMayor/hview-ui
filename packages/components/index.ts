@@ -27,6 +27,12 @@ import { default as Alert } from "./alert";
 import { Timeline, TimelineItem } from "./timeline";
 import { default as Backtop } from "./backtop";
 import { default as InputNumber } from "./input-number";
+import { default as Switch } from "./switch";
+import { default as image } from "./image";
+import { default as imageViewer } from "./image-viewer";
+import { default as popover } from "./popover";
+import { Breadcrumb, BreadcrumbItem } from "./breadcrumb";
+import { Descriptions, DescriptionsItem } from "./descriptions";
 
 export {
   Button,
@@ -63,6 +69,14 @@ export {
   TimelineItem,
   Backtop,
   InputNumber,
+  Switch,
+  image,
+  imageViewer,
+  popover,
+  Breadcrumb,
+  BreadcrumbItem,
+  Descriptions,
+  DescriptionsItem,
 };
 
 export default [
@@ -100,4 +114,12 @@ export default [
   TimelineItem,
   Backtop,
   InputNumber,
+  Switch,
+  image,
+  imageViewer,
+  popover,
+  Breadcrumb,
+  BreadcrumbItem,
+  Descriptions,
+  DescriptionsItem,
 ];

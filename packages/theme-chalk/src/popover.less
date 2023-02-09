@@ -1,0 +1,303 @@
+.popover-box {
+  --geticonsite: 0;
+
+  position: relative;
+  display: inline-block;
+
+  .popover-outbox {
+    position: absolute;
+    z-index: 1;
+    min-width: 150px;
+    padding: 18px 20px;
+    background-color: #fff;
+    box-shadow: 0 3px 12px 0 rgb(0 0 0 / 10%);
+  }
+
+  &-content {
+    overflow: auto;
+
+    .popover-title {
+      margin-bottom: 12px;
+      font-size: 16px;
+      line-height: 1;
+      color: #303133;
+    }
+  }
+
+  .top {
+    bottom: 100%;
+    left: 50%;
+    margin-bottom: 12px;
+    transform: translateX(-50%);
+
+    .popover-arrow {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      display: block;
+      width: 0;
+      height: 0;
+      content: "";
+      border-top: 6px solid #fff;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      border-left: 6px solid transparent;
+      transform: translateX(-50%);
+    }
+  }
+
+  .top-start {
+    bottom: 100%;
+    left: 0;
+    margin-bottom: 12px;
+
+    .popover-arrow {
+      position: absolute;
+      top: 100%;
+      left: var(--geticonsite);
+      display: block;
+      width: 0;
+      height: 0;
+      content: "";
+      border-top: 6px solid #fff;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      border-left: 6px solid transparent;
+      transform: translateX(-50%);
+    }
+  }
+
+  .top-end {
+    right: 0;
+    bottom: 100%;
+    margin-bottom: 12px;
+
+    .popover-arrow {
+      position: absolute;
+      top: 100%;
+      right: var(--geticonsite);
+      display: block;
+      width: 0;
+      height: 0;
+      content: "";
+      border-top: 6px solid #fff;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      border-left: 6px solid transparent;
+      transform: translateX(-50%);
+    }
+  }
+
+  .bottom {
+    top: 100%;
+    left: 50%;
+    margin-top: 12px;
+    transform: translateX(-50%);
+
+    .popover-arrow {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      display: block;
+      width: 0;
+      height: 0;
+      content: "";
+      border-top: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #fff;
+      border-left: 6px solid transparent;
+      transform: translateX(-50%);
+    }
+  }
+
+  .bottom-start {
+    top: 100%;
+    left: 0;
+    margin-top: 12px;
+
+    .popover-arrow {
+      position: absolute;
+      bottom: 100%;
+      left: var(--geticonsite);
+      display: block;
+      width: 0;
+      height: 0;
+      content: "";
+      border-top: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #fff;
+      border-left: 6px solid transparent;
+      transform: translateX(-50%);
+    }
+  }
+
+  .bottom-end {
+    top: 100%;
+    right: 0;
+    margin-top: 12px;
+
+    .popover-arrow {
+      position: absolute;
+      right: var(--geticonsite);
+      bottom: 100%;
+      display: block;
+      width: 0;
+      height: 0;
+      content: "";
+      border-top: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #fff;
+      border-left: 6px solid transparent;
+      transform: translateX(-50%);
+    }
+  }
+
+  .left {
+    top: 50%;
+    right: 100%;
+    margin-right: 12px;
+    transform: translateY(-50%);
+
+    .popover-arrow {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      display: block;
+      width: 0;
+      height: 0;
+      content: "";
+      border-top: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      border-left: 6px solid #fff;
+      transform: translateY(-50%);
+    }
+  }
+
+  .left-start {
+    top: 0;
+    right: 100%;
+    margin-right: 12px;
+    background-color: #fff;
+
+    .popover-arrow {
+      position: absolute;
+      top: var(--geticonsite);
+      left: 100%;
+      display: block;
+      width: 0;
+      height: 0;
+      content: "";
+      border-top: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      border-left: 6px solid #fff;
+      transform: translateY(-50%);
+    }
+  }
+
+  .left-end {
+    right: 100%;
+    bottom: 0;
+    margin-right: 12px;
+    background-color: #fff;
+
+    .popover-arrow {
+      position: absolute;
+      bottom: var(--geticonsite);
+      left: 100%;
+      display: block;
+      width: 0;
+      height: 0;
+      content: "";
+      border-top: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      border-left: 6px solid #fff;
+      transform: translateY(-50%);
+    }
+  }
+
+  .right {
+    top: 50%;
+    left: 100%;
+    margin-left: 12px;
+    transform: translateY(-50%);
+
+    .popover-arrow {
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      display: block;
+      width: 0;
+      height: 0;
+      content: "";
+      border-top: 6px solid transparent;
+      border-right: 6px solid #fff;
+      border-bottom: 6px solid transparent;
+      border-left: 6px solid transparent;
+      transform: translateY(-50%);
+    }
+  }
+
+  .right-start {
+    --geticonsite: 0;
+
+    top: 0;
+    left: 100%;
+    margin-left: 12px;
+
+    .popover-arrow {
+      position: absolute;
+      top: var(--geticonsite);
+      right: 100%;
+      display: block;
+      width: 0;
+      height: 0;
+      content: "";
+      border-top: 6px solid transparent;
+      border-right: 6px solid #fff;
+      border-bottom: 6px solid transparent;
+      border-left: 6px solid transparent;
+      transform: translateY(-50%);
+    }
+  }
+
+  .right-end {
+    bottom: 0;
+    left: 100%;
+    margin-left: 12px;
+
+    .popover-arrow {
+      position: absolute;
+      right: 100%;
+      bottom: var(--geticonsite);
+      display: block;
+      width: 0;
+      height: 0;
+      content: "";
+      border-top: 6px solid transparent;
+      border-right: 6px solid #fff;
+      border-bottom: 6px solid transparent;
+      border-left: 6px solid transparent;
+      transform: translateY(-50%);
+    }
+  }
+
+  .reference-content {
+    display: inline-block;
+  }
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.6, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  opacity: 0;
+}

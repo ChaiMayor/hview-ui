@@ -132,12 +132,14 @@ importers:
       vite: ^3.1.8
       vite-plugin-eslint: ^1.8.1
       vite-plugin-vue-setup-extend: ^0.4.0
+      vue-router: ^4.1.6
     dependencies:
       '@vitejs/plugin-vue': 3.2.0_vite@3.2.5+vue@3.2.47
       hview-plus: link:../packages
       vite: 3.2.5
       vite-plugin-eslint: 1.8.1_eslint@8.33.0+vite@3.2.5
       vite-plugin-vue-setup-extend: 0.4.0_vite@3.2.5
+      vue-router: 4.1.6_vue@3.2.47
 
   packages:
 
@@ -2513,7 +2515,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001451
-      electron-to-chromium: 1.4.289
+      electron-to-chromium: 1.4.292
       node-releases: 2.0.10
       update-browserslist-db: 1.0.10_browserslist@4.21.5
     dev: true
@@ -3698,8 +3700,8 @@ packages:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: true
 
-  /electron-to-chromium/1.4.289:
-    resolution: {integrity: sha512-relLdMfPBxqGCxy7Gyfm1HcbRPcFUJdlgnCPVgQ23sr1TvUrRJz0/QPoGP0+x41wOVSTN/Wi3w6YDgHiHJGOzg==}
+  /electron-to-chromium/1.4.292:
+    resolution: {integrity: sha512-ESWOSyJy5odDlE8wvh5NNAMORv4r6assPwIPGHEMWrWD0SONXcG/xT+9aD9CQyeRwyYDPo6dJT4Bbeg5uevVQQ==}
     dev: true
 
   /element-plus/2.2.29_vue@3.2.47:
@@ -10464,6 +10466,15 @@ packages:
       '@intlify/core-base': 9.2.2
       '@intlify/shared': 9.2.2
       '@intlify/vue-devtools': 9.2.2
+      '@vue/devtools-api': 6.5.0
+      vue: 3.2.47
+    dev: false
+
+  /vue-router/4.1.6_vue@3.2.47:
+    resolution: {integrity: sha512-DYWYwsG6xNPmLq/FmZn8Ip+qrhFEzA14EI12MsMgVxvHFDYvlr4NXpVF5hrRH1wVcDP8fGi5F4rxuJSl8/r+EQ==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
       '@vue/devtools-api': 6.5.0
       vue: 3.2.47
     dev: false

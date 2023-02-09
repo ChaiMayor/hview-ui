@@ -1,0 +1,200 @@
+.h-switch-default {
+  display: inline-flex;
+  align-items: center;
+}
+
+.h-switch-default .h-switch-content {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 45px;
+  height: 22px;
+  font-size: 14px;
+  line-height: 22px;
+  vertical-align: middle;
+}
+
+.h-switch-default .h-switch-content input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+.h-switch-default .h-switch-content .core {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  cursor: pointer;
+  background: #dcdfe6;
+  border: 1px solid #dcdfe6;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.h-switch-default .h-switch-content .core::after {
+  position: absolute;
+  top: 2px;
+  left: 1px;
+  width: 18px;
+  height: 18px;
+  content: "";
+  background-color: #fff;
+  border-radius: 100%;
+  transition: all 0.3s;
+}
+
+.h-switch-default .h-switch-content .core .h-switch-inner {
+  position: absolute;
+  top: 2px;
+  left: 1px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  color: #fff;
+  white-space: nowrap;
+  transition: all 0.3s;
+}
+
+.h-switch-default .h-switch-content .off {
+  background-color: #c0ccda;
+}
+
+.h-switch-default .h-switch-content .on {
+  background-color: #409eff;
+}
+
+.h-switch-default .h-switch-content .on::after {
+  left: 100%;
+  margin-left: -19px;
+}
+
+.h-switch-default .h-switch-content .on .h-switch-inner {
+  left: 50%;
+  margin-left: -19px;
+}
+
+.h-switch-default .is-disabled {
+  color: #fff;
+  cursor: no-drop;
+  opacity: 0.6;
+}
+
+.h-switch-default .is-disabled .core {
+  cursor: no-drop;
+}
+
+.h-switch-default .h-switch-label {
+  display: inline-block;
+  height: 22px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #303133;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.h-switch-default .h-switch-label-left {
+  margin-right: 10px;
+}
+
+.h-switch-default .h-switch-label-right {
+  margin-left: 10px;
+}
+
+.h-switch-default .is-active {
+  color: #409eff;
+}
+
+.h-switch--large {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.h-switch--large .h-switch-label {
+  height: 24px;
+  font-size: 16px;
+}
+
+.h-switch--large .h-switch-content {
+  width: 55px;
+  height: 24px;
+  border-radius: 12px;
+}
+
+.h-switch--large .h-switch-content .core {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.h-switch--large .h-switch-content .core::after {
+  width: 20px;
+  height: 20px;
+}
+
+.h-switch--large .h-switch-content .on::after {
+  left: 100%;
+  margin-left: -21px;
+}
+
+.h-switch--large .h-switch-content .on .h-switch-inner {
+  left: 50%;
+  margin-left: -21px;
+}
+
+.h-switch--small {
+  height: 24px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.h-switch-inner--small {
+  font-size: 12px;
+}
+
+.h-switch-inner--large {
+  font-size: 16px;
+}
+
+.h-switch--small .h-switch-label {
+  height: 20px;
+  font-size: 12px;
+}
+
+.h-switch--small .h-switch-content {
+  width: 40px;
+  height: 20px;
+  border-radius: 8px;
+}
+
+.h-switch--small .h-switch-content .core {
+  width: 100%;
+  height: 100%;
+}
+
+.h-switch--small .h-switch-content .core::after {
+  width: 16px;
+  height: 16px;
+}
+
+.h-switch--small .h-switch-content .on::after {
+  left: 100%;
+  margin-left: -18px;
+}
+
+.h-switch--small .h-switch-content .on .h-switch-inner {
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin-left: -18px;
+}

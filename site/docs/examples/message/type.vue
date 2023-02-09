@@ -1,8 +1,8 @@
 <template>
-  <h-button type="default" @click="SuccessClick">success</h-button>
-  <h-button type="default" @click="WarningClick">warning</h-button>
-  <h-button type="default" @click="InfoClick">info</h-button>
-  <h-button type="default" @click="ErrorClick">error</h-button>
+  <h-button type="success" @click="SuccessClick">success</h-button>
+  <h-button type="warning" @click="WarningClick">warning</h-button>
+  <h-button type="info" @click="InfoClick">info</h-button>
+  <h-button type="danger" @click="ErrorClick">error</h-button>
 </template>
 
 <script setup lang="ts">
