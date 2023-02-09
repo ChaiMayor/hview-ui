@@ -1,13 +1,12 @@
 <script setup>
   import basic from 'exam/alert/basic.vue'
   import theme from 'exam/alert/theme.vue'
-  import customizClose from 'exam/alert/customizClose.vue'
-  import withIcon from 'exam/alert/withIcon.vue'
-  import centerText from 'exam/alert/centerText.vue'
-  import withDescription from 'exam/alert/withDescription.vue'
-  import iconAndDescription from 'exam/alert/iconAndDescription.vue'
+  import customizClose from 'exam/alert/customiz-close.vue'
+  import withIcon from 'exam/alert/with-icon.vue'
+  import centerText from 'exam/alert/center-text.vue'
+  import withDescription from 'exam/alert/with-description.vue'
+  import iconAndDescription from 'exam/alert/icon-and-description.vue'
 </script>
-
 # Alert
 
 Displays important alert messages.
@@ -38,7 +37,7 @@ Customize the close button as texts or other symbols.
 
 Alert allows you to configure if it's closable. The close button text and closing callbacks are also customizable. `closable` attribute decides if the component can be closed or not. It accepts `Boolean`, and the default is `false` You can set `close-text` attribute to replace the default cross symbol as the close button. Be careful that `close-text` must be a string. `close` event fires when the component is closed.
 
-::: code alert/customizClose
+::: code alert/customiz-close
 <customiz-close></customiz-close>
 :::
 
@@ -48,7 +47,7 @@ Displaying an icon improves readability.
 
 Setting the `show-icon` attribute displays an icon that corresponds with the current Alert type.
 
-::: code alert/withIcon
+::: code alert/with-icon
 <with-icon></with-icon>
 :::
 
@@ -56,7 +55,7 @@ Setting the `show-icon` attribute displays an icon that corresponds with the cur
 
 Use the `center` attribute to center the text.
 
-::: code alert/centerText
+::: code alert/center-text
 <center-text></center-text>
 :::
 
@@ -66,7 +65,7 @@ Description includes a message with more detailed information.
 
 Besides the required `title` attribute, you can add a `description` attribute to help you describe the alert with more details. Description can only store text string, and it will word wrap automatically.
 
-::: code alert/withDescription
+::: code alert/with-description
 <with-description></with-description>
 :::
 
@@ -74,7 +73,7 @@ Besides the required `title` attribute, you can add a `description` attribute to
 
 At last, this is an example with both icon and description.
 
-::: code alert/iconAndDescription
+::: code alert/icon-and-description
 <icon-and-description></icon-and-description>
 :::
 

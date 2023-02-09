@@ -1,7 +1,7 @@
 <script setup>
 import basic from 'exam/card/basic.vue'
 import simple from 'exam/card/simple.vue'
-import pictureCard from 'exam/card/pictureCard.vue'
+import pictureCard from 'exam/card/picture-card.vue'
 import shadow from 'exam/card/shadow.vue'
 </script>
 
@@ -32,7 +32,7 @@ Only the content area.
 More content can be displayed.
 Use `body-style` customizing the style of the body, the content can be more diverse.
 
-::: code card/pictureCard
+::: code card/picture-card
 <pictureCard></pictureCard>
 :::
 

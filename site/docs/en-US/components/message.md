@@ -3,7 +3,7 @@ import basic from 'exam/message/basic.vue'
 import type from 'exam/message/type.vue'
 import ShowClose from 'exam/message/show-close.vue'
 import CenterMessage from 'exam/message/center-message.vue'
-import HTMLString from 'exam/message/HTMLString.vue'
+import HTMLString from 'exam/message/html-string.vue'
 </script>
 
 # Message
@@ -52,7 +52,7 @@ message also supports HTML strings as body content.
 
 By setting the dangerouslyUseHTMLString property to true, the message will be treated as an HTML fragment.
 
-::: code message/HTMLString
+::: code message/html-string
 <HTMLString></HTMLString>
 :::
 

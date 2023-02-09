@@ -22,8 +22,8 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import { toMatrix } from "../utils/toMatrix";
-import { pickerMonthAndYearProps } from "./datePicker";
+import { toMatrix } from "../utils/to-matrix";
+import { pickerMonthAndYearProps } from "./date-picker";
 const props = defineProps(pickerMonthAndYearProps);
 
 let curYear: any = computed(() => {

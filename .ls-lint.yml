@@ -1,5 +1,5 @@
 ls:
-  packages/components/**/{src}:
+  packages/components/**/{src,hooks,utils}:
     .dir: kebab-case
     .vue: kebab-case
     .ts: kebab-case
@@ -24,6 +24,9 @@ ignore:
   - node_modules
   - packages/components/node_modules
   - packages/components/hview-ui
+  - packages/directives/node_modules
+  - packages/hooks/node_modules
+  - packages/constants/node_modules
   - site/docs/.vitepress
   - site/docs/en-US
   - site/docs/vite.config.ts

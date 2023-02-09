@@ -1,6 +1,6 @@
 <script setup>
   import basic from 'exam/empty/basic.vue'
-  import myPicture from 'exam/empty/myPicture.vue'
+  import myPicture from 'exam/empty/my-picture.vue'
   import size from 'exam/empty/size.vue'
   import bottom from 'exam/empty/bottom.vue'
 </script>
@@ -19,7 +19,7 @@ Display placeholder image in empty state.
 
 Use `image` prop to set image URL.
 
-::: code empty/myPicture
+::: code empty/my-picture
 <myPicture></myPicture>
 :::
 

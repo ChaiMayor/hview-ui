@@ -3,7 +3,7 @@ import basic from 'exam/message/basic.vue'
 import type from 'exam/message/type.vue'
 import ShowClose from 'exam/message/show-close.vue'
 import CenterMessage from 'exam/message/center-message.vue'
-import HTMLString from 'exam/message/HTMLString.vue'
+import HTMLString from 'exam/message/html-string.vue'
 </script>
 
 # Message 消息提示
@@ -52,7 +52,7 @@ message 还支持使用 HTML 字符串作为正文内容。
 
 将 dangerouslyUseHTMLString 属性设置为 true,message 就会被当作 HTML 片段处理。
 
-::: code message/HTMLString
+::: code message/html-string
 <HTMLString></HTMLString>
 :::
 

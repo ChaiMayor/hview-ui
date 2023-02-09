@@ -1,4 +1,4 @@
-import { ICell } from "../src/datePicker";
+import { ICell } from "../src/date-picker";
 
 // 获取当前月需要显示的天数
 const getCurrMonthDayCount = (year: number, month: number) => {

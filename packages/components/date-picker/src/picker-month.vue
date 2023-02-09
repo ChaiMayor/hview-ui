@@ -22,9 +22,9 @@
 
 <script setup lang="ts">
 import { computed, defineProps } from "vue";
-import { toMatrix } from "../utils/toMatrix";
-import { monthTable } from "../utils/tableHeader";
-import { pickerMonthAndYearProps } from "./datePicker";
+import { toMatrix } from "../utils/to-matrix";
+import { monthTable } from "../utils/table-header";
+import { pickerMonthAndYearProps } from "./date-picker";
 const props = defineProps(pickerMonthAndYearProps);
 
 const month = computed(() => {

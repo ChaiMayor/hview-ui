@@ -1,7 +1,7 @@
 <script setup>
 import basic from 'exam/card/basic.vue'
 import simple from 'exam/card/simple.vue'
-import pictureCard from 'exam/card/pictureCard.vue'
+import pictureCard from 'exam/card/picture-card.vue'
 import shadow from 'exam/card/shadow.vue'
 </script>
 
@@ -32,7 +32,7 @@ Card 组件包括 `header`,`body`,`handle`。`header` 与 `handle` 是可选的�
 可以展示更多的内容
 通过 `body-style` 自定义 body 的样式，可使内容更加多样
 
-::: code card/pictureCard
+::: code card/picture-card
 <pictureCard></pictureCard>
 :::
 

@@ -41,7 +41,7 @@
 
 <script setup lang="ts">
 import { computed, onMounted, watch, inject, nextTick } from "vue";
-import nodeContent from "./nodeContent.vue";
+import nodeContent from "./node-content.vue";
 import HCollapseTransition from "./transition.vue";
 
 const props = defineProps({

@@ -3,7 +3,7 @@ import basic from 'exam/tree/basic.vue'
 import selectTree from 'exam/tree/select-tree.vue'
 import settingTree from 'exam/tree/setting-tree.vue'
 import disabled from 'exam/tree/disabled.vue'
-import getDataTree from 'exam/tree/getData-tree.vue'
+import getDataTree from 'exam/tree/get-data-tree.vue'
 import renderTree from 'exam/tree/render-tree.vue'
 </script>
 
@@ -45,7 +45,7 @@ import renderTree from 'exam/tree/render-tree.vue'
 
 ## 树节点的设置和获取
 
-::: code tree/getData-tree
+::: code tree/get-data-tree
 <getDataTree></getDataTree>
 :::
 

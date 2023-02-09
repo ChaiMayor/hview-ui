@@ -1,5 +1,5 @@
-import * as dateTimePicker from "../utils/dateTimePicker";
-import { ICell } from "../src/datePicker";
+import * as dateTimePicker from "../utils/date-time-picker";
+import { ICell } from "../src/date-picker";
 
 export function useCtrlStyle() {
   //日期面板的一些样式

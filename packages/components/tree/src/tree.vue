@@ -20,7 +20,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, provide, watch } from "vue";
-import treeNode from "./treeNode.vue";
+import treeNode from "./tree-node.vue";
 import { deepCopy } from "@hview-plus/utils";
 import { TreeProps } from "./tree";
 

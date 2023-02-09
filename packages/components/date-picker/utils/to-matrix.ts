@@ -1,4 +1,4 @@
-import { ICell } from "../src/datePicker";
+import { ICell } from "../src/date-picker";
 
 export const toMatrix = (
   list: ICell[] | string[] | number[],
