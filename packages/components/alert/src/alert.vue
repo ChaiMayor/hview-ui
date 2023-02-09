@@ -26,6 +26,7 @@
 <script lang="ts" setup>
 import { computed, ref, useSlots } from "vue";
 import { AlertProps, AlertEmits } from "./alert";
+
 const props = defineProps(AlertProps);
 const emit = defineEmits(AlertEmits);
 const slots = useSlots();

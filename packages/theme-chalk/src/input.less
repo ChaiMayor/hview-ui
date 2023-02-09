@@ -13,15 +13,15 @@ input[type="number"] {
   appearance: textfield;
 }
 
-.h-from-input {
+.@{namespace}-from-input {
   position: relative;
   box-sizing: border-box;
 
-  .h-textarea {
+  .@{namespace}-textarea {
     padding-bottom: 2.3em;
   }
 
-  .h-textarea-maxlength {
+  .@{namespace}-textarea-maxlength {
     position: absolute;
     bottom: 10px;
     left: 10px;
@@ -29,28 +29,28 @@ input[type="number"] {
     color: var(--color-default);
   }
 
-  &.h-input-icon-before {
-    .h-input {
+  &.@{namespace}-input-icon-before {
+    .@{namespace}-input {
       padding-left: 30px;
     }
 
-    .h-before {
+    .@{namespace}-before {
       left: 8px;
     }
   }
 
-  &.h-input-icon-after {
-    .h-input {
+  &.@{namespace}-input-icon-after {
+    .@{namespace}-input {
       padding-right: 30px;
     }
 
-    .h-after {
+    .@{namespace}-after {
       right: -32px;
     }
   }
 
-  .h-after,
-  .h-before {
+  .@{namespace}-after,
+  .@{namespace}-before {
     position: absolute;
     top: 50%;
     color: #d9e1f0;
@@ -58,11 +58,11 @@ input[type="number"] {
     transform: translateY(-50%);
   }
 
-  .h-after {
+  .@{namespace}-after {
     transform: translate(-30%, -50%);
   }
 
-  .h-icon-h {
+  .@{namespace}-icon-h {
     position: absolute;
     top: 50%;
     right: -40px;
@@ -82,7 +82,7 @@ input[type="number"] {
     transform: translate(-40%, -50%);
   }
 
-  .h-icon-h::before {
+  .@{namespace}-icon-h::before {
     position: absolute;
     top: -7px;
     font-size: 12px;
@@ -91,8 +91,8 @@ input[type="number"] {
   }
 }
 
-.h-input,
-.h-textarea {
+.@{namespace}-input,
+.@{namespace}-textarea {
   box-sizing: border-box;
   width: 100%;
   padding: 5px 10px;
@@ -133,12 +133,12 @@ input[type="number"] {
     }
   }
 
-  &.h-input-large {
+  &.@{namespace}-input-large {
     padding: 12px 30px 12px 15px;
     font-size: 14px;
   }
 
-  &.h-input-small {
+  &.@{namespace}-input-small {
     padding: 4px 6px;
     font-size: 12px;
   }
@@ -148,7 +148,7 @@ input[type="number"] {
   }
 }
 
-.h-input {
+.@{namespace}-input {
   height: 100%;
   border-color: #d8d8d8;
   border-radius: 4px;
@@ -173,7 +173,7 @@ input[type="number"] {
 }
 
 html.dark {
-  .h-input {
+  .@{namespace}-input {
     color: #a1a4ac;
     border-color: rgb(78 78 78);
 
@@ -194,7 +194,7 @@ html.dark {
     }
   }
 
-  .h-textarea {
+  .@{namespace}-textarea {
     color: #a1a4ac;
     border-color: rgb(78 78 78);
   }

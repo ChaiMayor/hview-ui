@@ -7,7 +7,9 @@ importers:
       '@commitlint/cli': ^17.4.2
       '@commitlint/config-conventional': ^17.4.2
       '@hview-plus/components': 'workspace: *'
-      '@hview-plus/eslint-config': 'workspace: *'
+      '@hview-plus/constants': 'workspace: *'
+      '@hview-plus/directives': 'workspace: *'
+      '@hview-plus/hooks': 'workspace: *'
       '@hview-plus/locale': 'workspace: *'
       '@hview-plus/theme-chalk': 'workspace: *'
       '@hview-plus/utils': 'workspace: *'
@@ -63,7 +65,9 @@ importers:
       vue: ^3.2.45
     dependencies:
       '@hview-plus/components': link:packages/components
-      '@hview-plus/eslint-config': link:packages/eslint-config
+      '@hview-plus/constants': link:packages/constants
+      '@hview-plus/directives': link:packages/directives
+      '@hview-plus/hooks': link:packages/hooks
       '@hview-plus/locale': link:packages/locale
       '@hview-plus/theme-chalk': link:packages/theme-chalk
       '@hview-plus/utils': link:packages/utils
@@ -141,43 +145,27 @@ importers:
 
   packages/components:
     specifiers:
-      '@hview-plus/hooks': workspace:*
-      '@hview-plus/utils': workspace:*
-      '@rollup/plugin-terser': ^0.4.0
-      '@types/lodash': ^4.14.182
-      '@types/lodash-es': ^4.17.6
-      '@types/node': '*'
-      '@vue/shared': ^3.2.37
-      '@vueuse/core': ^9.1.0
-      dayjs: ^1.11.3
-      lodash: ^4.17.21
-      lodash-es: ^4.17.21
-      lodash-unified: ^1.0.2
       vue: ^3.2.37
     dependencies:
-      '@hview-plus/hooks': link:../hooks
-      '@hview-plus/utils': link:../utils
-      '@types/lodash': 4.14.191
-      '@types/lodash-es': 4.17.6
-      '@vue/shared': 3.2.47
-      '@vueuse/core': 9.12.0_vue@3.2.47
-      dayjs: 1.11.7
-      lodash: 4.17.21
-      lodash-es: 4.17.21
-      lodash-unified: 1.0.3_3ib2ivapxullxkx3xftsimdk7u
-    devDependencies:
-      '@rollup/plugin-terser': 0.4.0
-      '@types/node': 18.13.0
       vue: 3.2.47
 
   packages/constants:
     specifiers: {}
 
+  packages/directives:
+    specifiers:
+      vue: ^3.2.37
+    dependencies:
+      vue: 3.2.47
+
   packages/eslint-config:
     specifiers: {}
 
   packages/hooks:
-    specifiers: {}
+    specifiers:
+      vue: ^3.2.37
+    dependencies:
+      vue: 3.2.47
 
   packages/locale:
     specifiers:
@@ -955,30 +943,9 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /@jridgewell/gen-mapping/0.3.2:
-    resolution: {integrity: sha512-mh65xKQAzI6iBcFzwv28KVWSmCkdRBWoOh+bYQGW3+6OZvbbN3TqMGo5hqYxQniRcH9F2VZIoJCm4pa3BPDK/A==}
-    engines: {node: '>=6.0.0'}
-    dependencies:
-      '@jridgewell/set-array': 1.1.2
-      '@jridgewell/sourcemap-codec': 1.4.14
-      '@jridgewell/trace-mapping': 0.3.17
-    dev: true
-
   /@jridgewell/resolve-uri/3.1.0:
     resolution: {integrity: sha512-F2msla3tad+Mfht5cJq7LSXcdudKTWCVYUgw6pLFOOHSTtZlj6SWNYAp+AhuqLmWdBO2X5hPrLcu8cVP8fy28w==}
     engines: {node: '>=6.0.0'}
-    dev: true
-
-  /@jridgewell/set-array/1.1.2:
-    resolution: {integrity: sha512-xnkseuNADM0gt2bs+BvhO0p78Mk762YnZdsuzFV018NoG1Sj1SCQvpSqa7XUaTam5vAGasABV9qXASMKnFMwMw==}
-    engines: {node: '>=6.0.0'}
-    dev: true
-
-  /@jridgewell/source-map/0.3.2:
-    resolution: {integrity: sha512-m7O9o2uR8k2ObDysZYzdfhb08VuEml5oWGiosa1VdaPZ/A6QyPkAJuwN0Q1lhULOf6B7MtQmHENS743hWtCrgw==}
-    dependencies:
-      '@jridgewell/gen-mapping': 0.3.2
-      '@jridgewell/trace-mapping': 0.3.17
     dev: true
 
   /@jridgewell/sourcemap-codec/1.4.14:
@@ -1229,20 +1196,6 @@ packages:
       conventional-recommended-bump: 6.1.0
       release-it: 15.5.0
       semver: 7.3.8
-    dev: true
-
-  /@rollup/plugin-terser/0.4.0:
-    resolution: {integrity: sha512-Ipcf3LPNerey1q9ZMjiaWHlNPEHNU/B5/uh9zXLltfEQ1lVSLLeZSgAtTPWGyw8Ip1guOeq+mDtdOlEj/wNxQw==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      rollup: ^2.x || ^3.x
-    peerDependenciesMeta:
-      rollup:
-        optional: true
-    dependencies:
-      serialize-javascript: 6.0.1
-      smob: 0.0.6
-      terser: 5.16.3
     dev: true
 
   /@rollup/pluginutils/4.2.1:
@@ -8263,12 +8216,6 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /randombytes/2.1.0:
-    resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
-    dependencies:
-      safe-buffer: 5.2.1
-    dev: true
-
   /range-parser/1.2.1:
     resolution: {integrity: sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==}
     engines: {node: '>= 0.6'}
@@ -8797,12 +8744,6 @@ packages:
       - supports-color
     dev: true
 
-  /serialize-javascript/6.0.1:
-    resolution: {integrity: sha512-owoXEFjWRllis8/M1Q+Cw5k8ZH40e3zhp/ovX+Xr/vi1qj6QesbyXXViFbpNvWvPNAD62SutwEXavefrLJWj7w==}
-    dependencies:
-      randombytes: 2.1.0
-    dev: true
-
   /serve-index/1.9.1:
     resolution: {integrity: sha512-pXHfKNP4qujrtteMrSBb0rc8HJ9Ms/GrXwcUtUtD5s4ewDJI8bT3Cz2zTVRMKtri49pLx2e0Ya8ziP5Ya2pZZw==}
     engines: {node: '>= 0.8.0'}
@@ -8929,10 +8870,6 @@ packages:
     engines: {node: '>= 6.0.0', npm: '>= 3.0.0'}
     dev: true
 
-  /smob/0.0.6:
-    resolution: {integrity: sha512-V21+XeNni+tTyiST1MHsa84AQhT1aFZipzPpOFAVB8DkHzwJyjjAmt9bgwnuZiZWnIbMo2duE29wybxv/7HWUw==}
-    dev: true
-
   /snapdragon-node/2.1.1:
     resolution: {integrity: sha512-O27l4xaMYt/RSQ5TR3vpWCAB5Kb/czIcqUFOM/C4fYcLnbZUc1PkjTAMjof2pBWaSTwOUd6qUHcFGVGj7aIwnw==}
     engines: {node: '>=0.10.0'}
@@ -8997,13 +8934,6 @@ packages:
       resolve-url: 0.2.1
       source-map-url: 0.4.1
       urix: 0.1.0
-    dev: true
-
-  /source-map-support/0.5.21:
-    resolution: {integrity: sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==}
-    dependencies:
-      buffer-from: 1.1.2
-      source-map: 0.6.1
     dev: true
 
   /source-map-url/0.4.1:
@@ -9452,17 +9382,6 @@ packages:
       slice-ansi: 4.0.0
       string-width: 4.2.3
       strip-ansi: 6.0.1
-    dev: true
-
-  /terser/5.16.3:
-    resolution: {integrity: sha512-v8wWLaS/xt3nE9dgKEWhNUFP6q4kngO5B8eYFUuebsu7Dw/UNAnpUod6UHo04jSSkv8TzKHjZDSd7EXdDQAl8Q==}
-    engines: {node: '>=10'}
-    hasBin: true
-    dependencies:
-      '@jridgewell/source-map': 0.3.2
-      acorn: 8.8.2
-      commander: 2.20.3
-      source-map-support: 0.5.21
     dev: true
 
   /test-exclude/6.0.0:

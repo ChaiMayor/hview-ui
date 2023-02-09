@@ -1,4 +1,4 @@
-.h-tooltip {
+.@{namespace}-tooltip {
   position: absolute;
   z-index: 995;
   visibility: hidden;
@@ -19,14 +19,14 @@
     border-radius: 3px;
   }
 
-  &.h-tooltip-show {
+  &.@{namespace}-tooltip-show {
     visibility: visible;
     opacity: 1;
   }
 
-  &.h-tooltip-top,
-  &.h-tooltip-top-start,
-  &.h-tooltip-top-end {
+  &.@{namespace}-tooltip-top,
+  &.@{namespace}-tooltip-top-start,
+  &.@{namespace}-tooltip-top-end {
     padding-bottom: 8px;
 
     &::after {
@@ -39,31 +39,31 @@
     }
   }
 
-  &.h-tooltip-top-start,
-  &.h-tooltip-bottom-start {
+  &.@{namespace}-tooltip-top-start,
+  &.@{namespace}-tooltip-bottom-start {
     &::after {
       left: 10px;
     }
   }
 
-  &.h-tooltip-top,
-  &.h-tooltip-bottom {
+  &.@{namespace}-tooltip-top,
+  &.@{namespace}-tooltip-bottom {
     &::after {
       left: 50%;
       transform: translateX(-50%);
     }
   }
 
-  &.h-tooltip-top-end,
-  &.h-tooltip-bottom-end {
+  &.@{namespace}-tooltip-top-end,
+  &.@{namespace}-tooltip-bottom-end {
     &::after {
       right: 10px;
     }
   }
 
-  &.h-tooltip-bottom-start,
-  &.h-tooltip-bottom,
-  &.h-tooltip-bottom-end {
+  &.@{namespace}-tooltip-bottom-start,
+  &.@{namespace}-tooltip-bottom,
+  &.@{namespace}-tooltip-bottom-end {
     padding-top: 8px;
 
     &::after {
@@ -76,9 +76,9 @@
     }
   }
 
-  &.h-tooltip-left,
-  &.h-tooltip-left-start,
-  &.h-tooltip-left-end {
+  &.@{namespace}-tooltip-left,
+  &.@{namespace}-tooltip-left-start,
+  &.@{namespace}-tooltip-left-end {
     padding-right: 8px;
     transform-origin: right center;
 
@@ -92,31 +92,31 @@
     }
   }
 
-  &.h-tooltip-left-start,
-  &.h-tooltip-right-start {
+  &.@{namespace}-tooltip-left-start,
+  &.@{namespace}-tooltip-right-start {
     &::after {
       top: 10px;
     }
   }
 
-  &.h-tooltip-left,
-  &.h-tooltip-right {
+  &.@{namespace}-tooltip-left,
+  &.@{namespace}-tooltip-right {
     &::after {
       top: 50%;
       transform: translateY(-50%);
     }
   }
 
-  &.h-tooltip-left-end,
-  &.h-tooltip-right-end {
+  &.@{namespace}-tooltip-left-end,
+  &.@{namespace}-tooltip-right-end {
     &::after {
       bottom: 10px;
     }
   }
 
-  &.h-tooltip-right,
-  &.h-tooltip-right-start,
-  &.h-tooltip-right-end {
+  &.@{namespace}-tooltip-right,
+  &.@{namespace}-tooltip-right-start,
+  &.@{namespace}-tooltip-right-end {
     padding-left: 8px;
 
     &::after {
@@ -132,7 +132,7 @@
   &[class*="h-tooltip-top"] {
     transform: translateY(5px);
 
-    &.h-tooltip-show {
+    &.@{namespace}-tooltip-show {
       transform: translateY(0);
     }
   }
@@ -140,7 +140,7 @@
   &[class*="h-tooltip-left"] {
     transform: translateX(5px);
 
-    &.h-tooltip-show {
+    &.@{namespace}-tooltip-show {
       transform: translateY(0);
     }
   }
@@ -148,7 +148,7 @@
   &[class*="h-tooltip-right"] {
     transform: translateX(-5px);
 
-    &.h-tooltip-show {
+    &.@{namespace}-tooltip-show {
       transform: translateY(0);
     }
   }
@@ -156,7 +156,7 @@
   &[class*="h-tooltip-bottom"] {
     transform: translateY(-5px);
 
-    &.h-tooltip-show {
+    &.@{namespace}-tooltip-show {
       transform: translateY(0);
     }
   }

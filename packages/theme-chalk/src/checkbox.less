@@ -1,4 +1,4 @@
-.h-checkbox {
+.@{namespace}-checkbox {
   position: relative;
   display: inline-block;
   margin-right: 30px;
@@ -10,7 +10,7 @@
   user-select: none;
 }
 
-.h-checkbox .h-checkbox__input {
+.@{namespace}-checkbox .@{namespace}-checkbox__input {
   position: relative;
   display: inline-block;
   line-height: 1;
@@ -20,7 +20,9 @@
   outline: none;
 }
 
-.h-checkbox .h-checkbox__input .h-checkbox__inner {
+.@{namespace}-checkbox
+  .@{namespace}-checkbox__input
+  .@{namespace}-checkbox__inner {
   position: relative;
   z-index: 1;
   box-sizing: border-box;
@@ -34,7 +36,9 @@
     background-color 0.25s cubic-bezier(0.71, -0.46, 0.29, 1.46);
 }
 
-.h-checkbox .h-checkbox__input .h-checkbox__inner::after {
+.@{namespace}-checkbox
+  .@{namespace}-checkbox__input
+  .@{namespace}-checkbox__inner::after {
   position: absolute;
   top: 1px;
   left: 4px;
@@ -50,7 +54,9 @@
   transform-origin: center;
 }
 
-.h-checkbox .h-checkbox__input .h-checkbox__original {
+.@{namespace}-checkbox
+  .@{namespace}-checkbox__input
+  .@{namespace}-checkbox__original {
   position: absolute;
   z-index: -1;
   width: 0;
@@ -60,31 +66,33 @@
   opacity: 0;
 }
 
-.h-checkbox .is-checked .h-checkbox__inner {
+.@{namespace}-checkbox .is-checked .@{namespace}-checkbox__inner {
   background-color: var(--hv-color-primary);
   border-color: var(--hv-color-primary);
 }
 
-.h-checkbox .is-checked .h-checkbox__inner::after {
+.@{namespace}-checkbox .is-checked .@{namespace}-checkbox__inner::after {
   transform: rotate(45deg) scaleY(1);
 }
 
-.h-checkbox .is-checked.is-disabled .h-checkbox__inner {
+.@{namespace}-checkbox .is-checked.is-disabled .@{namespace}-checkbox__inner {
   cursor: no-drop;
   background-color: var(--hv-border-color-extra-light);
   border-color: var(--hv-border-color);
 }
 
-.h-checkbox .is-checked.is-disabled .h-checkbox__inner::after {
+.@{namespace}-checkbox
+  .is-checked.is-disabled
+  .@{namespace}-checkbox__inner::after {
   border-color: var(--hv-text-color-disabled);
 }
 
-.h-checkbox .is-indeterminate .h-checkbox__inner {
+.@{namespace}-checkbox .is-indeterminate .@{namespace}-checkbox__inner {
   background-color: var(--hv-color-primary);
   border-color: var(--hv-color-primary);
 }
 
-.h-checkbox .is-indeterminate .h-checkbox__inner::before {
+.@{namespace}-checkbox .is-indeterminate .@{namespace}-checkbox__inner::before {
   position: absolute;
   top: 5px;
   right: 0;
@@ -96,18 +104,18 @@
   transform: scale(0.5);
 }
 
-.h-checkbox .is-disabled {
+.@{namespace}-checkbox .is-disabled {
   color: var(--hv-text-color-disabled);
   cursor: no-drop;
 }
 
-.h-checkbox .is-disabled .h-checkbox__inner {
+.@{namespace}-checkbox .is-disabled .@{namespace}-checkbox__inner {
   cursor: not-allowed;
   background-color: var(--hv-check-bg-disabled);
   border-color: var(--hv-border-color);
 }
 
-.h-checkbox .h-checkbox__label {
+.@{namespace}-checkbox .@{namespace}-checkbox__label {
   display: inline-block;
   padding-left: 10px;
   font-size: 14px;
@@ -119,13 +127,13 @@
   cursor: no-drop;
 }
 
-.is-disabled .h-checkbox__inner {
+.is-disabled .@{namespace}-checkbox__inner {
   cursor: not-allowed;
   background-color: var(--hv-check-bg-disabled);
   border-color: var(--hv-border-color);
 }
 
-.is-disabled.is-indeterminate .h-checkbox__inner::before {
+.is-disabled.is-indeterminate .@{namespace}-checkbox__inner::before {
   background-color: var(--hv-text-color-disabled);
   border-color: var(--hv-text-color-disabled);
 }
@@ -145,10 +153,14 @@
 }
 
 html.dark {
-  .h-checkbox .h-checkbox__input .h-checkbox__inner {
+  .@{namespace}-checkbox
+    .@{namespace}-checkbox__input
+    .@{namespace}-checkbox__inner {
     background-color: transparent;
 
-    .h-checkbox .h-checkbox__input .h-checkbox__inner::after {
+    .@{namespace}-checkbox
+      .@{namespace}-checkbox__input
+      .@{namespace}-checkbox__inner::after {
       background-color: transparent;
     }
   }

@@ -13,13 +13,13 @@
 
 @__stop_size: 6px;
 
-.h-slider {
+.@{namespace}-slider {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
 
-  .h-input-number {
+  .@{namespace}-input-number {
     margin-left: 16px;
   }
 
@@ -84,7 +84,7 @@
     }
 
     &.showEffect {
-      .h-slider__stop_item {
+      .@{namespace}-slider__stop_item {
         z-index: 1;
       }
     }
@@ -166,7 +166,7 @@
 }
 
 html.dark {
-  .h-slider {
+  .@{namespace}-slider {
     &.is-disabled {
       .@{cls}__bar {
         background-color: @--h-slider-disabled-color;

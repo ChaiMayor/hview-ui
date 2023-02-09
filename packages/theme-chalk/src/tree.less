@@ -3,20 +3,20 @@
 @import "mixins/config.less";
 @import "mixins/mixins.less";
 
-.h-tree {
+.@{namespace}-tree {
   position: relative;
   color: #606266;
   cursor: default;
 }
 
-.h-tree-node {
+.@{namespace}-tree-node {
   box-sizing: border-box;
   width: 100%;
   white-space: nowrap;
   outline: none;
 }
 
-.h-tree-node__content {
+.@{namespace}-tree-node__content {
   display: flex;
   align-items: center;
   height: 26px;
@@ -27,7 +27,7 @@
   }
 }
 
-.h-tree-node__expand-icon {
+.@{namespace}-tree-node__expand-icon {
   // 覆盖docs的全局样式
   box-sizing: content-box !important;
   display: inline-block;
@@ -44,10 +44,10 @@
   transform: rotate(90deg);
 }
 
-.h-tree-node-checkbox {
+.@{namespace}-tree-node-checkbox {
   margin-right: 0;
 }
 
-.h-tree-ul-box {
+.@{namespace}-tree-ul-box {
   padding-left: 5px;
 }

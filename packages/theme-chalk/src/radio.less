@@ -1,14 +1,14 @@
-.h-radio {
+.@{namespace}-radio {
   width: 100%;
   height: auto;
   overflow: hidden;
   color: #606266;
 
-  .h-item-disabled-radio {
+  .@{namespace}-item-disabled-radio {
     color: #808080;
     cursor: not-allowed !important;
 
-    .h-radio-item-button {
+    .@{namespace}-radio-item-button {
       background-color: #f5f7fa;
       border-color: #e4e7ed;
 
@@ -17,12 +17,12 @@
       }
     }
 
-    .h-radio-item-label {
+    .@{namespace}-radio-item-label {
       color: #a8abb2;
     }
   }
 
-  .h-item-radio {
+  .@{namespace}-item-radio {
     align-items: center;
     width: auto;
     height: auto;
@@ -32,7 +32,7 @@
     cursor: pointer;
     user-select: none;
 
-    .h-radio-item-button {
+    .@{namespace}-radio-item-button {
       position: relative;
       display: inline-block;
       width: 14px;
@@ -59,7 +59,7 @@
     }
 
     &.active {
-      .h-radio-item-button {
+      .@{namespace}-radio-item-button {
         background-color: var(--hv-color-primary);
         border: 1px solid var(--hv-color-primary);
 
@@ -68,12 +68,12 @@
         }
       }
 
-      .h-radio-item-label {
+      .@{namespace}-radio-item-label {
         color: var(--hv-color-primary);
       }
 
-      &.h-item-disabled-radio {
-        .h-radio-item-button {
+      &.@{namespace}-item-disabled-radio {
+        .@{namespace}-radio-item-button {
           background-color: transparent;
           border-color: #e4e7ed;
 
@@ -82,30 +82,30 @@
           }
         }
 
-        .h-radio-item-label {
+        .@{namespace}-radio-item-label {
           color: #a8abb2;
         }
       }
     }
   }
 
-  // .h-item-radio-custom {
+  // .@{namespace}-item-radio-custom {
   // }
 }
 
 html.dark {
-  .h-radio {
-    .h-item-radio {
+  .@{namespace}-radio {
+    .@{namespace}-item-radio {
       &:not(.active) {
-        .h-radio-item-button {
+        .@{namespace}-radio-item-button {
           background-color: transparent;
           border-color: #4c4d4f;
         }
       }
     }
 
-    .h-item-disabled-radio {
-      .h-radio-item-button {
+    .@{namespace}-item-disabled-radio {
+      .@{namespace}-radio-item-button {
         background-color: transparent !important;
         border-color: #4c4d4f !important;
       }

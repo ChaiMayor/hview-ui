@@ -1,20 +1,21 @@
 ls:
-  packages/components/src/**/{src, style}:
+  packages/components/**/{src}:
     .dir: kebab-case
     .vue: kebab-case
-    .js: kebab-case
     .ts: kebab-case
-    .json: kebab-case
-    .d.ts: kebab-case
-    .tsx: kebab-case
-  # site/docs/**:
-  #   .dir: kebab-case
-  #   .vue: kebab-case
-  #   .js: kebab-case
-  #   .ts: kebab-case
-  #   .json: kebab-case
-  #   .d.ts: kebab-case
-  #   .tsx: kebab-case
+  site/docs/**:
+    .dir: kebab-case
+    .vue: kebab-case
+    .ts: kebab-case
+  packages/theme-chalk/src/**:
+    .dir: kebab-case
+    .less: kebab-case
+  packages/hooks/**:
+    .dir: kebab-case
+    .ts: kebab-case
+  packages/directives/**:
+    .dir: kebab-case
+    .ts: kebab-case
 
 ignore:
   - .git
