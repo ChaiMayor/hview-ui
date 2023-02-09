@@ -25,6 +25,9 @@ import { default as Empty } from "./empty";
 import { default as Divider } from "./divider";
 import { default as Alert } from "./alert";
 import { Timeline, TimelineItem } from "./timeline";
+import { default as image } from "./image";
+import { default as imageViewer } from "./image-viewer";
+import { default as popover } from "./popover";
 
 export {
   Button,
@@ -59,6 +62,9 @@ export {
   Alert,
   Timeline,
   TimelineItem,
+  image,
+  imageViewer,
+  popover,
 };
 
 export default [
@@ -94,4 +100,7 @@ export default [
   Alert,
   Timeline,
   TimelineItem,
+  image,
+  imageViewer,
+  popover,
 ];

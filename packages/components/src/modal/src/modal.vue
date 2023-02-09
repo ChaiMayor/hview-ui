@@ -1,7 +1,12 @@
 <template>
   <transition name="modal-fade">
     <div class="modal-backdrop" v-if="props.show" :style="{ zIndex, backgroundColor: bgColor }">
-      <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+      <div
+        class="modal"
+        role="dialog"
+        aria-labelledby="modalTitle"
+        aria-describedby="modalDescription"
+        :style="{ backgroundColor: contentBgColor }">
         <header class="modal-header" id="modalTitle" v-if="title">
           <slot name="header"> This is the default title! </slot>
           <button type="button" class="btn-close" @click="handleClick" aria-label="Close modal"> x </button>
@@ -32,9 +37,7 @@
 import "../style/index.less";
 import { modalProps } from "./modal";
 const props = defineProps(modalProps);
-
 const emits = defineEmits(["onClose", "update:show"]);
-
 const handleClick = () => {
   //点击关闭按钮，关闭modal组件
   emits("update:show", !props.show);

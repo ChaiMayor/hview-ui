@@ -1,9 +1,8 @@
 /* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
 @font-face {
-  font-family: "Hviewicon"; /* Project id 3867051 */
-  src: url("//at.alicdn.com/t/c/font_3867051_q2pm58z8z2.woff2?t=1675757102175") format("woff2"),
-    url("//at.alicdn.com/t/c/font_3867051_q2pm58z8z2.woff?t=1675757102175") format("woff"),
-    url("//at.alicdn.com/t/c/font_3867051_q2pm58z8z2.ttf?t=1675757102175") format("truetype");
+  font-family: "Hviewicon";
+  /* Project id 3867051 */
+  src: url("//at.alicdn.com/t/c/font_3867051_q2pm58z8z2.woff2?t=1675757102175") format("woff2"), url("//at.alicdn.com/t/c/font_3867051_q2pm58z8z2.woff?t=1675757102175") format("woff"), url("//at.alicdn.com/t/c/font_3867051_q2pm58z8z2.ttf?t=1675757102175") format("truetype");
 }
 i {
   font-family: "Hviewicon" !important;
@@ -12,203 +11,153 @@ i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 .h-icon-experiment:before {
   content: "\e7e4";
 }
-
 .h-icon-github:before {
   content: "\e685";
 }
-
 .h-icon-xiangshang:before {
   content: "\e600";
 }
-
 .h-icon-xiangxia:before {
   content: "\e601";
 }
-
 .h-icon-xiangshang1:before {
   content: "\e76d";
 }
-
 .h-icon-xiala:before {
   content: "\e65c";
 }
-
 .h-icon-icon-arrow-left2:before {
   content: "\e664";
 }
-
 .h-icon-youjiantou:before {
   content: "\e61e";
 }
-
 .h-icon-you:before {
   content: "\e706";
 }
-
 .h-icon-you1:before {
   content: "\e60a";
 }
-
 .h-icon-fuzhi:before {
   content: "\ec7a";
 }
-
 .h-icon-zitidaima:before {
   content: "\ec83";
 }
-
 .h-icon-delete:before {
   content: "\e67e";
 }
-
 .h-icon-share:before {
   content: "\e68b";
 }
-
 .h-icon-edit:before {
   content: "\ed4f";
 }
-
 .h-icon-calendar:before {
   content: "\e74a";
 }
-
 .h-icon-loading:before {
   content: "\e644";
 }
-
 .h-icon-user:before {
   content: "\e7ae";
 }
-
 .h-icon-star:before {
   content: "\e7df";
 }
-
 .h-icon-download:before {
   content: "\e7ef";
 }
-
 .h-icon-view:before {
   content: "\e69e";
 }
-
 .h-icon-typescript:before {
   content: "\e6a3";
 }
-
 .h-icon-link:before {
   content: "\e8c1";
 }
-
 .h-icon-question:before {
   content: "\e6bd";
 }
-
 .h-icon-setting:before {
   content: "\e67d";
 }
-
 .h-icon-close:before {
   content: "\e6a7";
 }
-
 .h-icon-success:before {
   content: "\e73c";
 }
-
 .h-icon-error:before {
   content: "\e6c6";
 }
-
 .h-icon-warning:before {
   content: "\e63f";
 }
-
 .h-icon-info:before {
   content: "\e637";
 }
-
 .h-icon-search:before {
   content: "\e741";
 }
-
 .h-icon-fuzhi:before {
   content: "\ec7a";
 }
-
 .h-icon-code:before {
   content: "\ec83";
 }
-
 .h-icon-ArrowLeft:before {
   content: "\e664";
 }
-
 .h-icon-ArrowTop:before {
   content: "\e600";
 }
-
 .h-icon-ArrowRight:before {
   content: "\e61e";
 }
-
 .h-icon-ArrowBottom:before {
   content: "\e601";
 }
-
 .h-icon-ArrowLeftBold:before {
   content: "\e706";
 }
-
 .h-icon-ArrowTopBold:before {
   content: "\e76d";
 }
-
 .h-icon-ArrowRightBold:before {
   content: "\e60a";
 }
-
 .h-icon-ArrowBottomBold:before {
   content: "\e65c";
 }
-
 .h-icon-test:before {
   content: "\e7e4";
 }
-
 .h-icon-github:before {
   content: "\e685";
 }
-
 .h-icon-starfill:before {
   content: "\e732";
 }
-
 .h-icon-zoomOut:before {
   content: "\e684";
 }
-
 .h-icon-zoomIn:before {
   content: "\e683";
 }
-
 .h-icon-fullScreen:before {
   content: "\ea68";
 }
-
 .h-icon-refreshRight:before {
   content: "\e677";
 }
-
 .h-icon-refreshLeft:before {
   content: "\e673";
 }
-
 .h-icon-cloudUpload:before {
   content: "\e7d9";
 }

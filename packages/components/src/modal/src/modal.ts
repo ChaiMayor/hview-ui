@@ -16,6 +16,11 @@ export const modalProps = {
     type: String,
     default: "rgba(0,0,0,0.6)",
   },
+  //弹框内容的背景颜色
+  contentBgColor: {
+    type: String,
+    default: "#ffffff",
+  },
   // 是否使用title
   title: {
     type: Boolean,
