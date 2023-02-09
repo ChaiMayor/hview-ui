@@ -1,11 +1,11 @@
 {
-	"name": "@hview-plus/directives",
-	"version": "1.0.0",
-	"description": "Hview Plus directives",
-	"license": "MIT",
-	"main": "index.ts",
-	"module": "index.ts",
-	"peerDependencies": {
-		"vue": "^3.2.37"
-	}
+  "name": "@hview-plus/directives",
+  "version": "1.0.0",
+  "description": "Hview Plus directives",
+  "license": "MIT",
+  "main": "index.ts",
+  "module": "index.ts",
+  "peerDependencies": {
+    "vue": "^3.2.37"
+  }
 }

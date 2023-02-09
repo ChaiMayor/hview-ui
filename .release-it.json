@@ -1,32 +1,32 @@
 {
-	"git": {
-		"commitMessage": "chore: release v${version}",
-		"commit": false,
-		"tag": true,
-		"push": true
-	},
-	"github": {
-		"release": true
-	},
-	"npm": {
-		"publish": false
-	},
-	"plugins": {
-		"@release-it/conventional-changelog": {
-			"preset": {
-				"name": "conventionalcommits",
-				"types": [
-					{ "type": "feat", "section": "Features" },
-					{ "type": "fix", "section": "Bug Fixes" },
-					{ "type": "chore", "hidden": true },
-					{ "type": "docs", "hidden": true },
-					{ "type": "style", "hidden": true },
-					{ "type": "refactor", "hidden": true },
-					{ "type": "perf", "hidden": true },
-					{ "type": "test", "hidden": true }
-				]
-			},
-			"infile": "../../../CHANGELOG.md"
-		}
-	}
+  "git": {
+    "commitMessage": "chore: release v${version}",
+    "commit": false,
+    "tag": true,
+    "push": true
+  },
+  "github": {
+    "release": true
+  },
+  "npm": {
+    "publish": false
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": {
+        "name": "conventionalcommits",
+        "types": [
+          { "type": "feat", "section": "Features" },
+          { "type": "fix", "section": "Bug Fixes" },
+          { "type": "chore", "hidden": true },
+          { "type": "docs", "hidden": true },
+          { "type": "style", "hidden": true },
+          { "type": "refactor", "hidden": true },
+          { "type": "perf", "hidden": true },
+          { "type": "test", "hidden": true }
+        ]
+      },
+      "infile": "../../../CHANGELOG.md"
+    }
+  }
 }

@@ -8,15 +8,15 @@ import Aside from "../src/aside.vue";
 import Footer from "../src/footer.vue";
 
 describe("container.vue", () => {
-	it("test", async () => {
-		const wrapper = mount(Container, {
-			slots: {
-				default: "Hhlo world",
-			},
-		});
-		// console.log(wrapper.text());
-		expect(wrapper.text()).toBe("Hhlo world");
-	});
+  it("test", async () => {
+    const wrapper = mount(Container, {
+      slots: {
+        default: "Hhlo world",
+      },
+    });
+    // console.log(wrapper.text());
+    expect(wrapper.text()).toBe("Hhlo world");
+  });
 });
 
 // describe("Container.vue", () => {

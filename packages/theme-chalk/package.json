@@ -1,11 +1,11 @@
 {
-	"name": "@hview-plus/theme-chalk",
-	"version": "1.0.0",
-	"license": "MIT",
-	"main": "index.css",
-	"module": "index.ts",
-	"scripts": {
-		"start": "gulp -f script/build/gulpfile.ts",
-		"build": "vite build"
-	}
+  "name": "@hview-plus/theme-chalk",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "index.css",
+  "module": "index.ts",
+  "scripts": {
+    "start": "gulp -f script/build/gulpfile.ts",
+    "build": "vite build"
+  }
 }

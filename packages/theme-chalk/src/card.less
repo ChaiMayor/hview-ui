@@ -11,53 +11,53 @@
 @padding: 15px;
 
 .@{namespace}-card {
-	overflow: hidden;
-	color: @text-color;
-	background-color: @bg-color;
-	border: @border;
-	border-radius: 8px;
-	transition: 0.5s;
-	.@{namespace}-card-header {
-		box-sizing: border-box;
-		padding: @padding;
-		border-bottom: @border;
-	}
-	.@{namespace}-card-body {
-		padding: @padding;
-	}
-	.@{namespace}-card-handle {
-		display: flex;
-		padding: 1px;
-		border-top: @border;
-	}
+  overflow: hidden;
+  color: @text-color;
+  background-color: @bg-color;
+  border: @border;
+  border-radius: 8px;
+  transition: 0.5s;
+  .@{namespace}-card-header {
+    box-sizing: border-box;
+    padding: @padding;
+    border-bottom: @border;
+  }
+  .@{namespace}-card-body {
+    padding: @padding;
+  }
+  .@{namespace}-card-handle {
+    display: flex;
+    padding: 1px;
+    border-top: @border;
+  }
 }
 
 .@{namespace}-card-shadow--always {
-	box-shadow: @shadow;
+  box-shadow: @shadow;
 }
 
 .@{namespace}-card-shadow--hover {
-	&:hover,
-	&:focus {
-		box-shadow: @shadow;
-	}
+  &:hover,
+  &:focus {
+    box-shadow: @shadow;
+  }
 }
 
 // .@{namespace}-card-shadow--never {
 // }
 
 html.dark {
-	.@{namespace}-card {
-		color: #e4e7ed;
-		background-color: #1d1e1f;
-		border-color: #414243;
+  .@{namespace}-card {
+    color: #e4e7ed;
+    background-color: #1d1e1f;
+    border-color: #414243;
 
-		.h-card-header {
-			border-bottom: 1px solid #414243;
-		}
+    .h-card-header {
+      border-bottom: 1px solid #414243;
+    }
 
-		.h-card-handle {
-			border-top: 1px solid #414243;
-		}
-	}
+    .h-card-handle {
+      border-top: 1px solid #414243;
+    }
+  }
 }

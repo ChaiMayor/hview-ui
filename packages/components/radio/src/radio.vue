@@ -1,22 +1,22 @@
 <template>
-	<div class="h-radio">
-		<div
-			class="h-item-radio"
-			v-for="(item, index) in options"
-			:key="index"
-			:style="inlineStyle()"
-			@click="change(item, item.id)"
-			:class="[
-				{ active: radioIndex === String(item.id) },
-				{ 'h-item-disabled-radio': item.disabled },
-				// { 'h-item-radio-custom': props.customColor },
-			]">
-			<span :class="['h-radio-item-button']"></span>
-			<span class="h-radio-item-label">
-				{{ item.label }}
-			</span>
-		</div>
-	</div>
+  <div class="h-radio">
+    <div
+      class="h-item-radio"
+      v-for="(item, index) in options"
+      :key="index"
+      :style="inlineStyle()"
+      @click="change(item, item.id)"
+      :class="[
+        { active: radioIndex === String(item.id) },
+        { 'h-item-disabled-radio': item.disabled },
+        // { 'h-item-radio-custom': props.customColor },
+      ]">
+      <span :class="['h-radio-item-button']"></span>
+      <span class="h-radio-item-label">
+        {{ item.label }}
+      </span>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -30,8 +30,8 @@ const radioIndex = ref(props.modelValue);
 const isInline = ref("inline-flex");
 
 const inlineStyle = () => {
-	props.inline ? isInline.value : (isInline.value = "flex");
-	return { display: `${isInline.value}` };
+  props.inline ? isInline.value : (isInline.value = "flex");
+  return { display: `${isInline.value}` };
 };
 
 // const colorStyleButton = (id: number) => {
@@ -55,16 +55,16 @@ const inlineStyle = () => {
 // };
 
 const change = (item: OptionsItem, index: number): void => {
-	if (!item.disabled) {
-		radioIndex.value = String(index);
-	}
-	emit("change", item);
+  if (!item.disabled) {
+    radioIndex.value = String(index);
+  }
+  emit("change", item);
 };
 </script>
 
 <script lang="ts">
 export default {
-	name: "HRadio",
+  name: "HRadio",
 };
 </script>
 

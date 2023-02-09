@@ -6,10 +6,10 @@
  * @returns 判断值在界限内返回true，否则抛错
  */
 export const isOutBounds = (val: number, min: number, max: number) => {
-	if (val > max || val < min) {
-		throw new Error("不能超出限定范围(默认0~100)");
-	}
-	return true;
+  if (val > max || val < min) {
+    throw new Error("不能超出限定范围(默认0~100)");
+  }
+  return true;
 };
 
 /**
@@ -20,19 +20,19 @@ export const isOutBounds = (val: number, min: number, max: number) => {
  * @returns 返回一个数组，存储每份对应的px像素大小
  */
 export const cutChunk = (
-	extent: number,
-	step: number,
-	maxTotal: number,
+  extent: number,
+  step: number,
+  maxTotal: number,
 ): number[] => {
-	if (!extent) return [];
+  if (!extent) return [];
 
-	const length = Math.floor(maxTotal / step);
-	const one = extent / length;
-	const result = [];
-	for (let i = 1; i <= length; i++) {
-		result.push(one * i);
-	}
-	return result;
+  const length = Math.floor(maxTotal / step);
+  const one = extent / length;
+  const result = [];
+  for (let i = 1; i <= length; i++) {
+    result.push(one * i);
+  }
+  return result;
 };
 
 type Location = "start" | "end";
@@ -44,14 +44,14 @@ type Location = "start" | "end";
  * @returns 判断值大于中间值则返回右侧值，反之亦然
  */
 export const judgeLocation = (
-	val: number,
-	start: number,
-	end: number,
+  val: number,
+  start: number,
+  end: number,
 ): Location => {
-	// console.log(val, start, end);
+  // console.log(val, start, end);
 
-	const middle = (end - start) / 2;
-	return val > start + middle ? "end" : "start";
+  const middle = (end - start) / 2;
+  return val > start + middle ? "end" : "start";
 };
 
 // type near = "btn1" | "btn2";

@@ -8,58 +8,58 @@ import gulpMinifyCss from "gulp-minify-css";
 import { themeDir, finalDir } from "../utils/constant";
 
 export const removeCompDist = async (floor: number) => {
-	// await removeDir(reFinalPath);
-	return await delPath(`${root}/${finalDir}`, floor);
+  // await removeDir(reFinalPath);
+  return await delPath(`${root}/${finalDir}`, floor);
 };
 
 export const buildCompDist = async () => {
-	run("pnpm run build", root);
+  run("pnpm run build", root);
 };
 
 export const removeThemeDist = async () => {
-	return await removeDir(reThemePath);
+  return await removeDir(reThemePath);
 };
 
 export const buildThemeDist = async () => {
-	run("pnpm run build", themePath);
+  run("pnpm run build", themePath);
 };
 
 export const buildStyle = async () => {
-	return src(`${themePath}/src/*.less`)
-		.pipe(less())
-		.pipe(
-			autoprefixer({
-				// @ts-ignore
-				overrideBrowserslist: ["> 1%", "last 2 versions"],
-				cascade: false,
-			}),
-		)
-		.pipe(gulpMinifyCss())
-		.pipe(dest(`${root}/hview-ui/theme-chalk`));
+  return src(`${themePath}/src/*.less`)
+    .pipe(less())
+    .pipe(
+      autoprefixer({
+        // @ts-ignore
+        overrideBrowserslist: ["> 1%", "last 2 versions"],
+        cascade: false,
+      }),
+    )
+    .pipe(gulpMinifyCss())
+    .pipe(dest(`${root}/hview-ui/theme-chalk`));
 };
 
 export const buildStyleDir = async () => {
-	return src(`${themePath}/src/**/*.less`)
-		.pipe(less())
-		.pipe(
-			autoprefixer({
-				// @ts-ignore
-				overrideBrowserslist: ["> 1%", "last 2 versions"],
-				cascade: false,
-			}),
-		)
-		.pipe(gulpMinifyCss())
-		.pipe(dest(`${root}/hview-ui/theme-chalk`));
+  return src(`${themePath}/src/**/*.less`)
+    .pipe(less())
+    .pipe(
+      autoprefixer({
+        // @ts-ignore
+        overrideBrowserslist: ["> 1%", "last 2 versions"],
+        cascade: false,
+      }),
+    )
+    .pipe(gulpMinifyCss())
+    .pipe(dest(`${root}/hview-ui/theme-chalk`));
 };
 
 export const deriveDist = async () => {
-	return src(`${themePath}/${themeDir}/style.css`)
-		.pipe(
-			autoprefixer({
-				// @ts-ignore
-				overrideBrowserslist: ["> 1%", "last 2 versions"],
-				cascade: false,
-			}),
-		)
-		.pipe(dest(`${root}/hview-ui/theme-chalk`));
+  return src(`${themePath}/${themeDir}/style.css`)
+    .pipe(
+      autoprefixer({
+        // @ts-ignore
+        overrideBrowserslist: ["> 1%", "last 2 versions"],
+        cascade: false,
+      }),
+    )
+    .pipe(dest(`${root}/hview-ui/theme-chalk`));
 };

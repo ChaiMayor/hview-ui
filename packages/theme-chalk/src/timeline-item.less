@@ -4,103 +4,103 @@
 @import "mixins/mixins.less";
 
 .@{namespace}-timeline-item {
-	position: relative;
-	padding-bottom: 20px;
+  position: relative;
+  padding-bottom: 20px;
 
-	&-wrapper {
-		position: relative;
-		top: -3px;
-		padding-left: 28px;
-	}
+  &-wrapper {
+    position: relative;
+    top: -3px;
+    padding-left: 28px;
+  }
 
-	&-tail {
-		position: absolute;
-		left: 4px;
-		height: 100%;
-		border-left: 2px solid var(--hv-border-color-light);
-	}
+  &-tail {
+    position: absolute;
+    left: 4px;
+    height: 100%;
+    border-left: 2px solid var(--hv-border-color-light);
+  }
 
-	&-icon {
-		font-size: var(--hv-font-size-small);
-		color: #fff;
-	}
+  &-icon {
+    font-size: var(--hv-font-size-small);
+    color: #fff;
+  }
 
-	&-node {
-		position: absolute;
-		box-sizing: border-box;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: var(--hv-border-color-light);
-		border-color: var(--hv-border-color-light);
-		border-radius: 50%;
+  &-node {
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--hv-border-color-light);
+    border-color: var(--hv-border-color-light);
+    border-radius: 50%;
 
-		&--normal {
-			left: -1px;
-			width: 12px;
-			height: 12px;
-		}
+    &--normal {
+      left: -1px;
+      width: 12px;
+      height: 12px;
+    }
 
-		&--large {
-			left: -2px;
-			width: 14px;
-			height: 14px;
-		}
+    &--large {
+      left: -2px;
+      width: 14px;
+      height: 14px;
+    }
 
-		&-hollow {
-			background: #fff;
-			border-style: solid;
-			border-width: 2px;
-		}
+    &-hollow {
+      background: #fff;
+      border-style: solid;
+      border-width: 2px;
+    }
 
-		&--primary {
-			background-color: var(--hv-color-primary);
-			border-color: var(--hv-color-primary);
-		}
+    &--primary {
+      background-color: var(--hv-color-primary);
+      border-color: var(--hv-color-primary);
+    }
 
-		&--success {
-			background-color: #colors[success];
-			border-color: #67c23a;
-		}
+    &--success {
+      background-color: #colors[success];
+      border-color: #67c23a;
+    }
 
-		&--warning {
-			background-color: #e6a23c;
-			border-color: #e6a23c;
-		}
+    &--warning {
+      background-color: #e6a23c;
+      border-color: #e6a23c;
+    }
 
-		&--danger {
-			background-color: #f56c6c;
-			border-color: #f56c6c;
-		}
+    &--danger {
+      background-color: #f56c6c;
+      border-color: #f56c6c;
+    }
 
-		&--info {
-			background-color: #colors[info];
-			border-color: #909399;
-		}
-	}
+    &--info {
+      background-color: #colors[info];
+      border-color: #909399;
+    }
+  }
 
-	&-dot {
-		position: absolute;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
+  &-dot {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-	&-content {
-		color: var(--hv-text-color-primary);
-	}
+  &-content {
+    color: var(--hv-text-color-primary);
+  }
 
-	&-timestamp {
-		font-size: var(--hv-font-size-small);
-		line-height: 1;
-		color: var(--hv-text-color-secondary);
+  &-timestamp {
+    font-size: var(--hv-font-size-small);
+    line-height: 1;
+    color: var(--hv-text-color-secondary);
 
-		.@{namespace}-timeline-item-top {
-			padding-top: 4px;
-			margin-bottom: 8px;
-		}
-		.@{namespace}-timeline-item-bottom {
-			margin-top: 8px;
-		}
-	}
+    .@{namespace}-timeline-item-top {
+      padding-top: 4px;
+      margin-bottom: 8px;
+    }
+    .@{namespace}-timeline-item-bottom {
+      margin-top: 8px;
+    }
+  }
 }

@@ -4,50 +4,50 @@
 @import "mixins/mixins.less";
 
 .h-tree {
-	position: relative;
-	color: #606266;
-	cursor: default;
+  position: relative;
+  color: #606266;
+  cursor: default;
 }
 
 .h-tree-node {
-	box-sizing: border-box;
-	width: 100%;
-	white-space: nowrap;
-	outline: none;
+  box-sizing: border-box;
+  width: 100%;
+  white-space: nowrap;
+  outline: none;
 }
 
 .h-tree-node__content {
-	display: flex;
-	align-items: center;
-	height: 26px;
-	cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 26px;
+  cursor: pointer;
 
-	&:hover {
-		background: var(--hv-tree-hover-color);
-	}
+  &:hover {
+    background: var(--hv-tree-hover-color);
+  }
 }
 
 .h-tree-node__expand-icon {
-	// 覆盖docs的全局样式
-	box-sizing: content-box !important;
-	display: inline-block;
-	width: 14px;
-	height: 14px;
-	padding: 6px;
-	line-height: 14px;
-	color: #c0c4cc;
-	cursor: pointer;
-	transition: all 0.2s ease;
+  // 覆盖docs的全局样式
+  box-sizing: content-box !important;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  padding: 6px;
+  line-height: 14px;
+  color: #c0c4cc;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .expanded {
-	transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .h-tree-node-checkbox {
-	margin-right: 0;
+  margin-right: 0;
 }
 
 .h-tree-ul-box {
-	padding-left: 5px;
+  padding-left: 5px;
 }

@@ -17,18 +17,18 @@ import "@hview-plus/theme-chalk";
 import axios from "axios";
 
 const getVersionHp = () => {
-	axios.get("https://registry.npmjs.org/hview-plus").then((res: any) => {
-		const versions = Object.keys(res.data.versions);
-		const version = "v" + versions[versions.length - 1];
-		const el: HTMLSpanElement = document.querySelector(
-			".VPNavBarMenu .VPFlyout .text",
-		)!;
-		if (el) el.childNodes[1].nodeValue = version;
-		// @ts-ignore
-		// let screenEl = (HTMLSpanElement = document.querySelector(".VPNavScreen .button-text"));
-		// @ts-ignore
-		// if (screenEl) screenEl.innerText = version;
-	});
+  axios.get("https://registry.npmjs.org/hview-plus").then((res: any) => {
+    const versions = Object.keys(res.data.versions);
+    const version = "v" + versions[versions.length - 1];
+    const el: HTMLSpanElement = document.querySelector(
+      ".VPNavBarMenu .VPFlyout .text",
+    )!;
+    if (el) el.childNodes[1].nodeValue = version;
+    // @ts-ignore
+    // let screenEl = (HTMLSpanElement = document.querySelector(".VPNavScreen .button-text"));
+    // @ts-ignore
+    // if (screenEl) screenEl.innerText = version;
+  });
 };
 
 // @ts-ignore
@@ -36,29 +36,29 @@ import MyLayout from "../home/layout.vue";
 import { inBrowser } from "vitepress";
 
 export default {
-	...Theme,
+  ...Theme,
 
-	enhanceApp({ app, router }) {
-		if (inBrowser) {
-			app.use(hp);
+  enhanceApp({ app, router }) {
+    if (inBrowser) {
+      app.use(hp);
 
-			// refer: https://github.com/vuejs/vitepress/issues/1910
-			router.onBeforeRouteChange = () => {
-				NProgress.start();
-			};
-			router.onAfterRouteChanged = () => {
-				NProgress.done();
-			};
-		}
+      // refer: https://github.com/vuejs/vitepress/issues/1910
+      router.onBeforeRouteChange = () => {
+        NProgress.start();
+      };
+      router.onAfterRouteChanged = () => {
+        NProgress.done();
+      };
+    }
 
-		app.component("HCode", hpCode);
-	},
+    app.component("HCode", hpCode);
+  },
 
-	setup() {
-		if (inBrowser) {
-			getVersionHp();
-		}
-	},
+  setup() {
+    if (inBrowser) {
+      getVersionHp();
+    }
+  },
 
-	Layout: MyLayout,
+  Layout: MyLayout,
 };

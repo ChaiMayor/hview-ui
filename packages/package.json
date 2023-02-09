@@ -1,12 +1,12 @@
 {
-	"name": "hview-plus",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"build": "vite build"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC"
+  "name": "hview-plus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

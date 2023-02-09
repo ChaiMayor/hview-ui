@@ -1,17 +1,17 @@
 {
-	"name": "@hview-plus/components",
-	"version": "1.0.0",
-	"description": "all components are settled here",
-	"module": "./index.ts",
-	"main": "./index.ts",
-	"keywords": [
-		"hview-ui",
-		"vue3组件库"
-	],
-	"author": "芜湖起飞队",
-	"license": "MIT",
-	"peerDependencies": {
-		"vue": "^3.2.37"
-	},
-	"types": "index.d.ts"
+  "name": "@hview-plus/components",
+  "version": "1.0.0",
+  "description": "all components are settled here",
+  "module": "./index.ts",
+  "main": "./index.ts",
+  "keywords": [
+    "hview-ui",
+    "vue3组件库"
+  ],
+  "author": "芜湖起飞队",
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "^3.2.37"
+  },
+  "types": "index.d.ts"
 }

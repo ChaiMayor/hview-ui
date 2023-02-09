@@ -1,11 +1,11 @@
 <template>
-	<div
-		v-show="ready"
-		class="h-carousel-item"
-		:class="styleClass"
-		:style="itemStyle">
-		<slot />
-	</div>
+  <div
+    v-show="ready"
+    class="h-carousel-item"
+    :class="styleClass"
+    :style="itemStyle">
+    <slot />
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -18,39 +18,39 @@ const props = defineProps(carouselItemProps);
 
 // inject
 const {
-	active,
-	animating,
-	hover,
-	inStage,
-	isVertical,
-	translate,
-	scale,
-	ready,
-	// handleItemClick,
+  active,
+  animating,
+  hover,
+  inStage,
+  isVertical,
+  translate,
+  scale,
+  ready,
+  // handleItemClick,
 } = useCarouselItem(props, "HCarouselItem");
 
 const styleClass = computed(() => {
-	return {
-		[`h-carousel-item--active`]: unref(active),
-		[`h-carousel-item--inStage`]: unref(inStage),
-		[`h-carousel-item--hover`]: unref(hover),
-		[`h-carousel-item--animating`]: unref(animating),
-	};
+  return {
+    [`h-carousel-item--active`]: unref(active),
+    [`h-carousel-item--inStage`]: unref(inStage),
+    [`h-carousel-item--hover`]: unref(hover),
+    [`h-carousel-item--animating`]: unref(animating),
+  };
 });
 const itemStyle = computed<CSSProperties>(() => {
-	const translateType = `translate${unref(isVertical) ? "Y" : "X"}`;
-	const _translate = `${translateType}(${unref(translate)}px)`;
-	const _scale = `scale(${unref(scale)})`;
-	const transform = [_translate, _scale].join(" ");
+  const translateType = `translate${unref(isVertical) ? "Y" : "X"}`;
+  const _translate = `${translateType}(${unref(translate)}px)`;
+  const _scale = `scale(${unref(scale)})`;
+  const transform = [_translate, _scale].join(" ");
 
-	return {
-		transform,
-	};
+  return {
+    transform,
+  };
 });
 </script>
 
 <script lang="ts">
 export default {
-	name: "HCarouselItem",
+  name: "HCarouselItem",
 };
 </script>

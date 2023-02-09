@@ -1,5 +1,5 @@
 <template>
-	<div class="h-breadcrumb"> <slot /> </div>
+  <div class="h-breadcrumb"> <slot /> </div>
 </template>
 
 <script lang="ts" setup>
@@ -11,6 +11,6 @@ provide("breadcrumbProps", props);
 
 <script lang="ts">
 export default {
-	name: "HBreadcrumb",
+  name: "HBreadcrumb",
 };
 </script>

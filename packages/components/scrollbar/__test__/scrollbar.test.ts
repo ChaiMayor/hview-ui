@@ -5,14 +5,14 @@ import Scrollbar from "../index";
 
 // The component to test
 describe("Scrollbar", () => {
-	it("should render slot", () => {
-		const wrapper = mount(Scrollbar, {
-			slots: {
-				default: "Hello world",
-			},
-		});
+  it("should render slot", () => {
+    const wrapper = mount(Scrollbar, {
+      slots: {
+        default: "Hello world",
+      },
+    });
 
-		// Assert the rendered text of the component
-		expect(wrapper.text()).toBe("Hello world");
-	});
+    // Assert the rendered text of the component
+    expect(wrapper.text()).toBe("Hello world");
+  });
 });

@@ -1,10 +1,10 @@
 <template>
-	<div class="h-slider__button-wrapper">
-		<h-tooltip :content="$attrs.tip" :placement="placement" v-if="showTooltip">
-			<div ref="btn" class="h-slider__button" :style="buttonStyle"></div>
-		</h-tooltip>
-		<div ref="btn" class="h-slider__button" :style="buttonStyle" v-else></div>
-	</div>
+  <div class="h-slider__button-wrapper">
+    <h-tooltip :content="$attrs.tip" :placement="placement" v-if="showTooltip">
+      <div ref="btn" class="h-slider__button" :style="buttonStyle"></div>
+    </h-tooltip>
+    <div ref="btn" class="h-slider__button" :style="buttonStyle" v-else></div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -21,43 +21,43 @@ const site = ref<number>(0);
 const btnIndex = ref<number>(0);
 
 const buttonStyle = computed(() => {
-	return props.vertical
-		? {
-				bottom: `${props.modelValue}%`,
-		  }
-		: {
-				left: `${props.modelValue}%`,
-		  };
+  return props.vertical
+    ? {
+        bottom: `${props.modelValue}%`,
+      }
+    : {
+        left: `${props.modelValue}%`,
+      };
 });
 
 const mountMouseEvent = (dom: HTMLDivElement) => {
-	dom.onmousedown = function () {
-		document.onmousemove = throttle(function (e: MouseEvent) {
-			if (props.disabled) return false;
-			emits("update:isDraw", true);
-			if (props.vertical) {
-				site.value =
-					offsetTop(attrs.runway_wraper as HTMLDivElement) +
-					(attrs.runway_wraper as HTMLDivElement).offsetHeight -
-					e.pageY;
-			} else {
-				site.value =
-					e.pageX - offsetLeft(attrs.runway_wraper as HTMLDivElement);
-			}
-			emits("setMarkerSite", site.value, attrs.yname);
-			return false;
-		}, 20);
-		document.onmouseup = function () {
-			document.onmousemove = null;
-			document.onmousedown = null;
-			document.onmouseup = null;
-			setTimeout(() => {
-				emits("update:isDraw", false);
-			}, 50);
-			return false;
-		};
-		return false;
-	};
+  dom.onmousedown = function () {
+    document.onmousemove = throttle(function (e: MouseEvent) {
+      if (props.disabled) return false;
+      emits("update:isDraw", true);
+      if (props.vertical) {
+        site.value =
+          offsetTop(attrs.runway_wraper as HTMLDivElement) +
+          (attrs.runway_wraper as HTMLDivElement).offsetHeight -
+          e.pageY;
+      } else {
+        site.value =
+          e.pageX - offsetLeft(attrs.runway_wraper as HTMLDivElement);
+      }
+      emits("setMarkerSite", site.value, attrs.yname);
+      return false;
+    }, 20);
+    document.onmouseup = function () {
+      document.onmousemove = null;
+      document.onmousedown = null;
+      document.onmouseup = null;
+      setTimeout(() => {
+        emits("update:isDraw", false);
+      }, 50);
+      return false;
+    };
+    return false;
+  };
 };
 
 // const onDrawing = () => {};
@@ -65,15 +65,15 @@ const mountMouseEvent = (dom: HTMLDivElement) => {
 // const onDrawed = () => {};
 
 onMounted(() => {
-	mountMouseEvent(btn.value as HTMLDivElement);
+  mountMouseEvent(btn.value as HTMLDivElement);
 });
 defineExpose({
-	btnIndex: btnIndex,
+  btnIndex: btnIndex,
 });
 </script>
 
 <script lang="ts">
 export default {
-	name: "HSliderMarker",
+  name: "HSliderMarker",
 };
 </script>

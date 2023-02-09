@@ -2,8 +2,8 @@ import type { Ref } from "vue";
 
 export type HandleScroll = () => void;
 export type ScrollTo = (
-	options: ScrollToOptions | number,
-	yCoord?: number,
+  options: ScrollToOptions | number,
+  yCoord?: number,
 ) => void;
 export type SetScrollTop = (scrollTop: number) => void;
 export type SetScrollLeft = (scrollTop: number) => void;

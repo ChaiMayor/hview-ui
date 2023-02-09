@@ -1,13 +1,13 @@
 <template>
-	<span class="h-breadcrumb__item">
-		<span :class="innerClass" @click="onClick">
-			<slot />
-		</span>
-		<span class="item__separator">
-			<h-icon v-if="separatorIcon" :name="separatorIcon"></h-icon>
-			<span v-else>{{ separator }}</span>
-		</span>
-	</span>
+  <span class="h-breadcrumb__item">
+    <span :class="innerClass" @click="onClick">
+      <slot />
+    </span>
+    <span class="item__separator">
+      <h-icon v-if="separatorIcon" :name="separatorIcon"></h-icon>
+      <span v-else>{{ separator }}</span>
+    </span>
+  </span>
 </template>
 
 <script lang="ts" setup>
@@ -23,24 +23,24 @@ const instance = getCurrentInstance();
 const router = instance.appContext.config.globalProperties.$router;
 // 文本内容样式类
 const innerClass = computed(() => {
-	return {
-		item__inner: true,
-		"is-link": !!props.to,
-	};
+  return {
+    item__inner: true,
+    "is-link": !!props.to,
+  };
 });
 // 点击事件
 const onClick = () => {
-	if (!props.to || !router) return;
-	props.replace ? router.replace(props.to) : router.push(props.to);
+  if (!props.to || !router) return;
+  props.replace ? router.replace(props.to) : router.push(props.to);
 };
 
 onMounted(() => {
-	// console.log();
+  // console.log();
 });
 </script>
 
 <script lang="ts">
 export default {
-	name: "HBreadcrumbItem",
+  name: "HBreadcrumbItem",
 };
 </script>

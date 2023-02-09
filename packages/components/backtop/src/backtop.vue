@@ -1,13 +1,13 @@
 <template>
-	<div
-		class="h-backtop"
-		:style="backtopStyle"
-		v-if="visible"
-		@click="handleClick">
-		<slot>
-			<h-icon name="xiangshang1"></h-icon>
-		</slot>
-	</div>
+  <div
+    class="h-backtop"
+    :style="backtopStyle"
+    v-if="visible"
+    @click="handleClick">
+    <slot>
+      <h-icon name="xiangshang1"></h-icon>
+    </slot>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -18,15 +18,15 @@ const props = defineProps(BacktopProps);
 const emit = defineEmits(BacktopEmits);
 const { handleClick, visible } = useBacktop(props, emit);
 const backtopStyle = computed(() => {
-	return {
-		right: `${props.right}px`,
-		bottom: `${props.bottom}px`,
-	};
+  return {
+    right: `${props.right}px`,
+    bottom: `${props.bottom}px`,
+  };
 });
 </script>
 
 <script lang="ts">
 export default {
-	name: "HBacktop",
+  name: "HBacktop",
 };
 </script>

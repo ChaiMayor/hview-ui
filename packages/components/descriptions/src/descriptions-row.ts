@@ -1,6 +1,6 @@
 export const descriptionsRowProps = {
-	row: {
-		type: Array,
-		default: () => [],
-	},
+  row: {
+    type: Array,
+    default: () => [],
+  },
 } as const;

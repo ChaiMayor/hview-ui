@@ -1,19 +1,19 @@
 <template>
-	<div class="h-empty">
-		<div class="h-empty-image" :style="imageStyle">
-			<img v-if="image" :src="image" ondragstart="return false" />
-			<slot v-else name="image">
-				<empty-img />
-			</slot>
-		</div>
-		<div class="h-empty-description">
-			<slot v-if="$slots.description" name="No data" />
-			<p v-else>{{ emptyDescription }}</p>
-		</div>
-		<div v-if="$slots.default" class="h-empty-bottom">
-			<slot />
-		</div>
-	</div>
+  <div class="h-empty">
+    <div class="h-empty-image" :style="imageStyle">
+      <img v-if="image" :src="image" ondragstart="return false" />
+      <slot v-else name="image">
+        <empty-img />
+      </slot>
+    </div>
+    <div class="h-empty-description">
+      <slot v-if="$slots.description" name="No data" />
+      <p v-else>{{ emptyDescription }}</p>
+    </div>
+    <div v-if="$slots.default" class="h-empty-bottom">
+      <slot />
+    </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -27,12 +27,12 @@ const props = defineProps(emptyProps);
 
 const emptyDescription = computed(() => props.description || "description");
 const imageStyle = computed<CSSProperties>(() => ({
-	width: props.imageSize ? `${props.imageSize}px` : "",
+  width: props.imageSize ? `${props.imageSize}px` : "",
 }));
 </script>
 
 <script lang="ts">
 export default {
-	name: "HEmpty",
+  name: "HEmpty",
 };
 </script>

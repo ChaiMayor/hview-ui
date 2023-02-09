@@ -1,7 +1,7 @@
 module.exports = {
 	printWidth: 80, // 最大单行长度
 	tabWidth: 2, // 每个缩进的空格数
-	useTabs: true, // 使用制表符而不是空格缩进行
+	useTabs: false, // 使用制表符而不是空格缩进行
 	semi: true, // 在语句的末尾打印分号
 	vueIndentScriptAndStyle: false, // 是否缩进 Vue 文件中的代码<script>和<style>标签。
 	singleQuote: false, // 使用单引号而不是双引号

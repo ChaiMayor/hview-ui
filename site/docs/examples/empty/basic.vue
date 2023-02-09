@@ -1,3 +1,3 @@
 <template>
-	<h-empty description="description" />
+  <h-empty description="description" />
 </template>
