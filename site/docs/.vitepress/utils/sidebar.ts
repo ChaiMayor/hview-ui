@@ -42,6 +42,7 @@ const sidebar = {
         { text: "Radio 单选框", link: "/components/radio" },
         { text: "Slider 滑块", link: "/components/slider" },
         { text: "Checkbox 复选框", link: "/components/checkbox" },
+        { text: "Switch 开关", link: "/components/switch" },
       ],
     },
     {
@@ -121,6 +122,7 @@ const sidebarEN = {
         { text: "Radio", link: "/components/radio" },
         { text: "Slider", link: "/components/slider" },
         { text: "Checkbox", link: "/components/checkbox" },
+        { text: "Switch", link: "/components/switch" },
       ],
     },
     {
