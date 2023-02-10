@@ -3,12 +3,12 @@
 @import "mixins/config.less";
 @import "mixins/mixins.less";
 
-.@{namespace}switch-default {
+.@{namespace}-switch-default {
   display: inline-flex;
   align-items: center;
 }
 
-.@{namespace}switch-default .@{namespace}switch-content {
+.@{namespace}-switch-default .@{namespace}-switch-content {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -19,7 +19,7 @@
   vertical-align: middle;
 }
 
-.@{namespace}switch-default .@{namespace}switch-content input {
+.@{namespace}-switch-default .@{namespace}-switch-content input {
   position: absolute;
   width: 0;
   height: 0;
@@ -27,7 +27,7 @@
   opacity: 0;
 }
 
-.@{namespace}switch-default .@{namespace}switch-content .core {
+.@{namespace}-switch-default .@{namespace}-switch-content .core {
   box-sizing: border-box;
   display: inline-block;
   width: 100%;
@@ -35,13 +35,12 @@
   vertical-align: middle;
   cursor: pointer;
   background: #dcdfe6;
-  border: 1px solid #dcdfe6;
   border-radius: 10px;
   outline: none;
   transition: all 0.3s;
 }
 
-.@{namespace}switch-default .@{namespace}switch-content .core::after {
+.@{namespace}-switch-default .@{namespace}-switch-content .core::after {
   position: absolute;
   top: 2px;
   left: 1px;
@@ -53,10 +52,10 @@
   transition: all 0.3s;
 }
 
-.@{namespace}switch-default
-  .@{namespace}switch-content
+.@{namespace}-switch-default
+  .@{namespace}-switch-content
   .core
-  .@{namespace}switch-inner {
+  .@{namespace}-switch-inner {
   position: absolute;
   top: 2px;
   left: 1px;
@@ -71,145 +70,145 @@
   transition: all 0.3s;
 }
 
-.@{namespace}switch-default .@{namespace}switch-content .off {
+.@{namespace}-switch-default .@{namespace}-switch-content .off {
   background-color: #c0ccda;
 }
 
-.@{namespace}switch-default .@{namespace}switch-content .on {
+.@{namespace}-switch-default .@{namespace}-switch-content .on {
   background-color: #409eff;
 }
 
-.@{namespace}switch-default .@{namespace}switch-content .on::after {
+.@{namespace}-switch-default .@{namespace}-switch-content .on::after {
   left: 100%;
   margin-left: -19px;
 }
 
-.@{namespace}switch-default
-  .@{namespace}switch-content
+.@{namespace}-switch-default
+  .@{namespace}-switch-content
   .on
-  .@{namespace}switch-inner {
+  .@{namespace}-switch-inner {
   left: 50%;
   margin-left: -19px;
 }
 
-.@{namespace}switch-default .is-disabled {
+.@{namespace}-switch-default .is-disabled {
   color: #fff;
   cursor: no-drop;
   opacity: 0.6;
 }
 
-.@{namespace}switch-default .is-disabled .core {
+.@{namespace}-switch-default .is-disabled .core {
   cursor: no-drop;
 }
 
-.@{namespace}switch-default .@{namespace}switch-label {
+.@{namespace}-switch-default .@{namespace}-switch-label {
   display: inline-block;
   height: 22px;
   font-size: 14px;
   font-weight: 500;
   line-height: 22px;
-  color: #303133;
+  color: var(--hv-switch-lable-color);
   vertical-align: middle;
   cursor: pointer;
   transition: all 0.2s;
 }
 
-.@{namespace}switch-default .@{namespace}switch-label-left {
+.@{namespace}-switch-default .@{namespace}-switch-label-left {
   margin-right: 10px;
 }
 
-.@{namespace}switch-default .@{namespace}switch-label-right {
+.@{namespace}-switch-default .@{namespace}-switch-label-right {
   margin-left: 10px;
 }
 
-.@{namespace}switch-default .is-active {
+.@{namespace}-switch-default .is-active {
   color: #409eff;
 }
 
-.@{namespace}switch--large {
+.@{namespace}-switch--large {
   font-size: 16px;
   line-height: 24px;
 }
 
-.@{namespace}switch--large .@{namespace}switch-label {
+.@{namespace}-switch--large .@{namespace}-switch-label {
   height: 24px;
   font-size: 16px;
 }
 
-.@{namespace}switch--large .@{namespace}switch-content {
+.@{namespace}-switch--large .@{namespace}-switch-content {
   width: 55px;
   height: 24px;
   border-radius: 12px;
 }
 
-.@{namespace}switch--large .@{namespace}switch-content .core {
+.@{namespace}-switch--large .@{namespace}-switch-content .core {
   width: 100%;
   height: 100%;
   border-radius: 12px;
 }
 
-.@{namespace}switch--large .@{namespace}switch-content .core::after {
+.@{namespace}-switch--large .@{namespace}-switch-content .core::after {
   width: 20px;
   height: 20px;
 }
 
-.@{namespace}switch--large .@{namespace}switch-content .on::after {
+.@{namespace}-switch--large .@{namespace}-switch-content .on::after {
   left: 100%;
   margin-left: -21px;
 }
 
-.@{namespace}switch--large
-  .@{namespace}switch-content
+.@{namespace}-switch--large
+  .@{namespace}-switch-content
   .on
-  .@{namespace}switch-inner {
+  .@{namespace}-switch-inner {
   left: 50%;
   margin-left: -21px;
 }
 
-.@{namespace}switch--small {
+.@{namespace}-switch--small {
   height: 24px;
   font-size: 12px;
   line-height: 16px;
 }
 
-.@{namespace}switch-inner--small {
+.@{namespace}-switch-inner--small {
   font-size: 12px;
 }
 
-.@{namespace}switch-inner--large {
+.@{namespace}-switch-inner--large {
   font-size: 16px;
 }
 
-.@{namespace}switch--small .@{namespace}switch-label {
+.@{namespace}-switch--small .@{namespace}-switch-label {
   height: 20px;
   font-size: 12px;
 }
 
-.@{namespace}switch--small .@{namespace}switch-content {
+.@{namespace}-switch--small .@{namespace}-switch-content {
   width: 40px;
   height: 20px;
   border-radius: 8px;
 }
 
-.@{namespace}switch--small .@{namespace}switch-content .core {
+.@{namespace}-switch--small .@{namespace}-switch-content .core {
   width: 100%;
   height: 100%;
 }
 
-.@{namespace}switch--small .@{namespace}switch-content .core::after {
+.@{namespace}-switch--small .@{namespace}-switch-content .core::after {
   width: 16px;
   height: 16px;
 }
 
-.@{namespace}switch--small .@{namespace}switch-content .on::after {
+.@{namespace}-switch--small .@{namespace}-switch-content .on::after {
   left: 100%;
   margin-left: -18px;
 }
 
-.@{namespace}switch--small
-  .@{namespace}switch-content
+.@{namespace}-switch--small
+  .@{namespace}-switch-content
   .on
-  .@{namespace}switch-inner {
+  .@{namespace}-switch-inner {
   left: 50%;
   width: 16px;
   height: 16px;
