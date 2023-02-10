@@ -48,6 +48,9 @@
         font-weight: normal;
         line-height: 23px;
         text-align: left;
+        .@{namespace}-descriptions-label {
+          color: var(--hv-text-color-regular);
+        }
 
         &-left {
           text-align: left;
@@ -64,8 +67,8 @@
 
       &.is-bordered-des {
         .@{namespace}-descriptions-cell {
-          padding: 5px;
-          border: 1px solid var(--hv-border-color-light); /////////////////
+          padding: 8px;
+          border: 1px solid var(--hv-border-color-light);
         }
       }
 
@@ -84,11 +87,6 @@
     background: var(--hv-fill-color-light);
   }
 
-  &:not(.is-bordered-label) {
-    margin-right: 5px;
-    color: var(--hv-text-color-primary);
-  }
-
   :not(.is-bordered-label) .is-vertical-label {
     padding-bottom: 5px;
   }
@@ -99,7 +97,89 @@
     }
 
     &:not(.is-bordered-label) {
-      color: var(--hv-text-color-regular);
+      margin-left: 14px;
+    }
+  }
+}
+
+.@{namespace}-descriptions--small {
+  font-size: var(--hv-font-size-small);
+
+  .@{namespace}-descriptions-header {
+    margin-bottom: 8px;
+
+    .@{namespace}-descriptions-title {
+      font-size: var(--hv-font-size-base);
+    }
+  }
+
+  .@{namespace}-descriptions-body {
+    .@{namespace}-descriptions-table {
+      .@{namespace}-descriptions-cell {
+        font-size: var(--hv-font-size-small);
+      }
+
+      &.is-bordered-des {
+        .@{namespace}-descriptions-cell {
+          padding: 6px;
+        }
+      }
+
+      &:not(.is-bordered-des) {
+        .@{namespace}-descriptions-cell {
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+  .@{namespace}-descriptions-label {
+    &:not(.is-bordered-label) {
+      margin-right: 5px;
+    }
+
+    .@{namespace}-descriptions-cell:not(.is-bordered-label).is-vertical-label {
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.@{namespace}-descriptions--large {
+  font-size: var(--hv-font-size-large);
+
+  .@{namespace}-descriptions-header {
+    margin-bottom: 12px;
+
+    .@{namespace}-descriptions-title {
+      font-size: var(--hv-font-size-extra-large);
+    }
+  }
+
+  .@{namespace}-descriptions-body {
+    .@{namespace}-descriptions-table {
+      .@{namespace}-descriptions-cell {
+        font-size: var(--hv-font-size-large);
+      }
+
+      &.is-bordered-des {
+        .@{namespace}-descriptions-cell {
+          padding: 12px;
+        }
+      }
+
+      &:not(.is-bordered-des) {
+        .@{namespace}-descriptions-cell {
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+  .@{namespace}-descriptions-label {
+    &:not(.is-bordered-label) {
+      margin-right: 10px;
+    }
+
+    .@{namespace}-descriptions-cell:not(.is-bordered-label).is-vertical-label {
+      padding-bottom: 10px;
     }
   }
 }
