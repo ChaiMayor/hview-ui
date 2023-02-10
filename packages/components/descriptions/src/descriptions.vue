@@ -1,5 +1,5 @@
 <template>
-  <div class="h-descriptions" :class="descriptionKls">
+  <div class="h-descriptions" :class="{ [`h-descriptions--${size}`]: size }">
     <div
       v-if="title || extra || $slots.title || $slots.extra"
       class="h-descriptions-header">
@@ -36,13 +36,9 @@ import { descriptionProps } from "./descriptions";
 
 const props = defineProps(descriptionProps);
 
-// const descriptionsSize = useSize();
-
 const slots = useSlots();
 
 provide(descriptionsKey, props);
-
-// const descriptionKls = computed(() => [ns.b(), ns.m(descriptionsSize.value)]);
 
 const filledNode = (node, span, count, isLast = false) => {
   if (!node.props) {
