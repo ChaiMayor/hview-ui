@@ -28,7 +28,7 @@ Set the disabled attribute, accept a Boolean, set true to disable
 
 Use the active-text attribute and inactive-text attribute to set the text description of the switch, and use the active-color attribute and inactive-color attribute to set the background color of the switch
 
-::: code switch/textSwitch
+::: code switch/text-switch
 <textSwitch></textSwitch>
 :::
 

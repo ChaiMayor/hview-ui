@@ -28,7 +28,7 @@ import icon from 'exam/switch/icon.vue'
 
 使用 active-text 属性与 inactive-text 属性来设置开关的文字描述，使用 active-color 属性与 inactive-color 属性来设置开关的背景色
 
-::: code switch/textSwitch
+::: code switch/text-switch
 <textSwitch></textSwitch>
 :::
 
