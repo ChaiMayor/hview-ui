@@ -11,7 +11,7 @@ import {
 } from "./index";
 
 export default series(
-  () => removeCompDist(0),
+  () => removeCompDist(),
   () => removeThemeDist(),
   () => buildCompDist(),
   () => buildThemeDist(),

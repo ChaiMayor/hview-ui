@@ -121,7 +121,7 @@ const query = (selector: any) => {
 };
 
 //节流函数
-function throttle(func: Function, time: number, immediate = false) {
+function throttle(func: any, time: number, immediate = false) {
   if (immediate) {
     let prevTime = 0;
     return (...args: any) => {
