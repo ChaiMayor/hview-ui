@@ -32,6 +32,7 @@ const sidebar = {
         { text: "Link 链接", link: "/components/link" },
         { text: "Container 布局容器", link: "/components/container" },
         { text: "ScrollBar 滚动条", link: "/components/scrollbar" },
+        { text: "Space 间距", link: "/components/space" },
       ],
     },
     {
@@ -112,6 +113,7 @@ const sidebarEN = {
         { text: "Link", link: "/components/link" },
         { text: "Container", link: "/components/container" },
         { text: "ScrollBar", link: "/components/scrollbar" },
+        { text: "Space", link: "/components/space" },
       ],
     },
     {

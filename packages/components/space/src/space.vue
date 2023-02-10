@@ -6,7 +6,6 @@
 
 <script lang="ts">
 import { defineComponent, useSlots, h, ref, computed } from "vue";
-import { SpaceProps } from "./space";
 
 export default defineComponent({
   name: "HSpace",
