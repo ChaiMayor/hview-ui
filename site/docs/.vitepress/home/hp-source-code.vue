@@ -74,7 +74,7 @@ const copyCode = async () => {
 const toGithub = () => {
   const name = props.pageName.split("/")[0];
   window.open(
-    `https://github.com/ChaiMayor/hview-ui/tree/dev/packages/components/src/${name}/src/${name}.vue`,
+    `https://github.com/ChaiMayor/hview-ui/tree/dev/packages/components/${name}/src/${name}.vue`,
     "_blank",
   );
 };
