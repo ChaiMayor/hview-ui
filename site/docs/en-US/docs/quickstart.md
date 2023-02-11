@@ -11,8 +11,9 @@ If you don’t care about the bundle size so much, it’s more convenient to use
 ```ts
 // main.ts
 import { createApp } from "vue";
-// The HviewUI style file is automatically imported
 import HviewPlus from "hview-plus";
+import "hview-plus/theme-chalk/style.css";
+
 import App from "./App.vue";
 
 const app = createApp(App);
@@ -27,6 +28,8 @@ app.mount("#app");
 // main.ts
 import { createApp } from "vue";
 import { Button } from "hview-plus";
+import "hview-plus/theme-chalk/button.css";
+
 import App from "./App.vue";
 
 const app = createApp(App);
