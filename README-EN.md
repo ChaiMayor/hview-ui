@@ -111,11 +111,11 @@ Thanks for all their contributions 🐝！
 
 ## 🌸 Thanks
 
-This project is heavily inspired by the following awesome projects.
+The project draws on the following projects.
 
 - [Element Plus](https://element-plus.gitee.io/zh-CN/component/button.html)
 - [kitty-ui](https://gitee.com/geeksdidi/kittyui)
-- [VitePress](https://vitepress.vuejs.org/)
+- [brain-ui](https://github.com/longyanjiang/brain-ui)
 
 ## 📄 License
 
