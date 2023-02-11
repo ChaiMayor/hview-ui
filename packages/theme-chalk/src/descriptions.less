@@ -29,7 +29,7 @@
       border-spacing: 0;
       border-collapse: collapse;
       border: none;
-      border-color: #fff;
+      border-color: var(--hv-color-white);
 
       tbody {
         border: none !important;
@@ -181,5 +181,14 @@
     .@{namespace}-descriptions-cell:not(.is-bordered-label).is-vertical-label {
       padding-bottom: 10px;
     }
+  }
+}
+
+html.dark {
+  .h-descriptions .is-bordered-label {
+    background-color: transparent;
+  }
+  .@{namespace}-descriptions-body {
+    background-color: transparent;
   }
 }

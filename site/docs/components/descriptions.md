@@ -37,7 +37,7 @@
 <custom></custom>
 :::
 
-## API
+## Descriptions API
 
 ### Descriptions 属性
 
@@ -57,6 +57,8 @@
 | —      | 自定义默认内容 | Descriptions Item |
 | title  | 自定义标题     | —                 |
 | extra  | 自定义操作区   | —                 |
+
+## Descriptions Item API
 
 ### Descriptions Item 属性
 

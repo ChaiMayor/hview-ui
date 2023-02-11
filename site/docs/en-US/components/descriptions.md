@@ -37,7 +37,7 @@ vertical list.
 <custom></custom>
 :::
 
-## API
+## Descriptions API
 
 ### Descriptions Attributes
 
@@ -57,6 +57,8 @@ vertical list.
 | —     | customize default content                   | Descriptions Item |
 | title | custom title, display on the top left       | —                 |
 | extra | custom extra area, display on the top right | —                 |
+
+## Descriptions Item API
 
 ### Descriptions Item Attributes
 
