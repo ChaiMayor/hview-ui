@@ -109,11 +109,11 @@ logo 寓意：我们的组件库还存在很多不完善的地方，非常希望
 
 ## 🌸 感谢
 
-这个项目的内容主要来自于以下这些很厉害的项目。
+该项目主要借鉴于以下这些项目。
 
 - [Element Plus](https://element-plus.gitee.io/zh-CN/component/button.html)
 - [kitty-ui](https://gitee.com/geeksdidi/kittyui)
-- [VitePress](https://vitepress.vuejs.org/)
+- [brain-ui](https://github.com/longyanjiang/brain-ui)
 
 ## 📄 License
 
