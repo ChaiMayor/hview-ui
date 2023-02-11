@@ -21,10 +21,10 @@
     <!-- 无法正常展示：处于加载中或者加载错误 -->
     <div v-if="isLoading || hasLoadError" class="wrapper">
       <slot v-if="isLoading" name="placeholder">
-        <div class="placeholder">图片加载中</div>
+        <div class="placeholder">Loading..</div>
       </slot>
       <slot v-else-if="hasLoadError" name="error">
-        <div class="error">图片加载失败</div>
+        <div class="error">Fail</div>
       </slot>
     </div>
 

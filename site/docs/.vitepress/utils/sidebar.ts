@@ -58,6 +58,8 @@ const sidebar = {
         { text: "Message 消息", link: "/components/message" },
         { text: "Timeline 时间线", link: "/components/timeline" },
         { text: "Tree 树形控件", link: "/components/tree" },
+        { text: "Badge 徽章", link: "/components/badge" },
+        { text: "Image 图片", link: "/components/image" },
       ],
     },
     {
@@ -72,6 +74,8 @@ const sidebar = {
       items: [
         { text: "Alert 提示", link: "/components/alert" },
         { text: "Tooltip 文字提示", link: "/components/tooltip" },
+        { text: "Modal 模态框", link: "/components/modal" },
+        { text: "Popover 弹出框", link: "/components/popover" },
       ],
     },
     {
@@ -138,6 +142,8 @@ const sidebarEN = {
         { text: "Message", link: "/components/message" },
         { text: "Timeline", link: "/components/timeline" },
         { text: "Tree", link: "/components/tree" },
+        { text: "Badge", link: "/components/badge" },
+        { text: "Image", link: "/components/image" },
       ],
     },
     {
@@ -152,6 +158,8 @@ const sidebarEN = {
       items: [
         { text: "Alert", link: "/components/alert" },
         { text: "Tooltip", link: "/components/tooltip" },
+        { text: "Modal", link: "/components/modal" },
+        { text: "Popover", link: "/components/popover" },
       ],
     },
     {

@@ -3,10 +3,6 @@ import { definePropType } from "@hview-plus/utils";
 import { PropType } from "vue";
 
 export const ImageProps = {
-  hideOnClickModal: {
-    type: Boolean,
-    default: false,
-  },
   src: {
     type: String,
     default: "",
@@ -36,22 +32,15 @@ export const ImageProps = {
     type: Array as PropType<string[]>,
     default: [],
   },
-  // previewTeleported: {
-  //   type: Boolean,
-  //   default: false,
-  // },
   zIndex: {
     type: Number,
+    default: 0,
   },
   initialIndex: {
     type: Number,
     default: 0,
   },
   infinite: {
-    type: Boolean,
-    default: true,
-  },
-  closeOnPressEscape: {
     type: Boolean,
     default: true,
   },
