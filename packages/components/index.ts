@@ -33,6 +33,7 @@ import { default as ImageViewer } from "./image-viewer";
 import { default as Popover } from "./popover";
 import { Breadcrumb, BreadcrumbItem } from "./breadcrumb";
 import { Descriptions, DescriptionsItem } from "./descriptions";
+import { default as TimePicker } from "./time-picker";
 
 export {
   Button,
@@ -77,6 +78,7 @@ export {
   BreadcrumbItem,
   Descriptions,
   DescriptionsItem,
+  TimePicker,
 };
 
 export default [
@@ -122,4 +124,5 @@ export default [
   BreadcrumbItem,
   Descriptions,
   DescriptionsItem,
+  TimePicker,
 ];
