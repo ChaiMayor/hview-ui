@@ -1,12 +1,14 @@
 <div align="center">
-  <img width="100px" style="margin-bottom:24px;" src="https://oss.zhishiyu.online/common/w160h160.png">
-<h1>HVIEW</h1>
-
----
+  <img width="180px" style="margin-bottom:24px;" src="https://oss.zhishiyu.online/common/w160h160.png">
+<h1>HVIEW UI</h1>
 
 <p>基于 Vue3 的 Minimalism 风格的电脑端组件库</p>
-[English](https://github.com/ChaiMayor/hview-ui/tree/dev/README-EN.md) | 简体中文 
-<p align="center">
+
+<p><a href="https://github.com/ChaiMayor/hview-ui/tree/dev/README-EN.md">
+ English 
+</a> | 简体中文 </p>
+
+<p align="center" style="margin-top:24px;">
   <a href="https://www.npmjs.com/package/hview-plus">
     <img src="https://img.shields.io/npm/v/hview-plus">
   </a>
@@ -88,8 +90,6 @@ CICD：release-it、gulp、github actions
 项目名称：Hview-ui
 
 名称寓意：往往学习编程的第一句代码都是 hello world，而我们开发组件库也是第一次开发，我们的组件库也是参照已有的组件库进行开发和学习，而 view 有观察的意思，所以我们将 h 和 view 融合在了一起，给组件库其名为：hview-ui，寓意我们这个新生的组件库通过学习融合现有组件库的优点，希望能为大家呈现出一个不错的组件库项目
-
-logo：
 
 <p style="text-align:left;">
   <img width="100px" style="margin-bottom:24px;" src="https://oss.zhishiyu.online/common/hview-logo.png">
