@@ -2,7 +2,7 @@ name: Blog CI/CD
 on:
   push:
     branches:
-      - dev
+      - main
     paths-ignore:
       - README.md
       - LICENSE
