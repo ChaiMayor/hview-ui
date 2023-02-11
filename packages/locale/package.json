@@ -13,9 +13,6 @@
     "es",
     "lib"
   ],
-  "peerDependencies": {
-    "vue": "^3.2.37"
-  },
   "keywords": [
     "hview-ui",
     "vue3组件库"

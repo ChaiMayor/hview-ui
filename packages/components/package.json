@@ -10,8 +10,5 @@
   ],
   "author": "芜湖起飞队",
   "license": "MIT",
-  "peerDependencies": {
-    "vue": "^3.2.37"
-  },
   "types": "index.d.ts"
 }
