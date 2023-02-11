@@ -1,23 +1,13 @@
 import { src, dest } from "gulp";
-import { themePath, root, reThemePath } from "../utils/paths";
+import { themePath, root } from "../utils/paths";
 import less from "gulp-less";
 import autoprefixer from "gulp-autoprefixer";
 import run from "../utils/run";
-import { removeDir } from "../utils/delpath";
 import gulpMinifyCss from "gulp-minify-css";
-import { themeDir, finalDir } from "../utils/constant";
-
-export const removeCompDist = async () => {
-  // refer: https://m.xp.cn/b.php/4166.html
-  return await run(`rd /S /Q ${finalDir}`, root);
-};
+import { themeDir } from "../utils/constant";
 
 export const buildCompDist = async () => {
   return await run("pnpm run build", root);
-};
-
-export const removeThemeDist = async () => {
-  return await removeDir(reThemePath);
 };
 
 export const buildThemeDist = async () => {
@@ -62,4 +52,44 @@ export const deriveDist = async () => {
       }),
     )
     .pipe(dest(`${root}/hview-ui/theme-chalk`));
+};
+
+export const deriveEsNodeModules = async () => {
+  return src(`${root}/hview-ui/es/node_modules/.pnpm/**`).pipe(
+    dest(`${root}/hview-ui/node_modules/.pnpm`),
+  );
+};
+
+export const deriveLibNodeModules = async () => {
+  return src(`${root}/hview-ui/lib/node_modules/.pnpm/**`).pipe(
+    dest(`${root}/hview-ui/node_modules/.pnpm`),
+  );
+};
+
+export const deriveEsVirtual = async () => {
+  return src(`${root}/hview-ui/es/_virtual/**`).pipe(
+    dest(`${root}/hview-ui/_virtual`),
+  );
+};
+
+export const deriveLibVirtual = async () => {
+  return src(`${root}/hview-ui/lib/_virtual/**`).pipe(
+    dest(`${root}/hview-ui/_virtual`),
+  );
+};
+
+export const hierarchicalChangeEsModule = async () => {
+  // return src(`${root}/${finalDir}/es/**`).pipe(dest(`${root}/${finalDir}/es`));
+  return src(`${root}/hview-ui/es/packages/**`).pipe(
+    dest(`${root}/hview-ui/es`),
+  );
+};
+
+export const hierarchicalChangeLibModule = async () => {
+  // return src(`${root}/${finalDir}/lib/**`).pipe(
+  //   dest(`${root}/${finalDir}/lib`),
+  // );
+  return src(`${root}/hview-ui/lib/packages/**`).pipe(
+    dest(`${root}/hview-ui/lib`),
+  );
 };

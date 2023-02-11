@@ -47,10 +47,9 @@ export default defineConfig({
     vue(),
     DefineOptions(),
     dts({
-      entryRoot: "src",
       outputDir: [
-        resolve(__dirname, "./hview-ui/es/src"),
-        resolve(__dirname, "./hview-ui/lib/src"),
+        resolve(__dirname, "./hview-ui/es/packages"),
+        resolve(__dirname, "./hview-ui/lib/packages"),
       ],
     }),
   ],

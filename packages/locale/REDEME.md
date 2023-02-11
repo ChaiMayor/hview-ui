@@ -1,1 +1,0 @@
-Internationalization of hview-ui

@@ -28,7 +28,8 @@ export type FlattenVNodes = Array<VNodeChildAtom | RawSlots>;
 export const flattedChildren = (
   children: FlattenVNodes | VNode | VNodeNormalizedChildren,
 ): FlattenVNodes => {
-  const vNodes = isArray(children) ? children : [children];
+  const vNodes: (any | FlattenVNodes | VNode | VNodeNormalizedChildren)[] =
+    isArray(children) ? children : [children];
   const result: FlattenVNodes = [];
   vNodes.forEach((child: any) => {
     if (isArray(child)) {

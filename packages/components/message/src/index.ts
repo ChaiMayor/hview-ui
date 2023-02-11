@@ -1,10 +1,35 @@
 import element from "./message.vue";
 import { createVNode, render } from "vue";
 
-export default function message(options: any) {
+export interface MessageOptions {
+  message: string;
+  type?: {
+    type: "success" | "info" | "warning" | "error";
+    default: "info";
+  };
+  duration?: {
+    type: number;
+    default: 3000;
+  };
+  center?: {
+    type: boolean;
+    default: false;
+  };
+  dangerouslyUseHTMLString?: {
+    type: boolean;
+    default: false;
+  };
+  showClose?: {
+    type: boolean;
+    default: false;
+  };
+  onClose?: () => {};
+}
+
+export default function message(options: MessageOptions) {
   if (typeof options === "string") {
     options = {
-      message: options,
+      message: options as string,
     };
   }
 

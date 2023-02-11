@@ -20,7 +20,7 @@ const breadcrumbProps = inject("breadcrumbProps", undefined);
 const { separator, separatorIcon } = toRefs(breadcrumbProps);
 // 获取vue实例
 const instance = getCurrentInstance();
-const router = instance.appContext.config.globalProperties.$router;
+// const router = instance.appContext.config.globalProperties.$router;
 // 文本内容样式类
 const innerClass = computed(() => {
   return {
@@ -30,8 +30,8 @@ const innerClass = computed(() => {
 });
 // 点击事件
 const onClick = () => {
-  if (!props.to || !router) return;
-  props.replace ? router.replace(props.to) : router.push(props.to);
+  //   if (!props.to || !router) return;
+  //   props.replace ? router.replace(props.to) : router.push(props.to);
 };
 
 onMounted(() => {
