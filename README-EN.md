@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="180px" style="margin-bottom:24px;" src="https://oss.zhishiyu.online/common/w160h160.png">
+  <img width="130px" style="margin-bottom:24px;" src="https://oss.zhishiyu.online/common/w160h160.png">
 <h1>HVIEW UI</h1>
 
 <p>Minimalism library on the computer side based on Vue3</p>
