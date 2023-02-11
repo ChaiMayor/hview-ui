@@ -1,14 +1,14 @@
 <div align="center">
-  <img width="100px" style="margin-bottom:24px;" src="https://oss.zhishiyu.online/common/w160h160.png">
-<h1>HVIEW</h1>
-
----
+  <img width="180px" style="margin-bottom:24px;" src="https://oss.zhishiyu.online/common/w160h160.png">
+<h1>HVIEW UI</h1>
 
 <p>Minimalism library on the computer side based on Vue3</p>
 
-English | [简体中文](https://github.com/ChaiMayor/hview-ui/tree/dev/README.md)
+<p> English | <a href="https://github.com/ChaiMayor/hview-ui/tree/dev/README-EN.md">
+ 简体中文 
+</a></p>
 
-<p align="center">
+<p align="center"  style="margin-top:24px;">
   <a href="https://www.npmjs.com/package/hview-plus">
     <img src="https://img.shields.io/npm/v/hview-plus">
   </a>
