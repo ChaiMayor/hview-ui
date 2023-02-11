@@ -1,5 +1,5 @@
 <template>
-  <div class="h-descriptions" :class="descriptionKls">
+  <div class="h-descriptions" :class="{ [`h-descriptions--${size}`]: size }">
     <div
       v-if="title || extra || $slots.title || $slots.extra"
       class="h-descriptions-header">
@@ -35,8 +35,6 @@ import { descriptionsKey } from "./token";
 import { descriptionProps } from "./descriptions";
 
 const props = defineProps(descriptionProps);
-
-// const descriptionsSize = useSize();
 
 const slots = useSlots();
 

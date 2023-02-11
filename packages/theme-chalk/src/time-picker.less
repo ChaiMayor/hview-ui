@@ -1,0 +1,283 @@
+@import "common/icon.less";
+@import "common/color.less";
+@import "mixins/config.less";
+@import "mixins/mixins.less";
+
+.@{namespace}-time-picker-rel {
+  position: relative;
+  display: inline-block;
+
+  ul {
+    display: block;
+    padding: 0;
+    margin: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    list-style: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 2px;
+    height: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+}
+
+.@{namespace}-time-picker-rel .@{namespace}-time-picker {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.@{namespace}-input__prefix {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  height: 100%;
+  color: #c0c4cc;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.@{namespace}-time-picker-rel
+  .@{namespace}-time-picker
+  .@{namespace}-input__prefix {
+  width: 25px;
+  height: 100%;
+  line-height: 40px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.@{namespace}-time-picker-rel
+  .@{namespace}-time-picker
+  .@{namespace}-input__inner {
+  box-sizing: border-box;
+  height: 40px;
+  padding: 0 30px;
+  font-size: 14px;
+  line-height: 40px;
+  color: var(--hv-tiem-picker-text-color);
+  background-color: transparent;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+  outline: none;
+}
+
+.@{namespace}-time-picker-rel
+  .@{namespace}-time-picker
+  .@{namespace}-input__inner:focus {
+  border-color: var(--hv-color-primary);
+  outline: none;
+}
+
+.@{namespace}-time-picker-rel
+  .@{namespace}-time-picker
+  .@{namespace}-input__suffix {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  height: 100%;
+  color: #c0c4cc;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.@{namespace}-time-picker .@{namespace}-input__suffix {
+  width: 25px;
+  height: 100%;
+  line-height: 40px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.@{namespace}-time-picker-rel .@{namespace}-time-picker-disabled {
+  cursor: no-drop;
+}
+
+.@{namespace}-time-picker-rel
+  .@{namespace}-time-picker-disabled
+  .@{namespace}-input__inner {
+  cursor: no-drop;
+  background-color: var(--hv-time-picker-disabled-color);
+}
+
+.@{namespace}-time-picker-rel .@{namespace}-time-panel {
+  position: absolute;
+  top: 100%;
+  bottom: 0;
+  z-index: 99;
+  min-width: 100%;
+  height: 200px;
+  margin-top: 8px;
+  background-color: var(--hv-time-picker-body-color);
+  border-radius: 4px;
+}
+
+.@{namespace}-time-picker-rel
+  .@{namespace}-time-panel
+  .@{namespace}-time-panel-body {
+  display: flex;
+}
+
+.@{namespace}-time-picker-rel
+  .@{namespace}-time-panel
+  .@{namespace}-time-panel-body
+  .@{namespace}-time-panel__wrap.end-picker-time {
+  margin-left: 10px;
+}
+
+.@{namespace}-time-picker-rel
+  .@{namespace}-time-panel
+  .@{namespace}-time-panel-body
+  .@{namespace}-time-panel__wrap
+  .@{namespace}-time-panel__title {
+  height: 29px;
+  margin-bottom: 5px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.@{namespace}-time-picker-rel
+  .@{namespace}-time-panel
+  .@{namespace}-time-panel-body
+  .@{namespace}-time-panel__wrap
+  .@{namespace}-time-panel__content {
+  box-sizing: border-box;
+  width: 232px;
+  height: auto;
+  border: 1px solid var(--hv-time-picker-body-border);
+}
+
+.@{namespace}-time-picker-rel
+  .@{namespace}-time-panel
+  .@{namespace}-time-panel-body
+  .@{namespace}-time-panel__wrap
+  .@{namespace}-time-panel__content
+  .@{namespace}-time-spinner__wrapper {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 33%;
+  height: 190px;
+  overflow-y: overlay;
+  text-align: center;
+  vertical-align: top;
+  border-left: 1px solid var(--hv-time-picker-spinner-border);
+}
+
+.@{namespace}-time-spinner__wrapper {
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--hv-border-color);
+      border-radius: 3px;
+    }
+  }
+}
+
+.@{namespace}-time-picker-rel
+  .@{namespace}-time-panel
+  .@{namespace}-time-panel-body
+  .@{namespace}-time-panel__wrap
+  .@{namespace}-time-panel__content
+  .@{namespace}-time-spinner__wrapper:first-child {
+  border-left: none;
+}
+
+.@{namespace}-time-picker-rel
+  .@{namespace}-time-panel
+  .@{namespace}-time-panel-body
+  .@{namespace}-time-panel__wrap
+  .@{namespace}-time-panel__content
+  .@{namespace}-time-spinner__wrapper
+  .@{namespace}-time-spinner__ul
+  .@{namespace}-time-spinner__item {
+  height: 32px;
+  font-size: 13px;
+  line-height: 32px;
+  list-style: none;
+  background-color: var(--hv-time-picker-body-color);
+}
+
+.@{namespace}-time-picker-rel
+  .@{namespace}-time-panel
+  .@{namespace}-time-panel-body
+  .@{namespace}-time-panel__wrap
+  .@{namespace}-time-panel__content
+  .@{namespace}-time-spinner__wrapper
+  .@{namespace}-time-spinner__ul
+  .@{namespace}-time-spinner__item:hover {
+  cursor: pointer;
+  background: var(--hv-time-picker-spinner-li);
+}
+
+.@{namespace}-time-picker-rel
+  .@{namespace}-time-panel
+  .@{namespace}-time-panel-body
+  .@{namespace}-time-panel__wrap
+  .@{namespace}-time-panel__content
+  .@{namespace}-time-spinner__wrapper
+  .@{namespace}-time-spinner__ul
+  .cell-selected {
+  font-weight: bold;
+  color: var(--hv-color-primary);
+  background: var(--hv-time-picker-spinner-active);
+}
+
+.@{namespace}-time-picker-rel
+  .@{namespace}-time-panel
+  .@{namespace}-time-panel__footer {
+  box-sizing: border-box;
+  width: 232px;
+  height: 36px;
+  padding: 5px;
+  line-height: 25px;
+  text-align: right;
+  border: 1px solid var(--hv-time-picker-spinner-border);
+  border-top: none;
+}
+
+.@{namespace}-time-picker-rel
+  .@{namespace}-time-panel
+  .@{namespace}-time-panel__footer
+  .@{namespace}-time-panel__btn {
+  padding: 0 5px;
+  margin: 0 5px;
+  font-size: 13px;
+  line-height: 28px;
+  color: var(--hv-tiem-picker-text-color);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.@{namespace}-time-picker-rel
+  .@{namespace}-time-panel
+  .@{namespace}-time-panel__footer
+  .btn__confirm {
+  font-weight: 800;
+  color: var(--hv-color-primary);
+}
+
+.@{namespace}-time-picker-rel .is-confirm {
+  height: 232px;
+}
+
+.@{namespace}-time-picker-rel .is-range.is-confirm {
+  height: 270px;
+}
+
+.@{namespace}-time-picker-rel .is-range {
+  height: 232px;
+  padding: 5px;
+  border: 1px solid var(--hv-time-picker-body-border);
+}
+
+.@{namespace}-timepick__icon {
+  font-size: 18px;
+}
