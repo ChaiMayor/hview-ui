@@ -6,8 +6,8 @@ import { default as Input } from "./input";
 import { default as Tooltip } from "./tooltip";
 import { default as Avatar } from "./avatar";
 import { default as Radio } from "./radio";
-import { default as DatePicker } from "./date-picker";
-import { default as Space } from "./space";
+// import { default as DatePicker } from "./date-picker";
+// import { default as Space } from "./space";
 import { default as Message } from "./message";
 import { Container, Header, Aside, Main, Footer } from "./container";
 import { default as Carousel } from "./carousel";
@@ -49,8 +49,8 @@ export {
   Footer,
   Avatar,
   Radio,
-  DatePicker,
-  Space,
+  // DatePicker,
+  // Space,
   Tooltip,
   Carousel,
   CarouselItem,
@@ -96,8 +96,8 @@ export default [
   Footer,
   Avatar,
   Radio,
-  DatePicker,
-  Space,
+  // DatePicker,
+  // Space,
   Tooltip,
   Carousel,
   CarouselItem,
