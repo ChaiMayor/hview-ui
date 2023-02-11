@@ -110,7 +110,7 @@ const toPlayground = () => {
 }
 .example-showcase {
   padding: 1.5rem;
-  border-bottom: 1px solid #dcdcdcb3 !important;
+  border-bottom: 1px solid #dcdfe6 !important;
 }
 html.dark {
   .example-showcase {

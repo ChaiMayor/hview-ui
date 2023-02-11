@@ -7,7 +7,7 @@ export const useBacktop = (
   props: BacktopProps,
   emit: SetupContext<BacktopEmits>["emit"],
 ) => {
-  const container = shallowRef<Document | HTMLElement>(document);
+  const container = shallowRef<Document | any>(document);
   const element = shallowRef<HTMLElement>(document.documentElement);
   const visible = ref(false);
 

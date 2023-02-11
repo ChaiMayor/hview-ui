@@ -1,0 +1,20 @@
+<template>
+  <h-space :size="[20, 30]">
+    <h-button>按钮</h-button>
+    <h-button>按钮</h-button>
+    <h-button>按钮</h-button>
+    <h-button>按钮</h-button>
+    <h-button>按钮</h-button>
+    <h-button>按钮</h-button>
+    <h-button>按钮</h-button>
+    <h-button>按钮</h-button>
+    <h-button>按钮</h-button>
+    <h-button>按钮</h-button>
+    <h-button>按钮</h-button>
+    <h-button>按钮</h-button>
+    <h-button>按钮</h-button>
+    <h-button>按钮</h-button>
+    <h-button>按钮</h-button>
+    <h-button>按钮</h-button>
+  </h-space>
+</template>

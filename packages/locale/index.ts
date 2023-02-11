@@ -1,6 +1,7 @@
 import enUS from "./lang/en-US";
 import zhCn from "./lang/zh-CN";
-import { createI18n } from "vue-i18n/index";
+// refer: https://github.com/intlify/vue-i18n-next/issues/391
+import { createI18n } from "vue-i18n";
 import { App } from "vue";
 
 export type TranslatePair = {

@@ -20,6 +20,7 @@ const scopes = [
   "border",
   "var",
   "ssr",
+  "site",
 ];
 
 module.exports = {

@@ -81,7 +81,7 @@ const mode = ref(props.type);
 //控制日期面板的展示
 const visible = ref(false);
 const calendarRef = ref();
-onClickOutside(calendarRef, () => {
+onClickOutside(calendarRef as any, () => {
   visible.value = false;
 });
 

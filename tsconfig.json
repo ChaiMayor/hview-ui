@@ -3,7 +3,7 @@
     "baseUrl": ".",
     "jsx": "preserve",
     "strict": false,
-    "target": "ES2015",
+    "target": "es2020",
     "module": "commonjs",
     "skipLibCheck": true,
     "esModuleInterop": true,

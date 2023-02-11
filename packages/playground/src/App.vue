@@ -8,7 +8,7 @@
       auto-resize
       :sfc-options="sfcOptions"
       :clear-console="false"
-      :show-import-map="store.userOptions.value.showHidden || IS_DEV"
+      :show-import-map="store.userOptions.value.showHidden"
       @keydown="handleKeydown" />
   </div>
   <template v-else>
@@ -18,7 +18,7 @@
 
 <script setup lang="ts">
 import { Repl } from "@vue/repl";
-import { IS_DEV } from "./constants";
+// import { IS_DEV } from "./constants";
 import { genCdnLink } from "./utils/dependency";
 
 import { UserOptions, USER_IMPORT_MAP, useStore } from "./composables/store";

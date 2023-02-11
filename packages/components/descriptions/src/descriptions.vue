@@ -1,5 +1,5 @@
 <template>
-  <div class="h-descriptions" :class="descriptionKls">
+  <div class="h-descriptions" :class="{ [`h-descriptions--${size}`]: size }">
     <div
       v-if="title || extra || $slots.title || $slots.extra"
       class="h-descriptions-header">
@@ -36,15 +36,13 @@ import { descriptionProps } from "./descriptions";
 
 const props = defineProps(descriptionProps);
 
-// const descriptionsSize = useSize();
-
 const slots = useSlots();
 
 provide(descriptionsKey, props);
 
 // const descriptionKls = computed(() => [ns.b(), ns.m(descriptionsSize.value)]);
 
-const filledNode = (node, span, count, isLast = false) => {
+const filledNode = (node: any, span, count, isLast = false) => {
   if (!node.props) {
     node.props = {};
   }
@@ -60,14 +58,14 @@ const filledNode = (node, span, count, isLast = false) => {
 
 const getRows = () => {
   const children = flattedChildren(slots.default?.()).filter(
-    (node) => node?.type?.name === "HDescriptionsItem",
+    (node: any) => node?.type?.name === "HDescriptionsItem",
   );
   const rows = [];
   let temp = [];
   let count = props.column;
   let totalSpan = 0; // all spans number of item
 
-  children.forEach((node, index) => {
+  children.forEach((node: any, index) => {
     const span = node.props?.span || 1;
 
     if (index < children.length - 1) {

@@ -6,6 +6,8 @@ import { default as Input } from "./input";
 import { default as Tooltip } from "./tooltip";
 import { default as Avatar } from "./avatar";
 import { default as Radio } from "./radio";
+// import { default as DatePicker } from "./date-picker";
+// import { default as Space } from "./space";
 import { default as Message } from "./message";
 import { Container, Header, Aside, Main, Footer } from "./container";
 import { default as Carousel } from "./carousel";
@@ -33,6 +35,7 @@ import { default as ImageViewer } from "./image-viewer";
 import { default as Popover } from "./popover";
 import { Breadcrumb, BreadcrumbItem } from "./breadcrumb";
 import { Descriptions, DescriptionsItem } from "./descriptions";
+import { default as TimePicker } from "./time-picker";
 
 export {
   Button,
@@ -47,6 +50,8 @@ export {
   Footer,
   Avatar,
   Radio,
+  // DatePicker,
+  // Space,
   Tooltip,
   Carousel,
   CarouselItem,
@@ -77,6 +82,7 @@ export {
   BreadcrumbItem,
   Descriptions,
   DescriptionsItem,
+  TimePicker,
 };
 
 export default [
@@ -92,6 +98,8 @@ export default [
   Footer,
   Avatar,
   Radio,
+  // DatePicker,
+  // Space,
   Tooltip,
   Carousel,
   CarouselItem,
@@ -122,4 +130,5 @@ export default [
   BreadcrumbItem,
   Descriptions,
   DescriptionsItem,
+  TimePicker,
 ];

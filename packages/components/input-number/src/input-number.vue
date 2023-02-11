@@ -55,7 +55,7 @@
             { 'is-disabled': disabledClass === 'increase' },
           ]"
           @click="increase(step)">
-          <h-icon name="xiangshang"></h-icon>
+          <h-icon name="xiangshang2"></h-icon>
         </span>
         <span
           :class="[
@@ -63,7 +63,7 @@
             { 'is-disabled': disabledClass === 'decrease' },
           ]"
           @click="decrease(step)">
-          <h-icon name="xiangxia"></h-icon>
+          <h-icon name="xiangxia1"></h-icon>
         </span>
       </div>
     </template>

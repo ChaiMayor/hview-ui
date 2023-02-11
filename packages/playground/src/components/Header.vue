@@ -103,12 +103,12 @@ async function copyLink() {
           </el-option>
         </el-select>
 
-        <el-checkbox
+        <!-- <el-checkbox
           v-model="nightly"
           style="margin-right: 12px"
           @change="toggleNightly">
           Switch
-        </el-checkbox>
+        </el-checkbox> -->
       </div>
 
       <div flex="~ gap-4" class="icons">

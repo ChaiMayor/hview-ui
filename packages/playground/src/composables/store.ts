@@ -3,7 +3,7 @@ import { File, type Store, type StoreState, compileFile } from "@vue/repl";
 import { atou, utoa } from "../utils/encode";
 import { genCdnLink, genImportMap, genVueLink } from "../utils/dependency";
 import { type ImportMap, mergeImportMap } from "../utils/import-map";
-import { IS_DEV } from "../constants";
+// import { IS_DEV } from "../constants";
 import mainCode from "../template/main.vue?raw";
 import welcomeCode from "../template/welcome.vue?raw";
 import hviewPlusCode from "../template/hview-plus.js?raw";
@@ -39,7 +39,8 @@ export const useStore = (initial: Initial) => {
   let compiler = $(shallowRef<typeof import("vue/compiler-sfc")>());
   const [nightly, toggleNightly] = $(useToggle(false));
   let userOptions = $ref<UserOptions>(initial.userOptions || {});
-  const hideFile = $computed(() => !IS_DEV && !userOptions.showHidden);
+  // const hideFile = $computed(() => !IS_DEV && !userOptions.showHidden);
+  const hideFile = $computed(() => !userOptions.showHidden);
 
   const files = initFiles(initial.serializedState || "");
   const state = reactive<StoreState>({

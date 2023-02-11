@@ -13,11 +13,9 @@
     "es",
     "lib"
   ],
-  "dependencies": {
-    "vue-i18n": "^9.1.2"
-  },
   "keywords": [
     "hview-ui",
     "vue3组件库"
-  ]
+  ],
+  "types": "index.d.ts"
 }

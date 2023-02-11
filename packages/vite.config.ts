@@ -4,6 +4,9 @@ import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
 import { resolve } from "path";
 import DefineOptions from "unplugin-vue-define-options/vite";
+// @ts-ignore
+// import pkg from "../script/transipkg/package.json";
+// , ...Object.keys(pkg.dependencies)
 
 export default defineConfig({
   build: {
@@ -47,12 +50,25 @@ export default defineConfig({
     vue(),
     DefineOptions(),
     dts({
-      entryRoot: "src",
       outputDir: [
-        resolve(__dirname, "./hview-ui/es/src"),
-        resolve(__dirname, "./hview-ui/lib/src"),
+        resolve(__dirname, "./hview-ui/es/packages"),
+        resolve(__dirname, "./hview-ui/lib/packages"),
       ],
     }),
+    {
+      name: "node_modules",
+      generateBundle(_, bundle) {
+        const keys = Object.keys(bundle);
+        for (const key of keys) {
+          const bundler: any = bundle[key as any];
+          this.emitFile({
+            type: "asset",
+            fileName: key.replace(/node_modules/g, "node_module"),
+            source: bundler.code.replace(/node_modules/g, "node_module"),
+          });
+        }
+      },
+    },
   ],
   resolve: {
     alias: {

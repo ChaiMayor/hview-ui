@@ -12,7 +12,7 @@
 // main.ts
 import { createApp } from "vue";
 import HviewPlus from "hview-plus";
-import "hview-plus/es/style.css";
+import "hview-plus/theme-chalk/style.css";
 
 import App from "./App.vue";
 
@@ -28,7 +28,7 @@ app.mount("#app");
 // main.ts
 import { createApp } from "vue";
 import { Button } from "hview-plus";
-import "hview-plus/es/src/button/style/index.css";
+import "hview-plus/theme-chalk/button.css";
 
 import App from "./App.vue";
 
