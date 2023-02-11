@@ -8,6 +8,8 @@ import {
   removeNodeModulesLibDist,
   removeVirtualEsDist,
   removeVirtualLibDist,
+  removeNodeModuleEsDist,
+  removeNodeModuleLibDist,
 } from "./index";
 
 export default parallel(
@@ -19,4 +21,6 @@ export default parallel(
   () => removeNodeModulesLibDist(),
   () => removeVirtualEsDist(),
   () => removeVirtualLibDist(),
+  () => removeNodeModuleEsDist(),
+  () => removeNodeModuleLibDist(),
 );

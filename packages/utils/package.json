@@ -11,5 +11,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "types": "index.d.ts"
 }

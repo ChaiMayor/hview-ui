@@ -36,6 +36,14 @@ export const removeNodeModulesLibDist = async () => {
   return await run(`rd /S /Q ${finalDir}\\lib\\node_modules`, root);
 };
 
+export const removeNodeModuleEsDist = async () => {
+  return await run(`rd /S /Q ${finalDir}\\es\\node_module`, root);
+};
+
+export const removeNodeModuleLibDist = async () => {
+  return await run(`rd /S /Q ${finalDir}\\lib\\node_module`, root);
+};
+
 export const removeVirtualEsDist = async () => {
   return await run(`rd /S /Q ${finalDir}\\es\\_virtual`, root);
 };

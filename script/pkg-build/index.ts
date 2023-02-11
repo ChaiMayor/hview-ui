@@ -55,14 +55,14 @@ export const deriveDist = async () => {
 };
 
 export const deriveEsNodeModules = async () => {
-  return src(`${root}/hview-ui/es/node_modules/.pnpm/**`).pipe(
-    dest(`${root}/hview-ui/node_modules/.pnpm`),
+  return src(`${root}/hview-ui/es/node_module/.pnpm/**`).pipe(
+    dest(`${root}/hview-ui/node_module/.pnpm`),
   );
 };
 
 export const deriveLibNodeModules = async () => {
-  return src(`${root}/hview-ui/lib/node_modules/.pnpm/**`).pipe(
-    dest(`${root}/hview-ui/node_modules/.pnpm`),
+  return src(`${root}/hview-ui/lib/node_module/.pnpm/**`).pipe(
+    dest(`${root}/hview-ui/node_module/.pnpm`),
   );
 };
 
@@ -79,16 +79,12 @@ export const deriveLibVirtual = async () => {
 };
 
 export const hierarchicalChangeEsModule = async () => {
-  // return src(`${root}/${finalDir}/es/**`).pipe(dest(`${root}/${finalDir}/es`));
   return src(`${root}/hview-ui/es/packages/**`).pipe(
     dest(`${root}/hview-ui/es`),
   );
 };
 
 export const hierarchicalChangeLibModule = async () => {
-  // return src(`${root}/${finalDir}/lib/**`).pipe(
-  //   dest(`${root}/${finalDir}/lib`),
-  // );
   return src(`${root}/hview-ui/lib/packages/**`).pipe(
     dest(`${root}/hview-ui/lib`),
   );

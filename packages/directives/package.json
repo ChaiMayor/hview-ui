@@ -7,5 +7,6 @@
   "module": "index.ts",
   "peerDependencies": {
     "vue": "^3.2.37"
-  }
+  },
+  "types": "index.d.ts"
 }

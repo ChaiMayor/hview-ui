@@ -1,5 +1,4 @@
 import { series, parallel } from "gulp";
-import { copypackage } from "../publish/index";
 import {
   buildCompDist,
   buildThemeDist,
@@ -30,6 +29,5 @@ export default series(
     () => buildStyle(),
     () => buildStyleDir(),
     () => deriveDist(),
-    () => copypackage(),
   ),
 );
