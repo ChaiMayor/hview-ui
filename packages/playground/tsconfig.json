@@ -4,6 +4,7 @@
     "module": "es2022",
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
     "isolatedModules": true,
     "types": ["vite/client", "vue/macros-global"]
   }

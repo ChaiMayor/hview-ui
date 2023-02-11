@@ -3,13 +3,13 @@ import { themePath, root, reThemePath } from "../utils/paths";
 import less from "gulp-less";
 import autoprefixer from "gulp-autoprefixer";
 import run from "../utils/run";
-import { removeDir, delPath } from "../utils/delpath";
+import { removeDir } from "../utils/delpath";
 import gulpMinifyCss from "gulp-minify-css";
 import { themeDir, finalDir } from "../utils/constant";
 
-export const removeCompDist = async (floor: number) => {
-  // 一定要使用 await 同步加载，否则会出错
-  return await delPath(`${root}/${finalDir}`, floor);
+export const removeCompDist = async () => {
+  // refer: https://m.xp.cn/b.php/4166.html
+  return await run(`rd /S /Q ${finalDir}`, root);
 };
 
 export const buildCompDist = async () => {

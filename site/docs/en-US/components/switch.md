@@ -66,7 +66,7 @@ Use the inactive-icon and active-icon attributes to add icons. Use the inline-pr
 
 <br/>
 
-### 事件
+### Events
 
 | 事件名称 | 说明                                            | 回调参数                   |
 | -------- | ----------------------------------------------- | -------------------------- |

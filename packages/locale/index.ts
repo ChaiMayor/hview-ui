@@ -1,6 +1,6 @@
 import enUS from "./lang/en-US";
 import zhCn from "./lang/zh-CN";
-import { createI18n } from "vue-i18n";
+import { createI18n } from "vue-i18n/index";
 import { App } from "vue";
 
 export type TranslatePair = {
