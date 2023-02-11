@@ -5,35 +5,26 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-  color: #303133;
   font-family: "JetBrains Mono", source-code-pro, Menlo, Monaco, Consolas,
     "Courier New", monospace !important;
-  direction: ltr;
+  font-size: 0.9em;
+  hyphens: none;
+  line-height: 1.2em;
+  color: #303133;
   text-align: left;
+  word-break: normal;
+  tab-size: 4;
   white-space: pre;
   word-spacing: normal;
-  word-break: normal;
-  font-size: 0.9em;
-  line-height: 1.2em;
-
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
+  direction: ltr;
 }
 
 pre > code[class*="language-"] {
   font-size: 1em;
 }
 
-pre[class*="language-"]::-moz-selection,
-pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection,
-code[class*="language-"] ::-moz-selection {
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection {
   background-color: var(--code-select-bg-color);
 }
 
@@ -49,8 +40,8 @@ pre[class*="language-"] {
   padding: 1em;
   margin: 0.5em 0;
   overflow: auto;
-  border: 1px solid #dddddd;
   background-color: white;
+  border: 1px solid #ddd;
 }
 
 /* Inline code */
@@ -59,15 +50,15 @@ pre[class*="language-"] {
   padding-top: 1px;
   padding-bottom: 1px;
   background: #f8f8f8;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
 }
 
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: var(--code-comment-color);
   font-style: italic;
+  color: var(--code-comment-color);
 }
 
 .token.namespace {

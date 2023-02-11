@@ -1,4 +1,4 @@
-.dark {
+html.dark {
   --vp-c-bg-alt: #141414 !important; // 深色模式侧边栏
   --vp-c-bg: #141414 !important;
   --vp-c-black-soft: #141414;
@@ -10,7 +10,7 @@
   --code-color: #d4d4d4 !important;
   --code-script-color: #4fc1ff !important;
   --code-select-bg-color: #b3d4fc !important;
-  --code-comment-color: #999988 !important;
+  --code-comment-color: #998 !important;
   --code-attr-value-color: #ce9178 !important;
   --code-punctuation-color: #808080 !important;
   --code-entity-color: #36acaa !important;
@@ -32,60 +32,75 @@
   --shiki-token-string-expression: #c3e88d !important;
   --shiki-token-function: #82aaff !important;
   // search
-  --search-bg-color: rgba(0, 0, 0, 0.8) !important;
+  --search-bg-color: rgb(0 0 0 / 80%) !important;
   --seach-bg-pla-color: #161618 !important;
 
+  .vp-doc h2 {
+    color: var(--vp-c-text-dark-1) !important;
+  }
+
   .tip.custom-block {
-    background-color: #7593f71a !important;
     color: #e5eaf3;
+    background-color: #7593f71a !important;
   }
 
   .vp-doc :not(pre) > code {
     color: #e5eaf3;
   }
+
   .VPNav {
-    border-bottom: 1px solid #dcdfe6;
     background-image: radial-gradient(transparent 1.8px, #000 1px);
+    border-bottom: 1px solid #dcdfe6;
   }
+
   .VPNavBarTitle {
     .title {
       color: #5d80f4 !important;
     }
   }
+
   .VPSidebarGroup {
     .VPLink {
       &.active {
-        background: rgba(64, 158, 255, 0.1) !important;
+        background: rgb(64 158 255 / 10%) !important;
       }
     }
   }
+
   .example {
-    border: 1px solid rgba(84, 84, 84, 0.48) !important;
+    border: 1px solid rgb(84 84 84 / 48%) !important;
   }
+
   p.details {
     border: 0;
   }
+
   .details {
-    border: 1px solid rgb(63, 63, 63);
+    border: 1px solid rgb(63 63 63);
+
     summary {
       background: #232323 !important;
     }
   }
+
   .custom-block {
     background: #232323 !important;
   }
+
   .icon_content {
-    border-left: 1px solid rgb(63, 63, 63) !important;
-    border-top: 1px solid rgb(63, 63, 63) !important;
+    border-top: 1px solid rgb(63 63 63) !important;
+    border-left: 1px solid rgb(63 63 63) !important;
+
     .icon_list {
-      border-right: 1px solid rgb(63, 63, 63) !important;
-      border-bottom: 1px solid rgb(63, 63, 63) !important;
+      border-right: 1px solid rgb(63 63 63) !important;
+      border-bottom: 1px solid rgb(63 63 63) !important;
     }
   }
   // 布局容器
   .container-style {
-    border: 1px solid rgba(84, 84, 84, 0.48) !important;
+    border: 1px solid rgb(84 84 84 / 48%) !important;
   }
+
   ._components_container {
     .container-style {
       color: #232323;
@@ -93,22 +108,24 @@
   }
   // 滚动条容器
   .example_scrollbar {
-    border: 1px solid rgba(84, 84, 84, 0.48) !important;
+    border: 1px solid rgb(84 84 84 / 48%) !important;
   }
 
   .group {
     .items {
       padding-right: 12px;
+
       .VPSidebarItem {
-        font-size: 13px;
         padding: 2px 0;
         padding-left: 12px;
         margin: 6px 0;
+        font-size: 13px;
+
         &.is-active,
         .has-active {
-          border-radius: 6px;
-          background: rgba(64, 158, 255, 0.1);
           box-sizing: border-box;
+          background: rgb(64 158 255 / 10%);
+          border-radius: 6px;
         }
       }
     }
