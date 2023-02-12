@@ -23,7 +23,7 @@ export interface MessageOptions {
     type: boolean;
     default: false;
   };
-  onClose?: () => {};
+  onClose?: () => void;
 }
 
 export default function message(options: MessageOptions) {

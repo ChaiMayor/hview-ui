@@ -69,7 +69,7 @@ import imgPreview from'exam/image/img-preview.vue'
 | `placeholder` | 当图像尚未加载时，自定义的占位符内容 |     |     |     |
 | `error`       | 自定义图像加载失败的内容             |     |     |     |
 
-### Image-viewer 属性
+### Image-view 属性
 
 | 属性名          | 说明                                     | 类型       | 默认值  |     |
 | --------------- | ---------------------------------------- | ---------- | ------- | --- | --- |
@@ -80,7 +80,7 @@ import imgPreview from'exam/image/img-preview.vue'
 | `infinite`      | 是否可以无限循环预览                     | `boolean`  | `true`  |     |
 | `zoom-rate`     | 缩放事件的缩放速度                       | `number`   | `1.2`   |     |
 
-### Image-viewer 事件
+### Image-view 事件
 
 | 事件名       | 说明             | 类型         |
 | ------------ | ---------------- | ------------ |
