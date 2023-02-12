@@ -25,7 +25,7 @@ Custom failed content when error occurs to image load by slot = error
 
 ## Lazy load
 
-可通过 lazy 开启懒加载功能， 当图片滚动到可视范围内才会加载。 可通过 scroll-container 来设置滚动容器， 若未定义，默认为 window
+You can enable lazy loading with lazy, which will not load until the image is scrolled into view. The scroll container can be set via scroll-container.If it is not defined, it defaults to window
 ::: code image/lazy-imgs
 <lazyImgs></lazyImgs>
 :::
@@ -48,8 +48,8 @@ Use lazy load by lazy = true. Image will load until scroll into view when set. Y
 | scrollContainer | the container to add scroll listener when using lazy load.                                                                                        | `string    | HTMLElement` | window  |
 | alt             | native attribute `alt`.                                                                                                                           | `string`   | —            |
 | previewSrcList  | allow big image preview.                                                                                                                          | `string[]` | —            |
-| zIndex          | set image preview z-index.                                                                                                                        | `number`   | —            |
-| initialIndex    | initial preview image index, less than the length of `url-list`.                                                                                  | `number`   | 0            |
+| zIndex          | set image preview z-index.                                                                                                                        | `number`   | 0            |
+| initialIndex    | initial preview image index, less than the length of `urlList`.                                                                                   | `number`   | 0            |
 
 ### Image Events
 
@@ -62,26 +62,25 @@ Use lazy load by lazy = true. Image will load until scroll into view when set. Y
 
 ### Image Slots
 
-| 插槽名        | 说明                                                     |     |     |     |
-| ------------- | -------------------------------------------------------- | --- | --- | --- |
-| `placeholder` | custom placeholder content when image hasn't loaded yet. |     |     |     |
-| `error`       | custom image load failed content.                        |     |     |     |
+| name          | Description                                              |
+| ------------- | -------------------------------------------------------- |
+| `placeholder` | custom placeholder content when image hasn't loaded yet. |
+| `error`       | custom image load failed content.                        |
 
-### Image-viewer Attributes
+### ImageViewer Attributes
 
-| Name                  | Description                                                                      | Type       | Default |
-| --------------------- | -------------------------------------------------------------------------------- | ---------- | ------- | --- |
-| visable               | preview images                                                                   | `boolean`  | -       |
-| `url-list`            | preview link list.                                                               | `string[]` | `[]`    |
-| `z-index`             | preview backdrop z-index.                                                        | `number    | string` | —   |
-| `initial-index`       | the initial preview image index, less than or equal to the length of `url-list`. | `number`   | `0`     |
-| `infinite`            | whether preview is infinite.                                                     | `boolean`  | `true`  |
-| `hide-on-click-modal` | whether user can emit close event when clicking backdrop.                        | `boolean`  | `false` |
-| `zoom-rate`           | the zoom rate of the image viewer zoom event                                     | `number`   | `1.2`   |
+| Name         | Description                                                                      | Type       | Default |
+| ------------ | -------------------------------------------------------------------------------- | ---------- | ------- | --- |
+| visable      | preview images                                                                   | `boolean`  | —       |
+| urlList      | preview link list.                                                               | `string[]` | `[]`    |
+| zIndex       | preview backdrop z-index.                                                        | `number    | string` | —   |
+| initialIndex | the initial preview image index, less than or equal to the length of `url-list`. | `number`   | `0`     |
+| infinite     | whether preview is infinite.                                                     | `boolean`  | `true`  |
+| zoomRate     | the zoom rate of the image viewer zoom event                                     | `number`   | `1.2`   |
 
-### Image -viewer Events
+### imageViewer Events
 
 | name         | Description                           | Type         |
 | ------------ | ------------------------------------- | ------------ |
 | closePreview | trigger when clicking on close button | `() => void` |
-| `switch`     | trigger when switching images.        | （）=> void  |
+| `switch`     | trigger when switching images.        | `() => void` |

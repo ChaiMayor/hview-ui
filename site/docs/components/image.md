@@ -45,13 +45,13 @@ import imgPreview from'exam/image/img-preview.vue'
 | 属性名          | 说明                                                                                                     | 类型       | 默认值       |
 | --------------- | -------------------------------------------------------------------------------------------------------- | ---------- | ------------ | ------- | ------ | ------------- | --- |
 | src             | 图片源地址，同原生属性一致                                                                               | `string`   | —            |
-| fit             | 确定图片如何适应容器框，同原生 [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit) | `'fill'    | 'contain'    | 'cover' | 'none' | 'scale-down'` | —   |
+| fit             | 确定图片如何适应容器框，同原生[object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit). | `'fill'    | 'contain'    | 'cover' | 'none' | 'scale-down'` | —   |
 | lazy            | 是否使用懒加载                                                                                           | `boolean`  | `false`      |
 | scrollContainer | 开启懒加载功能后，监听 scroll 事件的容器                                                                 | `string    | HTMLElement` | window  |
 | alt             | 原生属性 `alt`                                                                                           | `string`   | —            |
 | previewSrcList  | 开启图片预览功能                                                                                         | `string[]` | —            |
-| zIndex          | 设置图片预览的 z-index                                                                                   | `number`   | —            |
-| initialIndex    | 初始预览图像索引，小于 `url-list` 的长度                                                                 | `number`   | `0`          |
+| zIndex          | 设置图片预览的 z-index                                                                                   | `number`   | 0            |
+| initialIndex    | 初始预览图像索引，小于 `url-list` 的长度                                                                 | `number`   | 0            |
 
 ### Image 事件
 
@@ -64,25 +64,25 @@ import imgPreview from'exam/image/img-preview.vue'
 
 ### Image 插槽
 
-| 插槽名        | 说明                                 |     |     |     |
-| ------------- | ------------------------------------ | --- | --- | --- |
-| `placeholder` | 当图像尚未加载时，自定义的占位符内容 |     |     |     |
-| `error`       | 自定义图像加载失败的内容             |     |     |     |
+| 插槽名        | 说明                                 |
+| ------------- | ------------------------------------ |
+| `placeholder` | 当图像尚未加载时，自定义的占位符内容 |
+| `error`       | 自定义图像加载失败的内容             |
 
-### Image-view 属性
+### ImageViewer 属性
 
-| 属性名          | 说明                                     | 类型       | 默认值  |     |
-| --------------- | ---------------------------------------- | ---------- | ------- | --- | --- |
-| visable         | 是否预览图片                             | `boolean`  |         |     |
-| `url-list`      | 用于预览的图片链接列表                   | `string[]` | `[]`    |     |
-| `z-index`       | 预览时遮罩层的 z-index                   | `number    | string` | —   |     |
-| `initial-index` | 初始预览图像索引，小于 `url-list` 的长度 | `number`   | `0`     |     |
-| `infinite`      | 是否可以无限循环预览                     | `boolean`  | `true`  |     |
-| `zoom-rate`     | 缩放事件的缩放速度                       | `number`   | `1.2`   |     |
+| 属性名       | 说明                                    | 类型       | 默认值  |
+| ------------ | --------------------------------------- | ---------- | ------- | --- |
+| visable      | 是否预览图片                            | `boolean`  | —       |
+| urlList      | 用于预览的图片链接列表                  | `string[]` | [ ]     |
+| zIndex       | 预览时遮罩层的 z-index                  | `number    | string` | —   |
+| initialIndex | 初始预览图像索引，小于 `urlList` 的长度 | `number`   | `0`     |
+| infinite     | 是否可以无限循环预览                    | `boolean`  | true    |
+| zoomRate     | 缩放事件的缩放速度                      | `number`   | 1.2     |
 
-### Image-view 事件
+### ImageViewer 事件
 
 | 事件名       | 说明             | 类型         |
 | ------------ | ---------------- | ------------ |
 | closePreview | 关闭预览页面触发 | `() => void` |
-| `switch`     | 切换图像时触发。 | （）=> void  |
+| `switch`     | 切换图像时触发。 | `() => void` |
