@@ -4,7 +4,6 @@ import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
 import { resolve } from "path";
 import DefineOptions from "unplugin-vue-define-options/vite";
-// @ts-ignore
 // import pkg from "../script/transipkg/package.json";
 // , ...Object.keys(pkg.dependencies)
 

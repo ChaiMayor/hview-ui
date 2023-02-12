@@ -9,6 +9,7 @@
     "isolatedModules": true,
     "module": "commonjs",
     "sourceMap": true,
+    "types": ["node", "jsdom"],
     "skipLibCheck": true,
     "esModuleInterop": true,
     "moduleResolution": "Node",

@@ -31,7 +31,7 @@ Hview is a Minimalism style mobile component library developed based on `Vue3`, 
 
 ## ✨ Features
 
-- 🚀 Provides 20+ high quality common components
+- 🚀 Provides 30+ high quality common components
 - 💪 Developed by Chinese people, perfect documentation and logistics support in both Chinese and English
 - 🛠️ Support on demand import, reduce packaging volume
 - 🛠️ Support theme customization
@@ -75,15 +75,17 @@ Core：vue3 + typescript + less + vite
 
 Submit：husky、commitlint、lint-staged
 
-Genre：eslint、prettier、stylelint、postcss-less、ls-lint
+Genre：eslint、prettier、stylelint、postcss-less
 
-Document：vitePress
+Dir：ls-lint
+
+Document：vitepress
 
 I18n：vue-i18n
 
-Test：vitest、@vue/test-utils
+Test：vitest、@vue/test-utils、jsdom、c8
 
-CICD：release-it、gulp、github actions
+CI/CD：gulp、github actions、release-it
 
 ## 🎪 Project case
 
