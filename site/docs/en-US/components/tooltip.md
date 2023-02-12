@@ -41,7 +41,7 @@ Use the `content` property to determine the tooltip on `hover`. The display effe
 
 ### Attributes
 
-| parameter | illustrate              | Type   | optional value                                                                                            | default |
-| --------- | ----------------------- | ------ | --------------------------------------------------------------------------------------------------------- | ------- |
-| content   | content                 | string |                                                                                                           | -----   |
-| placement | position of the tooltip | string | top/top-start/top-end/bottom/bottom-start/bottom-end/left/left-start/left-end/right/right-start/right-end | bottom  |
+| parameter | illustrate              | Type     | optional value                                                                                            | default |
+| --------- | ----------------------- | -------- | --------------------------------------------------------------------------------------------------------- | ------- |
+| content   | content                 | `string` |                                                                                                           | -----   |
+| placement | position of the tooltip | `string` | top/top-start/top-end/bottom/bottom-start/bottom-end/left/left-start/left-end/right/right-start/right-end | bottom  |

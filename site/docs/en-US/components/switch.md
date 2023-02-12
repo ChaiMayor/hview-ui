@@ -52,17 +52,17 @@ Use the inactive-icon and active-icon attributes to add icons. Use the inline-pr
 
 ### Attribute
 
-| parameter      | illustrate                          | type    | optional value          | Defaults |
-| -------------- | ----------------------------------- | ------- | ----------------------- | -------- |
-| v-model        | bind value                          | boolean | true / false            | —        |
-| disabled       | Whether to disable                  | boolean | true / false            | false    |
-| active-text    | switch Text description when opened | string  | —                       | —        |
-| inactive-text  | switch Text description when closed | string  | —                       | —        |
-| active-icon    | switch icon when open               | string  | —                       | —        |
-| inactive-icon  | switch icon when closed             | string  | —                       | —        |
-| active-color   | switch Background color when opened | string  | —                       | #409EFF  |
-| inactive-color | switch Background color when closed | string  | —                       | #C0CCDA  |
-| size           | The size of the switch              | string  | large / default / small | —        |
+| parameter      | illustrate                          | type      | optional value          | Defaults |
+| -------------- | ----------------------------------- | --------- | ----------------------- | -------- |
+| v-model        | bind value                          | `boolean` | true / false            | —        |
+| disabled       | Whether to disable                  | `boolean` | true / false            | false    |
+| active-text    | switch Text description when opened | `string`  | —                       | —        |
+| inactive-text  | switch Text description when closed | `string`  | —                       | —        |
+| active-icon    | switch icon when open               | `string`  | —                       | —        |
+| inactive-icon  | switch icon when closed             | `string`  | —                       | —        |
+| active-color   | switch Background color when opened | `string`  | —                       | #409EFF  |
+| inactive-color | switch Background color when closed | `string`  | —                       | #C0CCDA  |
+| size           | The size of the switch              | `string`  | large / default / small | —        |
 
 <br/>
 

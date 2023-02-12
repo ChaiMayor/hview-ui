@@ -52,17 +52,17 @@ import icon from 'exam/switch/icon.vue'
 
 ### 属性
 
-| 参数           | 说明                    | 类型    | 可选值                  | 默认值  |
-| -------------- | ----------------------- | ------- | ----------------------- | ------- |
-| v-model        | 绑定值                  | boolean | true / false            | —       |
-| disabled       | 是否禁用                | boolean | true / false            | false   |
-| active-text    | switch 打开时的文字描述 | string  | —                       | —       |
-| inactive-text  | switch 关闭时的文字描述 | string  | —                       | —       |
-| active-icon    | switch 打开时的图标     | string  | —                       | —       |
-| inactive-icon  | switch 关闭时的图标     | string  | —                       | —       |
-| active-color   | switch 打开时的背景色   | string  | —                       | #409EFF |
-| inactive-color | switch 关闭时的背景色   | string  | —                       | #C0CCDA |
-| size           | switch 的大小           | string  | large / default / small | —       |
+| 参数           | 说明                    | 类型      | 可选值                  | 默认值  |
+| -------------- | ----------------------- | --------- | ----------------------- | ------- |
+| v-model        | 绑定值                  | `boolean` | true / false            | —       |
+| disabled       | 是否禁用                | `boolean` | true / false            | false   |
+| active-text    | switch 打开时的文字描述 | `string`  | —                       | —       |
+| inactive-text  | switch 关闭时的文字描述 | `string`  | —                       | —       |
+| active-icon    | switch 打开时的图标     | `string`  | —                       | —       |
+| inactive-icon  | switch 关闭时的图标     | `string`  | —                       | —       |
+| active-color   | switch 打开时的背景色   | `string`  | —                       | #409EFF |
+| inactive-color | switch 关闭时的背景色   | `string`  | —                       | #C0CCDA |
+| size           | switch 的大小           | `string ` | large / default / small | —       |
 
 <br/>
 
