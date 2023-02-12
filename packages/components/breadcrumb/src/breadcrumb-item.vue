@@ -19,7 +19,7 @@ const props = defineProps(BreadcrumbItemProps);
 const breadcrumbProps = inject("breadcrumbProps", undefined);
 const { separator, separatorIcon } = toRefs(breadcrumbProps);
 // 获取vue实例
-const instance = getCurrentInstance();
+// const instance = getCurrentInstance();
 // const router = instance.appContext.config.globalProperties.$router;
 // 文本内容样式类
 const innerClass = computed(() => {

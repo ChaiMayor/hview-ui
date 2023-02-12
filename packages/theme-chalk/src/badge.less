@@ -13,8 +13,8 @@
 }
 #badgeBase() {
   position: absolute;
-  top: -9px;
-  right: -22px;
+  top: 0;
+  right: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -24,6 +24,7 @@
   color: #fff;
   white-space: nowrap;
   border-radius: 12px;
+  transform: translateX(30%);
 }
 
 .@{namespace}-badge-type--danger {
@@ -53,10 +54,11 @@
 
 .is-dot {
   position: absolute;
-  top: -5px;
-  right: -5px;
+  top: 0;
+  right: 0;
   width: 8px;
   height: 8px;
   background-color: var(--hv-color-danger);
   border-radius: 50%;
+  transform: translate(-2px, 8px);
 }

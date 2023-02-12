@@ -53,7 +53,6 @@ Use the attribute is-dot. It is a Boolean.
 | isDot  | if a little dot is displayed.                                                 | `boolean`           | -                                           | false   |     |
 | hidden | hidden badge.                                                                 | `boolean`           | -                                           | false   |     |
 | type   | badge type.                                                                   | `string`            | primary / success / warning / danger / info | danger  |     |
-|        |                                                                               |                     |                                             |         |     |
 
 ### Slots
 
