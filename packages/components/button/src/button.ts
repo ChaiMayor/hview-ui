@@ -24,7 +24,10 @@ export const ButtonProps = {
   },
   plain: Boolean,
   round: Boolean,
-  disabled: Boolean,
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
   icon: {
     type: String,
     default: "",
