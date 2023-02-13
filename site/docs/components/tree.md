@@ -61,18 +61,18 @@ import renderTree from 'exam/tree/render-tree.vue'
 
 ### 属性
 
-| 参数                  | 说明                                                 | 类型                              | 可选值 | 默认值   |
-| --------------------- | ---------------------------------------------------- | --------------------------------- | ------ | -------- |
-| data                  | 展示数据                                             | array                             | —      | —        |
-| label                 | 定义子节点名称在 data 数据对象中的键名               | string                            | —      | label    |
-| children              | 定义子节点数据在 data 数据对象中的键名               | string                            | —      | children |
-| show-checkbox         | 节点是否可被选择                                     | boolean                           | —      | false    |
-| node-key              | 每个树节点用来作为唯一标识的属性，整棵树应该是唯一的 | string                            | —      | —        |
-| default-expand-all    | 是否默认展开所有节点                                 | boolean                           | —      | false    |
-| default-expanded-keys | 默认的展开项                                         | array                             | —      | —        |
-| default-checked-keys  | 默认的选中项                                         | array                             | —      | —        |
-| disabled              | 是否禁用                                             | boolean                           | —      | false    |
-| render-content        | 自定义树节点的内容区的渲染 Function                  | Function(h, { data, parentData }) | —      | —        |
+| 参数                  | 说明                                                 | 类型                                | 可选值 | 默认值   |
+| --------------------- | ---------------------------------------------------- | ----------------------------------- | ------ | -------- |
+| data                  | 展示数据                                             | `array`                             | —      | —        |
+| label                 | 定义子节点名称在 data 数据对象中的键名               | `string`                            | —      | label    |
+| children              | 定义子节点数据在 data 数据对象中的键名               | `string`                            | —      | children |
+| show-checkbox         | 节点是否可被选择                                     | `boolean`                           | —      | false    |
+| node-key              | 每个树节点用来作为唯一标识的属性，整棵树应该是唯一的 | `string`                            | —      | —        |
+| default-expand-all    | 是否默认展开所有节点                                 | `boolean`                           | —      | false    |
+| default-expanded-keys | 默认的展开项                                         | `array`                             | —      | —        |
+| default-checked-keys  | 默认的选中项                                         | `array`                             | —      | —        |
+| disabled              | 是否禁用                                             | `boolean`                           | —      | false    |
+| render-content        | 自定义树节点的内容区的渲染 Function                  | `Function(h, { data, parentData })` | —      | —        |
 
 <br/>
 
