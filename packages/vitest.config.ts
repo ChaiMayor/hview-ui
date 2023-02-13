@@ -20,5 +20,8 @@ export default defineConfig({
   },
   test: {
     environment: "jsdom",
+    transformMode: {
+      web: [/.tsx$/],
+    },
   },
 });

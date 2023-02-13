@@ -6,10 +6,13 @@
   "module": "index.ts",
   "scripts": {
     "build": "vite build",
-    "test": "vitest scrollbar",
-    "coverage": "vitest scrollbar run --coverage"
+    "test": "vitest input",
+    "coverage": "vitest input run --coverage"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@vitest/coverage-c8": "^0.28.4"
+  }
 }

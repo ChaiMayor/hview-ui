@@ -7,7 +7,10 @@ export const InputProps = {
   iconAfter: String,
   size: String,
   clearable: Boolean,
-  modelValue: [String, Number],
+  modelValue: {
+    type: [String, Number],
+    default: "",
+  },
 };
 
 export type InputProps = ExtractPropTypes<typeof InputProps>;
