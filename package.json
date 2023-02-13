@@ -34,6 +34,7 @@
     "@hview-plus/locale": "workspace: *",
     "@hview-plus/theme-chalk": "workspace: *",
     "@hview-plus/utils": "workspace: *",
+    "@hview-plus/test-utils": "workspace: *",
     "vue-i18n": "9.3.0-beta.16"
   },
   "devDependencies": {

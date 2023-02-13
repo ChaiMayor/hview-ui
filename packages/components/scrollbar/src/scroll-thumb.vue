@@ -25,28 +25,28 @@ import { throttle } from "lodash-es";
 
 const props = defineProps<{
   // 传入的height高度
-  height: string | number;
-  maxHeight: number;
+  height?: string | number;
+  maxHeight?: number;
   // 传入的width高度
-  width: string | number;
+  width?: string | number;
   // 视口总体高度
-  viewHeight: number;
+  viewHeight?: number;
   // 视口总体宽度
-  viewWidth: number;
+  viewWidth?: number;
   // thumb高度
-  thumbHeight: number;
+  thumbHeight?: number;
   // thumb宽度
-  thumbWidth: number;
+  thumbWidth?: number;
   // 是否使用原生滚动条
-  native: boolean;
+  native?: boolean;
   // 是否一直显示滚动条
-  always: boolean;
+  always?: boolean;
   // 是否关闭监听容器响应式变化
-  noresize: boolean;
+  noresize?: boolean;
   // 比例
-  retio: number;
+  retio?: number;
   // 移动的方向
-  move: "moveX" | "moveY";
+  move?: "moveX" | "moveY";
 }>();
 
 const emits = defineEmits([

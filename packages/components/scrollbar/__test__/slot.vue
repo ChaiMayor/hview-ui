@@ -2,7 +2,7 @@
   <p v-for="item in 20" :key="item" class="h-scrollbar-demo-item">{{ item }}</p>
 </template>
 
-<style scoped>
+<style lang="less" scoped>
 p.h-scrollbar-demo-item {
   display: flex;
   align-items: center;
@@ -14,8 +14,8 @@ p.h-scrollbar-demo-item {
   border-radius: 4px;
   background: #ecf5ff;
   color: #409eff;
-}
-p.h-scrollbar-demo-item:last-of-type {
-  margin-bottom: 0;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 </style>
