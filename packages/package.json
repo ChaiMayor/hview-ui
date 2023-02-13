@@ -6,8 +6,8 @@
   "module": "index.ts",
   "scripts": {
     "build": "vite build",
-    "test": "vitest input",
-    "coverage": "vitest input run --coverage"
+    "test": "vitest input-number",
+    "coverage": "vitest input-number run --coverage"
   },
   "keywords": [],
   "author": "",
