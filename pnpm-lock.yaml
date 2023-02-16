@@ -30,7 +30,7 @@ importers:
       '@vitest/ui': 0.16.0
       '@vue/compiler-sfc': ^3.2.45
       '@vue/eslint-config-typescript': ^11.0.2
-      '@vue/test-utils': ^2.0.0
+      '@vue/test-utils': ^2.2.10
       agent-base: ^6.0.2
       c8: ^7.12.0
       commitlint: ^17.4.2
@@ -8776,7 +8776,7 @@ packages:
       got: 12.5.1
       registry-auth-token: 5.0.1
       registry-url: 6.0.1
-      semver: 7.3.7
+      semver: 7.3.8
     dev: true
 
   /pako/1.0.11:
@@ -9787,7 +9787,7 @@ packages:
     resolution: {integrity: sha512-0Ju4+6A8iOnpL/Thra7dZsSlOHYAHIeMxfhWQRI1/VLcT3WDBZKKtQt/QkBOsiIN9ZpuvHE6cGZ0x4glCMmfiA==}
     engines: {node: '>=12'}
     dependencies:
-      semver: 7.3.7
+      semver: 7.3.8
     dev: true
 
   /semver-greatest-satisfied-range/1.1.0:

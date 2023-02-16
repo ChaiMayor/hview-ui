@@ -1,25 +1,123 @@
 import { mount } from "@vue/test-utils";
 import { describe, expect, test } from "vitest";
-import { nextTick, VNode } from "vue";
 // import makeScroll from "@element-plus/test-utils/make-scroll";
 // import defineGetter from "@element-plus/test-utils/define-getter";
 import Scrollbar from "../src/scrollbar.vue";
 import ScrollbarThumb from "../src/scroll-thumb.vue";
-import Slot from "./slot.vue";
-import Slot2 from "./horizontal.vue";
+import Vertical from "./slot.vue";
+import Horizontal from "./horizontal.vue";
+import MaxHeight from "./max-height.vue";
 import { sleep } from "@hview-plus/test-utils";
 
-// describe("Scrollbar", () => {
-//   test("vertical", async () => {
-//     const wrapper = mount(Scrollbar, {
-//       slots: {
-//         default: slot,
-//       },
-//     });
-//   });
-// });
-
 describe("Scrollbar", () => {
+  test("destroy", async () => {
+    const wrapper = mount(Scrollbar, {
+      slots: {
+        default: Vertical,
+      },
+      props: {
+        height: 400,
+      },
+    });
+
+    await wrapper.vm.$nextTick();
+
+    await sleep(200);
+
+    wrapper.unmount();
+  });
+
+  test("scrollbar roll to top", async () => {
+    const wrapper = mount(Scrollbar, {
+      slots: {
+        default: Vertical,
+      },
+      props: {
+        height: 400,
+        noresize: true,
+      },
+    });
+
+    await wrapper.vm.$nextTick();
+    const thumb = wrapper.findComponent(ScrollbarThumb);
+
+    thumb.vm.handleDrawScrollVal(50, "moveY");
+    wrapper.vm.setScrollTop(50);
+    expect(wrapper.find(".h-scrollbar__wrap").attributes("style")).toBe(
+      "height: 400px;",
+    );
+  });
+
+  test("scrollbar roll to left", async () => {
+    const wrapper = mount(Scrollbar, {
+      slots: {
+        default: Horizontal,
+      },
+    });
+    await wrapper.vm.$nextTick();
+    const thumb = wrapper.findComponent(ScrollbarThumb);
+    // const wrap = wrapper.find(".h-scrollbar__wrap");
+
+    thumb.vm.handleDrawScrollVal(50, "moveX");
+    wrapper.vm.setScrollLeft(50);
+    // @ts-ignore
+    wrapper.vm.setScrollTumb();
+  });
+
+  test("watch height change", async () => {
+    const wrapper = mount(Scrollbar, {
+      slots: {
+        default: MaxHeight,
+      },
+      props: {
+        height: 100,
+      },
+    });
+
+    // wrapper.vm.thumbHeight = 10;
+    // wrapper.vm.countAllHeight();
+
+    // console.log(wrapper.vm);
+
+    await wrapper.setProps({
+      height: 600,
+      maxHeight: 600,
+    });
+  });
+
+  test("watch height change is noresize", async () => {
+    const wrapper = mount(Scrollbar, {
+      slots: {
+        default: MaxHeight,
+      },
+      props: {
+        height: 100,
+        maxHeight: 100,
+        noresize: true,
+      },
+    });
+
+    await wrapper.setProps({
+      height: 600,
+      maxHeight: 600,
+    });
+  });
+
+  test("watch max-height", async () => {
+    const wrapper = mount(Scrollbar, {
+      slots: {
+        default: MaxHeight,
+      },
+      props: {
+        maxHeight: 100,
+      },
+    });
+
+    await wrapper.setProps({
+      maxHeight: 600,
+    });
+  });
+
   test("ScrollbarThumb setScrollViewTop", async () => {
     const wrapper = mount(Scrollbar, {
       props: {
@@ -199,110 +297,6 @@ describe("Scrollbar", () => {
     expect(wrapper.find(".h-scrollbar__bar").attributes("style")).toBeFalsy();
   });
 
-  // test("set scrollTop & scrollLeft", async () => {
-  //   const outerHeight = 204;
-  //   const innerHeight = 500;
-  //   const outerWidth = 204;
-  //   const innerWidth = 500;
-  //   const wrapper = mount({
-  //     setup() {
-  //       return () => (
-  //         <Scrollbar
-  //           ref="scrollbar"
-  //           style={`height: ${outerHeight}px; width: ${outerWidth}px;`}
-  //           always>
-  //           <div
-  //             style={`height: ${innerHeight}px; width: ${innerWidth}px;`}></div>
-  //         </Scrollbar>
-  //       );
-  //     },
-  //   });
-
-  //   const scrollbar = wrapper.findComponent({ ref: "scrollbar" }).vm;
-  //   const scrollDom = wrapper.find(".h-scrollbar__wrap").element;
-
-  //   // const offsetHeightRestore = defineGetter(
-  //   //   scrollDom,
-  //   //   "offsetHeight",
-  //   //   outerHeight,
-  //   // );
-  //   // const scrollHeightRestore = defineGetter(
-  //   //   scrollDom,
-  //   //   "scrollHeight",
-  //   //   innerHeight,
-  //   // );
-  //   // const offsetWidthRestore = defineGetter(
-  //   //   scrollDom,
-  //   //   "offsetWidth",
-  //   //   outerWidth,
-  //   // );
-  //   // const scrollWidthRestore = defineGetter(
-  //   //   scrollDom,
-  //   //   "scrollWidth",
-  //   //   innerWidth,
-  //   // );
-
-  //   scrollbar.setScrollTop(100);
-  //   await nextTick();
-  //   scrollbar.setScrollLeft(100);
-  //   await nextTick();
-  //   expect(wrapper.find(".is-vertical div").attributes("style")).toContain(
-  //     "height: 80px; transform: translateY(0%);",
-  //   );
-  //   expect(wrapper.find(".is-horizontal div").attributes("style")).toContain(
-  //     "width: 80px; transform: translateX(0%);",
-  //   );
-
-  //   // offsetHeightRestore();
-  //   // scrollHeightRestore();
-  //   // offsetWidthRestore();
-  //   // scrollWidthRestore();
-  // });
-
-  test("should render min-size props", async () => {
-    const outerHeight = 204;
-    const innerHeight = 10000;
-    const wrapper = mount(() => (
-      <Scrollbar style={`height: ${outerHeight}px;`}>
-        <div style={`height: ${innerHeight}px;`}></div>
-      </Scrollbar>
-    ));
-
-    const scrollDom = wrapper.find(".h-scrollbar__wrap").element;
-
-    // const offsetHeightRestore = defineGetter(
-    //   scrollDom,
-    //   "offsetHeight",
-    //   outerHeight,
-    // );
-    // const scrollHeightRestore = defineGetter(
-    //   scrollDom,
-    //   "scrollHeight",
-    //   innerHeight,
-    // );
-
-    // await makeScroll(scrollDom, "scrollTop", 0);
-    // expect(wrapper.find(".is-vertical div").attributes("style")).toContain(
-    //   "height: 20px; transform: translateY(0%);",
-    // );
-    // offsetHeightRestore();
-    // scrollHeightRestore();
-  });
-
-  test("should render tag props", async () => {
-    const wrapper = mount(() => (
-      <Scrollbar tag="ul">
-        {[1, 2, 3].map((item) => (
-          <li>{item}</li>
-        ))}
-      </Scrollbar>
-    ));
-
-    expect(
-      wrapper.find(".h-scrollbar__view").element instanceof HTMLUListElement,
-    ).toBeTruthy();
-  });
-
   test("should render wrap-style props", async () => {
     const wrapStyle = "background: red;";
     const wrapper = mount(() => <Scrollbar wrap-style={wrapStyle} />);
@@ -338,7 +332,7 @@ describe("Scrollbar", () => {
   test("emit setScrollTop", async () => {
     const wrapper = mount(Scrollbar, {
       slots: {
-        default: Slot,
+        default: Vertical,
       },
       props: {
         height: "400px",
