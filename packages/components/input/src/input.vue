@@ -47,6 +47,7 @@
 <script setup lang="ts">
 import { InputProps } from "./input";
 import { ref, watch, computed } from "vue";
+import { log } from "console";
 
 const props = defineProps(InputProps);
 const emit = defineEmits(["change", "blur", "focus"]);
@@ -60,7 +61,8 @@ const input = ref<any>(null);
 
 watch(
   () => props.modelValue,
-  () => {
+  (newVal) => {
+    if (newVal == 0) return (text.value = 0);
     text.value = props.modelValue ? props.modelValue : "";
   },
 );
@@ -76,7 +78,7 @@ const clearInput = () => {
 };
 
 const handlerBlur = (e: any) => {
-  emit("blur", e);
+  emit("blur", e, text.value);
 };
 
 const handlerFocus = (e: any) => {

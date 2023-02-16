@@ -148,16 +148,23 @@ const increase = (num: number) => {
 };
 
 // input 失去焦点
-const blurInput = (e: FocusEvent) => {
-  if (stepStrictly.value && step.value > 1) {
-    const res = getSideValue(Number(numberValue.value), step.value, step.value);
-    const location = judgeLocation(Number(numberValue.value), res[0], res[1]);
-    location === "start"
-      ? (numberValue.value = res[0])
-      : (numberValue.value = res[1]);
-  }
-  emits("blur", e);
-  update();
+const blurInput = (e: FocusEvent, val: string | number) => {
+  numberValue.value = Number(val);
+  nextTick(() => {
+    if (stepStrictly.value && step.value > 1) {
+      const res = getSideValue(
+        Number(numberValue.value),
+        step.value,
+        step.value,
+      );
+      const location = judgeLocation(Number(numberValue.value), res[0], res[1]);
+      location === "start"
+        ? (numberValue.value = res[0])
+        : (numberValue.value = res[1]);
+    }
+    emits("blur", e);
+    update();
+  });
 };
 
 // input 获得焦点

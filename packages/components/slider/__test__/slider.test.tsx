@@ -11,4 +11,28 @@ describe("slider.vue", () => {
 
     expect(wrapper.find(".h-slider").exists()).toBe(true);
   });
+
+  test("watch props modelValue change", async () => {
+    const val = ref(36);
+
+    const wrapper = mount(<Slider v-model={val.value} />);
+
+    wrapper.setProps({
+      modelValue: 40,
+    });
+
+    expect(wrapper.find(".h-slider").exists()).toBe(true);
+  });
+
+  test("steps", async () => {
+    const val = ref(36);
+
+    const wrapper = mount(<Slider v-model={val.value} step={10} />);
+  });
+
+  // test("steps", async () => {
+  //   const val = ref(36);
+
+  //   const wrapper = mount(<Slider v-model={val.value} step={10}/>);
+  // });
 });
