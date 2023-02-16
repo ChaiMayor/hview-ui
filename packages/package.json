@@ -6,8 +6,8 @@
   "module": "index.ts",
   "scripts": {
     "build": "vite build",
-    "test": "vitest radio",
-    "coverage": "vitest radio run --coverage"
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "keywords": [],
   "author": "",

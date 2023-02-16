@@ -4,7 +4,7 @@ import { describe, expect, test } from "vitest";
 import Radio from "../src/radio.vue";
 import { OptionsItem } from "../src/radio";
 
-describe("InputNumber.vue", () => {
+describe("radio.vue", () => {
   test("create", async () => {
     const change = () => {};
 
