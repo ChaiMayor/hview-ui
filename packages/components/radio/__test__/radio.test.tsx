@@ -29,6 +29,36 @@ describe("radio.vue", () => {
     expect(wrapper.find(".h-radio-item-button").exists()).toBe(true);
   });
 
+  test("default options", async () => {
+    mount(<Radio />);
+  });
+
+  test("trigger click", async () => {
+    const change = () => {};
+
+    const value = ref<string>("1");
+    const options = ref<OptionsItem[]>([
+      {
+        label: "Option 1",
+        id: 1,
+      },
+      {
+        label: "Option 2",
+        id: 2,
+      },
+    ]);
+
+    const wrapper = mount(
+      <Radio v-model={value.value} options={options.value} onChange={change} />,
+    );
+
+    const radio = wrapper.find(".h-item-radio");
+    radio.trigger("click", {
+      item: "Option 1",
+      index: 1,
+    });
+  });
+
   test("inline to false", async () => {
     const value = ref<string>("1");
     const options = ref<OptionsItem[]>([
