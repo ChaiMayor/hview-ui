@@ -241,8 +241,7 @@ onMounted(() => {
     slider_runway.value!.addEventListener("click", runwayClick);
 });
 onUnmounted(() => {
-  slider_runway.value &&
-    slider_runway.value!.removeEventListener("click", runwayClick);
+  slider_runway.value?.removeEventListener("click", runwayClick);
 });
 defineExpose({
   update,
