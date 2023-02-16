@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, inject, toRefs, getCurrentInstance, onMounted } from "vue";
+import { computed, inject, toRefs, onMounted } from "vue";
 import { BreadcrumbItemProps } from "./breadcrumb-item";
 
 const props = defineProps(BreadcrumbItemProps);

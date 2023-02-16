@@ -47,7 +47,6 @@
 <script setup lang="ts">
 import { InputProps } from "./input";
 import { ref, watch, computed } from "vue";
-import { log } from "console";
 
 const props = defineProps(InputProps);
 const emit = defineEmits(["change", "blur", "focus"]);
