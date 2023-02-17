@@ -77,8 +77,9 @@ const sidebar = {
       items: [
         { text: "Alert 提示", link: "/components/alert" },
         { text: "Tooltip 文字提示", link: "/components/tooltip" },
-        { text: "Modal 模态框", link: "/components/modal" },
+        // { text: "Modal 模态框", link: "/components/modal" },
         { text: "Popover 弹出框", link: "/components/popover" },
+        { text: "Dialog 对话框", link: "/components/dialog" },
       ],
     },
     {
@@ -164,8 +165,9 @@ const sidebarEN = {
       items: [
         { text: "Alert", link: "/components/alert" },
         { text: "Tooltip", link: "/components/tooltip" },
-        { text: "Modal", link: "/components/modal" },
+        // { text: "Modal", link: "/components/modal" },
         { text: "Popover", link: "/components/popover" },
+        { text: "Dialog", link: "/components/dialog" },
       ],
     },
     {

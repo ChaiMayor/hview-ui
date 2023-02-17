@@ -31,7 +31,7 @@ Hview 是一个基于 `Vue3` 开发的 Minimalism 风格移动端组件库，全
 
 ## ✨ 特性
 
-- 🚀 提供 20+ 个高质量通用组件
+- 🚀 提供 30+ 个高质量通用组件
 - 💪 由国人开发，完善的中英文文档和后勤保障
 - 🛠️ 支持按需引入，减少打包体积
 - 🛠️ 支持主题定制
@@ -75,15 +75,17 @@ app.mount("#app");
 
 代码提交：husky、commitlint、lint-staged
 
-代码风格：eslint、prettier、stylelint、postcss-less、ls-lint
+代码风格：eslint、prettier、stylelint、postcss-less
 
-文档库：vitePress
+目录规范：ls-lint
+
+文档库：vitepress
 
 国际化：vue-i18n
 
-测试：vitest、@vue/test-utils
+测试：vitest、@vue/test-utils、jsdom、c8
 
-CICD：release-it、gulp、github actions
+CI/CD：gulp、github actions、release-it
 
 ## 🎪 项目情况
 

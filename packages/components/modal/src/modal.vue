@@ -16,7 +16,7 @@
             class="btn-close"
             @click="handleClick"
             aria-label="Close modal">
-            x
+            <h-icon name="close1"></h-icon>
           </button>
         </header>
 
@@ -27,7 +27,7 @@
             @click="handleClick"
             aria-label="Close modal"
             v-if="!title && !footer">
-            x
+            <h-icon name="close1"></h-icon>
           </button>
           <slot name="body"> This is the default body! </slot>
         </section>
@@ -49,6 +49,7 @@
 
 <script setup lang="ts">
 import { modalProps } from "./modal";
+import HIcon from "../../icon";
 const props = defineProps(modalProps);
 
 const emits = defineEmits(["onClose", "update:show"]);

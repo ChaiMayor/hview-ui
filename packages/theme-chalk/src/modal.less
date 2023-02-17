@@ -2,6 +2,7 @@
 @import "common/color.less";
 @import "mixins/config.less";
 @import "mixins/mixins.less";
+@import "common/transition.less";
 
 .modal-backdrop {
   position: fixed;
@@ -12,14 +13,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: fade-in-out 0.3s;
 }
 
 .modal {
   display: flex;
   flex-direction: column;
   overflow-x: auto;
-  background: #fff;
-  box-shadow: 2px 2px 20px 1px;
+  background: transparent;
 }
 
 .modal-header,
@@ -47,24 +48,23 @@
 }
 
 .btn-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 20px;
-  font-weight: bold;
-  color: #4aae9b;
+  position: fixed;
+  top: 5%;
+  right: 2%;
+  z-index: var(--hv-index-top);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  font-size: 22px;
+  color: #eee;
   cursor: pointer;
   background: transparent;
+  background-color: var(--hv-text-color-regular);
   border: none;
-}
-
-.btn-green {
-  margin-top: 10px;
-  color: white;
-  cursor: pointer;
-  background: #4aae9b;
-  border: 1px solid #4aae9b;
-  border-radius: 2px;
+  border-radius: 50%;
+  opacity: 0.8;
 }
 
 .modal-fade-enter,
@@ -75,4 +75,10 @@
 .modal-fade-enter-active,
 .modal-fade-leave-active {
   transition: opacity 0.5s ease;
+}
+
+html.dark {
+  .btn-close {
+    background-color: var(--hv-text-color-regular-dark);
+  }
 }

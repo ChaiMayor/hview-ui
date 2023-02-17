@@ -9,12 +9,12 @@ export const modalProps = {
   // 层级
   zIndex: {
     type: Number,
-    default: 1,
+    default: 30,
   },
   //遮罩层背景颜色
   bgColor: {
     type: String,
-    default: "rgba(0,0,0,0.6)",
+    default: "rgba(0, 0, 0, 0.5)",
   },
   // 是否使用title
   title: {

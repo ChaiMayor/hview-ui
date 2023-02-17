@@ -1,44 +1,45 @@
 <template>
-  <div>
-    <div
-      class="popover-box"
-      @mouseenter="hoverTriggerEnterHandler"
-      @mouseleave="hoverTriggerLeaveHandler">
-      <!-- popover内部元素 -->
-      <transition
-        :name="transition"
-        @after-enter="handleAfterEnter"
-        @after-leave="handleAfterLeave">
-        <div
-          v-show="!disabled && showPopover"
-          :class="['popover-outbox', placement, popperClass]"
-          :aria-hidden="disabled || !showPopover ? 'true' : 'false'">
-          <div class="popover-arrow" ref="popoverArrow"></div>
-          <div :class="['popover-box-content']" :style="popoverStyles">
-            <div v-if="title" v-text="title" class="popover-title"></div>
-            <slot>{{ content }}</slot>
-          </div>
-        </div>
-      </transition>
-
-      <!--触发popover元素-->
+  <div
+    ref="target"
+    class="popover-box"
+    @mouseenter="hoverTriggerEnterHandler"
+    @mouseleave="hoverTriggerLeaveHandler">
+    <!-- popover内部元素 -->
+    <transition
+      :name="transition"
+      @after-enter="handleAfterEnter"
+      @after-leave="handleAfterLeave">
       <div
-        ref="reference"
-        class="reference-content"
-        @click="clickTriggerHandler"
-        @mousedown="focusTriggerHandler"
-        @mouseup="blurTriggerHandler">
-        <slot name="reference"></slot>
+        v-show="!disabled && showPopover"
+        :class="['popover-outbox', placement, popperClass]"
+        :aria-hidden="disabled || !showPopover ? 'true' : 'false'">
+        <div class="popover-arrow" ref="popoverArrow"></div>
+        <div :class="['popover-box-content']" :style="popoverStyles">
+          <div v-if="title" v-text="title" class="popover-title"></div>
+          <slot>{{ content }}</slot>
+        </div>
       </div>
+    </transition>
+
+    <!--触发popover元素-->
+    <div
+      ref="reference"
+      class="reference-content"
+      @click="clickTriggerHandler"
+      @mousedown="focusTriggerHandler"
+      @mouseup="blurTriggerHandler">
+      <slot name="reference"></slot>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted, computed, CSSProperties } from "vue";
+import { onClickOutside } from "@vueuse/core";
 import { popoverProps } from "./popover";
 const props = defineProps(popoverProps);
 const emit = defineEmits(["after-enter", "after-leave"]);
+const target = ref(null);
 const visible = ref(false);
 
 const showPopover = computed(() => {
@@ -92,6 +93,10 @@ function clickTriggerHandler() {
     }
   }
 }
+//点击外部区域，关闭tip
+onClickOutside(target, (event) => {
+  visible.value = false;
+});
 //聚焦触发
 function focusTriggerHandler() {
   if (props.trigger.toLowerCase() == "focus") {

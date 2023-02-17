@@ -61,18 +61,18 @@ The content of the node supports customization, and you can add buttons or icons
 
 ### Attributes
 
-| parameter             | illustrate                                                                                      | Type                              | optional value | default  |
-| --------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------- | -------------- | -------- |
-| data                  | display data                                                                                    | array                             | —              | —        |
-| label                 | Define the key name of the child node name in the data data object                              | string                            | —              | label    |
-| children              | Define the key name of the child node data in the data data object                              | string                            | —              | children |
-| show-checkbox         | Whether the node can be selected                                                                | boolean                           | —              | false    |
-| node-key              | Each tree node is used as a uniquely identified attribute, and the entire tree should be unique | string                            | —              | —        |
-| default-expand-all    | Whether to expand all nodes by default                                                          | boolean                           | —              | false    |
-| default-expanded-keys | default expansion                                                                               | array                             | —              | —        |
-| default-checked-keys  | default selection                                                                               | array                             | —              | —        |
-| disabled              | Whether to disable                                                                              | boolean                           | —              | false    |
-| render-content        | The rendering function of the content area of the custom tree node                              | Function(h, { data, parentData }) | —              | —        |
+| parameter             | illustrat                                                                                       | Type                                | optional value | default  |
+| --------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------- | -------------- | -------- |
+| data                  | display data                                                                                    | `array`                             | —              | —        |
+| label                 | Define the key name of the child node name in the data data object                              | `string`                            | —              | label    |
+| children              | Define the key name of the child node data in the data data object                              | `string`                            | —              | children |
+| show-checkbox         | Whether the node can be selected                                                                | `boolean`                           | —              | false    |
+| node-key              | Each tree node is used as a uniquely identified attribute, and the entire tree should be unique | `string`                            | —              | —        |
+| default-expand-all    | Whether to expand all nodes by default                                                          | `boolean`                           | —              | false    |
+| default-expanded-keys | default expansion                                                                               | `array`                             | —              | —        |
+| default-checked-keys  | default selection                                                                               | `array`                             | —              | —        |
+| disabled              | Whether to disable                                                                              | `boolean`                           | —              | false    |
+| render-content        | The rendering function of the content area of the custom tree node                              | `Function(h, { data, parentData })` | —              | —        |
 
 <br/>
 

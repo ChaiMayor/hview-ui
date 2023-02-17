@@ -106,6 +106,7 @@ const clickHandler = () => {
   if (!preview.value) return;
   //阻止body滚动
   document.body.style.overflow = "hidden";
+  // }
   //打开预览界面
   showViewer.value = !showViewer.value;
 };
@@ -182,12 +183,7 @@ watch(
   },
 );
 
-// onMounted(() => {
-//   nextTick(() => {
-
-//   });
-// });
-//初始预览图像索引
+// 初始预览图像索引
 const initialSrc = () => {
   if (preview.value) {
     imageSrc.value = props.previewSrcList[imageIndex.value];
@@ -195,6 +191,8 @@ const initialSrc = () => {
 };
 const updateVisable = () => {
   showViewer.value = false;
+  // 恢复body滚动
+  document.body.style.overflow = "auto";
   emits("close");
 };
 const switchImg = () => {

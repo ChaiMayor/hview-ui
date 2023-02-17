@@ -41,7 +41,7 @@ import settingWidth from 'exam/tooltip/setting-width.vue'
 
 ### 属性
 
-| 参数      | 说明           | 类型   | 可选值                                                                                                    | 默认   |
-| --------- | -------------- | ------ | --------------------------------------------------------------------------------------------------------- | ------ |
-| content   | 内容           | string |                                                                                                           | -----  |
-| placement | 工具提示的位置 | string | top/top-start/top-end/bottom/bottom-start/bottom-end/left/left-start/left-end/right/right-start/right-end | bottom |
+| 参数      | 说明           | 类型     | 可选值                                                                                                    | 默认   |
+| --------- | -------------- | -------- | --------------------------------------------------------------------------------------------------------- | ------ |
+| content   | 内容           | `string` |                                                                                                           | -----  |
+| placement | 工具提示的位置 | `string` | top/top-start/top-end/bottom/bottom-start/bottom-end/left/left-start/left-end/right/right-start/right-end | bottom |

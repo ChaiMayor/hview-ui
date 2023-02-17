@@ -29,5 +29,10 @@ export const imageViewerProps = {
     type: Number,
     default: 1.2,
   },
+  //是否可以通过esc按钮关闭预览
+  closeOnPressEscape: {
+    type: Boolean,
+    default: false,
+  },
 };
 export type ImageViewerProps = ExtractPropTypes<typeof imageViewerProps>;

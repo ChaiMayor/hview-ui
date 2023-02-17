@@ -1,0 +1,107 @@
+@import "common/icon.less";
+@import "common/color.less";
+@import "mixins/config.less";
+@import "mixins/mixins.less";
+
+@__box-shadow:0 2px 12px 0 rgba(7, 7, 7, 0.1);
+@__bg-color-black: rgba(0, 0, 0, 0.4);
+@__bg-color-dark: var(--hv-color-black);
+@__bg-color-white: var(--hv-color-white);
+@__text-color-primary: var(--hv-text-color-primary);
+@__border-white:1px solid #f0f0f0;
+@__font-size-medium: var(--hv-font-size-medium);
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+.@{namespace}-dialog-default {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8880;
+  width: 100%;
+  height: 100%;
+  background: @__bg-color-black;
+
+  .@{namespace}-dialog-contentbox {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    width: 35%;
+    background: @__bg-color-white;
+    border-radius: 4px;
+    box-shadow: @__box-shadow;
+    transform: translate(-50%, -50%);
+
+    .@{namespace}-dialog-header {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      height: 50px;
+      padding: 0 20px;
+      //   border-bottom: @__border-white;
+
+      .@{namespace}-dialog-title {
+        margin: 0;
+        font-size: @__font-size-medium;
+        line-height: 50px;
+        color: @__text-color-primary;
+      }
+
+      .@{namespace}-dialog-close {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        font-size: @__font-size-medium;
+        line-height: 50px;
+        cursor: pointer;
+      }
+    }
+
+    .@{namespace}-dialog-content {
+      box-sizing: border-box;
+      padding: 20px;
+    }
+
+    .@{namespace}-dialog-footer {
+      box-sizing: border-box;
+      padding: 10px 20px;
+      text-align: right;
+      //   border-top: @__border-white;
+    }
+  }
+  .@{namespace}-dialog-text--center {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .@{namespace}-dialog-contentbox-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 35%;
+    background: @__bg-color-white;
+    border-radius: 4px;
+    box-shadow: @__box-shadow;
+    transform: translate(-50%, -50%);
+  }
+  .@{namespace}-dialog-contentbox-draggable {
+    cursor: move;
+    user-select: none;
+  }
+}
+
+html.dark {
+  .@{namespace}-dialog-contentbox {
+    background: @__bg-color-dark;
+  }
+  .@{namespace}-dialog-contentbox-draggable {
+    cursor: move;
+  }
+}

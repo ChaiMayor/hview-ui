@@ -36,6 +36,7 @@ import { default as Popover } from "./popover";
 import { Breadcrumb, BreadcrumbItem } from "./breadcrumb";
 import { Descriptions, DescriptionsItem } from "./descriptions";
 import { default as TimePicker } from "./time-picker";
+import { default as Dialog } from "./dialog";
 
 export {
   Button,
@@ -83,6 +84,7 @@ export {
   Descriptions,
   DescriptionsItem,
   TimePicker,
+  Dialog,
 };
 
 export default [
@@ -131,4 +133,5 @@ export default [
   Descriptions,
   DescriptionsItem,
   TimePicker,
+  Dialog,
 ];
