@@ -17,5 +17,20 @@
   "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "prettier.configPath": "prettier.config.js",
   "stylelint.customSyntax": "postcss-less",
-  "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "sass"]
+  "stylelint.validate": [
+    "css",
+    "less",
+    "postcss",
+    "scss",
+    "vue",
+    "sass"
+  ],
+  "i18n-ally.localesPaths": [
+    "packages/locale",
+    "packages/locale/lang",
+    "packages/hview-ui/es/locale",
+    "packages/hview-ui/lib/locale",
+    "packages/hview-ui/es/locale/lang",
+    "packages/hview-ui/lib/locale/lang"
+  ]
 }

@@ -28,7 +28,7 @@
         <span
           class="h-icon-h"
           v-if="clearable && textLength > 0"
-          @click.stop="handerInput"></span>
+          @click.stop="clearInput"></span>
       </transition>
     </template>
     <template v-else>
@@ -46,12 +46,11 @@
 
 <script setup lang="ts">
 import { InputProps } from "./input";
-import { toRefs, ref, watchEffect, computed } from "vue";
+import { ref, watch, computed } from "vue";
 
 const props = defineProps(InputProps);
-const emit = defineEmits(["update:modelValue", "change", "blur", "focus"]);
-const { modelValue } = toRefs(props);
-const text = ref();
+const emit = defineEmits(["change", "blur", "focus"]);
+const text = ref(props.modelValue);
 const size = computed(() => {
   return {
     [`h-input-${props.size}`]: props.size,
@@ -59,19 +58,26 @@ const size = computed(() => {
 });
 const input = ref<any>(null);
 
-watchEffect(() => {
-  // text.value = modelValue!.value,
-  text.value = modelValue! ? modelValue.value : "";
-});
+watch(
+  () => props.modelValue,
+  (newVal) => {
+    if (newVal == 0) return (text.value = 0);
+    text.value = props.modelValue ? props.modelValue : "";
+  },
+);
 
 const handerInput = (e: any) => {
-  text.value = e ? e.target.value : "";
-  emit("update:modelValue", Number(text.value));
+  text.value = e.target.value;
+  emit("change", Number(text.value));
+};
+
+const clearInput = () => {
+  text.value = "";
   emit("change", Number(text.value));
 };
 
 const handlerBlur = (e: any) => {
-  emit("blur", e);
+  emit("blur", e, text.value);
 };
 
 const handlerFocus = (e: any) => {
@@ -87,7 +93,7 @@ const inputGetBlur = () => {
 };
 
 const textLength = computed(() => {
-  return text.value === undefined ? 0 : text.value.length;
+  return text.value ? String(text.value).length : 0;
 });
 
 defineExpose({

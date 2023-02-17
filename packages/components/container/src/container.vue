@@ -18,7 +18,8 @@ const slots = useSlots();
 const isVertical = computed(() => {
   if (props.direction === "vertical") {
     return true;
-  } else if (props.direction === "horizontal") {
+  }
+  if (props.direction === "horizontal") {
     return false;
   }
   if (slots && slots.default) {

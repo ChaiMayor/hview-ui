@@ -1,18 +1,8 @@
 <template>
-  <p v-for="item in arr" :key="item" class="h-scrollbar-demo-item">{{
+  <p v-for="item in 200" :key="item" class="h-scrollbar-demo-item">{{
     item
   }}</p>
 </template>
-
-<script lang="ts" setup>
-import { ref } from "vue";
-
-const arr = ref<number[]>(Array.from({ length: 20 }, (_, i) => 1 + i));
-
-setTimeout(() => {
-  arr.value = Array.from({ length: 30 }, (_, i) => 1 + i);
-}, 100);
-</script>
 
 <style lang="less" scoped>
 p.h-scrollbar-demo-item {

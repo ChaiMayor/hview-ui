@@ -1,5 +1,5 @@
 <template>
-  <button class="h-button" :class="styleClass">
+  <button class="h-button" :disabled="props.disabled" :class="styleClass">
     <span>
       <i v-if="icon !== ''" :class="`h-icon-${icon}`"></i>
     </span>

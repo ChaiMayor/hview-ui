@@ -70,8 +70,6 @@ Use lazy load by lazy = true. Image will load until scroll into view when set. Y
 
 ## Image-viewer API
 
-### ImageViewer Attributes
-
 | Name         | Description                                                                      | Type                | Default |
 | ------------ | -------------------------------------------------------------------------------- | ------------------- | ------- |
 | visable      | preview images                                                                   | `boolean`           | —       |

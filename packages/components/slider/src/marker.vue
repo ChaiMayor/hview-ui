@@ -1,6 +1,9 @@
 <template>
   <div class="h-slider__button-wrapper">
-    <h-tooltip :content="$attrs.tip" :placement="placement" v-if="showTooltip">
+    <h-tooltip
+      :content="($attrs.tip as string)"
+      :placement="placement"
+      v-if="showTooltip">
       <div ref="btn" class="h-slider__button" :style="buttonStyle"></div>
     </h-tooltip>
     <div ref="btn" class="h-slider__button" :style="buttonStyle" v-else></div>
@@ -12,6 +15,7 @@ import { ref, onMounted, computed, useAttrs } from "vue";
 import { SliderProps } from "./slider";
 import { offsetTop, offsetLeft } from "@hview-plus/utils";
 import { throttle } from "lodash-es";
+import HTooltip from "../../tooltip";
 
 const props = defineProps(SliderProps);
 const emits = defineEmits(["update:isDraw", "setMarkerSite"]);

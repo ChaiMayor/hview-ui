@@ -1,13 +1,6 @@
-import { isNumber } from "@vueuse/core";
 import { ExtractPropTypes, PropType } from "vue";
 
 type useSizeProp = "large" | "default" | "small";
-
-export const inputNumberEmits = {
-  blur: (e: FocusEvent) => e instanceof FocusEvent,
-  focus: (e: FocusEvent) => e instanceof FocusEvent,
-};
-export type InputNumberEmits = typeof inputNumberEmits;
 
 export const InputNumberProps = {
   id: {
@@ -48,12 +41,6 @@ export const InputNumberProps = {
     type: String,
     default: "",
     values: ["", "right"],
-  },
-  valueOnClear: {
-    type: [String, Number, null],
-    validator: (val: "min" | "max" | number | null) =>
-      val === null || isNumber(val) || ["min", "max"].includes(val),
-    default: null,
   },
   name: String,
   label: String,

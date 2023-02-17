@@ -6,10 +6,13 @@
   "module": "index.ts",
   "scripts": {
     "build": "vite build",
-    "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "test": "vitest radio",
+    "coverage": "vitest radio run --coverage"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@vitest/coverage-c8": "^0.28.4"
+  }
 }

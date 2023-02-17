@@ -65,6 +65,7 @@ const showViewer = ref<boolean>(null);
 const container = ref<any>(null);
 
 const scrollContainer = ref<any>(null);
+// const imageViewerRef = ref<any>(null);
 
 // 动态加载图片的fit样式
 const imageStyle = computed(() => {

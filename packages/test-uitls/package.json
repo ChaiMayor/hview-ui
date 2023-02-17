@@ -1,0 +1,8 @@
+{
+  "name": "@hview-plus/test-utils",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "index.ts",
+  "module": "index.ts"
+}
