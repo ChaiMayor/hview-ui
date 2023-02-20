@@ -8,7 +8,6 @@
       @onClose="closeModal">
       <template #body>
         <div class="content">
-          <!-- ARROW -->
           <div class="arrow">
             <span @click="prev" class="arrowLeft">
               <h-icon name="xiangshang2"></h-icon>
@@ -17,7 +16,6 @@
               <h-icon name="xiangxia1"></h-icon>
             </span>
           </div>
-          <!-- ACTIONS -->
           <div class="actions">
             <h-icon @click="handleActions('zoomOut')" name="zoomOut"></h-icon>
             <h-icon @click="handleActions('zoomIn')" name="zoomIn"> </h-icon>
@@ -29,7 +27,6 @@
               @click="handleActions('clockwise')"
               name="refreshRight"></h-icon>
           </div>
-          <!-- CANVAS -->
           <div class="canvs" ref="canvs">
             <img
               v-for="(url, i) in urlList"
@@ -49,14 +46,13 @@
 import { ref, computed, onMounted } from "vue";
 import { imageViewerProps } from "./image-viewer";
 import HIcon from "../../icon";
-import HModal from "../../modal";
 
 const props = defineProps(imageViewerProps);
 const emits = defineEmits(["update:visable", "closePreview", "switch"]);
 
 const activeIndex = ref(props.initialIndex);
 const transform = ref({
-  scale: 1,
+  scale: 1.2,
   deg: 0,
   enableTransition: false,
 });
@@ -139,7 +135,7 @@ function handleActions(action: string, options = {}) {
 //重置图片的尺寸和角度
 const resetImg = () => {
   canvs.value.style.setProperty("--deg", 0 + "deg");
-  canvs.value.style.setProperty("--scale", "1");
+  canvs.value.style.setProperty("--scale", "1.2");
   transform.value.enableTransition = false;
 };
 //上一张图片
@@ -158,6 +154,40 @@ const next = () => {
   //分发事件
   emits("switch");
 };
+//节流函数
+function throttle(func: any, time: number, immediate = false) {
+  if (immediate) {
+    let prevTime = 0;
+    return (...args: any) => {
+      let nowTime = Date.now();
+      if (nowTime - prevTime >= time) {
+        func.apply(this, args);
+        prevTime = nowTime;
+      }
+    };
+  } else {
+    let timer: number | null = null;
+    return (...args: any) => {
+      if (!timer) {
+        func.apply(this, args);
+        timer = window.setTimeout(() => {
+          if (timer) clearInterval(timer);
+          timer = null;
+        }, time);
+      }
+    };
+  }
+}
+const mousewheelHandler = throttle((e: WheelEvent) => {
+  const delta = e.deltaY || e.deltaX;
+  handleActions(delta < 0 ? "zoomIn" : "zoomOut", {
+    zoomRate: props.zoomRate,
+  });
+}, 100);
+onMounted(() => {
+  //监听鼠标滚动事件
+  window.addEventListener("mousewheel", mousewheelHandler);
+});
 </script>
 <script lang="ts">
 export default {
