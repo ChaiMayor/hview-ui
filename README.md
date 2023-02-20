@@ -128,7 +128,8 @@ logo 寓意：我们的组件库还存在很多不完善的地方，非常希望
 <p style="text-align:left;">
   <img width="200px" style="margin-bottom:24px;" src="https://oss.zhishiyu.online/common/hview-ui.png">
 </p>
-> 参考文章：[如何给开源项目贡献代码？ - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/359612351)
+
+> 参考文章：<a href="https://zhuanlan.zhihu.com/p/359612351">如何给开源项目贡献代码？ - 知乎 (zhihu.com)</a>
 
 ## 🌸 感谢
 

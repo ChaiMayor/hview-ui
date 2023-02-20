@@ -140,7 +140,7 @@ Finally, I hope you can make a fortune and give us a free star. Thank you again 
   <img width="200px" style="margin-bottom:24px;" src="https://oss.zhishiyu.online/common/hview-ui.png">
 </p>
 
-> Reference article：[How do I contribute code to an open source project? - zhihu.com](https://zhuanlan.zhihu.com/p/359612351)
+> Reference article：<a href="https://zhuanlan.zhihu.com/p/359612351">How do I contribute code to an open source project? - zhihu.com</a>
 
 ## 🌸 Thanks
 
