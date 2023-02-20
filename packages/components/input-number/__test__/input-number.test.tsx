@@ -77,17 +77,15 @@ describe("InputNumber.vue", () => {
         v-model={num.value}
         min={1}
         max={10}
-        step={2}
+        step={4}
         step-strictly
       />,
     );
-    await wrapper.vm.blurInput();
+    const blur = new FocusEvent("blur", {});
 
-    await wrapper.setProps({
-      modelValue: 4,
-    });
+    await wrapper.vm.blurInput(blur, 3);
 
-    await wrapper.vm.blurInput();
+    await wrapper.vm.blurInput(blur, 5);
   });
 
   test("HMR", async () => {
@@ -125,7 +123,22 @@ describe("InputNumber.vue", () => {
       />,
     );
 
+    const decrease = wrapper.find(".h-input-number__decrease");
+    decrease.trigger("click");
+    const increase = wrapper.find(".h-input-number__increase");
+    increase.trigger("click");
+
     wrapper.vm.inputGetFocus();
     wrapper.vm.inputGetBlur();
+  });
+
+  test("click", async () => {
+    const num = ref(1);
+    const wrapper = mount(<InputNumber modelValue={num.value} />);
+
+    const decrease = wrapper.find(".h-input-number__decrease");
+    decrease.trigger("click");
+    const increase = wrapper.find(".h-input-number__increase");
+    increase.trigger("click");
   });
 });

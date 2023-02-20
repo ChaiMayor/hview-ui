@@ -2,7 +2,6 @@
 export {};
 declare global {
   const EffectScope: typeof import("vue")["EffectScope"];
-  const ElMessage: typeof import("element-plus/es")["ElMessage"];
   const USER_IMPORT_MAP: typeof import("./composables/store")["USER_IMPORT_MAP"];
   const asyncComputed: typeof import("@vueuse/core")["asyncComputed"];
   const autoResetRef: typeof import("@vueuse/core")["autoResetRef"];

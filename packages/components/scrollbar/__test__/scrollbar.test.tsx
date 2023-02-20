@@ -1,4 +1,5 @@
 import { mount } from "@vue/test-utils";
+import { nextTick } from "vue";
 import { describe, expect, test } from "vitest";
 // import makeScroll from "@element-plus/test-utils/make-scroll";
 // import defineGetter from "@element-plus/test-utils/define-getter";
@@ -10,23 +11,6 @@ import MaxHeight from "./max-height.vue";
 import { sleep } from "@hview-plus/test-utils";
 
 describe("Scrollbar", () => {
-  test("destroy", async () => {
-    const wrapper = mount(Scrollbar, {
-      slots: {
-        default: Vertical,
-      },
-      props: {
-        height: 400,
-      },
-    });
-
-    await wrapper.vm.$nextTick();
-
-    await sleep(200);
-
-    wrapper.unmount();
-  });
-
   test("scrollbar roll to top", async () => {
     const wrapper = mount(Scrollbar, {
       slots: {
@@ -345,54 +329,40 @@ describe("Scrollbar", () => {
   });
 });
 
-// describe("Scrollbar_thumb", () => {
-//   test("should render max-height props", async () => {
-//     const outerHeight = 204;
-//     const wrapper = mount(ScrollbarThumb, {
-//       props: {
-//         maxHeight: outerHeight,
-//       },
-//     });
+describe("Scrollbar_thumb", () => {
+  test("value greater than max-height", async () => {
+    const wrapper = mount(Scrollbar, {
+      slots: {
+        default: Horizontal,
+      },
+    });
 
-//     expect(wrapper.props().maxHeight).toBe(204);
-//   });
+    await wrapper.vm.$nextTick();
+    // await sleep(500);
 
-//   test("emit update:isDraw", async () => {
-//     const key = "update:isDraw";
-//     const wrapper = mount(ScrollbarThumb);
+    // const thumb = wrapper.findComponent(ScrollbarThumb);
 
-//     wrapper.vm.$emit(key, true);
-//     await wrapper.vm.$nextTick();
+    // setTimeout(() => {
+    //   console.log(thumb.vm.thumbMax);
+    // }, 200);
 
-//     const emitted = wrapper.emitted();
+    // await thumb.vm.setScrollLeft(80000);
+  });
 
-//     expect(emitted[key]).toBeTruthy();
-//     expect(emitted[key].length).toBe(1);
-//     expect(emitted[key][0]).toEqual([true]);
-//   });
+  test("destroy", async () => {
+    const wrapper = mount(Scrollbar, {
+      slots: {
+        default: Vertical,
+      },
+      props: {
+        height: 400,
+      },
+    });
 
-//   test("emit setScrollViewTop", async () => {
-//     const key = "setScrollViewTop";
-//     const val = 20;
-//     const wrapper = mount(ScrollbarThumb);
+    await wrapper.vm.$nextTick();
 
-//     wrapper.vm.$emit(key, val);
-//     await wrapper.vm.$nextTick();
+    await sleep(500);
 
-//     const emitted = wrapper.emitted();
-
-//     expect(emitted[key]).toBeTruthy();
-//     expect(emitted[key].length).toBe(1);
-//     expect(emitted[key][0]).toEqual([val]);
-//   });
-
-//   test("class exist", () => {
-//     const wrapper = mount(ScrollbarThumb, {
-//       props: {
-//         move: "moveX",
-//       },
-//     });
-
-//     expect(wrapper.classes()).toContain("is-horizontal");
-//   });
-// });
+    wrapper.unmount();
+  });
+});

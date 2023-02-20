@@ -9,9 +9,9 @@ import { ref } from "vue";
 
 const arr = ref<number[]>(Array.from({ length: 20 }, (_, i) => 1 + i));
 
-setTimeout(() => {
-  arr.value = Array.from({ length: 30 }, (_, i) => 1 + i);
-}, 100);
+// setTimeout(() => {
+//   arr.value = Array.from({ length: 30 }, (_, i) => 1 + i);
+// }, 100);
 </script>
 
 <style lang="less" scoped>

@@ -13,6 +13,7 @@
     "docs:dev": "pnpm run --filter ./site docs:dev",
     "docs:build-other": "pnpm run --filter ./site docs:build",
     "docs:build": "gulp -f script/vite-build/gulpfile.ts",
+    "play:dev": "pnpm run --filter ./packages/playground dev",
     "play:build": "pnpm run --filter ./packages/playground build",
     "lint:eslint": "eslint .",
     "lint:ls-lint": "ls-lint",
