@@ -2,7 +2,7 @@
 
 ## 环境支持
 
-由于 Vue 3 不再支持 IE11，hviewui 也不再支持 IE11 浏览器。
+由于 Vue 3 不再支持 IE11，hview-ui 也不再支持 IE11 浏览器。
 
 | <img src="https://cdn.jsdelivr.net/npm/@browser-logos/edge/edge_32x32.png" alt=""> | <img src="https://cdn.jsdelivr.net/npm/@browser-logos/firefox/firefox_32x32.png" alt=""> | <img src="https://cdn.jsdelivr.net/npm/@browser-logos/chrome/chrome_32x32.png" alt=""> | <img src="https://cdn.jsdelivr.net/npm/@browser-logos/safari/safari_32x32.png" alt=""> |
 | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
@@ -14,7 +14,7 @@ Hview UI 目前还处于快速开发迭代中。
 
 ## 使用包管理器
 
-建议您使用包管理器 (NPM, Yarn, pnpm) 安装 hviewui, 然后您就可以使用打包工具，例如 Vite 和 webpack
+建议您使用包管理器 (NPM, Yarn, pnpm) 安装 hview-ui, 然后您就可以使用打包工具，例如 Vite 和 webpack
 
 ```shell
 # 选择一个你喜欢的包管理器
