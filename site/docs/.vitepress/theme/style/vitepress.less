@@ -1,15 +1,25 @@
 @import "./dark.less";
 
 @font-face {
+  font-family: "PingFang SC Semibold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/Inter-Bold.woff2") format("woff2");
+}
+
+@font-face {
   font-family: "JetBrains Mono custom";
-  src: url("../font/JetBrainsMono.woff");
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/JetBrainsMono-Regular.woff2") format("woff2"),
+    url("../font/JetBrainsMono-Regular.ttf") format("truetype");
 }
 
 :root {
-  --vp-font-family-base: -apple-system, blinkmacsystemfont, pingfang sc,
-    hiragino sans gb, noto sans, microsoft yahei, helvetica neue, helvetica,
-    arial, sans-serif;
-  --vp-font-family-mono: "JetBrains Mono", "JetBrains Mono custom",
+  --vp-font-family-base: "PingFang SC Semibold", pingfang sc, helvetica neue,
+    helvetica, hiragino sans gb, microsoft yahei, arial, "JetBrains Mono custom",
+    -apple-system;
+  --vp-font-family-mono: "JetBrains Mono custom", "JetBrains Mono",
     source-code-pro, menlo, monaco, consolas, "Courier New", monospace;
   --vp-c-green: #5d80f4;
   --vp-c-brand-dark: #5d80f4;
