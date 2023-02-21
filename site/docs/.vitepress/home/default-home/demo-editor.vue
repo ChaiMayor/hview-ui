@@ -27,7 +27,6 @@
 import TypeIt from "typeit";
 import { El } from "typeit/dist/types";
 import { ref, onMounted, watch } from "vue";
-import { useInViewport } from "vue-hooks-plus";
 import MacContainer from "./mac-container.vue";
 import { useIntersectionObserver } from "@vueuse/core";
 import { useIsEn, useData } from "../hooks/use-is-en";
@@ -55,11 +54,10 @@ useIntersectionObserver(homeDemo, ([{ isIntersecting }]) => {
 const domRef = ref(null);
 const isMount = ref(false);
 const isFirst = ref(true);
-const [inViewport] = useInViewport(domRef);
 
 const block = ref<El>();
 
-watch([inViewport, isMount], (curr) => {
+watch([isShow, isMount], (curr) => {
   if (curr?.[0] && curr?.[1] && isFirst.value === true) {
     isFirst.value = false;
     if (block.value)
