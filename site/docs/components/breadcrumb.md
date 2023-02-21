@@ -39,12 +39,12 @@
 
 ## BreadcrumbItem API
 
-### BreadcrumbItem 属性
+<!-- ### BreadcrumbItem 属性
 
 | 名称    | 说明                                            | 类型                | 默认值 |
 | :------ | :---------------------------------------------- | :------------------ | :----- |
 | to      | 路由跳转目标，同 `vue-router` 的 `to` 属性      | `string` / `object` | ''     |
-| replace | 如果设置该属性为 `true`, 导航将不会留下历史记录 | `boolean`           | false  |
+| replace | 如果设置该属性为 `true`, 导航将不会留下历史记录 | `boolean`           | false  | -->
 
 ### BreadcrumbItem 插槽
 

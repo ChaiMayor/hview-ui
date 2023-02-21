@@ -39,12 +39,12 @@ Set `separator-icon` to use svg icon as the separator，it will cover `separator
 
 ## BreadcrumbItem API
 
-### BreadcrumbItem Attributes
+<!-- ### BreadcrumbItem Attributes
 
 | Name    | Description                                               | Type                | Default |
 | :------ | :-------------------------------------------------------- | :------------------ | :------ |
 | to      | target route of the link, same as `vue-router` of `to`    | `string` / `object` | ''      |
-| replace | if `true`, the navigation will not leave a history record | `boolean`           | false   |
+| replace | if `true`, the navigation will not leave a history record | `boolean`           | false   | -->
 
 ### BreadcrumbItem Slots
 
