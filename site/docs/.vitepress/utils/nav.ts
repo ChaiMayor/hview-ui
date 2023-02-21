@@ -19,6 +19,10 @@ const nav = [
     link: "/components/button",
   },
   {
+    text: "演武场",
+    link: "https://playground.zhishiyu.online/",
+  },
+  {
     text: version,
     items: [
       {
@@ -45,6 +49,10 @@ const navEN = [
     text: "Component",
     activeMatch: "^/en-US/components/",
     link: "/components/button",
+  },
+  {
+    text: "Playground",
+    link: "https://playground.zhishiyu.online/",
   },
   {
     text: version,

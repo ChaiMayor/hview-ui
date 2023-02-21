@@ -13,14 +13,16 @@ const sidebar = {
     {
       text: "进阶",
       items: [
-        { text: "国际化", link: "/docs/" },
-        { text: "主题", link: "/docs/" },
-        { text: "更新日志", link: "/docs/" },
+        { text: "国际化", link: "/docs/i18n" },
+        { text: "暗黑模式", link: "/docs/dark" },
       ],
     },
     {
       text: "开发",
-      items: [{ text: "开发指南", link: "/docs/" }],
+      items: [
+        { text: "开发指南", link: "/docs/guide" },
+        { text: "开发常见问题", link: "/docs/faq" },
+      ],
     },
   ],
   "/components/": [
@@ -101,14 +103,17 @@ const sidebarEN = {
     {
       text: "Advanced",
       items: [
-        { text: "i18n", link: "/docs/" },
-        { text: "Theming", link: "/docs/" },
-        { text: "Release", link: "/docs/" },
+        { text: "i18n", link: "/docs/i18n" },
+        { text: "Dark Mode", link: "/docs/dark" },
+        // { text: "Theming", link: "/docs/" },
       ],
     },
     {
       text: "Development",
-      items: [{ text: "Development Guide", link: "/docs/" }],
+      items: [
+        { text: "Development Guide", link: "/docs/guide" },
+        { text: "Development FAQ", link: "/docs/faq" },
+      ],
     },
   ],
   "/en-US/components/": [

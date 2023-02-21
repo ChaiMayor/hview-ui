@@ -34,6 +34,11 @@ html.dark {
   // search
   --search-bg-color: rgb(0 0 0 / 80%) !important;
   --seach-bg-pla-color: #161618 !important;
+  // home
+  --vi-color-primary: #f9f9f9;
+  --vi-bg-color-primary: rgb(22 22 26);
+  --vi-mac-bg-color-primary: rgb(53 54 60);
+  --vi-welcome-color: #f9f9f9;
 
   .vp-doc h2 {
     color: var(--vp-c-text-dark-1) !important;
@@ -127,6 +132,30 @@ html.dark {
           background: rgb(64 158 255 / 10%);
           border-radius: 6px;
         }
+      }
+    }
+  }
+  // 首页样式
+  .VPHome {
+    .actions {
+      .action {
+        &:last-of-type {
+          a {
+            &:hover {
+              background-color: rgb(255 255 255 / 12%);
+            }
+          }
+        }
+      }
+    }
+
+    .image-bg {
+      &::after {
+        background-color: rgb(10 149 136);
+      }
+
+      &::before {
+        background-color: rgb(52 68 163);
       }
     }
   }

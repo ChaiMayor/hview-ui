@@ -30,7 +30,7 @@
 
 ## 🎃 Intro
 
-Hview is a Minimalism style mobile component library developed based on `Vue3`, fully embracing the `Vue3` ecology, maintained by `Wuhu Takeoff` team.
+Hview is a Minimalism style computer side component library developed based on `Vue3`, fully embrace `Vue3` ecology, maintained by `Wuhu Takeoff` team.
 
 ## ✨ Features
 
@@ -43,8 +43,6 @@ Hview is a Minimalism style mobile component library developed based on `Vue3`, 
 - 🛠️ Support theme customization
 
 - 🌍 Support internationalization
-
-- 💪 Support SSR
 
 - 🎯 Built in TypeScript, complete type definition files are available
 
@@ -106,7 +104,7 @@ CI/CD：gulp、github actions、release-it
 
 Project name：Hview-ui
 
-Implied meaning：Usually, the first code to learn programming is Hello World, and it is the first time for us to develop component libraries. Our component libraries are also developed and learned by referring to existing component libraries. view has the meaning of observation and is a homophone with vue, so we combine h and view together. We named the library hview-ui to indicate that this new library will learn the advantages of integrating the existing library, hoping to present you with a good library project.
+Implied meaning：Usually, the first code to learn programming is Hello World, and it is the first time for us to develop component libraries. Our component libraries are also developed and learned by referring to existing component libraries. view has the meaning of observation and is a homophone with vue, so we combine h and view together. Naming the component library hview-ui means that our new component library will learn the advantages of integrating existing component libraries and hopefully present a good component library project for you.
 
 Logo：
 
@@ -114,7 +112,7 @@ Logo：
   <img width="100px" style="margin-bottom:24px;" src="https://oss.zhishiyu.online/common/hview-logo.png">
 </p>
 
-Design：view also means perspective and view. Here, three patterns in different view directions are used to form the H to make it a three-dimensional and multi-faceted effect.
+Design：view also means perspective, view. Here, three patterns in different view directions are used to form the solid H
 
 Implied meaning：There are still many imperfections in our component library. We sincerely hope that the majority of developers can use our component library and give us feedback and questions. We will humbly accept and then accept your opinions, and continue to iterate the project that satisfies the developers.
 
@@ -132,7 +130,7 @@ By using the fly book scan code to join the development group chat, later in the
 
 Those who have the ability and ideas can participate in our open source project after completing and submitting the development of the three components according to the introduction
 
-For those who have ideas but are not able at present, we will provide some reference articles and video materials in the group. We hope that you can participate in the development of our project as soon as possible after you have achieved some success through study and practice
+For those who have ideas but don't have the ability at present, we will provide some article materials of component library in the group. We hope you can participate in the development of our project after learning and practicing
 
 Finally, I hope you can make a fortune and give us a free star. Thank you again 😘
 

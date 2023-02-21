@@ -12,6 +12,8 @@ type NavItemWithLink = {
   activeMatch?: string;
 };
 
+const exclude = ["Playground", "Releases", "Author"];
+
 export const addNavPrefix = (prefix: string = "/", nav: Array<NavItem>) => {
   if (prefix === "/") return nav;
 
@@ -23,7 +25,9 @@ export const addNavPrefix = (prefix: string = "/", nav: Array<NavItem>) => {
           if (/^v/.test(item["items"].test)) return i;
           return {
             text: i.text,
-            link: `${prefix}${i.link.replace("/", "")}`,
+            link: !exclude.includes(i.text)
+              ? `${prefix}${(i as NavItemWithLink).link.replace("/", "")}`
+              : (i as NavItemWithLink).link,
           };
         }),
       };
@@ -32,7 +36,9 @@ export const addNavPrefix = (prefix: string = "/", nav: Array<NavItem>) => {
         text: item.text,
         activeMatch: item.activeMatch,
         // @ts-ignore
-        link: `${prefix}${item.link.replace("/", "")}`,
+        link: !exclude.includes(item.text)
+          ? `${prefix}${(item as NavItemWithLink).link.replace("/", "")}`
+          : (item as NavItemWithLink).link,
       };
     }
   });

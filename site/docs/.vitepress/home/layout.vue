@@ -1,5 +1,10 @@
 <script setup>
 import DefaultTheme from "vitepress/theme";
+// import Divider from "../home/default-home/divider.vue";
+import Team from "../home/default-home/team.vue";
+import JoinUs from "../home/default-home/join-us.vue";
+import DemoEditor from "../home/default-home/demo-editor.vue";
+import Projects from "../home/default-home/projects.vue";
 
 const { Layout } = DefaultTheme;
 
@@ -22,7 +27,10 @@ const { Layout } = DefaultTheme;
   <Layout>
     <!-- 首页下面 -->
     <template #home-features-after>
-      <!-- <VPTeamMembers size="small" :members="members" /> -->
+      <DemoEditor> </DemoEditor>
+      <Projects></Projects>
+      <Team></Team>
+      <JoinUs></JoinUs>
     </template>
     <!-- 文档页面最后 -->
     <!-- <template #doc-footer-before> </template> -->

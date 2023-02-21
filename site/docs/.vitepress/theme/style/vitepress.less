@@ -32,7 +32,7 @@
   --vp-button-brand-hover-bg: #426bf5;
   --vp-c-indigo: #303133;
   --vp-nav-height-desktop: 60px;
-  --vp-nav-height: 55px;
+  --vp-nav-height: 54px;
   --vp-code-font-size: 1em;
   --vp-code-block-bg: #f5f7fa;
   --vp-z-index-nav: 30;
@@ -77,6 +77,11 @@
   --seach-bg-pla-color: #f6f6f7;
   --docsearch-modal-shadow: inset 1px 1px 0 0 hsl(0deg 0% 100% / 20%),
     0 3px 16px 0 #d4d4d4;
+  // home
+  --vi-color-primary: rgb(28 31 35 / 100%);
+  --vi-bg-color-primary: #fff;
+  --vi-mac-bg-color-primary: #fff;
+  --vi-welcome-color: #303133;
 }
 
 .aside-curtain {
@@ -342,11 +347,33 @@ details > summary:first-of-type {
 
 .VPNav {
   top: 0;
-  padding: 0 12px 0 24px;
+  // padding: 0 12px 0 24px;
   background-image: radial-gradient(transparent 1px, #fff 1px);
   background-size: 4px 4px;
   border-bottom: 1px solid #dcdfe6;
   backdrop-filter: saturate(50%) blur(4px);
+
+  .VPNavBar {
+    /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+    .container {
+      max-width: calc(var(--vp-layout-max-width) - 70px);
+
+      .title {
+        background: #fff;
+
+        a.title {
+          border: 0;
+        }
+      }
+
+      .content {
+        // 模糊效果
+        .curtain {
+          display: none;
+        }
+      }
+    }
+  }
 
   .has-sidebar {
     // .container[data-v-27ffb391] {
@@ -422,29 +449,8 @@ details > summary:first-of-type {
 /* 取消40版本默认样式 */
 // 导航条
 .VPNavBar.has-sidebar .content-body {
+  padding-right: 3px;
   background-color: transparent !important;
-}
-
-/* stylelint-disable-next-line no-duplicate-selectors */
-.VPNav {
-  .VPNavBar {
-    .container {
-      .title {
-        background: #fff;
-
-        a.title {
-          border: 0;
-        }
-      }
-
-      .content {
-        // 模糊效果
-        .curtain {
-          display: none;
-        }
-      }
-    }
-  }
 }
 
 // search
@@ -459,7 +465,7 @@ details > summary:first-of-type {
     .container {
       .image {
         .image-src {
-          transform: scale(1.1) translate(-40%, -24%);
+          transform: scale(1.12) translate(-40%, -24%);
         }
       }
     }

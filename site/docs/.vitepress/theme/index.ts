@@ -35,6 +35,25 @@ const getVersionHp = () => {
 import MyLayout from "../home/layout.vue";
 import { inBrowser } from "vitepress";
 
+const vi = "vi_lang";
+
+function dispatchEventStroage() {
+  const signSetItem = localStorage.setItem;
+  localStorage.setItem = function (key, val) {
+    let setEvent: any = new Event("setItemEvent");
+    setEvent.key = key;
+    setEvent.newValue = val;
+    window.dispatchEvent(setEvent);
+    signSetItem.apply(this, arguments);
+  };
+}
+
+function toggleLang(router: any) {
+  /\/en-US\//.test(router.route.path)
+    ? localStorage.setItem(vi, "en-US")
+    : localStorage.setItem(vi, "zh-CN");
+}
+
 export default {
   ...Theme,
 
@@ -42,11 +61,14 @@ export default {
     if (inBrowser) {
       app.use(hp);
 
+      dispatchEventStroage();
+
       // refer: https://github.com/vuejs/vitepress/issues/1910
       router.onBeforeRouteChange = () => {
         NProgress.start();
       };
       router.onAfterRouteChanged = () => {
+        toggleLang(router);
         NProgress.done();
       };
 

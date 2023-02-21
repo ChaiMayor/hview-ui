@@ -31,4 +31,13 @@ features:
   - icon: 🛠️
     title: Import as required
     details: Direct support for on-demand import without any plug-in configuration
+  - icon: 🚀
+    title: Component enrichment
+    details: Provides 30+ high quality general purpose components
+  - icon: 🔐
+    title: Security
+    details: Ensure over 80% unit test coverage
+  - icon: 🌍
+    title: I18n
+    details: Both Chinese and English are supported
 ---
