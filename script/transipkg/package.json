@@ -42,7 +42,7 @@
   },
   "homepage": "https://chai-mayor.gitee.io/hview-ui/",
   "scripts": {
-    "release": "release-it --only-version"
+    "release": "release-it"
   },
   "repository": {
     "type": "github",
