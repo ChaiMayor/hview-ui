@@ -4,17 +4,23 @@
 @import "mixins/mixins.less";
 
 .@{namespace}-image {
+  position: relative;
   width: 100%;
   height: 100%;
 
   .wrapper {
-    position: relative;
-
     .placeholder {
       position: absolute;
       top: 50%;
-      right: 50%;
-      transform: translate(-50% -50%);
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .hview-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 

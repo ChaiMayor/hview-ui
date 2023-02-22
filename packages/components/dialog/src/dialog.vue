@@ -34,7 +34,6 @@
   </Teleport>
 </template>
 <script setup lang="ts">
-import { emitKeypressEvents } from "readline";
 import {
   useSlots,
   ref,

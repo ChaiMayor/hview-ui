@@ -21,7 +21,7 @@ const url = [
 <style scoped>
 .demo-image_lazy {
   height: 400px;
-  width: 600px;
+  width: 100%;
   overflow-y: scroll;
 }
 .demo-image__lazy .h-image {

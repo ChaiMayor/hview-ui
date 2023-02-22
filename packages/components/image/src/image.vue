@@ -19,8 +19,8 @@
     </div>
 
     <!-- 无法正常展示：处于加载中或者加载错误 -->
-    <div v-if="isLoading || hasLoadError" class="wrapper">
-      <slot v-if="isLoading" name="placeholder">
+    <div class="wrapper" v-if="isLoading || hasLoadError">
+      <slot name="placeholder" v-if="isLoading">
         <div class="placeholder">Loading..</div>
       </slot>
       <slot v-else-if="hasLoadError" name="error">

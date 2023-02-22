@@ -101,6 +101,7 @@ function handleActions(action: string, options = {}) {
         transform.value.scale = Number.parseFloat(
           (transform.value.scale * zoomRate).toFixed(3),
         );
+        if (!canvs.value) break;
         canvs.value.style.setProperty(
           "--scale",
           transform.value.scale.toString(),
@@ -183,7 +184,7 @@ const mousewheelHandler = throttle((e: WheelEvent) => {
   handleActions(delta < 0 ? "zoomIn" : "zoomOut", {
     zoomRate: props.zoomRate,
   });
-}, 100);
+}, 30);
 onMounted(() => {
   //监听鼠标滚动事件
   window.addEventListener("mousewheel", mousewheelHandler);
