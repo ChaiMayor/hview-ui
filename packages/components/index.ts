@@ -37,6 +37,7 @@ import { Breadcrumb, BreadcrumbItem } from "./breadcrumb";
 import { Descriptions, DescriptionsItem } from "./descriptions";
 import { default as TimePicker } from "./time-picker";
 import { default as Dialog } from "./dialog";
+import { default as Color } from "./color";
 
 export {
   Button,
@@ -85,6 +86,7 @@ export {
   DescriptionsItem,
   TimePicker,
   Dialog,
+  Color
 };
 
 export default [
@@ -134,4 +136,5 @@ export default [
   DescriptionsItem,
   TimePicker,
   Dialog,
+  Color
 ];

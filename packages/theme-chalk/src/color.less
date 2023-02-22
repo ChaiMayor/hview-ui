@@ -1,0 +1,34 @@
+@import "common/icon.less";
+@import "common/color.less";
+@import "mixins/config.less";
+@import "mixins/mixins.less";
+
+@max-height: 112px;
+
+.h-color {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 326px;
+  max-height: @max-height;
+  overflow: hidden;
+  font-size: 14px;
+  color: inherit;
+  border: 1px solid var(--hv-border-color-light);
+  border-radius: 6px;
+
+  &__header {
+    box-sizing: border-box;
+    height: 72px;
+    padding: 12px 0 0 20px;
+  }
+
+  &__footer {
+    box-sizing: border-box;
+    display: flex;
+    height: 40px;
+
+    &--item {
+      flex: 1;
+    }
+  }
+}
