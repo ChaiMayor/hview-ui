@@ -122,7 +122,7 @@ const sidebarEN = {
       text: "Basic",
       items: [
         { text: "Button", link: "/components/button" },
-        { text: "Color", link: "/components/color" }, 
+        { text: "Color", link: "/components/color" },
         { text: "Icon", link: "/components/icon" },
         { text: "Link", link: "/components/link" },
         { text: "Container", link: "/components/container" },
@@ -148,7 +148,7 @@ const sidebarEN = {
         { text: "Avatar", link: "/components/avatar" },
         { text: "Card", link: "/components/card" },
         { text: "Carousel", link: "/components/carousel" },
-        { text: "Descriptions 描述列表", link: "/components/descriptions" },
+        { text: "Descriptions", link: "/components/descriptions" },
         { text: "Empty", link: "/components/empty" },
         { text: "Message", link: "/components/message" },
         { text: "Progress", link: "/components/progress" },
