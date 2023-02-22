@@ -1,5 +1,9 @@
 <template>
-  <button class="h-button" :disabled="props.disabled" :class="styleClass">
+  <button
+    class="h-button"
+    :disabled="props.disabled"
+    :class="styleClass"
+    @click="handleClick">
     <span>
       <i v-if="icon !== ''" :class="`h-icon-${icon}`"></i>
     </span>
@@ -10,6 +14,12 @@
 import { computed, toRefs } from "vue";
 import { ButtonProps } from "./button";
 const props = defineProps(ButtonProps);
+const emits = defineEmits(["click"]);
+
+const handleClick = () => {
+  emits("click");
+};
+
 const { icon } = toRefs(props);
 const styleClass = computed(() => {
   return {

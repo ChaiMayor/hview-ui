@@ -8,13 +8,9 @@
         <p class="home-project__header--subtitle">{{
           isEn ? dataEn.subtitle : data.subtitle
         }}</p>
-        <h-button type="primary"
-          ><a
-            href="https://chai-mayor.gitee.io/hview-ui/docs/installation.html"
-            target="_blank"
-            >{{ isEn ? orderEn.learn : order.learn }}</a
-          ></h-button
-        >
+        <h-button type="primary" @click="toGuide">
+          {{ isEn ? orderEn.learn : order.learn }}
+        </h-button>
       </div>
       <div class="home-project__body">
         <div class="home-project__body--codebg"> </div>
@@ -203,6 +199,10 @@ const activitiesEn = [
     timestamp: "2023-01-04 13:14",
   },
 ];
+
+const toGuide = () => {
+  location.href = "https://chai-mayor.gitee.io/hview-ui/docs/installation.html";
+};
 
 useIntersectionObserver(homeProject, ([{ isIntersecting }]) => {
   isShow.value = isIntersecting;
