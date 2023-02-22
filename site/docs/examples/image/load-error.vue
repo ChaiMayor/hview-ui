@@ -43,7 +43,7 @@ const src =
 }
 .block .h-image {
   margin-top: 15px;
-  background-color: #f5f7fa;
+  background-color: #c4c4c6;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -113,6 +113,7 @@ function handleActions(action: string, options = {}) {
         transform.value.scale = Number.parseFloat(
           (transform.value.scale / zoomRate).toFixed(3),
         );
+        if (!canvs.value) break;
         canvs.value.style.setProperty(
           "--scale",
           transform.value.scale.toString(),
