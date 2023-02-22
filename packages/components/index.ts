@@ -86,7 +86,7 @@ export {
   DescriptionsItem,
   TimePicker,
   Dialog,
-  Color
+  Color,
 };
 
 export default [
@@ -136,5 +136,5 @@ export default [
   DescriptionsItem,
   TimePicker,
   Dialog,
-  Color
+  Color,
 ];
