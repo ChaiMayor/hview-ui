@@ -63,7 +63,7 @@ Set draggable value to true.Then you can drag the dialog.
 
 ## API
 
-## Attributes
+### Attributes
 
 | Name                 | Description                                                                     | Type              | Accepted Values | Default |
 | -------------------- | ------------------------------------------------------------------------------- | ----------------- | --------------- | ------- |
@@ -79,7 +79,7 @@ Set draggable value to true.Then you can drag the dialog.
 | closeOnModal         | whether the Dialog can be closed by clicking the mask                           | `boolean`         | `true / false`  | true    |
 | draggable            | whether the Dialog can drag                                                     | `boolean`         | `true/false`    | false   |
 
-## Slots
+### Slots
 
 | Name    | Description                                                                                           |
 | ------- | ----------------------------------------------------------------------------------------------------- |
@@ -87,7 +87,7 @@ Set draggable value to true.Then you can drag the dialog.
 | content | main content of the Dialog                                                                            |
 | footer  | content of the Dialog footer                                                                          |
 
-## Events
+### Events
 
 | Name  | Description                     | Callback  |
 | ----- | ------------------------------- | --------- |
