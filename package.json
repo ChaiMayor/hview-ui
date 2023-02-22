@@ -7,7 +7,7 @@
     "prepare": "husky install",
     "dev": "pnpm run --filter ./examples dev",
     "build": "gulp -f ./script/pkg-build/gulpfile.ts & gulp -f ./script/remove/gulpfile.ts",
-    "publish": "cd ./packages/components/hview-ui & pnpm run release",
+    "publish": "cd ./packages/hview-ui & pnpm run release",
     "publish:build": "gulp -f packages/components/script/publish/gulpfile.ts",
     "publish:gulp": "pnpm run build & gulp -f script/publish/gulpfile.ts",
     "docs:dev": "pnpm run --filter ./site docs:dev",
