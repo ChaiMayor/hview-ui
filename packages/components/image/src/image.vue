@@ -164,6 +164,7 @@ const lazyLoad = (elRef) => {
   const fristImg = query("img[data-src]")[0];
   if (fristImg) {
     fristImg.src = fristImg.dataset.src;
+    isLoading.value = false;
   }
   const root = elRef;
   // 监听滚动事件，做节流处理
