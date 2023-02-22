@@ -30,6 +30,7 @@ const sidebar = {
       text: "基础组件",
       items: [
         { text: "Button 按钮", link: "/components/button" },
+        { text: "Color 色彩", link: "/components/color" },
         { text: "Icon 图标", link: "/components/icon" },
         { text: "Link 链接", link: "/components/link" },
         { text: "Container 布局容器", link: "/components/container" },
@@ -121,6 +122,7 @@ const sidebarEN = {
       text: "Basic",
       items: [
         { text: "Button", link: "/components/button" },
+        { text: "Color", link: "/components/color" }, 
         { text: "Icon", link: "/components/icon" },
         { text: "Link", link: "/components/link" },
         { text: "Container", link: "/components/container" },
