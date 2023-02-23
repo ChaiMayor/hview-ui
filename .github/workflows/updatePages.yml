@@ -1,0 +1,25 @@
+name: Sync
+on:
+  push:
+    branches: [gh-pages]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync to Gitee
+        uses: wearerequired/git-mirror-action@master
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY  }}
+        with:
+          source-repo: git@github.com:ChaiMayor/hview-ui.git
+          destination-repo: git@gitee.com:chai-mayor/hview-ui.git
+
+      - name: Build Gitee Pages
+        uses: yanglbme/gitee-pages-action@main
+        with:
+          gitee-username: chai-mayor
+          gitee-password: ${{ secrets.GITEE_PASSWORD }}
+          gitee-repo: chai-mayor/hview-ui
+          branch: gh-pages
+          https: true
