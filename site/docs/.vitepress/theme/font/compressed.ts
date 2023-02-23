@@ -1,6 +1,12 @@
 const fs = require("fs");
+const path = require("path");
 const Fontmin = require("fontmin"); // 需要借助 fontmin 插件
 let set = new Set();
+
+const exclude = ["cache", "config", "dist", "theme"]; // 排除搜索文件夹中的内容
+const scanFolderDir = path.resolve(__dirname, "../../../../docs"); // 搜索文件夹
+const fontFolderDir = path.resolve(__dirname, "../fonts/PingFangSC.ttf"); // 字体源文件位置
+const buildFolderDir = path.resolve(__dirname, "./"); // 字体输出文件位置
 
 // refer: https://juejin.cn/post/7123041200449257480#heading-6
 //get all possible characters
@@ -24,7 +30,7 @@ const scanFolder = (dir, done) => {
         if (stat && stat.isDirectory()) {
           scanFolder(file, (err, res) => {
             // 排除掉不想引入的文件
-            if (/cache|config|dist|theme/.test(file)) {
+            if (new RegExp(exclude.join("|")).test(file)) {
               // 重新调用方法，获取子目录下的目录结构
               results = results.concat([]);
             } else {
@@ -45,8 +51,8 @@ const scanFolder = (dir, done) => {
 //get all possible characters
 const generateFinalHTML = (finalString) => {
   const fontmin = new Fontmin()
-    .src("../fonts/PingFangSC.ttf")
-    .dest("./")
+    .src(fontFolderDir)
+    .dest(buildFolderDir)
     .use(
       Fontmin.glyph({
         text: finalString,
@@ -63,7 +69,7 @@ const generateFinalHTML = (finalString) => {
 
 //get all possible characters
 // 指定扫描路径，注意路径不同，会导致最终扫描到的字符数不同
-scanFolder("../../../../docs", (n, results) => {
+scanFolder(scanFolderDir, (n, results) => {
   results.forEach((file) => {
     const result = fs.readFileSync(file, "utf8");
     const currentSet = new Set(result);
