@@ -140,5 +140,6 @@ describe("InputNumber.vue", () => {
     decrease.trigger("click");
     const increase = wrapper.find(".h-input-number__increase");
     increase.trigger("click");
+    // increase.trigger("click");
   });
 });
