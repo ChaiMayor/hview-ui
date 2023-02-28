@@ -1,15 +1,7 @@
 <template>
   <h-space wrap>
-    <h-button>按钮</h-button>
-    <h-button>按钮</h-button>
-    <h-button>按钮</h-button>
-    <h-button>按钮</h-button>
-    <h-button>按钮</h-button>
-    <h-button>按钮</h-button>
-    <h-button>按钮</h-button>
-    <h-button>按钮</h-button>
-    <h-button>按钮</h-button>
-    <h-button>按钮</h-button>
-    <h-button>按钮</h-button>
+    <div v-for="i in 10" :key="i">
+      <h-button text> Text button </h-button>
+    </div>
   </h-space>
 </template>

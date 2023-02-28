@@ -1,6 +1,6 @@
 <script setup>
     import basic from 'exam/space/basic.vue'
-    import inline from 'exam/space/inline.vue'
+    import direction from 'exam/space/direction.vue'
     import wrap from 'exam/space/wrap.vue'
     import size from 'exam/space/size.vue'
 </script>
@@ -21,8 +21,8 @@
 
 默认水平布局方式，我们也提供垂直布局的方式
 
-::: code space/inline
-<inline></inline>
+::: code space/direction
+<direction></direction>
 :::
 
 ## 自定义 Size
@@ -40,3 +40,13 @@
 ::: code space/wrap
 <wrap></wrap>
 :::
+
+## API
+
+### 属性
+
+| 属性名    | 说明             | 类型      | 默认值 |
+| --------- | ---------------- | --------- | ------ |
+| direction | 排列的方向       | `string`  | `row`  |
+| size      | 间隔大小         | `array`   | —      |
+| wrap      | 设置是否自动折行 | `boolean` | false  |
