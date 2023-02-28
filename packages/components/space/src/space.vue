@@ -6,60 +6,57 @@
 
 <script lang="ts">
 import { defineComponent, useSlots, h, ref, computed } from "vue";
+import { SpaceProps } from "./space";
 
 export default defineComponent({
   name: "HSpace",
-  props: {
-    inline: {
-      type: Boolean,
-      default: true,
-    },
-    size: {
-      type: Array,
-      default: () => [10, 10],
-    },
-    wrap: {
-      type: Boolean,
-      default: true,
-    },
-  },
+  props: SpaceProps,
   setup(props) {
     const $slots = useSlots();
     const slotList = ref([]);
     const hStyle = computed(() => {
       return {
-        display: props.inline ? "inline-flex" : "flex",
-        gap: !props.inline
-          ? `${props.size[0]}px`
-          : `${props.size[0]}px ${props.size[1]}px`,
-        "flex-direction": props.inline ? "inherit" : "column",
+        display: "flex",
+        gap: `${props.size[0]}px ${props.size[1]}px`,
+        "flex-direction": props.direction === "row" ? "row" : "column",
         "flex-wrap": props.wrap ? "wrap" : "nowrap",
-        width: "fit-content",
       };
     });
-
-    $slots.default().forEach((item) => {
-      slotList.value.push(
+    if ($slots.default().length !== 1) {
+      $slots.default().forEach((item) => {
+        slotList.value.push(
+          h(
+            "div",
+            {
+              className: "h-space-item",
+              style: "width: fit-content",
+            },
+            item,
+          ),
+        );
+      });
+      return () => [
         h(
           "div",
           {
-            className: "h-space-item",
-            style: "width: fit-content",
+            className: "space",
+            style: hStyle.value,
           },
-          item,
+          slotList.value,
         ),
-      );
-    });
-    return () => [
-      h(
-        "div",
-        {
-          className: "space",
-          style: hStyle.value,
-        },
-        slotList.value,
-      ),
-    ];
+      ];
+    } else {
+      return () => [
+        h(
+          "div",
+          {
+            className: "space",
+            style: hStyle.value,
+          },
+          $slots.default()[0].children,
+        ),
+      ];
+    }
   },
 });
 </script>
