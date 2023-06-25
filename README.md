@@ -125,7 +125,7 @@ logo 寓意：我们的组件库还存在很多不完善的地方，非常希望
 最后希望各位小伙伴可以动动发财的小手，给我们点个免费的 star 再次感谢大家 😘
 
 <p style="text-align:left;">
-  <img width="200px" style="margin-bottom:24px;" src="https://oss.zhishiyu.online/common/hview-ui.png">
+  <img width="200px" style="margin-bottom:24px;" src="https://oss.zhishiyu.online/markdown_images/202304142128584.png">
 </p>
 
 > 参考文章：<a href="https://zhuanlan.zhihu.com/p/359612351">如何给开源项目贡献代码？ - 知乎 (zhihu.com)</a>
