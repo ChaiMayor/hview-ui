@@ -30,6 +30,9 @@ export const MessageProps = {
   onClose: {
     type: Function,
   },
+  offset: {
+    type: Number,
+  },
 };
 
 export type MessageProps = ExtractPropTypes<typeof MessageProps>;

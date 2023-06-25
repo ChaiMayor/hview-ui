@@ -9,6 +9,7 @@
         type ? `h-message--${type}` : '',
         center ? 'is-center' : '',
       ]"
+      :style="topStyle"
       v-show="visible">
       <i :class="`h-message__icon h-icon-${type}`"></i>
       <slot>
@@ -26,7 +27,7 @@
 </template>
 <script setup lang="ts">
 import { MessageProps } from "./message";
-import { toRefs, onMounted, ref, onUnmounted } from "vue";
+import { toRefs, onMounted, ref, onUnmounted, computed } from "vue";
 const props = defineProps(MessageProps);
 const {
   message,
@@ -58,6 +59,12 @@ const close = () => {
 
 onMounted(() => {
   startTimer();
+});
+
+const topStyle = computed(() => {
+  return {
+    top: `${props.offset}px`,
+  };
 });
 
 onUnmounted(() => {
