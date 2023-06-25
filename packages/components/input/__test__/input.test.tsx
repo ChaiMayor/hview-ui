@@ -65,4 +65,12 @@ describe("Input.vue", () => {
       modelValue: undefined,
     });
   });
+  // 帮我生成一个测试用例
+  test("watch clearable", async () => {
+    //继续写测试用例
+    const wrapper = mount(<Input modelValue={0} clearable></Input>);
+    await wrapper.setProps({
+      clearable: false,
+    });
+  });
 });
