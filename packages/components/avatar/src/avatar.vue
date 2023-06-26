@@ -24,9 +24,9 @@ const hasLoadError = ref(false);
 
 const styleClass = computed(() => {
   return {
-    [`h-avatar-size--${props.size}`]: typeof props.size !== "number",
+    [`h-avatar--${props.size}`]: typeof props.size !== "number",
     [`h-avatar--${props.shape}`]: props.shape,
-    [`h-avatar-border--${props.border}`]: props.border,
+    [`h-avatar--${props.border}`]: props.border,
   };
 });
 

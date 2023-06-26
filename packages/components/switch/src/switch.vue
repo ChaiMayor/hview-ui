@@ -13,7 +13,6 @@
       <i :class="`h-icon-${inactiveIcon}`"></i>
     </span>
     <div class="h-switch-content" :class="styleClass" @click="handleSwitch">
-      <input type="checkbox" v-model="curChecked" />
       <span
         class="core"
         :class="[curChecked ? 'on' : 'off']"
