@@ -1,5 +1,7 @@
 import type { ExtractPropTypes } from "vue";
 
+export const AlertType = ["success", "warning", "info", "error"];
+
 export const AlertProps = {
   title: {
     type: String,
@@ -7,7 +9,7 @@ export const AlertProps = {
   },
   type: {
     type: String,
-    values: ["success", "warning", "info", "error"],
+    values: AlertType,
     default: "info",
   },
   // 描述性文本

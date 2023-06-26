@@ -1,25 +1,30 @@
 import type { ExtractPropTypes, PropType } from "vue";
+import Avatar from "..";
 const definePropType = <T>(val: any): PropType<T> => val;
 
 type FitProperty = "contain" | "cover" | "fill" | "none" | "scale-down";
+
+export const AvatarSize = ["", "default", "small", "large"];
+export const AvatarShape = ["circle", "square"];
+export const AvatarBorder = ["none", "solid", "dot"];
 
 export const avatarProps = {
   // 头像尺寸
   size: {
     type: [Number, String],
-    values: ["", "default", "small", "large"],
+    values: AvatarSize,
     default: "default",
   },
   // 头像形状
   shape: {
     type: String,
-    values: ["circle", "square"],
+    values: AvatarShape,
     default: "circle",
   },
   // 头像边框
   border: {
     type: String,
-    value: ["none", "solid", "dot"],
+    value: AvatarBorder,
     default: "solid",
   },
   // 图标类型
