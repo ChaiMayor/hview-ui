@@ -1,5 +1,6 @@
 import type { ExtractPropTypes, StyleValue, PropType } from "vue";
 const definePropType = <T>(val: any): PropType<T> => val;
+export const CardShadow = ["always", "hover", "never"];
 export const cardProps = {
   // 头部标题
   header: {
@@ -19,7 +20,7 @@ export const cardProps = {
   // 是否展示卡片阴影
   shadow: {
     type: String,
-    values: ["always", "hover", "never"],
+    values: CardShadow,
     default: "always",
   },
 };

@@ -17,7 +17,7 @@ import { cardProps } from "./card";
 const props = defineProps(cardProps);
 const styleClass = computed(() => {
   return {
-    [`h-card-shadow--${props.shadow}`]: props.shadow,
+    [`h-card--${props.shadow}`]: props.shadow,
   };
 });
 </script>
