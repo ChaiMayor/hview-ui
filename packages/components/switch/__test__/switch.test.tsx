@@ -50,6 +50,8 @@ describe("Switch.vue", () => {
       },
     });
     const switchContent = wrapper.find(".h-switch-content");
+    const vm = wrapper.vm as any;
+    vm.visible = false;
     await switchContent.trigger("click");
     expect(wrapper.emitted("change")).toBeDefined();
   });
