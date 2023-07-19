@@ -1,4 +1,3 @@
-import { compare } from "compare-versions";
 import { ExtractPropTypes, Ref } from "vue";
 
 export interface tagType {
@@ -9,7 +8,7 @@ export interface tagType {
 }
 
 export interface dataType {
-  tags: tagType[];
+  tags?: tagType[];
   checked?: Ref<boolean> | boolean;
 }
 
@@ -29,6 +28,12 @@ export const TableProps = {
   checkbox: {
     type: Boolean,
     default: false,
+  },
+  border: {
+    type: Boolean,
+  },
+  tableRowClassName: {
+    type: Function,
   },
 };
 export type TableProps = ExtractPropTypes<typeof TableProps>;
