@@ -7,7 +7,11 @@
   </h-checkbox>
   <div style="margin: 10px 0"></div>
   <h-checkbox-group v-model="checkedCities" @change="handleCheckedCitiesChange">
-    <h-checkbox v-for="city in cities" :label="city" :key="city">
+    <h-checkbox
+      v-for="city in cities"
+      :label="city"
+      :key="city"
+      style="margin-right: 10px">
       {{ city }}
     </h-checkbox>
   </h-checkbox-group>
