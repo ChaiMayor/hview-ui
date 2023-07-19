@@ -27,7 +27,7 @@ app.mount("#app");
 ```ts
 // main.ts
 import { createApp } from "vue";
-import { Button } from "hview-plus";
+import Button from "hview-plus/lib/components/button/index";
 import "hview-plus/theme-chalk/button.css";
 
 import App from "./App.vue";
