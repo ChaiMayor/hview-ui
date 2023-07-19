@@ -42,7 +42,7 @@ const props = defineProps(tagProps);
 const emit = defineEmits(tagEmits);
 
 const tagClasses = computed(() => {
-  const { type, border, theme, round, size } = props;
+  const { type, theme, round, size } = props;
   return {
     [`h-tag-round`]: round,
     [`h-tag--${type}`]: unref(type),

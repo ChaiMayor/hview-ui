@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from "vue";
-import Avatar from "..";
 const definePropType = <T>(val: any): PropType<T> => val;
 
 type FitProperty = "contain" | "cover" | "fill" | "none" | "scale-down";
