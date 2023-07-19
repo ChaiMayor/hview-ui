@@ -38,6 +38,7 @@ import { Descriptions, DescriptionsItem } from "./descriptions";
 import { default as TimePicker } from "./time-picker";
 import { default as Dialog } from "./dialog";
 import { default as Color } from "./color";
+import { default as Table } from "./table";
 
 export {
   Button,
@@ -87,6 +88,7 @@ export {
   TimePicker,
   Dialog,
   Color,
+  Table,
 };
 
 export default [
@@ -137,4 +139,5 @@ export default [
   TimePicker,
   Dialog,
   Color,
+  Table,
 ];
