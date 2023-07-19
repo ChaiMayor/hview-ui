@@ -1,18 +1,17 @@
-import { ExtractPropTypes } from "vue";
+import { compare } from "compare-versions";
+import { ExtractPropTypes, Ref } from "vue";
 
-// type dataType {
-//   id: number;
-//   name: string;
-//   tags: tagType[];
-//   address: string;
-//   checked?: Ref<boolean>;
-// }
-// interface tagType {
-//   name: string;
-//   type: string;
-//   size?: string;
-//   round?: boolean;
-// }
+export interface tagType {
+  name: string;
+  type: string;
+  size?: string;
+  round?: boolean;
+}
+
+export interface dataType {
+  tags: tagType[];
+  checked?: Ref<boolean> | boolean;
+}
 
 export const TableProps = {
   columns: {
@@ -20,7 +19,7 @@ export const TableProps = {
     default: () => [],
   },
   data: {
-    type: Array,
+    type: Array as () => dataType[],
     default: () => [],
   },
   tag: {
@@ -32,5 +31,4 @@ export const TableProps = {
     default: false,
   },
 };
-
 export type TableProps = ExtractPropTypes<typeof TableProps>;

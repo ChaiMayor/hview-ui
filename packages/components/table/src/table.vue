@@ -53,7 +53,7 @@
 </template>
 <script setup lang="ts">
 import { ref, reactive } from "vue";
-import { TableProps } from "./table";
+import { TableProps, dataType } from "./table";
 import { deepCopy } from "@hview-plus/utils";
 
 const props = defineProps(TableProps);
@@ -66,7 +66,7 @@ const params = ref(deepCopy(props.data));
 const columns = ref(deepCopy(props.columns));
 
 const data = ref(
-  params.value.map((item) => {
+  params.value.map((item: dataType) => {
     return reactive({
       ...item,
       checked: false,
@@ -74,7 +74,7 @@ const data = ref(
   }),
 );
 
-const sortTable = (compare: (a, b) => any, rev?: boolean) => {
+const sortTable = (compare: (a, b) => number, rev?: boolean) => {
   rev = rev === void 0 ? false : true;
   data.value.sort(compare);
   if (rev) {
@@ -85,13 +85,13 @@ const sortTable = (compare: (a, b) => any, rev?: boolean) => {
 
 const handleCheckAllChange = (val: boolean) => {
   if (val) {
-    data.value.forEach((item) => {
+    data.value.forEach((item: dataType) => {
       item.checked = true;
     });
     isIndeterminate.value = false;
     checkAll.value = true;
   } else {
-    data.value.forEach((item) => {
+    data.value.forEach((item: dataType) => {
       item.checked = false;
     });
     checkAll.value = false;
@@ -101,7 +101,7 @@ const handleCheckAllChange = (val: boolean) => {
 const handleCheckedChange = () => {
   let flag = true;
   isIndeterminate.value = false;
-  data.value.forEach((item) => {
+  data.value.forEach((item: dataType) => {
     if (!item.checked) {
       flag = false;
     } else isIndeterminate.value = true;
