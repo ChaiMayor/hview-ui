@@ -2,9 +2,9 @@
 import basic from 'exam/table/basic.vue'
 import checkbox from 'exam/table/checkbox.vue'
 import sort from 'exam/table/sort.vue'
-import rowClass from 'exam/table/row-class.vue'
+import rowClass from 'exam/table/rowclass.vue'
 import border from 'exam/table/border.vue'
-import VirtualTable from 'exam/table/virtual-table.vue'
+import virtual from 'exam/table/virtual.vue'
 </script>
 
 # Table 表格
@@ -52,8 +52,8 @@ import VirtualTable from 'exam/table/virtual-table.vue'
 
 通过虚拟化表格组件，超大数据渲染将不再是一个头疼的问题,再巨大的数据也不在话下
 
-::: code table/VirtualTable
-<VirtualTable></VirtualTable>
+::: code table/virtual
+<virtual></virtual>
 :::
 
 <style>

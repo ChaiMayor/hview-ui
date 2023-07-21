@@ -2,9 +2,9 @@
 import basic from 'exam/table/basic.vue'
 import checkbox from 'exam/table/checkbox.vue'
 import sort from 'exam/table/sort.vue'
-import rowClass from 'exam/table/row-class.vue'
+import rowClass from 'exam/table/rowclass.vue'
 import border from 'exam/table/border.vue'
-import VirtualTable from 'exam/table/virtual-table.vue'
+import virtual from 'exam/table/virtual.vue'
 </script>
 
 # Table
@@ -52,8 +52,8 @@ In the field of front-end development, tables have always been a high-frequency 
 
 By virtualizing table components, large data rendering will no longer be a headache, no matter how huge the data is
 
-::: code table/VirtualTable
-<VirtualTable></VirtualTable>
+::: code table/virtual
+<virtual></virtual>
 :::
 
 <style>
