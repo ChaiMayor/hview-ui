@@ -40,6 +40,10 @@ export const TreeProps = {
   renderContent: {
     type: Function,
   },
+  isLazy: {
+    type: Boolean,
+    default: false,
+  },
 };
 
 export type TreeProps = ExtractPropTypes<typeof TreeProps>;

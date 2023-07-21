@@ -13,7 +13,8 @@
       :default-checked-keys="checkedKeys"
       :default-expand-all="defaultExpandAll"
       :render-content="renderContent"
-      :parent-data="copyData">
+      :parent-data="copyData"
+      :is-lazy="isLazy">
     </tree-node>
   </div>
 </template>
@@ -51,6 +52,7 @@ const initFn = (data: any) => {
     item.children = item[props.children] || [];
     item.label = item[props.label];
     item.id = item[props.nodeKey];
+    item.isLazy = props.isLazy;
     item.isOpen = false;
     item.isChecked = false;
     if (item.children && item.children.length) {
@@ -63,6 +65,7 @@ const initFn = (data: any) => {
       isOpen: item.isOpen,
       isChecked: item.isChecked,
       disabled: item.disabled,
+      isLazy: item.isLazy,
     };
   });
 };

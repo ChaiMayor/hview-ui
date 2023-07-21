@@ -1,5 +1,5 @@
 <template>
-  <h-tree :data="list"></h-tree>
+  <h-tree :data="list" isLazy></h-tree>
 </template>
 
 <script setup lang="ts">

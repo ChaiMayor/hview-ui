@@ -12,6 +12,22 @@
         :disabled="items.disabled"
         @change="handleCheckChange">
       </h-checkbox>
+      <div class="loading" v-if="loading">
+        <div class="loading-item">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
       <nodeContent
         :data="items"
         :render-content="renderContent"
@@ -62,11 +78,11 @@ const props = defineProps({
   defaultExpandAll: Boolean,
   renderContent: Function,
   parentData: Array,
+  isLazy: Boolean,
 });
 const checkboxChange = inject<() => void>("checkboxChange", () => {});
 const toggleChange = inject<(param: any) => void>("toggle-change", () => {});
 const checkedChange = inject<(param: any) => void>("checked-change", () => {});
-
 onMounted(() => {
   _initDefault();
 });
@@ -81,7 +97,13 @@ watch(
 );
 
 const isShow = computed(() => {
-  return props.items.children && props.items.children.length;
+  return (
+    props.items.children && props.items.children.length && !props.items.isLazy
+  );
+});
+
+const loading = computed(() => {
+  return props.items.isLazy && props.items.isOpen;
 });
 
 const nodeStyle = computed(() => {
@@ -99,8 +121,16 @@ const expandIconClass = computed(() => {
   ];
 });
 
-const handleToggle = (item: any) => {
+const sleep = (time: number) => {
+  return new Promise((resolve) => setTimeout(resolve, time));
+};
+
+const handleToggle = async (item: any) => {
   item.isOpen = !item.isOpen;
+  if (item.isLazy) {
+    await sleep(1000);
+    item.isLazy = false;
+  }
   // 展开/收起子节点时触发
   toggleChange(item);
 };
