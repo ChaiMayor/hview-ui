@@ -5,6 +5,7 @@ import settingTree from 'exam/tree/setting-tree.vue'
 import disabled from 'exam/tree/disabled.vue'
 import getDataTree from 'exam/tree/get-data-tree.vue'
 import renderTree from 'exam/tree/render-tree.vue'
+import lazy from 'exam/tree/lazy.vue'
 </script>
 
 # Tree 树形控件
@@ -57,6 +58,14 @@ import renderTree from 'exam/tree/render-tree.vue'
 <renderTree></renderTree>
 :::
 
+## 懒加载节点
+
+利用 `isLazy`开启动态加载节点数据, 只加载需要展示的数据
+
+::: code tree/lazy
+<lazy></lazy>
+:::
+
 ## API
 
 ### 属性
@@ -72,6 +81,7 @@ import renderTree from 'exam/tree/render-tree.vue'
 | default-expanded-keys | 默认的展开项                                         | `array`                             | —      | —        |
 | default-checked-keys  | 默认的选中项                                         | `array`                             | —      | —        |
 | disabled              | 是否禁用                                             | `boolean`                           | —      | false    |
+| isLazy                | 是否开启懒加载                                       | `boolean`                           | —      | false    |
 | render-content        | 自定义树节点的内容区的渲染 Function                  | `Function(h, { data, parentData })` | —      | —        |
 
 <br/>

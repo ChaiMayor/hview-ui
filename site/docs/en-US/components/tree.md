@@ -5,6 +5,7 @@ import settingTree from 'exam/tree/setting-tree.vue'
 import disabled from 'exam/tree/disabled.vue'
 import getDataTree from 'exam/tree/get-data-tree.vue'
 import renderTree from 'exam/tree/render-tree.vue'
+import lazy from 'exam/tree/lazy.vue'
 </script>
 
 # Tree
@@ -57,6 +58,14 @@ The content of the node supports customization, and you can add buttons or icons
 <renderTree></renderTree>
 :::
 
+## 懒加载节点
+
+Use `isLazy` to enable dynamic loading of node data, and only load the data that needs to be displayed
+
+::: code tree/lazy
+<lazy></lazy>
+:::
+
 ## API
 
 ### Attributes
@@ -72,6 +81,7 @@ The content of the node supports customization, and you can add buttons or icons
 | default-expanded-keys | default expansion                                                                               | `array`                             | —              | —        |
 | default-checked-keys  | default selection                                                                               | `array`                             | —              | —        |
 | disabled              | Whether to disable                                                                              | `boolean`                           | —              | false    |
+| isLazy                | Whether to isLazy                                                                               | `boolean`                           | —              | false    |
 | render-content        | The rendering function of the content area of the custom tree node                              | `Function(h, { data, parentData })` | —              | —        |
 
 <br/>
