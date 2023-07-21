@@ -14,7 +14,9 @@
             <div class="child">
               <div
                 class="up"
-                :style="{ borderBottomColor: arrowUp ? '#409eff' : '#a8abb2' }"
+                :style="{
+                  borderBottomColor: arrowUp ? '#409eff' : '#a8abb2',
+                }"
                 @click="sortTable(item.sorter.Compare)"></div>
               <div
                 class="down"
@@ -75,7 +77,6 @@ const columns = ref(deepCopy(props.columns));
 const checkAll = ref(false);
 const isIndeterminate = ref(false);
 const arrowUp = ref(false);
-
 const data = ref(
   params.value.map((item: dataType) => {
     if (isShowCheckBox.value) {
@@ -138,6 +139,7 @@ let tableList = ref(null);
 const { itemSize, tableHeight, isVritual } = toRefs(
   reactive(props.virtualTable),
 );
+
 const tableClass = computed(() => {
   return {
     height: tableHeight.value + "px",
