@@ -39,6 +39,7 @@ import { default as TimePicker } from "./time-picker";
 import { default as Dialog } from "./dialog";
 import { default as Color } from "./color";
 import { default as Table } from "./table";
+import { default as ColorPicker } from "./color-picker";
 
 export {
   Button,
@@ -89,6 +90,7 @@ export {
   Dialog,
   Color,
   Table,
+  ColorPicker,
 };
 
 export default [
@@ -140,4 +142,5 @@ export default [
   Dialog,
   Color,
   Table,
+  ColorPicker,
 ];
