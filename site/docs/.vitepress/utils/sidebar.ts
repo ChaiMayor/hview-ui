@@ -48,6 +48,7 @@ const sidebar = {
         { text: "Checkbox 复选框", link: "/components/checkbox" },
         { text: "Switch 开关", link: "/components/switch" },
         { text: "TimePicker 时间选择器", link: "/components/time-picker" },
+        { text: "ColorPicker 取色器", link: "/components/color-picker" },
       ],
     },
     {
@@ -141,6 +142,7 @@ const sidebarEN = {
         { text: "Checkbox", link: "/components/checkbox" },
         { text: "Switch", link: "/components/switch" },
         { text: "TimePicker", link: "/components/time-picker" },
+        { text: "ColorPicker", link: "/components/color-picker" },
       ],
     },
     {
