@@ -49,7 +49,7 @@ import { InputProps } from "./input";
 import { ref, watch, computed } from "vue";
 
 const props = defineProps(InputProps);
-const emit = defineEmits(["change", "blur", "focus"]);
+const emit = defineEmits(["update:modelValue", "change", "blur", "focus"]);
 const text = ref(props.modelValue);
 const size = computed(() => {
   return {
@@ -68,6 +68,7 @@ watch(
 
 const handerInput = (e: any) => {
   text.value = e.target.value;
+  emit("update:modelValue", text.value);
   emit("change", Number(text.value));
 };
 
